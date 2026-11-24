@@ -23,9 +23,44 @@ media:
     - "gta vi pc port progress"
     - "gta 6 victory xcl pc"
     - "gta 6 xbox recompilation pc"
+    - "gta 6 cgbj in game"
+    - "gta 6 running on pc"
+    - "gta 6 boots on pc"
+    - "gta 6 in game on pc footage"
+    - "gta 6 pc port gameplay"
+    - "gta 6 victory running"
+    - "gta 6 xcl running"
   youtube_max_per_query: 12
   youtube_days: 10
-  skip_image_patterns: ["shields.io", "badge", "/badges/", "sponsor", "paypal", "ko-fi", "kofi", "discord", "logo", "mascot", "banner", "favicon"]
+  skip_image_patterns: ["shields.io", "badge", "/badges/", "sponsor", "paypal", "ko-fi", "kofi", "discord", "logo", "mascot", "banner", "favicon", "opengraph.githubassets.com", "architecture", "diagram", "progress"]
+  # Strict relevance: an image/video is listed only if ITS OWN text (title, alt text, caption, README section heading)
+  # names GTA VI and is about PC / the ports, and none of these appear. Whole words, case-insensitive.
+  other_games: ["minecraft", "matrix", "keanu", "fortnite", "trackmania", "terraria", "undertale", "dragon ball", "rayman",
+    "puyo", "roblox", "halo", "forza", "starfield", "cyberpunk", "red dead", "rdr2?", "gta ?(5|v|iv|4)", "gta san andreas",
+    "san andreas", "vice city stories", "xdefiant", "freedoom", "doom", "call of duty", "warzone", "fifa", "ea fc",
+    "simpletriangle", "simple triangle", "lanes", "frosty", "unreal engine", "ue5", "tomb raider", "skyrim", "palworld",
+    "the finals", "hogwarts", "spider-?man", "mafia", "watch dogs", "saints row", "sleeping dogs"]
+  junk_terms: ["download", "descarga", "descargar", "free", "gratis", "apk", "android", "ios", "mobile", "móvil", "movil",
+    "crack", "repack", "giveaway", "sorteo", "how to get", "cómo conseguir", "como conseguir", "install", "instalar",
+    "trailer", "reaction", "reacción", "reaccion", "leaked gameplay", "map size", "how to play", "full guide", "right now", "all locations", "easter egg",
+    "money", "dinero", "cheats", "trucos", "mod menu", "funny", "meme", "#shorts", "shorts", "prank", "ai generated", "ia",
+    "ost", "music", "música", "musica", "soundtrack", "song", "radio", "dlss 5"]
+  # Posts (PRs/issues) that read like bug reports are not progress captures.
+  error_terms: ['error', 'errors', 'crash\w*', 'exception', '0x[0-9a-f]+', 'fail\w*', 'not working', "doesn'?t work",
+    'help', 'bug', 'broken', 'stuck', 'hangs?', 'freez\w*', 'tdr', 'device removed']
+  # "Progress footage" only: the text must also describe the game running on PC (booting, menus, in-game, frames...)
+  # and must not read as commentary/news/speculation. Regexes, whole words, case-insensitive. A "?" in a title rejects it.
+  footage_terms: ["run(s|ning)?", "boot(s|ed|ing)?", "menus?", "main menu", "title screen", "start screen", "in[- ]?game",
+    "first (frame|screen|picture)", "frames?", "footage", "gameplay", "showcase", "tested", "testing", "loading", "loads?",
+    "fps", "render(s|ed|ing)?", "playing", "walking", "driving", "screenshots?", "captured?", "on screen", "the world",
+    "world loads?", "progress", "works?", "working", "arranca", "menú", "menús", "funcionando", "corriendo", "en partida"]
+  commentary_terms: ["news", "noticias", "explained", "explains?", "explainer", 'fact[- ]?check\w*', "really", "reaction",
+    "reacts?", "will", "could", "may", "might", "when", "coming", "release date", "rumou?rs?", "race", "tracker",
+    "24/7", 'leak\w*', 'filtra\w*', "dropped", "taken down", "shut down", "why", "what", "opinion", "podcast", "should",
+    "can my pc", "can your pc", "specs", "requirements", "theory", "predictions?", "vs", "versus", "exploded", "breaking",
+    "rockstar is", "sooner", "early", "finally here", "catch", "is here"]
+  # Projects whose whole README is about GTA VI: a screenshot there needs no "GTA" in its caption (other games still excluded).
+  gta_only_projects: [victory, five-star-recomp, gta6-boottest, leonida-continued, leonida-reforge, palmetto, g6recomp, cgbj, palmwave]
 
 http:
   user_agent: "gta6-pc-tracker/1.0 (+https://github.com/NUXX-G/gta6-pc-tracker)"

@@ -570,3 +570,83 @@ def test_press_headlines_shown_but_forum_titles_are_not(site):
     assert "GTA 6 PC port progressing at breakneck speed" in text
     home = (site / "en" / "index.html").read_text(encoding="utf-8")
     assert "world now loads" not in home
+
+
+def test_media_must_really_be_gta_vi():
+    import collect_media
+
+    generic = """# Some layer
+## Tested games
+### Minecraft Preview
+![Minecraft in-world](docs/minecraft.png)
+https://github.com/user-attachments/assets/11111111-2222-3333-4444-555555555555
+### The Matrix Awakens
+![Matrix chase](docs/matrix.png)
+## A newer retail game
+![Settings screen](docs/settings.png)
+## GTA VI
+![GTA VI start screen on PC](docs/gta.png)
+![architecture](docs/architecture.png)
+"""
+    media = collect_media.media_from_readme(generic, "Some/Layer", "main", "xcl", None)
+    assert [m["thumb"] for m in media] == ["https://raw.githubusercontent.com/Some/Layer/main/docs/gta.png"]
+    # a GTA-only project keeps its screenshots without a caption, but never another game's
+    only = "## Status\n![menus](a.png)\n### Minecraft test\n![x](b.png)\n"
+    kept = collect_media.media_from_readme(only, "Marvisak/VIctory", "main", "victory", None)
+    assert [m["thumb"].rsplit("/", 1)[1] for m in kept] == ["a.png"]
+
+
+@pytest.mark.parametrize(
+    "title,ok",
+    [
+        ("GTA 6 running on PC with VIctory: menus at 30 fps", True),
+        ("Modders Got GTA 6 Booting on PC Overnight", True),
+        ("GTA 6 PC Port: Private Build CGBJ Takes First Place", False),  # standings, not footage
+        ("Is GTA 6 Really PORTED to PC? (fact checked)", False),
+        ("GTA 6 EXE LEAKED, already being tested on PC", False),
+        ("Minecraft running natively through XCL", False),
+        ("GTA 6 gameplay trailer reaction", False),
+        ("GTA 6 IS FREE ON PC!", False),
+        ("How To Play GTA 6 on PC RIGHT NOW! (Full Guide)", False),
+        ("Keanu in The Matrix Awakens on PC", False),
+        ("GTA 5 vs GTA 6 on PC", False),
+        ("GTA 6 money glitch", False),
+    ],
+)
+def test_video_titles_are_filtered_strictly(title, ok):
+    import collect_media
+
+    assert collect_media.is_progress_footage([title]) is ok
+
+
+def test_screenshots_from_project_posts():
+    import collect_media
+
+    posts = [
+        {
+            "url": "https://github.com/Marvisak/VIctory/pull/9",
+            "title": "Fix mesh pipelines: world now renders",
+            "body": "Before/after on an RX 6700 XT ![image](https://github.com/user-attachments/assets/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee)",
+            "date": "2026-11-24T10:00:00Z",
+            "trusted": True,
+        },
+        {
+            "url": "https://github.com/Marvisak/VIctory/issues/3",
+            "title": "Minecraft test crashes",
+            "body": "![image](https://github.com/user-attachments/assets/11111111-bbbb-cccc-dddd-eeeeeeeeeeee)",
+            "date": "2026-11-24T10:00:00Z",
+            "trusted": False,
+        },
+        {
+            "url": "https://github.com/Marvisak/VIctory/issues/4",
+            "title": "Typo in docs",
+            "body": "![image](https://github.com/user-attachments/assets/22222222-bbbb-cccc-dddd-eeeeeeeeeeee)",
+            "date": "2026-11-24T10:00:00Z",
+            "trusted": False,
+        },
+    ]
+    media = collect_media.media_from_posts(posts, "victory", "Marvisak/VIctory")
+    assert len(media) == 1 and media[0]["credibility"] == "confirmed"
+    assert media[0]["thumb"].startswith("https://github.com/user-attachments/assets/aaaaaaaa")
+    # a generic layer needs GTA named in the post
+    assert collect_media.media_from_posts(posts[:1], "xcl", "ivall/xcl") == []

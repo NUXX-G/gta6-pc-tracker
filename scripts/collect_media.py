@@ -20,7 +20,7 @@ from typing import Any
 from urllib.parse import quote, urljoin
 
 from common import Http, HttpError, config, domain_allowed, iso, log, now_utc, parse_time, sha
-from items import relevant
+from items import GTA_RE
 
 MD_IMG = re.compile(r"!\[([^\]]*)\]\(\s*<?([^)\s>]+)>?(?:\s+\"[^\"]*\")?\s*\)")
 HTML_IMG = re.compile(r"<img\b[^>]*?\bsrc=[\"']([^\"']+)[\"'][^>]*>", re.IGNORECASE)
@@ -56,25 +56,149 @@ def _resolve(src: str, repo: str, branch: str) -> str | None:
     return urljoin(base, src.lstrip("/") if src.startswith("/") else src)
 
 
-def media_from_readme(readme: str, repo: str, branch: str, slug: str, created: str | None) -> list[dict[str, Any]]:
-    """Screenshots and videos a project shows in its own README."""
-    found: list[tuple[str, str, str]] = []  # (kind, url, alt)
-    for alt, src in MD_IMG.findall(readme or ""):
-        found.append(("image", src, alt))
-    for tag in HTML_IMG.finditer(readme or ""):
-        alt = HTML_ALT.search(tag.group(0))
-        found.append(("image", tag.group(1), alt.group(1) if alt else ""))
-    for m in GH_ASSET.finditer(readme or ""):
-        found.append(("video", m.group(1), ""))
-    for m in YT_ID.finditer(readme or ""):
-        found.append(("youtube", m.group(1), ""))
+# ---------------------------------------------------------------- strict relevance: is this really GTA VI on PC?
 
+
+def _words(terms: list[str]) -> re.Pattern[str]:
+    return re.compile(r"(?<![\w])(?:" + "|".join(terms) + r")(?![\w])", re.IGNORECASE)
+
+
+def _pc_re() -> re.Pattern[str]:
+    names = [re.escape(p["name"].split(" (")[0]) for p in config("projects")["projects"]]
+    return _words(list(config("settings")["news"]["context_terms"]) + names)
+
+
+def other_game(texts: list[str]) -> str | None:
+    """The first other-game or junk term found in these texts, else None."""
+    cfg = _cfg()
+    joined = " ".join(t for t in texts if t)
+    m = _words(cfg["other_games"]).search(joined) or _words([re.escape(t) for t in cfg["junk_terms"]]).search(joined)
+    return m.group(0) if m else None
+
+
+def about_gta_pc(texts: list[str], need_gta: bool = True) -> bool:
+    """True only if these texts name GTA VI (unless need_gta is False) AND are about PC / the ports,
+    AND mention no other game or junk wording."""
+    joined = " ".join(t for t in texts if t)
+    if other_game(texts):
+        return False
+    if need_gta and not GTA_RE.search(joined):
+        return False
+    return bool(_pc_re().search(joined)) or not need_gta
+
+
+def is_progress_footage(texts: list[str], need_gta: bool = True) -> bool:
+    """Strictest check, for titles/captions: GTA VI + PC/ports + describes the game running + not commentary."""
+    cfg = _cfg()
+    joined = " ".join(t for t in texts if t)
+    if not about_gta_pc(texts, need_gta=need_gta):
+        return False
+    if "?" in (texts[0] if texts else ""):
+        return False
+    if _words(cfg["commentary_terms"]).search(joined):
+        return False
+    return bool(_words(cfg["footage_terms"]).search(joined))
+
+
+GH_IMG = re.compile(
+    r"!\[([^\]]*)\]\((https://(?:github\.com/user-attachments/assets/[0-9a-f-]{36}|"
+    r"user-images\.githubusercontent\.com/[^)\s]+|private-user-images\.githubusercontent\.com/[^)\s]+))\)"
+    r"|<img\b[^>]*?src=[\"'](https://(?:github\.com/user-attachments/assets/[0-9a-f-]{36}|"
+    r"user-images\.githubusercontent\.com/[^\"']+))[\"']",
+    re.IGNORECASE,
+)
+
+
+def media_from_posts(posts: list[dict[str, Any]], slug: str, repo: str) -> list[dict[str, Any]]:
+    """Screenshots/clips attached to a project's own PRs and issues, kept only when the post is about GTA VI
+    progress on PC (title + body), names no other game and does not read as speculation."""
+    gta_only = slug in _cfg().get("gta_only_projects", [])
+    out: list[dict[str, Any]] = []
+    for post in posts:
+        title, body = post.get("title", ""), post.get("body", "")
+        texts = [title, body[:1500]]
+        if other_game([title, body[:1500]]):
+            continue
+        if not gta_only and not GTA_RE.search(title + " " + body[:1500]):
+            continue
+        if not _words(_cfg()["footage_terms"]).search(title + " " + body[:1500]):
+            continue
+        if _words(_cfg()["error_terms"]).search(title + " " + body[:1500]):
+            continue  # a bug report, not a progress capture
+        shots = []
+        for m in GH_IMG.finditer(body):
+            shots.append(("image", m.group(2) or m.group(3)))
+        for m in GH_ASSET.finditer(body):
+            shots.append(("video", m.group(1)))
+        for kind, src in shots[:3]:
+            out.append(
+                {
+                    "id": sha("post" + src),
+                    "kind": kind,
+                    "url": post["url"] if kind == "image" else src,
+                    "thumb": src if kind == "image" else None,
+                    "embed": None,
+                    "source": "github",
+                    "source_label": f"GitHub · {repo.split('/')[1]}",
+                    "origin": "project",
+                    "project": slug,
+                    "credibility": "confirmed" if post.get("trusted") else "community",
+                    "created": post.get("date"),
+                    "_texts": texts,
+                }
+            )
+    return out[:8]
+
+
+def _context(readme: str, pos: int) -> tuple[str, str]:
+    """(nearest heading above, the lines around) for a match at `pos`."""
+    before = readme[:pos]
+    heading = ""
+    for line in reversed(before.splitlines()):
+        st = line.strip()
+        if st.startswith("#") or re.match(r"<h[1-4]\b", st, re.I):
+            heading = re.sub(r"<[^>]+>", " ", st).lstrip("#").strip()
+            break
+    lines = readme.splitlines()
+    idx = before.count(chr(10))
+    # The line itself plus its neighbours, never crossing into another section (a heading line is a boundary).
+    near = [lines[k] for k in (idx - 1, idx, idx + 1) if 0 <= k < len(lines)]
+    near = [ln for ln in near if not re.match(r"\s*(#|<h[1-4]\b)", ln, re.I) or ln is lines[idx]]
+    window = " ".join(near)
+    return heading, re.sub(r"<[^>]+>", " ", window)
+
+
+def media_from_readme(readme: str, repo: str, branch: str, slug: str, created: str | None) -> list[dict[str, Any]]:
+    """Screenshots and videos a project shows in its own README, ONLY when they are about GTA VI.
+
+    Generic layers show other games in their READMEs (Minecraft, demos...): an image is kept only if its alt text,
+    its section heading or the lines around it name GTA VI (or the project is GTA-only), and none of them names
+    another game. Diagrams, progress charts, logos and badges are skipped.
+    """
+    readme = readme or ""
+    found: list[tuple[int, str, str, str]] = []  # (pos, kind, url, alt)
+    for m in MD_IMG.finditer(readme):
+        found.append((m.start(), "image", m.group(2), m.group(1)))
+    for m in HTML_IMG.finditer(readme):
+        alt = HTML_ALT.search(m.group(0))
+        found.append((m.start(), "image", m.group(1), alt.group(1) if alt else ""))
+    for m in GH_ASSET.finditer(readme):
+        found.append((m.start(1), "video", m.group(1), ""))
+    for m in YT_ID.finditer(readme):
+        found.append((m.start(), "youtube", m.group(1), ""))
+    found.sort()
+
+    gta_only = slug in _cfg().get("gta_only_projects", [])
     out: list[dict[str, Any]] = []
     seen: set[str] = set()
     page = f"https://github.com/{repo}#readme"
-    for kind, src, alt in found:
+    for pos, kind, src, alt in found:
+        heading, window = _context(readme, pos)
+        texts = [alt, heading, window]
+        if other_game(texts) or not (gta_only or GTA_RE.search(" ".join(texts))):
+            continue
         if kind == "youtube":
-            item = _yt_item(src, source="github", label=repo.split("/")[0], created=created, texts=[alt])
+            item = _yt_item(src, source="github", label="README · " + repo.split("/")[1], created=created, texts=[alt])
             item.update({"origin": "project", "project": slug, "credibility": "confirmed"})
         else:
             url = _resolve(src, repo, branch)
@@ -109,6 +233,9 @@ def collect_readmes(gh_projects: dict[str, Any]) -> list[dict[str, Any]]:
         if not v.get("_readme") or not v.get("repo"):
             continue
         out += media_from_readme(v["_readme"], v["repo"], v.get("default_branch") or "main", slug, v.get("pushed_at"))
+    for slug, v in gh_projects.items():
+        if v.get("_posts") and v.get("repo"):
+            out += media_from_posts(v["_posts"], slug, v["repo"])
     return out
 
 
@@ -205,7 +332,9 @@ def collect_youtube(http: Http) -> dict[str, Any]:
             log.warning("youtube %r: %s", q, exc)
             continue
         for v in videos[: cfg["youtube_max_per_query"]]:
-            if not v["created"] or not relevant(v["texts"]):
+            title, _desc, channel = v["texts"]
+            # The TITLE itself must name GTA VI and be about PC/the ports; title + channel must name no other game.
+            if not v["created"] or not is_progress_footage([title]) or other_game([title, channel]):
                 continue
             if now_utc() - parse_time(v["created"]) > max_age:
                 continue

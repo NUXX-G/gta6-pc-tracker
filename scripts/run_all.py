@@ -129,17 +129,31 @@ def build_media(
     for it in items:
         if it["kind"] not in ("video", "image") or it["credibility"] == "false":
             continue
+        # Strict: the post/video text itself must name GTA VI, be about PC/the ports and name no other game.
+        texts = it.get("_texts", [])
+        if it["source"] == "youtube":
+            texts = texts[:1]  # the title only; the channel was already checked by the collector
+        if not collect_media.is_progress_footage(texts):
+            continue
         origin = "video" if it["source"] == "youtube" else "community"
         out.append({**public(it), "origin": origin})
     extra = collect_media.collect_readmes(gh.get("projects", {}))
     for m in (tr or {}).get("media", []):
         m["project"] = detect_project(m.get("_texts", []), [m["url"]])
+        # Tracker posts: the headline must name GTA VI or a tracked project, and no other game.
+        if not collect_media.is_progress_footage(m.get("_texts", [])[:1], need_gta=not m["project"]):
+            continue
+        if "opengraph.githubassets.com" in (m.get("thumb") or ""):  # a GitHub link card, not a capture
+            continue
         m["credibility"] = "community"
         extra.append(m)
     for m in extra:
         if legal_filter.url_violation(m["url"]) or (m.get("thumb") and legal_filter.url_violation(m["thumb"])):
             continue
-        if spoiler_filter.is_spoiler(m.get("_texts", [])):
+        texts = m.get("_texts", [])
+        if spoiler_filter.is_spoiler(texts[:1] if m.get("origin") == "tracker" else texts):
+            continue
+        if legal_filter.item_violation(texts, []):  # e.g. a post saying where a leaked file was downloaded
             continue
         out.append(public(m))
     if not tr and not gh.get("projects"):  # sources down: keep the last catalogue

@@ -154,6 +154,23 @@ def collect_project(http: Http, project: dict[str, Any], cache: dict[str, list[s
     except HttpError as exc:
         log.warning("pulls %s: %s", repo, exc)
         out["prs_open"], out["prs_merged_24h"] = None, None
+        closed = []
+    owner = repo.split("/")[0].lower()
+    # Posts (merged PRs, open PRs and issues) whose body carries screenshots/clips: candidates for the media catalogue.
+    # Their text is private (used only to decide whether the capture is GTA VI progress) and is never published.
+    posts = []
+    for pr in closed:
+        body = pr.get("body") or ""
+        if pr.get("merged_at") and ("user-attachments" in body or "![" in body):
+            posts.append(
+                {
+                    "url": pr.get("html_url"),
+                    "title": pr.get("title") or "",
+                    "body": (pr.get("body") or "")[:6000],
+                    "date": pr.get("merged_at"),
+                    "trusted": True,  # merged into the project: the maintainers accepted it
+                }
+            )
 
     # Open issues mentioning problems (titles/bodies are not stored)
     problems = []
@@ -168,10 +185,23 @@ def collect_project(http: Http, project: dict[str, Any], cache: dict[str, list[s
             if kws:
                 problems.append({"number": it["number"], "url": it.get("html_url"), "keywords": kws})
             gpu_issue_texts.append({"url": it.get("html_url"), "text": text, "problem": bool(kws)})
+        for it in issues:
+            body = it.get("body") or ""
+            if "user-attachments" in body or "![" in body:
+                posts.append(
+                    {
+                        "url": it.get("html_url"),
+                        "title": it.get("title") or "",
+                        "body": body[:6000],
+                        "date": it.get("created_at"),
+                        "trusted": ((it.get("user") or {}).get("login") or "").lower() == owner,
+                    }
+                )
     except HttpError as exc:
         log.warning("issues %s: %s", repo, exc)
     out["problem_issues"] = problems
     out["_issue_texts"] = gpu_issue_texts
+    out["_posts"] = posts[:60]
 
     # Releases
     try:

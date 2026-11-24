@@ -60,6 +60,8 @@ SECTION_PATHS = {
 }
 # Hosts a preview image may load from (only after a click; see static/js/site.js). Video embeds: youtube-nocookie.
 IMG_HOSTS = [
+    "github.com",  # github.com/user-attachments/assets/... (redirects to private-user-images)
+    "private-user-images.githubusercontent.com",
     "raw.githubusercontent.com",
     "user-images.githubusercontent.com",
     "opengraph.githubassets.com",

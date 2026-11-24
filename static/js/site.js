@@ -220,48 +220,16 @@
     track.parentNode.classList.add("is-loop");
   }
 
-  // Stagger index for grids of cards and phase segments.
-  var groups = [".summary > .stat", ".projects > .pcard", ".mediagrid > .mcard", ".linkgroups > .linkgroup",
-    ".newsgroups > .newsgroup", ".faq > .faq__item", ".glossary > div", ".alerts > .alert", ".timeline > li",
-    ".sheet__grid > .card", ".proscons > .card", ".areas > .card", ".pressgrid > .press", ".guides > .guide",
-    ".scamgrid > .scam", ".counters > .counter", ".routecards > .routecard", ".phasecards > li", ".steps > li"];
-  groups.forEach(function (sel) {
-    document.querySelectorAll(sel).forEach(function (el, i) {
-      el.classList.add("reveal");
-      el.style.setProperty("--i", String(i % 6));
-    });
-  });
-  document.querySelectorAll(".phasebar").forEach(function (bar) {
-    bar.querySelectorAll(".phasebar__seg").forEach(function (s, i) { s.style.setProperty("--i", String(i)); });
-  });
-
-  // Animated percentage counters (final value is already in the HTML).
-  function count(el) {
-    var target = parseInt(el.textContent, 10);
-    if (isNaN(target) || target <= 0) return;
-    var start = null;
-    var dur = 1100;
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min(1, (ts - start) / dur);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(target * eased));
-      if (p < 1) requestAnimationFrame(step);
-    }
-    el.textContent = "0";
-    requestAnimationFrame(step);
-  }
-
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (!e.isIntersecting) return;
       var el = e.target;
       el.classList.add("is-in");
-      if (el.classList.contains("num")) count(el);
+
       io.unobserve(el);
     });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
 
-  document.querySelectorAll(".reveal, .meter, .bars__bar, .phasebar, .h-section, .hero__pct .num, .pcard__pct .num")
+  document.querySelectorAll(".meter, .bars__bar")
     .forEach(function (el) { io.observe(el); });
 })();
