@@ -1,0 +1,229 @@
+# Hand-picked links. Titles and "why" are OUR words: neutral, technical, no game content.
+# type: press | tracker | thread | repo   ·  lang: es | en  ·  project: slug or null
+# Only allowlisted domains. Every entry still passes the legal and spoiler filters at build time.
+links:
+  - url: "https://www.xda-developers.com/gta-6-xbox-executable-leaked-opening-door-for-pc-recompilation-projects-begin-testing/"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-23"
+    title_es: "XDA: el ejecutable de Xbox sale a la luz y los proyectos de recompilación empiezan a probar"
+    title_en: "XDA: the Xbox executable surfaces and recompilation projects start testing"
+    why_es: "Buen contexto de por qué el ejecutable era la pieza que faltaba para los ports."
+    why_en: "Good context on why the executable was the missing piece for the ports."
+  - url: "https://kotaku.com/gta-6-leaker-cyberleek-claims-to-have-to-released-exe-file-that-could-lead-to-unofficial-pc-port-2000759529"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-23"
+    title_es: "Kotaku: arranca la carrera por los ports no oficiales tras la publicación del ejecutable"
+    title_en: "Kotaku: the race for unofficial ports starts after the executable surfaces"
+    why_es: "Cronología del día en que se publicó el ejecutable y reacción de los proyectos."
+    why_en: "Timeline of the day the executable surfaced and how the projects reacted."
+  - url: "https://www.dsogaming.com/news/cyberleek-just-leaked-gta-6-xbox-series-x-build-executable/"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-23"
+    title_es: "DSOGaming: aparece el ejecutable de la versión de Xbox Series"
+    title_en: "DSOGaming: the Xbox Series build executable appears"
+    why_es: "Nota breve y técnica sobre qué cambia para los proyectos de PC."
+    why_en: "Short technical note on what changes for the PC projects."
+  - url: "https://www.notebookcheck.net/GTA-6-PC-port-progressing-at-breakneck-speed.1458028.0.html"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-24"
+    title_es: "Notebookcheck: los ports de PC avanzan a toda velocidad"
+    title_en: "Notebookcheck: PC port work moves at breakneck speed"
+    why_es: "Resumen del estado de varios proyectos en las primeras horas."
+    why_en: "Roundup of several projects' state in the first hours."
+  - url: "https://vgtimes.com/gaming-news/175565-gta-vi-port-project-victory-reaches-menus-at-30-fps-but-isnt-playable.html"
+    type: press
+    lang: en
+    project: victory
+    date: "2026-11-24"
+    title_es: "VGTimes: VIctory llega a los menús a 30 fps, pero aún no es jugable"
+    title_en: "VGTimes: VIctory reaches the menus at 30 fps, but it is not playable yet"
+    why_es: "Explica el enfoque de VIctory y deja claro qué no está verificado."
+    why_en: "Explains VIctory's approach and is clear about what is unverified."
+  - url: "https://videocardz.com/newz/gta-6-pc-project-reportedly-reaches-in-game-rendering"
+    type: press
+    lang: en
+    project: victory
+    date: "2026-11-24"
+    title_es: "VideoCardz: un proyecto de PC informa de render dentro del juego"
+    title_en: "VideoCardz: a PC project reportedly reaches in-game rendering"
+    why_es: "Recoge el salto de los menús al render del mundo, con sus matices."
+    why_en: "Covers the jump from menus to world rendering, with caveats."
+  - url: "https://videocardz.com/newz/gta-vi-pc-efforts-have-already-kicked-off-with-multiple-xbox-emulation-projects-underway"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-22"
+    title_es: "VideoCardz: arrancan varios proyectos de compatibilidad con Xbox"
+    title_en: "VideoCardz: several Xbox compatibility projects get under way"
+    why_es: "Panorama inicial de los proyectos antes de que hubiera ejecutable."
+    why_en: "Early overview of the projects before the executable existed."
+  - url: "https://vgtimes.com/gaming-news/175543-gta-6-reaches-the-boot-stage-on-pc-as-leonida-creator-quits.html"
+    type: press
+    lang: en
+    project: leonida-continued
+    date: "2026-11-24"
+    title_es: "VGTimes: el autor de Leonida abandona y el repositorio original desaparece"
+    title_en: "VGTimes: Leonida's author quits and the original repository disappears"
+    why_es: "Cronología del cierre del Leonida original y de sus continuaciones."
+    why_en: "Timeline of the original Leonida shutting down and its continuations."
+  - url: "https://www.gamesradar.com/games/grand-theft-auto/unofficial-gta-6-pc-port-scrapped-as-rockstar-allegedly-takes-down-discord-server-hours-after-devs-managed-to-get-the-game-booting/"
+    type: press
+    lang: en
+    project: leonida-continued
+    date: "2026-11-24"
+    title_es: "GamesRadar: se cancela un port no oficial tras caer su servidor de chat"
+    title_en: "GamesRadar: an unofficial port is scrapped after its chat server goes down"
+    why_es: "Otra versión del cierre de Leonida; la causa sigue sin confirmar."
+    why_en: "Another account of Leonida's shutdown; the cause remains unconfirmed."
+  - url: "https://www.notebookcheck.net/As-GTA-6-PC-port-gets-closer-to-becoming-playable-Rockstar-is-reportedly-taking-action-against-modders-and-Discord-communities.1458181.0.html"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-24"
+    title_es: "Notebookcheck: informes de acciones contra comunidades de modding"
+    title_en: "Notebookcheck: reports of action against modding communities"
+    why_es: "Contexto legal: por qué algunos repos desaparecen sin aviso DMCA público."
+    why_en: "Legal context: why some repos vanish without a public DMCA notice."
+  - url: "https://vgtimes.com/gaming-news/175557-take-two-targets-hundreds-of-unofficial-gta-5-ports-on-github.html"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-24"
+    title_es: "VGTimes: Take-Two retira cientos de repos de ports no oficiales de otro título"
+    title_en: "VGTimes: Take-Two removes hundreds of unofficial port repos of another title"
+    why_es: "Precedente útil para entender el riesgo de retirada por DMCA."
+    why_en: "Useful precedent for understanding DMCA takedown risk."
+  - url: "https://vgtimes.com/gaming-news/175531-unverified-gta-6-pc-videos-show-menus-not-gameplay.html"
+    type: press
+    lang: en
+    project: null
+    date: "2026-11-23"
+    title_es: "VGTimes: los vídeos sin verificar muestran menús, no partidas"
+    title_en: "VGTimes: unverified videos show menus, not gameplay"
+    why_es: "Buen ejemplo de cómo separar vídeos reales de afirmaciones infladas."
+    why_en: "A good example of separating real videos from inflated claims."
+  - url: "https://vuyp.github.io/gta6-pc-race/"
+    type: tracker
+    lang: en
+    project: null
+    date: null
+    title_es: "GTA VI PC Race: clasificación de ports por etapas"
+    title_en: "GTA VI PC Race: port standings by stage"
+    why_es: "Tracker independiente con su propio modelo de 7 etapas; útil para contrastar."
+    why_en: "Independent tracker with its own 7-stage model; useful for cross-checking."
+  - url: "https://portwatch-vi.xyz/"
+    type: tracker
+    lang: en
+    project: null
+    date: null
+    title_es: "PortWatch VI: seguimiento y noticias de los ports"
+    title_en: "PortWatch VI: port tracking and news"
+    why_es: "Otro tracker con cronología propia de los proyectos."
+    why_en: "Another tracker with its own project timeline."
+  - url: "https://gta.mtwildwood.net/gta-6-pc"
+    type: tracker
+    lang: en
+    project: null
+    date: null
+    title_es: "mtwildwood: estado de GTA 6 en PC"
+    title_en: "mtwildwood: GTA 6 on PC status"
+    why_es: "Tercer tracker de referencia para comparar fases."
+    why_en: "A third reference tracker to compare phases."
+  - url: "https://news.ycombinator.com/item?id=50612686"
+    type: thread
+    lang: en
+    project: null
+    date: "2026-11-23"
+    title_es: "Hacker News: debate técnico sobre la publicación del ejecutable"
+    title_en: "Hacker News: technical discussion of the executable surfacing"
+    why_es: "Comentarios de gente de emulación y recompilación sobre la viabilidad."
+    why_en: "Comments from emulation and recompilation people on feasibility."
+  - url: "https://news.ycombinator.com/item?id=50622638"
+    type: thread
+    lang: en
+    project: leonida-continued
+    date: "2026-11-24"
+    title_es: "Hacker News: debate sobre la retirada del repositorio de Leonida"
+    title_en: "Hacker News: discussion of the Leonida repository removal"
+    why_es: "Discusión sobre DMCA, GitHub y continuidad de los proyectos."
+    why_en: "Discussion of DMCA, GitHub and project continuity."
+  - url: "https://github.com/Marvisak/VIctory/blob/main/docs/architecture.md"
+    type: repo
+    lang: en
+    project: victory
+    date: null
+    title_es: "VIctory: documento de arquitectura"
+    title_en: "VIctory: architecture document"
+    why_es: "Cómo encajan cargador, servicios, GPU y shaders en VIctory."
+    why_en: "How loader, services, GPU and shaders fit together in VIctory."
+  - url: "https://github.com/ivall/xcl#what-works"
+    type: repo
+    lang: en
+    project: xcl
+    date: null
+    title_es: "XCL: tabla de lo que funciona y cómo se verifica"
+    title_en: "XCL: what works and how it is verified"
+    why_es: "Cada pieza con su prueba; la mejor referencia técnica del enfoque de capa de compatibilidad."
+    why_en: "Each piece with its proof; the best technical reference for the compatibility-layer approach."
+  - url: "https://github.com/luizwidmer/palmetto/blob/main/docs/boot_frontier.md"
+    type: repo
+    lang: en
+    project: palmetto
+    date: null
+    title_es: "Palmetto: dónde se detiene el arranque y por qué"
+    title_en: "Palmetto: where the boot stops and why"
+    why_es: "Mediciones paso a paso del arranque; muy didáctico."
+    why_en: "Step-by-step boot measurements; very instructive."
+  - url: "https://github.com/R0Y00/Xbox2Windows/issues/870"
+    type: repo
+    lang: en
+    project: xbox2windows
+    date: null
+    title_es: "Xbox2Windows: progreso y bloqueos actuales"
+    title_en: "Xbox2Windows: progress and current blockers"
+    why_es: "Issue de seguimiento con lo verificado y lo pendiente."
+    why_en: "Tracking issue with what is verified and what is pending."
+  - url: "https://github.com/OnlyMoisties/GTA6-BootTest/blob/main/REPORT.md"
+    type: repo
+    lang: en
+    project: gta6-boottest
+    date: null
+    title_es: "GTA6-BootTest: informe técnico"
+    title_en: "GTA6-BootTest: technical report"
+    why_es: "Hallazgos de bajo nivel sobre memoria, D3D12.X y arranque."
+    why_en: "Low-level findings on memory, D3D12.X and booting."
+  - url: "https://github.com/ThatRecompDev/five-star-recomp/wiki/Status"
+    type: repo
+    lang: en
+    project: five-star-recomp
+    date: null
+    title_es: "Five Star Recomp: página de estado en la wiki"
+    title_en: "Five Star Recomp: wiki status page"
+    why_es: "Detalle y cifras del avance, más completo que el README."
+    why_en: "Details and numbers on progress, fuller than the README."
+  - url: "https://github.com/ubiquitarianism/leonida#project-status"
+    type: repo
+    lang: en
+    project: leonida-continued
+    date: null
+    title_es: "Leonida Continued: tabla de estado con enlaces a cada prueba"
+    title_en: "Leonida Continued: status table with links to each test run"
+    why_es: "Resultados de traducción y validación de shaders con su evidencia."
+    why_en: "Shader translation and validation results with their evidence."
+  - url: "https://github.com/github/dmca"
+    type: repo
+    lang: en
+    project: null
+    date: null
+    title_es: "Registro público de avisos DMCA de GitHub"
+    title_en: "GitHub's public DMCA notice log"
+    why_es: "Donde se comprueba si una retirada fue por DMCA o la hizo su autor."
+    why_en: "Where to check whether a removal was a DMCA notice or the author's own decision."

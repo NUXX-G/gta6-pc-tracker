@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="wrap sheet">
+  <p class="crumbs"><a href="{{ site.base }}{{ path_for(lang, 'home') }}">← {{ T.nav.home }}</a></p>
+  <h1 class="h-display">{{ T.system.title }}</h1>
+  <p class="lead">{{ T.system.intro }}</p>
+  <div class="table-wrap">
+  <table class="rtable health-table">
+    <thead><tr><th scope="col">{{ T.system.source }}</th><th scope="col">{{ T.project.status }}</th><th scope="col">{{ T.system.last_ok }}</th><th scope="col">{{ T.system.last_fail }}</th><th scope="col">{{ T.system.items }}</th></tr></thead>
+    <tbody>
+    {% for s in sources %}
+    <tr class="{{ 'is-warn' if s.warn }}">
+      <th scope="row" data-label="{{ T.system.source }}">{{ s.name }}</th>
+      <td data-label="{{ T.project.status }}">{% if s.ok %}<span class="badge badge--active">{{ T.system.ok }}</span>{% else %}<span class="badge badge--missing">{{ T.system.failing }}</span> <small class="note">{{ T.system.unavailable }}</small>{% endif %}
+        {% if s.warn %}<span class="badge badge--bad">{{ fmt(T.system.warn, h=warn_h) }}</span>{% endif %}
+        {% if s.error %}<small class="note">{{ T.system.error }}: <code>{{ s.error }}</code></small>{% endif %}</td>
+      <td data-label="{{ T.system.last_ok }}">{% if s.last_ok_iso %}{{ m.time(s.last_ok_iso, s.last_ok) }}{% else %}{{ s.last_ok }}{% endif %}</td>
+      <td data-label="{{ T.system.last_fail }}">{{ s.last_fail }}</td>
+      <td data-label="{{ T.system.items }}">{{ s.items }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</article>
+{% endblock %}

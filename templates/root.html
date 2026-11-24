@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-base="{{ site.base }}" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{{ csp|safe }}">
+<meta name="referrer" content="no-referrer">
+<title>{{ en.root.title }}</title>
+<meta name="description" content="{{ en.meta.description }}">
+<link rel="canonical" href="{{ site.origin }}{{ alt.en }}">
+<link rel="alternate" hreflang="es" href="{{ site.origin }}{{ alt.es }}">
+<link rel="alternate" hreflang="en" href="{{ site.origin }}{{ alt.en }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.origin }}{{ alt.en }}">
+<meta property="og:image" content="{{ site.origin }}{{ site.base }}assets/og.png">
+<link rel="icon" href="{{ site.base }}assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ site.base }}assets/css/site.css">
+<script src="{{ site.base }}assets/js/lang.js"></script>
+</head>
+<body class="page-root">
+<main class="root-choose wrap">
+  <p class="brand brand--big"><span class="brand__mark" aria-hidden="true">VI</span><span class="brand__name">PC&nbsp;Tracker</span></p>
+  <h1 class="h-section">{{ en.hero.question }} · {{ es.hero.question }}</h1>
+  <p class="muted">{{ en.root.choose }} · {{ es.root.choose }}</p>
+  <p class="root-links">
+    <a class="btn" href="{{ alt.es }}" hreflang="es" lang="es">Español</a>
+    <a class="btn" href="{{ alt.en }}" hreflang="en" lang="en">English</a>
+  </p>
+  <noscript><p class="muted">{{ en.root.choose }} / {{ es.root.choose }}</p></noscript>
+  <p class="note">{{ en.footer.legal }}</p>
+  <p class="note" lang="es">{{ es.footer.legal }}</p>
+</main>
+</body>
+</html>

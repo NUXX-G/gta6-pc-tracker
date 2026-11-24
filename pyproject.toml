@@ -1,0 +1,24 @@
+[project]
+name = "gta6-pc-tracker"
+version = "1.0.0"
+description = "Live, bilingual, spoiler-free status of unofficial GTA VI PC port projects"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["scripts"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [".venv", "_site", "_site_offline"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003", "SIM108", "B023"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["common", "items", "analyze", "build_site", "summarize", "legal_filter", "spoiler_filter",
+  "clone_detector", "credibility", "readme_parser", "collect_github", "collect_dmca", "collect_discovery",
+  "collect_reddit", "collect_social", "collect_news", "collect_trackers", "make_og_image", "run_all"]

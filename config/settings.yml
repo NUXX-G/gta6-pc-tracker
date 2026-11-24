@@ -1,0 +1,86 @@
+# Global settings. The base path lives ONLY here.
+site:
+  url: "https://nuxx-g.github.io"      # origin, no trailing slash
+  base_path: "/gta6-pc-tracker/"        # every route, asset, sitemap, canonical, hreflang and RSS uses this
+  repo: "NUXX-G/gta6-pc-tracker"
+  languages: [es, en]
+  default_language: en
+  show_thumbnails: false                 # thumbnails are off by default (spoiler safety)
+
+http:
+  user_agent: "gta6-pc-tracker/1.0 (+https://github.com/NUXX-G/gta6-pc-tracker)"
+  timeout_s: 20
+  max_bytes: 4000000
+  retries: 3
+  backoff_s: 2.0
+  min_interval_s:
+    default: 0.5
+    api.github.com: 0.15
+    www.reddit.com: 2.0
+    old.reddit.com: 2.0
+    reddit.com: 2.0
+    hn.algolia.com: 1.0
+    mastodon.social: 2.0
+    lemmy.world: 2.0
+    public.api.bsky.app: 2.0
+    news.google.com: 2.0
+
+github:
+  forks_to_check: 4                 # most-starred forks per tracked project run through the clone detector
+  problem_keywords: [crash, hang, tdr, "black screen", nvidia, wave64, "device removed", freeze]
+  stale_hours: 48
+
+discovery:
+  terms:
+    - "gta vi pc"
+    - "gta6 pc"
+    - "gta6 recomp"
+    - "gta vi recompilation"
+    - "xbox series recompilation"
+    - "xbox series emulator"
+    - "gdk compatibility layer"
+    - "scarlett emulator"
+    - "game_scarlett_master"
+  pushed_within_days: 14
+  max_candidates: 25
+  inspect_top: 25
+
+reddit:
+  subreddits: [pcgaming, GTA6, emulation, GamingLeaksAndRumours, GTA]
+  query: "(gta 6 OR gta vi OR gta6) (pc OR port OR victory OR xcl OR leonida OR recomp)"
+  weekly_min_score: 100
+  weekly_min_comments: 20
+
+social:
+  hn_queries: ["GTA 6 PC", "GTA VI PC", "GTA 6 recomp", "GTA 6 port"]
+  bluesky_queries: ["gta6 pc port", "gta vi pc port"]
+  mastodon_tags: [gta6, gtavi]
+  lemmy_queries: ["gta 6 pc", "gta vi pc"]
+  relevance_terms: [pc, port, recomp, victory, xcl, leonida, palmetto, xbox2windows, emulat, "compatibility layer", "five star recomp", anyxboxx]
+
+news:
+  google_news:
+    - {lang: es, url: "https://news.google.com/rss/search?q=GTA+6+PC+port&hl=es&gl=ES&ceid=ES:es"}
+    - {lang: en, url: "https://news.google.com/rss/search?q=GTA+6+PC+port&hl=en-US&gl=US&ceid=US:en"}
+  publisher_feeds:
+    - {lang: en, url: "https://www.notebookcheck.net/News.152.100.html"}
+    - {lang: en, url: "https://videocardz.com/feed"}
+    - {lang: en, url: "https://www.dsogaming.com/feed/"}
+  keywords: ["gta 6", "gta vi", "gta6"]
+  context_terms: [pc, port, recomp, emulat, xbox, executable, victory, xcl, leonida]
+
+trackers:
+  - {name: "GTA VI PC Race", url: "https://vuyp.github.io/gta6-pc-race/"}
+  - {name: "PortWatch VI", url: "https://portwatch-vi.xyz/", json: "https://portwatch-vi.xyz/data/tracker.json"}
+  - {name: "mtwildwood GTA 6 PC", url: "https://gta.mtwildwood.net/gta-6-pc"}
+
+health:
+  warn_after_hours: 6
+
+history:
+  hourly_days: 7
+
+ui:
+  news_visible: 3
+  links_visible: 5
+  history_visible: 20

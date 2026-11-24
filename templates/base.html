@@ -1,0 +1,105 @@
+{% import "macros.html" as m %}
+<!doctype html>
+<html lang="{{ lang }}" data-theme="night" data-base="{{ site.base }}" data-lang="{{ lang }}" data-t-just="{{ T.time.just_now }}" data-t-min="{{ T.time.min_ago }}" data-t-h="{{ T.time.h_ago }}" data-t-d="{{ T.time.d_ago }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{{ csp|safe }}">
+<meta name="referrer" content="no-referrer">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" hreflang="es" href="{{ site.origin }}{{ alt.es }}">
+<link rel="alternate" hreflang="en" href="{{ site.origin }}{{ alt.en }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.origin }}{{ alt.en }}">
+<link rel="alternate" type="application/rss+xml" title="{{ T.feed.title }}" href="{{ feed_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ T.meta.site_name }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:locale" content="{{ 'es_ES' if lang == 'es' else 'en_US' }}">
+<meta property="og:image" content="{{ site.origin }}{{ site.base }}assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ T.meta.og_alt }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0a12">
+<link rel="icon" href="{{ site.base }}assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ site.base }}assets/css/site.css">
+<script src="{{ site.base }}assets/js/site.js" defer></script>
+{% block head %}{% endblock %}
+</head>
+<body class="page-{{ page }}">
+<div class="sky" aria-hidden="true"></div>
+<a class="skip" href="#main">{{ T.nav.skip }}</a>
+<header class="topbar">
+  <div class="topbar__row wrap">
+    <a class="brand" href="{{ site.base }}{{ path_for(lang, 'home') }}" aria-label="{{ T.meta.site_name }} · {{ T.nav.home }}">
+      <span class="brand__mark" aria-hidden="true">VI</span><span class="brand__name">PC&nbsp;Tracker</span>
+    </a>
+    <div class="ticker" role="region" aria-label="{{ T.header.ticker }}">
+      <span class="ticker__label">{{ T.header.ticker }}</span>
+      {% if ticker %}
+      <div class="ticker__list">
+        <ul class="ticker__track">
+        {% for e in ticker %}<li data-ts="{{ e.created }}"><a href="{{ e.url }}" target="_blank" rel="noopener noreferrer nofollow" title="{{ T.external }}">{{ e.title }}</a> <span class="muted">· {{ m.time(e.created, e.rel) }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      {% else %}<span class="muted">{{ T.header.ticker_empty }}</span>{% endif %}
+    </div>
+    <div class="controls">
+      <span class="newcount" hidden data-one="{{ T.header.new_since_one }}" data-many="{{ T.header.new_since_many }}" data-badge="{{ T.header.new_badge }}"></span>
+      <a class="ctrl" href="{{ alt[other] }}" hreflang="{{ other }}" lang="{{ other }}" data-keep-hash title="{{ T.nav.lang_switch }}"><span aria-hidden="true">{{ T.nav.lang_short_other }}</span><span class="sr-only">{{ T.nav.lang_switch }}</span></a>
+      <button class="ctrl" type="button" data-theme-toggle data-day="{{ T.nav.theme_day }}" data-night="{{ T.nav.theme_night }}" aria-label="{{ T.nav.theme }}" hidden><span aria-hidden="true">◐</span></button>
+    </div>
+  </div>
+  <nav class="index wrap" aria-label="{{ T.nav.index }}">
+    {% set base_home = site.base ~ path_for(lang, 'home') if page != 'home' else '' %}
+    <a href="{{ base_home }}#status">{{ T.nav.status }}</a>
+    <a href="{{ base_home }}#projects">{{ T.nav.projects }}</a>
+    <a href="{{ base_home }}#news">{{ T.nav.news }}</a>
+    <a href="{{ base_home }}#media">{{ T.nav.media }}</a>
+    <a href="{{ base_home }}#eta">{{ T.nav.eta }}</a>
+    <a href="{{ base_home }}#radar">{{ T.nav.radar }}</a>
+    <a href="{{ base_home }}#deeper">{{ T.nav.deeper }}</a>
+    <a href="{{ base_home }}#faq">{{ T.nav.faq }}</a>
+    <a href="{{ base_home }}#history">{{ T.nav.history }}</a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <section aria-labelledby="ft-sources">
+      <h2 id="ft-sources" class="h-eyebrow">{{ T.sections.system }}</h2>
+      <ul class="health">
+        {% for s in sources %}
+        <li class="health__item {{ 'is-ok' if s.ok else 'is-fail' }}{{ ' is-warn' if s.warn }}"><span class="health__dot" aria-hidden="true"></span>{{ s.name }} <span class="sr-only">: {{ T.system.ok if s.ok else T.system.failing }}</span></li>
+        {% endfor %}
+      </ul>
+      <p><a href="{{ site.base }}{{ path_for(lang, 'status') }}">{{ T.system.see_all }} →</a></p>
+    </section>
+    <section aria-labelledby="ft-legal">
+      <h2 id="ft-legal" class="h-eyebrow">{{ T.footer.legal_title }}</h2>
+      <p>{{ T.footer.legal }}</p>
+      <p>{{ T.footer.takedown }}</p>
+      <p class="muted">{{ T.footer.privacy }}</p>
+    </section>
+    <section aria-labelledby="ft-links">
+      <h2 id="ft-links" class="h-eyebrow">{{ T.meta.site_name }}</h2>
+      <ul class="plain">
+        <li><a href="https://github.com/{{ site.repo }}/issues/new?template=takedown.yml" target="_blank" rel="noopener noreferrer nofollow">{{ T.footer.takedown_link }}</a></li>
+        <li><a href="https://github.com/{{ site.repo }}/issues/new?template=suggest_source.yml" target="_blank" rel="noopener noreferrer nofollow">{{ T.footer.suggest }}</a></li>
+        <li><a href="https://github.com/{{ site.repo }}/issues/new?template=wrong_score.yml" target="_blank" rel="noopener noreferrer nofollow">{{ T.footer.wrong }}</a></li>
+        <li><a href="https://github.com/{{ site.repo }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.footer.source_code }}</a> · {{ T.footer.license }}</li>
+        <li><a href="{{ feed_url }}">{{ T.footer.rss }}</a></li>
+      </ul>
+    </section>
+  </div>
+</footer>
+</body>
+</html>

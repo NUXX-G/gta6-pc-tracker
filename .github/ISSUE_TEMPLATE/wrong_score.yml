@@ -1,0 +1,39 @@
+name: "Wrong phase or score / Fase o porcentaje incorrecto"
+description: "For maintainers and testers: correct a project's phase with evidence. Reviewed by hand. / Para mantenedores y testers: corrige la fase de un proyecto con evidencia. Se revisa a mano."
+title: "[Phase] "
+labels: ["phase"]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: "Project / Proyecto"
+      placeholder: "VIctory, XCL, ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: phase
+    attributes:
+      label: "Correct phase / Fase correcta"
+      options:
+        - "1 · Recon / Reconocimiento (shaders & assets)"
+        - "2 · Get in / Entrar (exe starts)"
+        - "3 · First look / Primer vistazo (first frame)"
+        - "4 · Menus / Menús"
+        - "5 · Inside the map / Dentro del mapa (world loads)"
+        - "6 · Lights on / Luces encendidas (world lit)"
+        - "7 · Job done / Golpe completado (playable)"
+    validations:
+      required: true
+  - type: checkboxes
+    id: partial
+    attributes:
+      label: "Partial? / ¿Parcial?"
+      options:
+        - label: "Only partly reached / Solo alcanzada en parte"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence (links to README, commits, issues, reproductions) / Evidencia (enlaces a README, commits, issues, reproducciones)"
+      description: "No game content, no spoilers, no game files. / Sin contenido del juego, sin spoilers, sin archivos del juego."
+    validations:
+      required: true

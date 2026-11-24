@@ -1,0 +1,120 @@
+{# Shared components. Everything is autoescaped; no external HTML is ever inserted. #}
+
+{% macro ext(url, text, T, cls="") -%}
+<a class="ext {{ cls }}" href="{{ url }}" target="_blank" rel="noopener noreferrer nofollow">{{ text }}<span class="sr-only"> ({{ T.external }})</span></a>
+{%- endmacro %}
+
+{% macro ext_warn(T) -%}
+<small class="ext-warn" aria-hidden="true">↗ {{ T.external }}</small>
+{%- endmacro %}
+
+{% macro cred(level, T) -%}
+<span class="cred cred--{{ level }}" title="{{ T.credibility[level ~ '_desc'] }}"><span class="cred__dot" aria-hidden="true">{{ {'confirmed': '●', 'community': '◐', 'unverified': '○', 'false': '⛔'}[level] }}</span>{{ T.credibility[level] }}</span>
+{%- endmacro %}
+
+{% macro time(iso, rel) -%}
+<time datetime="{{ iso }}" data-rel>{{ rel }}</time>
+{%- endmacro %}
+
+{% macro phasebar(phase, T) -%}
+<div class="phasebar" role="img" aria-label="{{ fmt(T.phases.label, n=phase.level) }}{% if phase.partial %} ({{ T.phases.partial }}){% endif %}">
+  {% for i in range(1, 8) %}
+  {% set st = 'done' if i < phase.level or (i == phase.level and not phase.partial) else ('half' if i == phase.level else 'todo') %}
+  <span class="phasebar__seg phasebar__seg--{{ st }}" title="{{ i }} · {{ T.phases.heist[i] }}"></span>
+  {% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro meter(score) -%}
+<svg class="meter" viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <rect class="meter__track" x="0" y="0" width="100" height="6" rx="3"></rect>
+  <rect class="meter__fill" x="0" y="0" width="{{ [score, 1]|max }}" height="6" rx="3"></rect>
+</svg>
+{%- endmacro %}
+
+{% macro status_badge(status, label) -%}
+<span class="badge badge--{{ status }}">{{ label }}</span>
+{%- endmacro %}
+
+{% macro entry_list(entries, T, visible, empty_text) -%}
+{% if entries %}
+<ul class="entries">
+  {% for e in entries[:visible] %}{{ entry(e, T) }}{% endfor %}
+</ul>
+{% if entries|length > visible %}
+<details class="more">
+  <summary>{{ T.sections.more }} ({{ entries|length - visible }})</summary>
+  <ul class="entries">
+    {% for e in entries[visible:] %}{{ entry(e, T) }}{% endfor %}
+  </ul>
+</details>
+{% endif %}
+{% else %}
+<p class="empty">{{ empty_text }}</p>
+{% endif %}
+{%- endmacro %}
+
+{% macro entry(e, T) -%}
+<li class="entry" data-ts="{{ e.created }}">
+  <div class="entry__main">
+    {% if e.url %}{{ ext(e.url, e.title, T) }}{% else %}<span>{{ e.title }}</span>{% endif %}
+    <span class="entry__meta">{{ time(e.created, e.rel) }} · {{ cred(e.credibility, T) }}</span>
+  </div>
+  {% if e.external %}{{ ext_warn(T) }}{% endif %}
+</li>
+{%- endmacro %}
+
+{% macro signal_list(list, T, kind, empty) -%}
+{% if list %}
+<ul class="signals signals--{{ kind }}">
+  {% for s in list %}
+  <li><span class="signals__icon" aria-hidden="true">{{ '+' if kind == 'good' else '−' }}</span>
+    <span>{{ s.text }} {% if s.evidence %}<a class="evidence" href="{{ s.evidence }}" target="_blank" rel="noopener noreferrer nofollow" title="{{ T.external }}">{{ T.signals.evidence }} ↗</a>{% endif %}{% if s.manual %} <span class="tag">{{ T.signals.manual }}</span>{% endif %}</span></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">{{ empty }}</p>
+{% endif %}
+{%- endmacro %}
+
+{% macro gpu_matrix(gpu, T) -%}
+<div class="table-wrap">
+<table class="rtable gpu">
+  <thead><tr><th scope="col">{{ T.gpu.vendor }}</th><th scope="col">{{ T.gpu.status }}</th><th scope="col">{{ T.gpu.models }}</th></tr></thead>
+  <tbody>
+  {% for v in ['nvidia', 'amd', 'intel'] %}
+    {% set g = gpu.get(v, {'status': 'untested', 'models': []}) %}
+    {% set st = {'ok': 'ok', 'ok_with_issues': 'ok', 'issues': 'issues', 'untested': 'untested'}[g.status] %}
+    <tr>
+      <th scope="row" data-label="{{ T.gpu.vendor }}">{{ T.gpu[v] }}</th>
+      <td data-label="{{ T.gpu.status }}"><span class="badge badge--gpu-{{ st }}">{{ T.gpu[st] }}</span>{% if g.status == 'ok_with_issues' %} <span class="badge badge--gpu-issues">{{ T.gpu.issues }}</span>{% endif %}
+        {% if g.evidence_issue %} <a class="evidence" href="{{ g.evidence_issue }}" target="_blank" rel="noopener noreferrer nofollow" title="{{ T.external }}">{{ T.signals.evidence }} ↗</a>{% endif %}</td>
+      <td data-label="{{ T.gpu.models }}">{{ g.models|join(', ') if g.models else '—' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="note">{{ T.gpu.note }}</p>
+{%- endmacro %}
+
+{% macro radar_row(c, T) -%}
+<tr data-ts="{{ c.first_seen }}" class="{{ 'is-flagged' if c.flagged }}">
+  <th scope="row" data-label="Repo">
+    {% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener noreferrer nofollow" title="{{ T.external }}">{{ c.full_name }}</a>{% else %}<span class="plain-name">{{ c.full_name }}</span>{% endif %}
+    {% if c.flagged %}<span class="badge badge--bad">⚠ {{ T.radar.flagged }}</span><small class="note">{{ c.reasons_text }}</small>{% else %}<span class="badge badge--muted">{{ T.radar.unreviewed }}</span>{% endif %}
+  </th>
+  <td data-label="{{ T.radar.stars }}">{{ c.stars }}</td>
+  <td data-label="{{ T.radar.age }}">{{ fmt(T.radar.days, n=c.age_days) if c.age_days is not none else '—' }}</td>
+  <td data-label="{{ T.radar.commits }}">{{ c.commits if c.commits is not none else '—' }}</td>
+  <td data-label="{{ T.radar.code }}">{{ T.radar.code if c.has_code else T.radar.readme_only }}</td>
+</tr>
+{%- endmacro %}
+
+{% macro link_item(l, T) -%}
+<li class="link">
+  {{ ext(l.url, l.title, T) }} <span class="tag">{{ l.lang|upper }}</span>
+  <p class="link__why">{{ l.why }}</p>
+  {{ ext_warn(T) }}
+</li>
+{%- endmacro %}

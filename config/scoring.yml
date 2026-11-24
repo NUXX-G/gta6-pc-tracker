@@ -1,0 +1,100 @@
+# Phases, percentage weights, keyword rules, commit areas, signal thresholds and estimate rules.
+# Everything the analysis does is driven from here and documented in the README.
+
+# Seven phases ("the heist"). score = percentage when the phase is fully reached.
+# A "partial" phase scores half-way between the previous phase and this one.
+# Phase 1 (preparation) spans 0-25 %: fully prepared = 20; the exe booting = 25.
+phases:
+  1: {score: 20, key: prep}
+  2: {score: 25, key: boot}
+  3: {score: 40, key: first_frame}
+  4: {score: 55, key: menus}
+  5: {score: 70, key: world_loads}
+  6: {score: 80, key: world_lit}
+  7: {score: 90, key: playable}
+stable_score: 100        # phase 7 + "stable" flag (manual)
+
+# Keyword detector over README text (case-insensitive regex). Highest matching level wins.
+# A match is ignored when a negation appears just before it (see credibility.yml: negations).
+phase_rules:
+  7: ["\\b(30|60) ?fps (in|inside) the world\\b", "\\b(gta vi|the game|the title) is (now )?(fully )?playable\\b"]
+  6: ["\\bworld (is )?(fully )?(rendered|lit)\\b", "\\blighting (works|is done)\\b"]
+  5: ["\\bload(s|ing)? (into )?the world\\b", "\\bworld load", "\\breached the world\\b", "\\bin the world\\b", "\\bloading into the world\\b"]
+  4: ["\\bmain menu", "\\bits menus\\b", "\\bmenus (at|run|work)", "\\bstart screen\\b", "\\bfirst-run screens\\b"]
+  3: ["\\bfirst frame\\b", "\\bpresents? (frames|its logo)\\b", "\\bintro video\\b", "\\brenders its first\\b", "\\bpresented frame\\b"]
+  2: ["\\bthe (game|title) boots\\b", "\\bboots\\b", "\\bexecutable (starts|runs)\\b", "\\breaches its (own )?render code\\b", "\\bwell past renderer setup\\b"]
+  1: ["\\bshaders?\\b.*\\btranslat", "\\btranslat\\w* .*shaders?\\b"]
+
+# README status-table rows → canonical stage (first matching regex wins; order matters).
+table_stages:
+  - {stage: shaders, re: "shader|spir|dxil|hlsl"}
+  - {stage: textures, re: "texture|bcpack|tiling"}
+  - {stage: assets, re: "model|asset|archive|rpf|corpus"}
+  - {stage: lighting, re: "light|illuminat|ilumin"}
+  - {stage: world, re: "world|mundo|scene"}
+  - {stage: loading, re: "loading|carga|streaming"}
+  - {stage: boot, re: "boot|startup|arranque|booting"}
+  - {stage: menus, re: "menu|start screen|profile|save|first-boot|first-run|setting"}
+  - {stage: video, re: "video|bink|movie|intro"}
+  - {stage: frame, re: "frame|present"}
+  - {stage: audio, re: "audio|sound|xma|opus"}
+  - {stage: input, re: "input|pad|keyboard"}
+  - {stage: gpu, re: "gpu|d3d12|vulkan|graphics|pipeline|render"}
+  - {stage: loader, re: "loader|image|platform|runtime|import|kernel|pe\\b|memory"}
+  - {stage: network, re: "network|online"}
+  - {stage: storage, re: "storage|file"}
+  - {stage: series_s, re: "series s"}
+  - {stage: other, re: "."}
+
+# Row state → level. Checked in order on the "state" cell (lowercase).
+table_states:
+  - {state: "no", re: "not reached|❌|\\bno\\b|not yet|missing|fails|refus|untested"}
+  - {state: partial, re: "⚠|in progress|partial|reached and|still|some|🚧|\\?|measured"}
+  - {state: ok, re: "✅|\\bworks?\\b|\\bdone\\b|\\byes\\b|exported|passed|translated|\\bok\\b|\\d+ ?fps"}
+
+# How canonical README rows map to phases (used to detect "README row improved/worsened" and the auto phase).
+stage_phase: {shaders: 1, textures: 1, assets: 1, boot: 2, frame: 3, video: 3, menus: 4, loading: 5, world: 5, lighting: 6}
+
+# Commit area classification (regex on file paths and on the commit message).
+commit_areas:
+  gpu:      {files: "d3d12|gpu|render|vulkan|dx12|pipeline|graphics|present|swapchain", message: "\\b(gpu|d3d12|render|vulkan|pipeline|draw|present|descriptor)"}
+  shaders:  {files: "shader|dxil|spirv|hlsl|rdna|gfx10|isa", message: "\\b(shader|dxil|spir-?v|hlsl|rdna|wave(32|64)|ps|vs|cs)\\b"}
+  audio:    {files: "audio|xma|opus|xaudio|sound|apu", message: "\\b(audio|xma|opus|xaudio|sound|apu)"}
+  input:    {files: "input|xinput|gamepad|keyboard|gameinput|sdl", message: "\\b(input|xinput|gamepad|keyboard|controller|rumble)"}
+  loader:   {files: "loader|runtime|kernel|import|xgameruntime|thunk|tls|mem|file|storage|pe/", message: "\\b(loader|runtime|kernelx?|import|thunk|tls|memory|heap|xgameruntime|storage|boot)"}
+  perf:     {files: "perf|bench|cache|pool", message: "\\b(perf|faster|speed|optimi[sz]|cache|latency|parallel|fps)"}
+  vendor:   {files: "nvidia|amd|intel|wave64|wave32", message: "\\b(nvidia|amd|intel|radeon|geforce|rtx|wave64|wave32|driver)"}
+  docs:     {files: "readme|docs/|\\.md$|\\.txt$", message: "\\b(readme|docs?|typo|documentation)\\b"}
+
+# Good/bad signal thresholds.
+signals:
+  activity_ratio_good: 1.5      # commits in 24h vs daily average of the last 7 days
+  activity_ratio_bad: 0.25
+  min_commits_for_ratio: 4
+  stale_hours_bad: 48
+  crash_issues_bad: 3
+  stars_growth_good_24h: 150
+  contributors_growth_good: 2
+
+# Estimates (rule-based, wide ranges, always labelled as indicative).
+estimates:
+  days_per_phase:
+    2: [2, 10]
+    3: [3, 14]
+    4: [3, 21]
+    5: [7, 30]
+    6: [14, 60]
+    7: [30, 180]
+  activity_factor: {high: 0.7, normal: 1.0, low: 1.6}
+  high_commits_7d: 60
+  low_commits_7d: 10
+
+# GPU extraction.
+gpu:
+  vendors:
+    nvidia: "\\b(nvidia|geforce|rtx ?\\d{4}( ?(ti|super))?|gtx ?\\d{3,4}( ?ti)?)\\b"
+    amd: "\\b(amd|radeon|rx ?\\d{3,4}( ?xtx?)?|rdna ?\\d)\\b"
+    intel: "\\b(intel arc|arc ?[ab]\\d{3}|intel (iris|uhd)|intel gen\\d+)\\b"
+  model: "\\b(rtx ?\\d{4}(?: ?(?:ti|super))?(?: laptop)?|gtx ?\\d{3,4}(?: ti)?|rx ?\\d{3,4}(?: ?xtx?)?|arc ?[ab]\\d{3})\\b"
+  ok_context: "tested|measured|works|runs|on an?|verified|matched|passed|probado"
+  problem_keywords: [crash, hang, tdr, "black screen", "device removed", artifact, freeze, fails, broken, wave64]

@@ -1,0 +1,34 @@
+{
+ "items": [
+  {
+   "full_name": "newdev/scarlett-runtime",
+   "html_url": "https://github.com/newdev/scarlett-runtime",
+   "stargazers_count": 40,
+   "created_at": "2026-11-20T00:00:00Z",
+   "pushed_at": "2026-11-24T10:00:00Z",
+   "language": "C++",
+   "size": 900,
+   "fork": false
+  },
+  {
+   "full_name": "shady/GTA6-PC-Port",
+   "html_url": "https://github.com/shady/GTA6-PC-Port",
+   "stargazers_count": 15,
+   "created_at": "2026-11-23T00:00:00Z",
+   "pushed_at": "2026-11-24T10:00:00Z",
+   "language": null,
+   "size": 2,
+   "fork": false
+  },
+  {
+   "full_name": "bad/gta6-free-download",
+   "html_url": "https://github.com/bad/gta6-free-download",
+   "stargazers_count": 3,
+   "created_at": "2026-11-23T00:00:00Z",
+   "pushed_at": "2026-11-24T10:00:00Z",
+   "language": null,
+   "size": 1,
+   "fork": false
+  }
+ ]
+}

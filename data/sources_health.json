@@ -1,0 +1,93 @@
+{
+ "generated": "2026-11-24T12:59:41Z",
+ "sources": {
+  "github": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 9,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "dmca": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 412,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "trackers": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 3,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "discovery": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 25,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "reddit": {
+   "last_ok": null,
+   "last_fail": "2026-11-24T12:59:41Z",
+   "items": 0,
+   "error": "HTTP 403 for https://www.reddit.com (blocked from this runner: json:403, rss:429)",
+   "ok_this_run": false,
+   "failing_since": "2026-11-24T12:59:41Z"
+  },
+  "hn": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 8,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "bluesky": {
+   "last_ok": null,
+   "last_fail": "2026-11-24T12:59:41Z",
+   "items": 0,
+   "error": "HTTP 403 for bluesky (all queries failed)",
+   "ok_this_run": false,
+   "failing_since": "2026-11-24T12:59:41Z"
+  },
+  "mastodon": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 14,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "lemmy": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 32,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null
+  },
+  "news": {
+   "last_ok": "2026-11-24T12:59:41Z",
+   "last_fail": null,
+   "items": 38,
+   "error": null,
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": 209
+  }
+ }
+}

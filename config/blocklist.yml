@@ -1,0 +1,5 @@
+# Manual blocklist. Anything here is never linked and is shown (if at all) as plain text with a warning.
+# repos: "owner/name" (case-insensitive). owners: whole accounts. domains: never linked or stored.
+repos: []
+owners: []
+domains: []

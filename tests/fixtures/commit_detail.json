@@ -1,0 +1,10 @@
+{
+ "files": [
+  {
+   "filename": "src/gpu/d3d12/heap.rs"
+  },
+  {
+   "filename": "src/shaders/rdna.rs"
+  }
+ ]
+}

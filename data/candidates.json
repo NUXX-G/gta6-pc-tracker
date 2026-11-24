@@ -1,0 +1,503 @@
+{
+ "generated": "2026-11-24T12:59:41Z",
+ "candidates": [
+  {
+   "full_name": "4lwayz/portwatch-vi",
+   "url": "https://github.com/4lwayz/portwatch-vi",
+   "stars": 1763,
+   "created_at": "2026-11-21T23:16:41Z",
+   "pushed_at": "2026-11-24T13:00:21Z",
+   "age_days": 2,
+   "language": "JavaScript",
+   "size_kb": 2459,
+   "has_code": true,
+   "commits": 104,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.033
+  },
+  {
+   "full_name": "omonkeyz/xbox-emulator",
+   "url": "https://github.com/omonkeyz/xbox-emulator",
+   "stars": 1750,
+   "created_at": "2026-11-21T08:08:39Z",
+   "pushed_at": "2026-11-23T11:58:17Z",
+   "age_days": 3,
+   "language": "Rust",
+   "size_kb": 8748,
+   "has_code": true,
+   "commits": 359,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.041
+  },
+  {
+   "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
+   "url": "https://github.com/Ahmet-Dedeler/awesome-gta6-reverse-engineering",
+   "stars": 646,
+   "created_at": "2026-11-21T17:08:48Z",
+   "pushed_at": "2026-11-24T03:06:55Z",
+   "age_days": 2,
+   "language": "HTML",
+   "size_kb": 6006,
+   "has_code": true,
+   "commits": 33,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.047
+  },
+  {
+   "full_name": "Shagg88/COGBox",
+   "url": "https://github.com/Shagg88/COGBox",
+   "stars": 562,
+   "created_at": "2026-10-27T04:28:46Z",
+   "pushed_at": "2026-11-24T04:47:43Z",
+   "age_days": 28,
+   "language": "C++",
+   "size_kb": 13061,
+   "has_code": true,
+   "commits": 792,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    },
+    {
+     "code": "hosting"
+    },
+    {
+     "code": "password"
+    }
+   ],
+   "similarity": 0.038
+  },
+  {
+   "full_name": "ProjectLeonidaL/leonida",
+   "url": "https://github.com/ProjectLeonidaL/leonida",
+   "stars": 234,
+   "created_at": "2026-11-24T02:20:14Z",
+   "pushed_at": "2026-11-24T12:41:21Z",
+   "age_days": 0,
+   "language": "Python",
+   "size_kb": 11810,
+   "has_code": true,
+   "commits": 38,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.269
+  },
+  {
+   "full_name": "sammwyy/xvalkyrie",
+   "url": "https://github.com/sammwyy/xvalkyrie",
+   "stars": 213,
+   "created_at": "2026-11-20T00:25:27Z",
+   "pushed_at": "2026-11-23T19:24:06Z",
+   "age_days": 4,
+   "language": "C++",
+   "size_kb": 3796,
+   "has_code": true,
+   "commits": 314,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.047
+  },
+  {
+   "full_name": "drycheetah84/TomBox",
+   "url": "https://github.com/drycheetah84/TomBox",
+   "stars": 97,
+   "created_at": "2026-11-17T04:56:20Z",
+   "pushed_at": "2026-11-22T22:42:07Z",
+   "age_days": 7,
+   "language": "Rust",
+   "size_kb": 5379,
+   "has_code": true,
+   "commits": 142,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.053
+  },
+  {
+   "full_name": "ranveersoni98/Xenora",
+   "url": "https://github.com/ranveersoni98/Xenora",
+   "stars": 93,
+   "created_at": "2026-11-22T03:52:19Z",
+   "pushed_at": "2026-11-24T12:43:10Z",
+   "age_days": 2,
+   "language": "Rust",
+   "size_kb": 1959,
+   "has_code": true,
+   "commits": 336,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.03
+  },
+  {
+   "full_name": "pixl27/ProjectReCity",
+   "url": "https://github.com/pixl27/ProjectReCity",
+   "stars": 46,
+   "created_at": "2026-11-22T04:40:06Z",
+   "pushed_at": "2026-11-22T05:54:55Z",
+   "age_days": 2,
+   "language": "Python",
+   "size_kb": 5782,
+   "has_code": true,
+   "commits": 1865,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.115
+  },
+  {
+   "full_name": "fablinoo/palmwave",
+   "url": "https://github.com/fablinoo/palmwave",
+   "stars": 46,
+   "created_at": "2026-11-23T18:24:29Z",
+   "pushed_at": "2026-11-24T12:54:33Z",
+   "age_days": 0,
+   "language": "Rust",
+   "size_kb": 17217,
+   "has_code": true,
+   "commits": 747,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.056
+  },
+  {
+   "full_name": "emelin2004/rpcs3-xbox",
+   "url": "https://github.com/emelin2004/rpcs3-xbox",
+   "stars": 38,
+   "created_at": "2026-10-15T11:42:24Z",
+   "pushed_at": "2026-11-18T14:52:36Z",
+   "age_days": 40,
+   "language": "C++",
+   "size_kb": 156153,
+   "has_code": true,
+   "commits": 20947,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "password"
+    }
+   ],
+   "similarity": 0.035
+  },
+  {
+   "full_name": "jadeowaowa/scarlett-layer",
+   "url": "https://github.com/jadeowaowa/scarlett-layer",
+   "stars": 35,
+   "created_at": "2026-11-20T23:54:18Z",
+   "pushed_at": "2026-11-24T00:30:36Z",
+   "age_days": 3,
+   "language": "C++",
+   "size_kb": 1154,
+   "has_code": true,
+   "commits": 161,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.036
+  },
+  {
+   "full_name": "IAmNotSiob/leonida-ce",
+   "url": "https://github.com/IAmNotSiob/leonida-ce",
+   "stars": 19,
+   "created_at": "2026-11-24T01:22:10Z",
+   "pushed_at": "2026-11-24T12:58:48Z",
+   "age_days": 0,
+   "language": "Python",
+   "size_kb": 44009,
+   "has_code": true,
+   "commits": 11404,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "similar",
+     "pct": 88,
+     "repo": "ubiquitarianism/leonida"
+    }
+   ],
+   "similarity": 0.881
+  },
+  {
+   "full_name": "WebConstableReckon/GTA-VI-Windows-Beta-PC",
+   "url": "https://github.com/WebConstableReckon/GTA-VI-Windows-Beta-PC",
+   "stars": 19,
+   "created_at": "2026-11-24T12:03:31Z",
+   "pushed_at": "2026-11-24T12:03:43Z",
+   "age_days": 0,
+   "language": null,
+   "size_kb": 0,
+   "has_code": false,
+   "commits": 2,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "password"
+    },
+    {
+     "code": "setup"
+    },
+    {
+     "code": "external"
+    }
+   ],
+   "similarity": 0.033
+  },
+  {
+   "full_name": "ViceroyModulator/gta6-ps5-pro-to-windows",
+   "url": "https://github.com/ViceroyModulator/gta6-ps5-pro-to-windows",
+   "stars": 17,
+   "created_at": "2026-11-24T12:03:14Z",
+   "pushed_at": "2026-11-24T12:03:24Z",
+   "age_days": 0,
+   "language": null,
+   "size_kb": 0,
+   "has_code": false,
+   "commits": 2,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "password"
+    }
+   ],
+   "similarity": 0.038
+  },
+  {
+   "full_name": "vuyp/gta6-pc-race",
+   "url": "https://github.com/vuyp/gta6-pc-race",
+   "stars": 11,
+   "created_at": "2026-11-23T17:27:05Z",
+   "pushed_at": "2026-11-24T12:47:09Z",
+   "age_days": 0,
+   "language": "HTML",
+   "size_kb": 292,
+   "has_code": true,
+   "commits": 71,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.036
+  },
+  {
+   "full_name": "BSXbox/BSXbox",
+   "url": "https://github.com/BSXbox/BSXbox",
+   "stars": 11,
+   "created_at": "2026-11-22T11:09:31Z",
+   "pushed_at": "2026-11-23T17:57:40Z",
+   "age_days": 2,
+   "language": "C++",
+   "size_kb": 93,
+   "has_code": true,
+   "commits": 21,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.026
+  },
+  {
+   "full_name": "Guernica4u/GTA6-PC-Port-Archive",
+   "url": "https://github.com/Guernica4u/GTA6-PC-Port-Archive",
+   "stars": 8,
+   "created_at": "2026-11-24T01:15:37Z",
+   "pushed_at": "2026-11-24T09:37:26Z",
+   "age_days": 0,
+   "language": "Python",
+   "size_kb": 645793,
+   "has_code": true,
+   "commits": 15,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.041
+  },
+  {
+   "full_name": "Mizushi148/MizuBox",
+   "url": "https://github.com/Mizushi148/MizuBox",
+   "stars": 8,
+   "created_at": "2026-11-22T18:25:09Z",
+   "pushed_at": "2026-11-22T18:31:35Z",
+   "age_days": 1,
+   "language": "C++",
+   "size_kb": 1509,
+   "has_code": true,
+   "commits": 4,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.054
+  },
+  {
+   "full_name": "WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
+   "url": "https://github.com/WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
+   "stars": 7,
+   "created_at": "2026-11-24T12:27:02Z",
+   "pushed_at": "2026-11-24T12:27:13Z",
+   "age_days": 0,
+   "language": null,
+   "size_kb": 0,
+   "has_code": false,
+   "commits": 2,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "password"
+    },
+    {
+     "code": "setup"
+    },
+    {
+     "code": "external"
+    }
+   ],
+   "similarity": 0.032
+  },
+  {
+   "full_name": "Kajcsi/G6Recomp",
+   "url": "https://github.com/Kajcsi/G6Recomp",
+   "stars": 6,
+   "created_at": "2026-11-20T15:07:18Z",
+   "pushed_at": "2026-11-24T07:52:34Z",
+   "age_days": 3,
+   "language": "C++",
+   "size_kb": 937,
+   "has_code": true,
+   "commits": 61,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.084
+  },
+  {
+   "full_name": "Batushn/KestrelX",
+   "url": "https://github.com/Batushn/KestrelX",
+   "stars": 6,
+   "created_at": "2026-11-23T20:41:28Z",
+   "pushed_at": "2026-11-24T02:52:07Z",
+   "age_days": 0,
+   "language": "C++",
+   "size_kb": 902,
+   "has_code": true,
+   "commits": 37,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.027
+  },
+  {
+   "full_name": "DesignWithTommy/Neonbridge",
+   "url": "https://github.com/DesignWithTommy/Neonbridge",
+   "stars": 4,
+   "created_at": "2026-11-23T23:52:16Z",
+   "pushed_at": "2026-11-24T12:58:52Z",
+   "age_days": 0,
+   "language": "Rust",
+   "size_kb": 3240,
+   "has_code": true,
+   "commits": 403,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.064
+  },
+  {
+   "full_name": "Yeetbot159/Longshot-Xbox",
+   "url": "https://github.com/Yeetbot159/Longshot-Xbox",
+   "stars": 3,
+   "created_at": "2026-11-15T12:24:09Z",
+   "pushed_at": "2026-11-23T16:43:15Z",
+   "age_days": 9,
+   "language": "C++",
+   "size_kb": 33865,
+   "has_code": true,
+   "commits": 2315,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.055
+  },
+  {
+   "full_name": "puffnfresh/rebox",
+   "url": "https://github.com/puffnfresh/rebox",
+   "stars": 3,
+   "created_at": "2026-11-23T12:13:18Z",
+   "pushed_at": "2026-11-24T12:57:25Z",
+   "age_days": 1,
+   "language": "C",
+   "size_kb": 8811,
+   "has_code": true,
+   "commits": 491,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.03
+  }
+ ],
+ "forks_flagged": [
+  {
+   "full_name": "theaustinayers/xcl",
+   "flagged": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.554,
+   "similar_to": "ivall/xcl"
+  }
+ ]
+}

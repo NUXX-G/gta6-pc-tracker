@@ -1,0 +1,124 @@
+[
+ {
+  "match": "api\\.github\\.com/repos/github/dmca/contents/\\d{4}/\\d{2}$",
+  "file": "dmca_list.json"
+ },
+ {
+  "match": "api\\.github\\.com/repos/github/dmca/contents/.+\\.md$",
+  "file": "dmca_notice.md"
+ },
+ {
+  "match": "api\\.github\\.com/search/repositories",
+  "file": "search.json"
+ },
+ {
+  "match": "api\\.github\\.com/repos/shady/GTA6-PC-Port/readme",
+  "file": "clone_readme.md"
+ },
+ {
+  "match": "api\\.github\\.com/repos/shady/GTA6-PC-Port/releases",
+  "file": "clone_releases.json"
+ },
+ {
+  "match": "api\\.github\\.com/repos/newdev/scarlett-runtime/readme",
+  "file": "candidate_readme.md"
+ },
+ {
+  "match": "api\\.github\\.com/repos/LeonidaReforge/Leonida$",
+  "status": 404
+ },
+ {
+  "match": "api\\.github\\.com/repos/[^/]+/[^/?]+$",
+  "file": "repo.json"
+ },
+ {
+  "match": "/contributors\\?",
+  "file": "contributors.json",
+  "headers": {
+   "link": "<https://api.github.com/x?per_page=1&page=37>; rel=\"last\""
+  }
+ },
+ {
+  "match": "/commits/[0-9a-f]{10,}$",
+  "file": "commit_detail.json"
+ },
+ {
+  "match": "/commits\\?",
+  "file": "commits.json"
+ },
+ {
+  "match": "/pulls\\?state=open",
+  "file": "pulls_open.json",
+  "headers": {
+   "link": "<https://api.github.com/x?per_page=1&page=14>; rel=\"last\""
+  }
+ },
+ {
+  "match": "/pulls\\?state=closed",
+  "file": "pulls_closed.json"
+ },
+ {
+  "match": "/issues\\?",
+  "file": "issues.json"
+ },
+ {
+  "match": "/releases\\?",
+  "file": "releases.json"
+ },
+ {
+  "match": "/readme$",
+  "file": "readme.md"
+ },
+ {
+  "match": "/forks\\?",
+  "file": "forks.json"
+ },
+ {
+  "match": "reddit\\.com/r/[^/]+/search\\.json",
+  "file": "reddit.json"
+ },
+ {
+  "match": "reddit\\.com/.+\\.rss",
+  "status": 403
+ },
+ {
+  "match": "hn\\.algolia\\.com",
+  "file": "hn.json"
+ },
+ {
+  "match": "bsky\\.app",
+  "status": 403
+ },
+ {
+  "match": "mastodon\\.social/api",
+  "file": "mastodon.json"
+ },
+ {
+  "match": "lemmy\\.world/api",
+  "file": "lemmy.json"
+ },
+ {
+  "match": "news\\.google\\.com",
+  "file": "gnews.xml"
+ },
+ {
+  "match": "notebookcheck\\.net",
+  "file": "publisher.xml"
+ },
+ {
+  "match": "videocardz\\.com|dsogaming\\.com",
+  "status": 403
+ },
+ {
+  "match": "portwatch-vi\\.xyz/data/tracker\\.json",
+  "file": "portwatch.json"
+ },
+ {
+  "match": "vuyp\\.github\\.io",
+  "file": "vuyp.html"
+ },
+ {
+  "match": "mtwildwood",
+  "status": 403
+ }
+]

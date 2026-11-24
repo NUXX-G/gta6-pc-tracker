@@ -1,0 +1,41 @@
+name: "Takedown request / Solicitud de retirada"
+description: "Ask us to remove a link or content. We remove first and review afterwards. / Pídenos retirar un enlace o contenido. Retiramos primero y revisamos después."
+title: "[Takedown] "
+labels: ["takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **EN:** Tell us exactly what to remove. Do not paste copyrighted material or personal data here.
+        **ES:** Indica exactamente qué hay que retirar. No pegues material protegido ni datos personales aquí.
+  - type: input
+    id: url
+    attributes:
+      label: "Page or link to remove / Página o enlace a retirar"
+      placeholder: "https://nuxx-g.github.io/gta6-pc-tracker/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: "Reason / Motivo"
+      options:
+        - "Copyright / Derechos de autor"
+        - "Spoiler"
+        - "Personal data / Datos personales"
+        - "Harmful or malicious link / Enlace dañino o malicioso"
+        - "Other / Otro"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "Details / Detalles"
+      description: "Who you represent, if anyone, and anything that helps us act fast. / A quién representas, si es el caso, y lo que nos ayude a actuar rápido."
+  - type: checkboxes
+    id: good_faith
+    attributes:
+      label: "Confirmation / Confirmación"
+      options:
+        - label: "I make this request in good faith. / Hago esta solicitud de buena fe."
+          required: true

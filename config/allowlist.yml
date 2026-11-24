@@ -1,0 +1,28 @@
+# Only these domains (and their subdomains) may be linked or stored. Extend as needed.
+domains:
+  - github.com
+  - gitlab.com
+  - reddit.com
+  - redd.it
+  - i.redd.it
+  - preview.redd.it
+  - v.redd.it
+  - news.ycombinator.com
+  - bsky.app
+  - mastodon.social
+  - lemmy.world
+  - videocardz.com
+  - notebookcheck.net
+  - pcgamer.com
+  - gamesradar.com
+  - vgtimes.com
+  - tarreo.com
+  - dsogaming.com
+  - xda-developers.com
+  - eurogamer.net
+  - ign.com
+  - kotaku.com
+  - videogameschronicle.com
+  - vuyp.github.io
+  - portwatch-vi.xyz
+  - gta.mtwildwood.net

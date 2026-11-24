@@ -1,0 +1,217 @@
+# Tracked projects. Edit by hand; the hourly job never adds entries here.
+# Fields:
+#   name, slug, repo (owner/name), language (fallback if the API says nothing), priority (lower = shown first on ties)
+#   phase: optional manual override {level: 1-7, partial: bool, note_es, note_en}. Wins over the keyword detector.
+#   goal_*/approach_*/technical_*/requirements_*: our own short texts, written from the project's README.
+#   strengths/weaknesses: list of {es, en, evidence} where evidence is a URL in the allowlist.
+# Rule: neutral, technical wording only. No game content.
+
+projects:
+  - name: VIctory
+    slug: victory
+    repo: Marvisak/VIctory
+    language: Rust
+    priority: 1
+    phase: {level: 5, partial: false,
+            note_es: "Menús a 30 fps y carga del mundo; la escena 3D aún sale oscura y va a segundos por frame.",
+            note_en: "Menus at 30 fps and the world loads; the 3D scene is still dark and takes seconds per frame."}
+    goal_es: "Ejecutar de forma nativa en Windows la versión de Xbox Series a partir de los archivos que aporta el usuario."
+    goal_en: "Run the Xbox Series build natively on Windows from files the user supplies."
+    approach_es: "Capa de compatibilidad en Rust: el código x86-64 del juego corre tal cual y VIctory pone debajo la plataforma de consola sobre Direct3D 12."
+    approach_en: "Rust compatibility layer: the game's x86-64 code runs unchanged and VIctory provides the console platform underneath on Direct3D 12."
+    technical_es: "Cargador propio para el ejecutable y sus DLL, servicios de sistema offline, lectura de archivos y streaming con descompresión zlib y BCPack, audio XMA y Opus, y recompilación de shaders de consola a DXIL en el primer uso con caché en disco. En la escena 3D quedan shaders sin traducir (mesh 8.191 de 8.506; vertex/pixel 10.617 de 12.346; compute 1.643 de 2.539)."
+    technical_en: "Own loader for the executable and its DLLs, offline system services, archive reading and streaming with zlib and BCPack decoding, XMA and Opus audio, and console shaders recompiled to DXIL on first use with a disk cache. Some 3D-scene shaders are still untranslated (mesh 8,191 of 8,506; vertex/pixel 10,617 of 12,346; compute 1,643 of 2,539)."
+    requirements_es: "Windows 10/11 x64, CPU con AVX2, GPU Direct3D 12 con shader model 6.6 y mesh shaders."
+    requirements_en: "Windows 10/11 x64, AVX2 CPU, Direct3D 12 GPU with shader model 6.6 and mesh shaders."
+    strengths:
+      - {es: "Es el que más lejos ha llegado en público: menús a 30 fps y carga del mundo en unos 50 s.", en: "Furthest public progress: menus at 30 fps and the world loads in about 50 s.", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
+      - {es: "Tabla de estado honesta, con lo que funciona y lo que falta por subsistema.", en: "Honest status table listing what works and what is missing per subsystem.", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
+      - {es: "Comunidad grande: miles de estrellas y más de mil forks.", en: "Large community: thousands of stars and over a thousand forks.", evidence: "https://github.com/Marvisak/VIctory"}
+    weaknesses:
+      - {es: "Dentro del mundo la imagen sigue oscura y cada frame tarda entre 0,5 y 1,8 s.", en: "Inside the world the picture is still dark and each frame takes 0.5–1.8 s.", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
+      - {es: "Entrar al mundo en una GPU real puede colgarla y provocar un reinicio del driver (TDR).", en: "Entering the world on a real GPU can hang it and trigger a driver reset (TDR).", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
+      - {es: "Probado en una sola máquina (AMD RX 6700 XT).", en: "Tested on a single machine (AMD RX 6700 XT).", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
+
+  - name: XCL
+    slug: xcl
+    repo: ivall/xcl
+    language: Rust
+    priority: 2
+    phase: {level: 4, partial: false,
+            note_es: "Arranca en unos 4 s y muestra sus menús a 30 fps estables; todavía no entra en partida.",
+            note_en: "Starts in about 4 s and shows its menus at a steady 30 fps; gameplay not reached yet."}
+    goal_es: "Capa de compatibilidad general (al estilo Wine/Proton) para ejecutar en Windows juegos de Xbox Series que poseas."
+    goal_en: "General compatibility layer (in the spirit of Wine/Proton) to run Xbox Series games you own on Windows."
+    approach_es: "Sin emulación de CPU: reimplementa las bibliotecas de sistema de la consola y recompila el código de GPU RDNA2 a HLSL y DXIL."
+    approach_en: "No CPU emulation: it reimplements the console system libraries and recompiles RDNA2 GPU code to HLSL and DXIL."
+    technical_es: "Cargador PE completo, kernelx, memoria gráfica compartida CPU/GPU de hasta 16 GB, DirectStorage con BCPack, XGameRuntime offline, entrada GameInput, XAudio2, recompilador de shaders RDNA2→HLSL→DXIL (26.698 de 26.698 programas de un juego comercial), detiling de texturas GFX10, trazado de rayos con el constructor BVH del propio juego y FSR 4 de consola ejecutado en GPU de PC."
+    technical_en: "Full PE loader, kernelx, CPU/GPU shared graphics memory up to 16 GB, DirectStorage with BCPack, offline XGameRuntime, GameInput, XAudio2, an RDNA2→HLSL→DXIL shader recompiler (26,698 of 26,698 programs of a retail game), GFX10 texture detiling, ray tracing through the game's own BVH builder and the console FSR 4 running on a PC GPU."
+    requirements_es: "Windows x64 con GPU Direct3D 12; el README indica ~15 GB de memoria comprometida en menús (pensado para 32 GB)."
+    requirements_en: "Windows x64 with a Direct3D 12 GPU; the README reports ~15 GB committed in menus (fits a 32 GB machine)."
+    strengths:
+      - {es: "Ya ejecuta otros juegos de Xbox Series completos (Minecraft Preview, Unicorn Overlord), lo que avala la base.", en: "Already runs other Xbox Series games fully (Minecraft Preview, Unicorn Overlord), which backs the foundation.", evidence: "https://github.com/ivall/xcl#games"}
+      - {es: "Traduce el 100 % de los shaders del juego objetivo y tiene más de 370 tests automáticos.", en: "Translates 100% of the target game's shaders and has 370+ automated tests.", evidence: "https://github.com/ivall/xcl#highlights"}
+      - {es: "Menús estables a 30 fps y arranque en unos 4 s.", en: "Stable menus at 30 fps and about 4 s to start.", evidence: "https://github.com/ivall/xcl#games"}
+    weaknesses:
+      - {es: "Todavía no llega a la partida; algunas pipelines mesh del minimapa se rechazan.", en: "Gameplay not reached yet; some minimap mesh pipelines are refused.", evidence: "https://github.com/ivall/xcl#games"}
+      - {es: "Consumo de memoria alto (~15 GB comprometidos ya en los menús).", en: "High memory use (~15 GB committed already in the menus).", evidence: "https://github.com/ivall/xcl#games"}
+
+  - name: Five Star Recomp
+    slug: five-star-recomp
+    repo: ThatRecompDev/five-star-recomp
+    language: C#
+    priority: 3
+    phase: {level: 5, partial: true,
+            note_es: "Presenta logo, vídeo de introducción y pantallas de primer arranque; empieza a cargar la partida pero la carga no termina.",
+            note_en: "Presents logo, intro video and first-run screens; starts loading the game but the load does not finish."}
+    goal_es: "Preparar y ejecutar la versión de Xbox Series de forma nativa en PC desde tu propia copia."
+    goal_en: "Prepare and run the Xbox Series build natively on PC from your own copy."
+    approach_es: "Traductor de shaders RDNA a HLSL, cargador con implementaciones de PC de las bibliotecas de consola y un dispositivo D3D12.X sobre D3D12 de escritorio, en .NET."
+    approach_en: "RDNA-to-HLSL shader translator, a loader with PC implementations of the console libraries and a D3D12.X device on desktop D3D12, in .NET."
+    technical_es: "Los 25.908 programas de shader compilan; flujo de control estructurado; lector de archivos sin la tabla cifrada; decodificación de texturas con tablas BCPack que aporta el usuario; exportación de geometría; mapa de direcciones de GPU de consola y cuelgues de GPU acotados."
+    technical_en: "All 25,908 shader programs compile; structured control flow; archive reader that works without the encrypted file table; texture decoding with user-supplied BCPack tables; geometry export; console GPU address map and bounded GPU hangs."
+    requirements_es: "SDK de .NET 10 y el compilador DXC del Windows SDK."
+    requirements_en: ".NET 10 SDK and DXC from the Windows SDK."
+    strengths:
+      - {es: "Ya presenta frames propios: logo, vídeo de introducción y menús con el texto completo.", en: "Already presents its own frames: logo, intro video and menus with full UI text.", evidence: "https://github.com/ThatRecompDev/five-star-recomp#status"}
+      - {es: "Todos los shaders que usa el juego se traducen y compilan.", en: "Every shader stage the game uses translates and compiles.", evidence: "https://github.com/ThatRecompDev/five-star-recomp#status"}
+    weaknesses:
+      - {es: "La carga de partida se detiene por memoria del juego corrupta.", en: "The game load stops on corrupted game memory.", evidence: "https://github.com/ThatRecompDev/five-star-recomp#status"}
+      - {es: "Las pantallas de primer arranque se pasan con un mando simulado por script.", en: "First-run screens are passed with a scripted virtual gamepad.", evidence: "https://github.com/ThatRecompDev/five-star-recomp#status"}
+
+  - name: AnyXboxX
+    slug: anyxboxx
+    repo: LooperSalty/AnyXboxX
+    language: Python
+    priority: 4
+    phase: {level: 5, partial: false,
+            note_es: "Con su integración de VIctory llega al mundo; la escena 3D sigue negra a 0,3–0,5 fps.",
+            note_en: "With its VIctory integration it reaches the world; the 3D scene stays black at 0.3–0.5 fps."}
+    goal_es: "Prototipo de emulador de Xbox Series X centrado por ahora en una sola versión del juego."
+    goal_en: "Xbox Series X emulator prototype, focused for now on a single build of the game."
+    approach_es: "Emulación de alto nivel del GDK (con Unicorn en modo aislado) más una integración estable de VIctory con parches de la comunidad."
+    approach_en: "High-level emulation of the GDK (with Unicorn in isolated mode) plus a stable VIctory integration with community patches."
+    technical_es: "Runtime C++ en modo nativo y código Python en la máquina aislada; 210 de las 396 funciones del runtime GDK escritas; recompilador RDNA2→DXIL inicial; integra VIctory más 24 pull requests de la comunidad en un fork propio."
+    technical_en: "C++ runtime in native mode and Python code in the isolated machine; 210 of 396 GDK runtime functions written; early RDNA2→DXIL recompiler; integrates VIctory plus 24 community pull requests in its own fork."
+    requirements_es: "GPU NVIDIA o AMD con SM 6.6 y mesh shaders, y Rust."
+    requirements_en: "NVIDIA or AMD GPU with SM 6.6 and mesh shaders, and Rust."
+    strengths:
+      - {es: "Informa de 5 minutos en el mundo sin cuelgue de GPU en una RTX 4070 SUPER.", en: "Reports 5 minutes in the world with no GPU hang on an RTX 4070 SUPER.", evidence: "https://github.com/LooperSalty/AnyXboxX"}
+      - {es: "Reconoce de forma explícita el código que toma de VIctory y acredita cada parche.", en: "Explicitly credits the VIctory code it builds on and each patch author.", evidence: "https://github.com/LooperSalty/AnyXboxX"}
+    weaknesses:
+      - {es: "Gran parte del avance viene de VIctory, no de un motor propio.", en: "Much of the progress comes from VIctory rather than its own engine.", evidence: "https://github.com/LooperSalty/AnyXboxX"}
+      - {es: "Escena 3D negra y 0,3–0,5 fps dentro del mundo.", en: "Black 3D scene and 0.3–0.5 fps inside the world.", evidence: "https://github.com/LooperSalty/AnyXboxX"}
+
+  - name: GTA6-BootTest
+    slug: gta6-boottest
+    repo: OnlyMoisties/GTA6-BootTest
+    language: C
+    priority: 5
+    phase: {level: 4, partial: true,
+            note_es: "Arranca, ejecuta su bucle de frames y dibuja su primera pantalla de interfaz con shaders traducidos.",
+            note_en: "Boots, runs its frame loop and draws its first UI screen through translated shaders."}
+    goal_es: "DLL sustitutas y un arnés de depuración para estudiar el arranque en Windows."
+    goal_en: "Stand-in DLLs and a debugger harness to study booting on Windows."
+    approach_es: "DLL de sustitución en C para la memoria y D3D12.X, un traductor RDNA2→HLSL en Python y una ruta a GPU real de PC."
+    approach_en: "C stand-in DLLs for memory and D3D12.X, a Python RDNA2→HLSL translator and a real-PC-GPU path."
+    technical_es: "Memoria de GPU respaldada por un pool compartido (cero copias), dispositivo D3D12.X con grabación y reproducción de listas de comandos, DirectStorage síncrono con zlib y un depurador con puntos de ruptura y watchpoints. Audio en silencio."
+    technical_en: "GPU memory backed by a shared pool (zero copy), a D3D12.X device with command-list recording and replay, synchronous DirectStorage with zlib and a debugger with breakpoints and watchpoints. Audio is silent."
+    requirements_es: "Visual Studio 2022, Gaming Services, Python 3 y DXC."
+    requirements_en: "Visual Studio 2022, Gaming Services, Python 3 and DXC."
+    strengths:
+      - {es: "Ya pinta su primera pantalla de interfaz en una GPU de PC.", en: "Already draws its first UI screen on a PC GPU.", evidence: "https://github.com/OnlyMoisties/GTA6-BootTest"}
+      - {es: "Informe técnico detallado de los hallazgos.", en: "Detailed technical report of its findings.", evidence: "https://github.com/OnlyMoisties/GTA6-BootTest/blob/main/REPORT.md"}
+    weaknesses:
+      - {es: "Compute, texturas en tiles, blending y fases de carga posteriores sin terminar.", en: "Compute, tiled textures, blending and later loading stages are unfinished.", evidence: "https://github.com/OnlyMoisties/GTA6-BootTest"}
+      - {es: "Es más un banco de pruebas que un port para usuarios.", en: "More a test bench than a port for end users.", evidence: "https://github.com/OnlyMoisties/GTA6-BootTest"}
+
+  - name: Xbox2Windows
+    slug: xbox2windows
+    repo: R0Y00/Xbox2Windows
+    language: Python
+    priority: 6
+    phase: {level: 3, partial: true,
+            note_es: "Con un ejecutable de diagnóstico modificado mostró la introducción y llegó a la carga; el arranque del ejecutable original no está verificado.",
+            note_en: "A modified diagnostic executable played the intro and reached loading; startup of the original executable is unverified."}
+    goal_es: "Investigación de recompilación estática de Xbox Series X|S a Windows x64."
+    goal_en: "Research into static recompilation from Xbox Series X|S to x64 Windows."
+    approach_es: "Traduce código máquina x64 seleccionado a C++ y shaders gfx1013 seleccionados a DXIL, con tests que comparan píxel a píxel."
+    approach_en: "Translates selected x64 machine code to C++ and selected gfx1013 shaders to DXIL, with tests that compare pixel by pixel."
+    technical_es: "Comparaciones exactas entre ejecución nativa, PE mapeado y compilación AOT; ruta de compilación DXIL para 26.500 de 26.503 shaders; pruebas de pixel, compute y mesh shaders en RTX 4060 Laptop y WARP; herramienta de comprobación de GPU para que la comunidad aporte resultados."
+    technical_en: "Exact comparisons between native, mapped-PE and AOT runs; a DXIL compilation route for 26,500 of 26,503 shaders; pixel, compute and mesh shader tests on RTX 4060 Laptop and WARP; a GPU check tool so the community can report results."
+    requirements_es: "Windows; los tests públicos no necesitan el juego."
+    requirements_en: "Windows; the public tests need no game installation."
+    strengths:
+      - {es: "Método muy riguroso: cada avance va con un test reproducible.", en: "Very rigorous method: each step comes with a reproducible test.", evidence: "https://github.com/R0Y00/Xbox2Windows#current-results-and-open-work"}
+      - {es: "Abierto a que cualquiera pruebe su GPU sin compilar nada.", en: "Open for anyone to test their GPU without building anything.", evidence: "https://github.com/R0Y00/Xbox2Windows#run-the-gpu-check"}
+    weaknesses:
+      - {es: "El arranque del ejecutable original, los menús y la partida siguen sin verificar.", en: "Startup of the original executable, menus and gameplay remain unverified.", evidence: "https://github.com/R0Y00/Xbox2Windows"}
+      - {es: "Enfoque de investigación: avanza por piezas aisladas, no hacia un port completo a corto plazo.", en: "Research focus: it advances in isolated pieces, not towards a full port in the short term.", evidence: "https://github.com/R0Y00/Xbox2Windows"}
+
+  - name: Leonida Continued
+    slug: leonida-continued
+    repo: ubiquitarianism/leonida
+    language: Python
+    priority: 7
+    phase: {level: 1, partial: false,
+            note_es: "Preparación completa (shaders traducidos y validados, assets exportados); el README dice que el juego aún no arranca.",
+            note_en: "Preparation done (shaders translated and validated, assets exported); the README says the game does not boot yet."}
+    goal_es: "Continuar en abierto Leonida, el port de Xbox a PC por recompilación estática."
+    goal_en: "Carry on Leonida, the static-recompilation Xbox-to-PC port, in the open."
+    approach_es: "Recompilación estática: el código x86-64 se ejecuta de forma nativa y los programas de GPU RDNA2 se traducen a SPIR-V para Vulkan."
+    approach_en: "Static recompilation: x86-64 code runs natively and RDNA2 GPU programs are translated to SPIR-V for Vulkan."
+    technical_es: "Los 26.503 shaders se traducen a SPIR-V y pasan spirv-val; 23.841 son wave64 (exactos en AMD; en NVIDIA e Intel se emulan); exportación de modelos, texturas y audio; cargador PE y shims probados con un ejecutable sustituto; D3D12 de Xbox sobre Vulkan en curso."
+    technical_en: "All 26,503 shaders translate to SPIR-V and pass spirv-val; 23,841 are wave64 (exact on AMD; emulated on NVIDIA and Intel); model, texture and audio export; PE loader and shims tested with a stand-in executable; Xbox D3D12 on Vulkan in progress."
+    requirements_es: "GPU con Vulkan; wave64 nativo solo en AMD (en NVIDIA e Intel, emulado)."
+    requirements_en: "Vulkan GPU; native wave64 only on AMD (emulated on NVIDIA and Intel)."
+    strengths:
+      - {es: "Conserva el historial completo del Leonida original y su trabajo de shaders validado.", en: "Keeps the original Leonida's full history and its validated shader work.", evidence: "https://github.com/ubiquitarianism/leonida#project-status"}
+      - {es: "Pruebas del traductor de shaders en más de 30 combinaciones de GPU y driver.", en: "Shader translator tests on more than 30 GPU and driver combinations.", evidence: "https://github.com/ubiquitarianism/leonida#project-status"}
+    weaknesses:
+      - {es: "Según su README, el juego todavía no arranca.", en: "According to its README, the game does not boot yet.", evidence: "https://github.com/ubiquitarianism/leonida#project-status"}
+      - {es: "El autor original abandonó el proyecto; continuidad incierta.", en: "The original author left; continuity is uncertain.", evidence: "https://vgtimes.com/gaming-news/175543-gta-6-reaches-the-boot-stage-on-pc-as-leonida-creator-quits.html"}
+
+  - name: Leonida (Reforge)
+    slug: leonida-reforge
+    repo: LeonidaReforge/Leonida
+    language: Python
+    priority: 8
+    phase: {level: 1, partial: true,
+            note_es: "Hereda la tabla del Leonida original, pero avisa de que no ha reproducido esos resultados por su cuenta.",
+            note_en: "Inherits the original Leonida's table, but warns it has not reproduced those results independently."}
+    goal_es: "Continuación comunitaria del proyecto Leonida."
+    goal_en: "Community-driven continuation of the Leonida project."
+    approach_es: "La misma base que Leonida: recompilación estática con traducción de shaders a SPIR-V para Vulkan."
+    approach_en: "Same base as Leonida: static recompilation with shaders translated to SPIR-V for Vulkan."
+    technical_es: "Parte del código y los resultados históricos de Leonida; la tabla de estado es una instantánea heredada, no un informe de compatibilidad actual."
+    technical_en: "Starts from Leonida's code and historical results; its status table is an inherited snapshot, not a current compatibility report."
+    requirements_es: "Las mismas que Leonida: GPU con Vulkan."
+    requirements_en: "Same as Leonida: a Vulkan GPU."
+    strengths:
+      - {es: "Transparente: dice claramente qué no ha verificado.", en: "Transparent: it says clearly what it has not verified.", evidence: "https://github.com/LeonidaReforge/Leonida#project-status"}
+    weaknesses:
+      - {es: "Sin arranque verificado ni resultados propios reproducidos.", en: "No verified boot and no independently reproduced results.", evidence: "https://github.com/LeonidaReforge/Leonida#project-status"}
+
+  - name: Palmetto
+    slug: palmetto
+    repo: luizwidmer/palmetto
+    language: Python
+    priority: 9
+    phase: {level: 2, partial: false,
+            note_es: "El ejecutable arranca y llega al código de render, pero aún no completa ningún frame.",
+            note_en: "The executable boots and reaches its render code, but has not completed a frame yet."}
+    goal_es: "Runtime de sala limpia que ejecuta la versión de Xbox Series en Windows; continúa el Leonida original tras quedar privado."
+    goal_en: "Clean-room runtime that runs the Xbox Series build on Windows; carries on the original Leonida after it went private."
+    # Note: often described as an XCL fork, but GitHub reports fork=false and its README says it continues Leonida.
+    approach_es: "Lleva adelante el runtime de Leonida: imagen PE mapeada, shims de importación y D3D12 de consola sobre Vulkan."
+    approach_en: "Carries Leonida's runtime forward: mapped PE image, import shims and console D3D12 on Vulkan."
+    technical_es: "11.986 llamadas D3D12 en un arranque con 0 fallos de pipeline; 26.616 módulos SPIR-V indexados; 29 de 29 programas FidelityFX traducidos. Se detiene en un puntero nulo dentro del código de render que está investigando."
+    technical_en: "11,986 D3D12 calls in a boot with 0 pipeline failures; 26,616 SPIR-V modules indexed; 29 of 29 FidelityFX programs translated. It stops on a null pointer inside render code that is under investigation."
+    requirements_es: "Unos 400 GiB libres, Python 3.12, .NET 8, Visual Studio 2022, Vulkan SDK y LLVM con target AMDGPU."
+    requirements_en: "About 400 GiB free, Python 3.12, .NET 8, Visual Studio 2022, Vulkan SDK and LLVM with the AMDGPU target."
+    strengths:
+      - {es: "Mediciones muy detalladas de dónde se para y por qué.", en: "Very detailed measurements of where it stops and why.", evidence: "https://github.com/luizwidmer/palmetto#status"}
+      - {es: "0 fallos de creación de pipelines en el arranque medido.", en: "0 pipeline creation failures in the measured boot.", evidence: "https://github.com/luizwidmer/palmetto#status"}
+    weaknesses:
+      - {es: "Todavía no presenta ningún frame.", en: "No presented frame yet.", evidence: "https://github.com/luizwidmer/palmetto#status"}
+      - {es: "Comunidad pequeña y requisitos de compilación muy pesados.", en: "Small community and very heavy build requirements.", evidence: "https://github.com/luizwidmer/palmetto#build"}

@@ -1,0 +1,34 @@
+name: "Suggest a source / Sugerir una fuente"
+description: "Propose a project, tracker, article or thread. Reviewed by hand, never published automatically. / Propón un proyecto, tracker, artículo o hilo. Se revisa a mano y nunca se publica solo."
+title: "[Source] "
+labels: ["source"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **EN:** Source code, trackers, press and discussion only. No game files, no leaks, no download sites, no spoilers.
+        **ES:** Solo código fuente, trackers, prensa y debates. Nada de archivos del juego, filtraciones, webs de descarga ni spoilers.
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Type / Tipo"
+      options:
+        - "Project repository / Repositorio de proyecto"
+        - "Tracker"
+        - "Press / Prensa"
+        - "Thread / Hilo"
+        - "Docs / Documentación"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: "URL"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "Why is it useful? (one sentence) / ¿Por qué es útil? (una frase)"
+    validations:
+      required: true

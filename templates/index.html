@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% block head %}
+<script type="application/ld+json">{{ faq_jsonld|safe }}</script>
+{% endblock %}
+{% block main %}
+
+{# 2. HERO #}
+<section id="status" class="hero" aria-labelledby="hero-q">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="h-eyebrow">{{ T.sections.status_lead }}</p>
+      <h1 id="hero-q" class="hero__q">{{ T.hero.question }}</h1>
+      <p class="hero__answer hero__answer--{{ hero.tone }}">{{ hero.answer }}</p>
+      <p class="hero__tagline">{{ hero.tagline }}</p>
+      <p class="hero__updated">{{ T.hero.updated }} {{ m.time(now_iso, T.time.just_now) }}
+        <span class="muted">· {{ now_iso[11:16] }} {{ T.hero.updated_utc }}</span>
+        <span class="muted localtime" data-local="{{ now_iso }}" data-label="{{ T.hero.local_time }}"></span></p>
+    </div>
+    {% if leader %}
+    <aside class="hero__leader card card--glow" aria-label="{{ T.hero.leader }}">
+      <p class="h-eyebrow">{{ T.hero.leader }}</p>
+      <p class="hero__leadname"><a href="{{ site.base }}{{ path_for(lang, 'project', leader.slug) }}">{{ leader.name }}</a></p>
+      <p class="hero__pct"><span class="num">{{ leader.score|round|int }}</span><span class="pct">%</span> <span class="muted">{{ T.project_card.of_total }}</span></p>
+      {{ m.meter(leader.score) }}
+      <p class="hero__phase">{{ leader.phase_label }} · <strong>{{ leader.phase_name }}</strong> <span class="muted">({{ leader.phase_tech }})</span></p>
+      {{ m.phasebar(leader.phase, T) }}
+    </aside>
+    {% endif %}
+  </div>
+  <div class="wrap">
+    <p class="scam-strip" role="note"><span aria-hidden="true">⚠</span> {{ T.hero.scam }}</p>
+  </div>
+</section>
+
+{# 3. SUMMARY CARDS #}
+<section class="wrap summary" aria-label="{{ T.sections.status_lead }}">
+  <div class="stat card">
+    <p class="stat__label">{{ T.cards.leader }}</p>
+    <p class="stat__value">{{ leader.name if leader else '—' }}</p>
+    <p class="stat__sub">{{ leader.score|round|int if leader else 0 }} %</p>
+  </div>
+  <div class="stat card">
+    <p class="stat__label">{{ T.cards.max_phase }}</p>
+    <p class="stat__value">{{ max_phase_label }}</p>
+    <p class="stat__sub">{{ max_phase_name }}</p>
+  </div>
+  <div class="stat card">
+    <p class="stat__label">{{ T.cards.changes }}</p>
+    <p class="stat__value">{{ count_hour }} <span class="stat__unit">/ {{ T.cards.last_hour }}</span></p>
+    <p class="stat__sub">{{ T.cards.last_day }}: {{ count_day }}</p>
+  </div>
+  <div class="stat card {{ 'stat--alert' if alerts_count }}">
+    <p class="stat__label">{{ T.cards.alerts }}</p>
+    <p class="stat__value"><a href="#alerts">{{ alerts_count if alerts_count else T.cards.alerts_none }}</a></p>
+    <p class="stat__sub">{{ T.nav.alerts }}</p>
+  </div>
+</section>
+
+{# 4. PROJECTS #}
+<section id="projects" class="section wrap" aria-labelledby="h-projects">
+  <header class="section__head">
+    <h2 id="h-projects" class="h-section">{{ T.sections.projects }}</h2>
+    <p class="section__lead">{{ T.sections.projects_lead }}</p>
+  </header>
+  <ol class="projects">
+    {% for p in projects %}
+    <li class="pcard card pcard--{{ p.status }}">
+      <div class="pcard__top">
+        <span class="pcard__rank" aria-hidden="true">{{ loop.index }}</span>
+        <h3 class="pcard__name"><a href="{{ site.base }}{{ path_for(lang, 'project', p.slug) }}">{{ p.name }}</a></h3>
+        {{ m.status_badge(p.status, p.status_label) }}
+        <p class="pcard__pct"><span class="num">{{ p.score|round|int }}</span>%</p>
+      </div>
+      {{ m.meter(p.score) }}
+      <div class="pcard__phase">{{ m.phasebar(p.phase, T) }}<span class="pcard__phaselabel">{{ p.phase_label }} · {{ p.phase_name }}</span></div>
+      <dl class="pcard__facts">
+        <div><dt>{{ T.project_card.goal }}</dt><dd>{{ p.goal }}</dd></div>
+        <div><dt>{{ T.project_card.now }}</dt><dd>{{ p.now_line }}</dd></div>
+        {% if p.best %}<div class="fact--good"><dt>{{ T.project_card.best }}</dt><dd>{{ p.best.text }}</dd></div>{% endif %}
+        {% if p.worst %}<div class="fact--bad"><dt>{{ T.project_card.worst }}</dt><dd>{{ p.worst.text }}</dd></div>{% endif %}
+        <div><dt>{{ T.project_card.gpus }}</dt><dd>{% if p.gpu_ok %}{% for v in p.gpu_ok %}<span class="chip">{{ T.gpu[v] }}</span>{% endfor %}{% else %}<span class="muted">{{ T.project_card.gpus_none }}</span>{% endif %}</dd></div>
+      </dl>
+      <a class="pcard__more" href="{{ site.base }}{{ path_for(lang, 'project', p.slug) }}">{{ T.project_card.full }} <span aria-hidden="true">→</span></a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{# 5. NEWS #}
+<section id="news" class="section wrap" aria-labelledby="h-news">
+  <header class="section__head">
+    <h2 id="h-news" class="h-section">{{ T.sections.news }}</h2>
+    <p class="section__lead">{{ T.sections.news_lead }}</p>
+  </header>
+  <div class="tabs" data-tabs>
+    <div class="tabs__list" role="tablist" hidden>
+      <button type="button" role="tab" id="tab-hour" aria-controls="panel-hour" aria-selected="true">{{ T.sections.tab_hour }} <span class="count">{{ count_hour }}</span></button>
+      <button type="button" role="tab" id="tab-day" aria-controls="panel-day" aria-selected="false" tabindex="-1">{{ T.sections.tab_day }} <span class="count">{{ count_day }}</span></button>
+    </div>
+    {% for key, groups in [('hour', news_hour), ('day', news_day)] %}
+    <div class="tabs__panel" role="tabpanel" id="panel-{{ key }}" aria-labelledby="tab-{{ key }}">
+      <h3 class="tabs__fallback">{{ T.sections['tab_' ~ key] }}</h3>
+      {% if groups %}
+      <div class="newsgroups">
+        {% for g in groups %}
+        <section class="newsgroup card">
+          <h4 class="newsgroup__name">{{ g.name }}</h4>
+          {{ m.entry_list(g.entries, T, ui.news_visible, T.sections.news_empty) }}
+        </section>
+        {% endfor %}
+      </div>
+      {% else %}<p class="empty">{{ T.sections.news_empty }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# 6. MEDIA #}
+<section id="media" class="section wrap" aria-labelledby="h-media">
+  <header class="section__head">
+    <h2 id="h-media" class="h-section">{{ T.sections.media }}</h2>
+    <p class="section__lead">{{ T.sections.media_lead }}</p>
+  </header>
+  {% if media %}
+  <ul class="mediagrid">
+    {% for e in media %}
+    <li class="mcard card" data-ts="{{ e.created }}">
+      <span class="mcard__kind">{{ T.kinds[e.kind] }}</span>
+      {{ m.ext(e.url, e.title, T, 'mcard__title') }}
+      <span class="entry__meta">{{ m.time(e.created, e.rel) }} · {{ m.cred(e.credibility, T) }}</span>
+      {{ m.ext_warn(T) }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="empty">{{ T.sections.media_empty }}</p>{% endif %}
+</section>
+
+{# 7. ETA #}
+<section id="eta" class="section wrap" aria-labelledby="h-eta">
+  <header class="section__head">
+    <h2 id="h-eta" class="h-section">{{ T.sections.eta }}</h2>
+    <p class="section__lead">{{ T.sections.eta_lead }}</p>
+  </header>
+  <ol class="timeline">
+    {% for ms in milestones %}
+    <li class="timeline__item {{ 'is-reached' if ms.reached else 'is-pending' }}">
+      <span class="timeline__dot" aria-hidden="true">{{ ms.level }}</span>
+      <div class="timeline__body">
+        <p class="timeline__title"><strong>{{ ms.name }}</strong> <span class="muted">· {{ ms.tech }}</span></p>
+        {% if ms.reached %}
+        <p class="ok-text">✓ {{ ms.reached }}</p>
+        {% else %}
+        <p><span class="badge badge--est">{{ T.eta.label }}</span> <strong>{{ ms.range }}</strong>{% if ms.who %} <span class="muted">({{ ms.who }})</span>{% endif %}</p>
+        <details class="why"><summary>{{ T.eta.why }}</summary><p>{{ ms.reason }}</p></details>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{# 8. RADAR #}
+<section id="radar" class="section wrap" aria-labelledby="h-radar">
+  <header class="section__head">
+    <h2 id="h-radar" class="h-section">{{ T.sections.radar }}</h2>
+    <p class="section__lead">{{ T.sections.radar_lead }}</p>
+  </header>
+  {% if radar %}
+  <div class="table-wrap">
+  <table class="rtable radar">
+    <thead><tr><th scope="col">Repo</th><th scope="col">{{ T.radar.stars }}</th><th scope="col">{{ T.radar.age }}</th><th scope="col">{{ T.radar.commits }}</th><th scope="col">{{ T.radar.code }}</th></tr></thead>
+    <tbody>
+    {% for c in radar[:8] %}{{ m.radar_row(c, T) }}{% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% if radar|length > 8 %}
+  <details class="more"><summary>{{ T.sections.more }} ({{ radar|length - 8 }})</summary>
+    <div class="table-wrap"><table class="rtable radar"><tbody>{% for c in radar[8:] %}{{ m.radar_row(c, T) }}{% endfor %}</tbody></table></div>
+  </details>
+  {% endif %}
+  {% else %}<p class="empty">{{ T.sections.radar_empty }}</p>{% endif %}
+</section>
+
+{# 9. DIG DEEPER #}
+<section id="deeper" class="section wrap" aria-labelledby="h-deeper">
+  <header class="section__head">
+    <h2 id="h-deeper" class="h-section">{{ T.sections.deeper }}</h2>
+    <p class="section__lead">{{ T.sections.deeper_lead }}</p>
+  </header>
+  <div class="linkgroups">
+    {% for type in ['press', 'tracker', 'thread', 'repo'] %}
+    {% set links = deeper.get(type, []) %}
+    <section class="linkgroup card">
+      <h3 class="linkgroup__title"><span class="ltype ltype--{{ type }}" aria-hidden="true"></span>{{ T.link_types[type] }}</h3>
+      <ul class="links">
+        {% for l in links[:ui.links_visible] %}{{ m.link_item(l, T) }}{% endfor %}
+      </ul>
+      {% if links|length > ui.links_visible %}
+      <details class="more"><summary>{{ T.sections.more }} ({{ links|length - ui.links_visible }})</summary>
+        <ul class="links">{% for l in links[ui.links_visible:] %}{{ m.link_item(l, T) }}{% endfor %}</ul>
+      </details>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+  <h3 class="h-sub">{{ T.sections.weekly }}</h3>
+  {{ m.entry_list(weekly, T, ui.links_visible, T.sections.weekly_empty) }}
+</section>
+
+{# 10. ALERTS #}
+<section id="alerts" class="section wrap" aria-labelledby="h-alerts">
+  <header class="section__head">
+    <h2 id="h-alerts" class="h-section">{{ T.sections.alerts }}</h2>
+    <p class="section__lead">{{ T.sections.alerts_lead }}</p>
+  </header>
+  <ul class="alerts">
+    {% for a in alerts %}
+    <li class="alert alert--{{ a.kind }}">
+      <strong class="alert__title">{{ a.title }}</strong>
+      <span class="{{ 'strike' if a.strike }}">{{ a.text }}</span>
+      {% if a.url %} <a class="evidence" href="{{ a.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.alerts.notice }} ↗</a>{% endif %}
+    </li>
+    {% else %}
+    <li class="alert alert--calm">{{ T.alerts.none }}</li>
+    {% endfor %}
+    <li class="alert alert--scam"><strong class="alert__title">{{ T.alerts.scam_title }}</strong> {{ T.alerts.scam }}</li>
+  </ul>
+</section>
+
+{# 11. FAQ + GLOSSARY #}
+<section id="faq" class="section wrap" aria-labelledby="h-faq">
+  <header class="section__head"><h2 id="h-faq" class="h-section">{{ T.sections.faq }}</h2></header>
+  <div class="faq">
+    {% for f in T.faq %}
+    <details class="faq__item">
+      <summary>{{ f.q }}</summary>
+      <div class="faq__a">
+        <p>{{ f.a }}</p>
+        {% if loop.index0 == 3 %}
+        <ul>{% for g in gpu_faq %}<li><strong>{{ g.name }}:</strong> {{ g.req }}</li>{% endfor %}</ul>
+        {% endif %}
+        {% if loop.index0 == 2 %}
+        <ol class="phaselegend">{% for i in range(1, 8) %}<li><strong>{{ T.phases.heist[i] }}</strong> — {{ T.phases.tech[i] }}</li>{% endfor %}</ol>
+        {% endif %}
+        {% if loop.index0 == 6 %}
+        <ul class="credlegend">{% for c in ['confirmed', 'community', 'unverified', 'false'] %}<li>{{ m.cred(c, T) }} {{ T.credibility[c ~ '_desc'] }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+  <h3 class="h-sub">{{ T.sections.glossary }}</h3>
+  <dl class="glossary">
+    {% for g in T.glossary %}<div><dt><dfn>{{ g.term }}</dfn></dt><dd>{{ g.def }}</dd></div>{% endfor %}
+  </dl>
+</section>
+
+{# 12. HISTORY #}
+<section id="history" class="section wrap" aria-labelledby="h-history">
+  <header class="section__head">
+    <h2 id="h-history" class="h-section">{{ T.sections.history }}</h2>
+    <p class="section__lead">{{ T.sections.history_lead }}</p>
+  </header>
+  {% if history %}
+  <ol class="hist">
+    {% for h in history[:ui.history_visible] %}<li data-ts="{{ h.t }}"><time datetime="{{ h.t }}">{{ h.t[:10] }} {{ h.t[11:16] }} UTC</time> <span>{{ h.text }}</span></li>{% endfor %}
+  </ol>
+  {% if history|length > ui.history_visible %}
+  <details class="more"><summary>{{ T.sections.older }} ({{ history|length - ui.history_visible }})</summary>
+    <ol class="hist">{% for h in history[ui.history_visible:] %}<li><time datetime="{{ h.t }}">{{ h.t[:10] }} {{ h.t[11:16] }} UTC</time> <span>{{ h.text }}</span></li>{% endfor %}</ol>
+  </details>
+  {% endif %}
+  {% else %}<p class="empty">{{ T.sections.history_empty }}</p>{% endif %}
+</section>
+{% endblock %}

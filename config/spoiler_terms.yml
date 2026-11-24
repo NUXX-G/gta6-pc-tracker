@@ -1,0 +1,22 @@
+# Generic spoiler terms. Any external item containing one is discarded, and no generated HTML may contain them
+# (tests enforce it). Matching is case-insensitive and on word boundaries. Extend freely.
+terms:
+  - story
+  - storyline
+  - ending
+  - endings
+  - mission walkthrough
+  - final mission
+  - mission
+  - missions
+  - plot
+  - cutscene
+  - cutscene leak
+  - protagonist
+  - historia
+  - final
+  - misión
+  - misiones
+  - trama
+  - cinemática
+  - protagonista

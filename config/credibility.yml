@@ -1,0 +1,57 @@
+# Credibility rules (applied by scripts/credibility.py, in this order).
+#
+#  confirmed  🟢  the tracked project's own README/commit/release, or reproduced by an external tracker or a second origin
+#  community  🟡  specialised press, or a thread with evidence (links to a tracked repo, or posted by a project owner)
+#  unverified 🔴  anonymous posts or rumour language
+#  false      ⛔  rumour + something technically impossible given the known state. Never counts; shown struck through in Alerts.
+
+project_sources: [github]           # items generated from the tracked repos themselves
+tracker_sources: [tracker]          # external trackers
+press_sources: [news]               # publisher / Google News items
+press_domains:
+  - videocardz.com
+  - notebookcheck.net
+  - pcgamer.com
+  - gamesradar.com
+  - vgtimes.com
+  - tarreo.com
+  - dsogaming.com
+  - xda-developers.com
+  - eurogamer.net
+  - ign.com
+  - kotaku.com
+  - videogameschronicle.com
+
+# Evidence that lifts a community post (reddit/hn/lemmy/bluesky/mastodon) to "community"
+evidence:
+  link_domains: [github.com, gitlab.com]
+  min_score: 50                      # a well-voted thread that links a tracked repo
+
+rumour_terms:
+  - rumor
+  - rumour
+  - rumored
+  - insider
+  - apparently
+  - supposedly
+  - "i heard"
+  - "my source"
+  - "trust me"
+  - "dicen que"
+  - "se rumorea"
+  - "según fuentes"
+  - unconfirmed
+
+# A claim that needs at least `requires_phase`. If no tracked project has reached `false_if_max_phase_below`
+# and the item is rumour-level, it is marked false (⛔).
+impossible_claims:
+  - {pattern: "\\b60 ?fps\\b", requires_phase: 7}
+  - {pattern: "\\b(fully|totally|completely) playable\\b", requires_phase: 7}
+  - {pattern: "\\bplayable\\b", requires_phase: 7}
+  - {pattern: "\\b(completamente )?jugable\\b", requires_phase: 7}
+  - {pattern: "\\bbeat(en)? the (whole )?game\\b", requires_phase: 7}
+  - {pattern: "\\bruns? perfectly\\b", requires_phase: 7}
+  - {pattern: "\\bfunciona perfecto\\b", requires_phase: 7}
+false_if_max_phase_below: 6
+negations: ["not", "isn't", "is not", "no", "not yet", "never", "todavía no", "aún no", "nada", "ni", "without", "sin"]
+negation_window: 28   # characters before the claim checked for a negation

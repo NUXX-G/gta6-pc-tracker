@@ -1,0 +1,26 @@
+{
+ "updated": "2026-11-24T11:41:43.000Z",
+ "efforts": [
+  {
+   "name": "VIctory",
+   "repo": "Marvisak/VIctory",
+   "gta": {
+    "loads": 1,
+    "boots": 1,
+    "menu": 1,
+    "ingame": 1,
+    "fps": 1
+   }
+  },
+  {
+   "name": "XCL",
+   "repo": "ivall/xcl",
+   "gta": {
+    "loads": 1,
+    "boots": 1,
+    "menu": 1,
+    "ingame": 0
+   }
+  }
+ ]
+}
