@@ -23,8 +23,8 @@ reddit:
       url: "https://arctic-shift.photon-reddit.com/api/posts/search"
       after: "48hour"           # relative dates are supported by the API
       limit: 100
-      min_interval_s: 4
-      timeout_retry_wait_s: 8   # the API answers 422 "Timeout. Maybe slow down a bit" under load: wait, retry once
+      min_interval_s: 6
+      timeout_retry_wait_s: 12  # the API answers 422 "Timeout. Maybe slow down a bit" under load: wait, retry once
       max_requests: 30
       term_queries: 2           # besides one plain "latest posts" request per subreddit, up to N keyword queries
 
@@ -37,8 +37,10 @@ reddit:
       pause_hours_on_refusal: 24  # it answers 429 "does not provide free scraping resources for agents": respect it
 
     bing:                       # 4. Discovery through Bing's search RSS (no score/comments → partial)
-      enabled: true             # Bing's RSS terms allow personal, non-commercial use; switch off here if needed
-      url: "https://www.bing.com/search?format=rss&q={q}"
+      enabled: true             # Bing's RSS terms allow personal, non-commercial use; switch off here if needed.
+                                # Note (2026-11-24): Bing's RSS ignores site:/inurl: and returned no reddit.com
+                                # threads in tests; the layer stays on and reports 0 until that changes.
+      url: "https://www.bing.com/search?format=rss&setlang=en-US&mkt=en-US&q={q}"  # fixed locale: English dates
       min_interval_s: 3
       queries:
         - 'site:reddit.com "GTA 6" PC port'
