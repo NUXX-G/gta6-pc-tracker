@@ -148,6 +148,15 @@ class HttpError(Exception):
         self.url = url
 
 
+class SourcePaused(Exception):
+    """A source asked us not to call it (e.g. it refuses automated clients): skip it until `until` (ISO time)."""
+
+    def __init__(self, until: str, reason: str) -> None:
+        super().__init__(f"paused until {until}: {reason}")
+        self.until = until
+        self.reason = reason
+
+
 class OfflineMiss(HttpError):
     def __init__(self, url: str) -> None:
         super().__init__(0, url, "(no offline fixture)")
@@ -216,8 +225,12 @@ class Http:
                 return Response(status, url, text, dict(entry.get("headers", {})))
         raise OfflineMiss(url)
 
-    def get(self, url: str, headers: dict[str, str] | None = None, github: bool = False) -> Response:
+    def get(
+        self, url: str, headers: dict[str, str] | None = None, github: bool = False, retries: int | None = None
+    ) -> Response:
+        """`retries=0` makes one attempt only: a 403/429 is raised at once (used where we must back off, not retry)."""
         self.calls += 1
+        max_retries = self.retries if retries is None else retries
         if self.offline:
             return self._offline(url)
         import requests
@@ -230,7 +243,7 @@ class Http:
                 hdrs["Authorization"] = f"Bearer {self.token}"
         host = urlparse(url).hostname or ""
         last_exc: Exception | None = None
-        for attempt in range(self.retries + 1):
+        for attempt in range(max_retries + 1):
             self._pace(host)
             try:
                 with self.session.get(url, headers=hdrs, timeout=self.timeout, stream=True) as r:
@@ -241,10 +254,10 @@ class Http:
                             raise HttpError(r.status_code, url, "(response too large)")
                     text = body.decode(r.encoding or "utf-8", "replace")
                     resp_headers = {k.lower(): v for k, v in r.headers.items()}
-                    if r.status_code == 429 or (r.status_code >= 500 and attempt < self.retries):
+                    if r.status_code == 429 or (r.status_code >= 500 and attempt < max_retries):
                         retry_after = resp_headers.get("retry-after", "")
                         delay = float(retry_after) if retry_after.isdigit() else self.backoff * 2**attempt
-                        if r.status_code == 429 and attempt >= self.retries:
+                        if r.status_code == 429 and attempt >= max_retries:
                             raise HttpError(429, url, "(rate limited)")
                         time.sleep(min(delay, 30))
                         continue

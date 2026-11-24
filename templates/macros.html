@@ -58,7 +58,7 @@
 <li class="entry" data-ts="{{ e.created }}">
   <div class="entry__main">
     {% if e.url %}{{ ext(e.url, e.title, T) }}{% else %}<span>{{ e.title }}</span>{% endif %}
-    <span class="entry__meta">{{ time(e.created, e.rel) }} · {{ cred(e.credibility, T) }}</span>
+    <span class="entry__meta">{{ time(e.created, e.rel) }} · {{ cred(e.credibility, T) }}{% if e.partial %} · <span class="tag tag--partial">{{ T.reddit.partial }}</span>{% endif %}</span>
   </div>
   {% if e.external %}{{ ext_warn(T) }}{% endif %}
 </li>
@@ -171,4 +171,13 @@
   <p class="counter__value" aria-live="off"><span data-u="d">{{ parts.d }}</span><small>{{ T.counters.d }}</small> <span data-u="h">{{ parts.h }}</span><small>{{ T.counters.h }}</small> <span data-u="m">{{ parts.m }}</span><small>{{ T.counters.m }}</small> <span data-u="s" class="counter__s">00</span><small class="counter__s">{{ T.counters.s }}</small></p>
   <p class="counter__sub">{{ sub }}{% if link %} <a class="evidence" href="{{ link }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.counters.source }} ↗</a>{% endif %}</p>
 </div>
+{%- endmacro %}
+
+{# "Reddit: delayed data" notice (newest Reddit item older than stale_after_hours, or none at all). #}
+{% macro reddit_note(rs, T) -%}
+{% if rs.stale %}
+<p class="reddit-note reddit-note--stale" role="status"><strong>{{ T.reddit.stale }}</strong> · {{ fmt(T.reddit.stale_text, rel=rs.newest_rel) }}</p>
+{% else %}
+<p class="reddit-note" role="status">{{ fmt(T.reddit.fresh, rel=rs.newest_rel) }}</p>
+{% endif %}
 {%- endmacro %}

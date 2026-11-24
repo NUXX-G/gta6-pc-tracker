@@ -81,6 +81,30 @@ CSP = (
 )
 
 
+REDDIT_KEYS = ["reddit_rss", "arcticshift", "pullpush", "bing"]
+SOURCE_KEYS = [
+    "github",
+    "dmca",
+    "discovery",
+    *REDDIT_KEYS,
+    "hn",
+    "bluesky",
+    "mastodon",
+    "lemmy",
+    "youtube",
+    "news",
+    "trackers",
+]
+
+
+def rel_until(T: dict[str, Any], value: Any, now: datetime) -> str:
+    """'paused until <date time> UTC' text, or '' when there is no active pause."""
+    dt = parse_time(value)
+    if not dt or dt <= now:
+        return ""
+    return fmt(T["system"]["paused"], t=dt.strftime("%Y-%m-%d %H:%M"))
+
+
 def site() -> dict[str, Any]:
     s = config("settings")["site"]
     base = "/" + s["base_path"].strip("/") + "/" if s["base_path"].strip("/") else "/"
@@ -170,6 +194,7 @@ def _entry(T, it: dict[str, Any], names: dict[str, str], now, is_event: bool) ->
         "external": not is_event,
         "source": it.get("source"),
         "kind": it.get("kind"),
+        "partial": it.get("completeness") == "partial",
     }
 
 
@@ -432,19 +457,7 @@ def view_model(
     # Sources health
     sources = []
     warn_h = config("settings")["health"]["warn_after_hours"]
-    for name in [
-        "github",
-        "dmca",
-        "discovery",
-        "reddit",
-        "hn",
-        "bluesky",
-        "mastodon",
-        "lemmy",
-        "youtube",
-        "news",
-        "trackers",
-    ]:
+    for name in SOURCE_KEYS:
         h = (health.get("sources") or {}).get(name, {})
         failing_h = None
         if h.get("failing_since"):
@@ -457,11 +470,24 @@ def view_model(
                 "last_ok": rel_time(T, h.get("last_ok"), now),
                 "last_ok_iso": h.get("last_ok"),
                 "last_fail": rel_time(T, h.get("last_fail"), now) if h.get("last_fail") else "—",
-                "items": h.get("items", 0),
+                "count": h.get("items", 0),
                 "warn": failing_h is not None and failing_h > warn_h,
                 "error": _strip_urls(h.get("error") or "")[:160] if not h.get("ok_this_run") else "",
+                "lag": fmt(T["system"]["lag_h"], n=h["lag_h"]) if h.get("lag_h") is not None else "—",
+                "paused": rel_until(T, h.get("paused_until"), now),
+                "group": "reddit" if name in REDDIT_KEYS else "",
             }
         )
+    fr = data.get("reddit_freshness") or {}
+    reddit_status = {
+        "stale": bool(fr.get("stale")),
+        "lag_h": fr.get("lag_h"),
+        "newest": fr.get("newest"),
+        "newest_rel": rel_time(T, fr.get("newest"), now) if fr.get("newest") else T["time"]["never"],
+    }
+    reddit_partial = [
+        e for e in entries if e.get("source") == "reddit" and e.get("partial") and e["credibility"] != "false"
+    ][:10]
 
     trackers_view = []
     for t in data.get("trackers", []):
@@ -518,6 +544,8 @@ def view_model(
         "names": names,
         "external": external_view(T, data.get("external", []), names),
         "trackers": trackers_view,
+        "reddit_status": reddit_status,
+        "reddit_partial": reddit_partial,
         "counters": counters,
         "faq": faq,
         "scam": {

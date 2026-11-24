@@ -71,9 +71,12 @@ http:
   min_interval_s:
     default: 0.5
     api.github.com: 0.15
-    www.reddit.com: 2.0
-    old.reddit.com: 2.0
-    reddit.com: 2.0
+    www.reddit.com: 3.0         # >= 3 s between Reddit requests (config/sources.yml)
+    old.reddit.com: 3.0
+    reddit.com: 3.0
+    arctic-shift.photon-reddit.com: 4.0
+    api.pullpush.io: 3.0
+    www.bing.com: 3.0
     hn.algolia.com: 1.0
     mastodon.social: 2.0
     lemmy.world: 2.0
@@ -101,7 +104,7 @@ discovery:
   max_candidates: 25
   inspect_top: 25
 
-reddit:
+reddit:                         # collection (layers, subreddits, terms) lives in config/sources.yml
   subreddits: [pcgaming, GTA6, emulation, GamingLeaksAndRumours, GTA]
   query: "(gta 6 OR gta vi OR gta6) (pc OR port OR victory OR xcl OR leonida OR recomp)"
   weekly_min_score: 100

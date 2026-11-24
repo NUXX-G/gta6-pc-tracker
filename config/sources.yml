@@ -1,0 +1,49 @@
+# Reddit without the official API or OAuth: several public layers, all run every hour and merged by post id.
+# Rules: the project's own User-Agent always; no proxies, no IP rotation, no browser impersonation. A layer that
+# blocks us is logged and skipped. Everything still goes through the legal and spoiler filters, and titles shown on
+# the site are generated from templates (never the post's own title).
+reddit:
+  subreddits: [pcgaming, GTA6, emulation, GamingLeaksAndRumours, GTA]
+  terms: ["gta 6 pc", "gta vi pc", "pc port", "victory", "xcl"]
+  stale_after_hours: 6          # newest Reddit item older than this → "Reddit: delayed data" on the site
+  full_after_hours: 36          # archives (Arctic Shift, PullPush) store score/comments at posting time; they are
+                                # only final ~36 h later, so younger posts count as "partial" data
+
+  layers:
+    rss:                        # 1. Reddit's own RSS feeds (no score/comment counts → partial)
+      enabled: true
+      min_interval_s: 3
+      stop_after_blocks: 2      # two 403/429 in a row → stop calling Reddit for this run
+      max_requests: 30
+      search: "https://www.reddit.com/r/{sub}/search.rss?q={q}&restrict_sr=1&sort=new&t=day"
+      new: "https://www.reddit.com/r/{sub}/new.rss"
+
+    arcticshift:                # 2. Arctic Shift public archive API (docs: github.com/ArthurHeitmann/arctic_shift/api)
+      enabled: true
+      url: "https://arctic-shift.photon-reddit.com/api/posts/search"
+      after: "48hour"           # relative dates are supported by the API
+      limit: 100
+      min_interval_s: 4
+      timeout_retry_wait_s: 8   # the API answers 422 "Timeout. Maybe slow down a bit" under load: wait, retry once
+      max_requests: 30
+      term_queries: 2           # besides one plain "latest posts" request per subreddit, up to N keyword queries
+
+    pullpush:                   # 3. PullPush public search (api.pullpush.io)
+      enabled: true
+      url: "https://api.pullpush.io/reddit/search/submission/"
+      hours: 48
+      size: 100
+      min_interval_s: 3
+      pause_hours_on_refusal: 24  # it answers 429 "does not provide free scraping resources for agents": respect it
+
+    bing:                       # 4. Discovery through Bing's search RSS (no score/comments → partial)
+      enabled: true             # Bing's RSS terms allow personal, non-commercial use; switch off here if needed
+      url: "https://www.bing.com/search?format=rss&q={q}"
+      min_interval_s: 3
+      queries:
+        - 'site:reddit.com "GTA 6" PC port'
+        - 'site:reddit.com VIctory GTA'
+        - 'site:reddit.com XCL "GTA 6"'
+        - 'site:reddit.com "GTA VI" PC recomp'
+        - 'site:reddit.com "GTA 6" PC port español'
+        - 'site:reddit.com "GTA 6" en PC emulador'

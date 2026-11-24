@@ -33,6 +33,7 @@ import spoiler_filter
 from common import (
     DATA_DIR,
     Http,
+    SourcePaused,
     config,
     domain_allowed,
     hours_since,
@@ -50,7 +51,10 @@ SOURCES = [
     "github",
     "dmca",
     "discovery",
-    "reddit",
+    "reddit_rss",
+    "arcticshift",
+    "pullpush",
+    "bing",
     "hn",
     "bluesky",
     "mastodon",
@@ -69,11 +73,28 @@ class Runner:
         self.health: dict[str, Any] = (load_json(DATA_DIR / "sources_health.json", {}) or {}).get("sources", {})
         if offline:
             self.health = {}
+        # Drop entries of sources that no longer exist (e.g. the old single "reddit" source) so they raise no alerts.
+        self.health = {k: v for k, v in self.health.items() if k in SOURCES}
 
     def run(self, name: str, fn: Callable[[], dict[str, Any]]) -> dict[str, Any] | None:
         entry = self.health.setdefault(name, {"last_ok": None, "last_fail": None, "items": 0, "error": None})
         try:
             result = fn()
+        except SourcePaused as exc:  # the source asked us to stay away: not a failure, no "source down" alert
+            log.warning("source %s paused: %s", name, exc)
+            entry.update(
+                {
+                    "ok_this_run": False,
+                    "paused_until": exc.until,
+                    "pause_reason": exc.reason,
+                    "error": str(exc)[:240],
+                    "failing_since": None,
+                    "items": 0,
+                }
+            )
+            if "HTTP" in exc.reason:  # the refusal happened now (not just an earlier pause being honoured)
+                entry["last_fail"] = iso(self.now)
+            return None
         except Exception as exc:
             log.error("source %s failed: %s", name, exc)
             log.debug(traceback.format_exc())
@@ -86,6 +107,9 @@ class Runner:
         )
         extra = result.get("blocked") or result.get("seen")
         entry["note"] = extra if extra else None
+        entry["lag_h"] = result.get("lag_h")
+        entry.pop("paused_until", None)
+        entry.pop("pause_reason", None)
         return result
 
 
@@ -204,8 +228,22 @@ def main(argv: list[str] | None = None) -> int:
     disc = runner.run("discovery", lambda: collect_discovery.collect(http, readmes))
 
     raw_items: list[dict[str, Any]] = []
+    # Reddit: four public layers (no official API, no OAuth), each with its own health entry, merged by post id.
+    reddit_layers = []
     for name, fn in [
-        ("reddit", lambda: collect_reddit.collect(http)),
+        ("reddit_rss", lambda: collect_reddit.collect_rss(http)),
+        ("arcticshift", lambda: collect_reddit.collect_arcticshift(http)),
+        ("pullpush", lambda: collect_reddit.collect_pullpush(http, runner.health.get("pullpush"))),
+        ("bing", lambda: collect_reddit.collect_bing(http)),
+    ]:
+        res = runner.run(name, fn)
+        if res:
+            reddit_layers.append(res["items"])
+    if reddit_layers:
+        raw_items += collect_reddit.merge(reddit_layers)
+    else:  # every layer failed: keep the last known Reddit items so the page does not go blank
+        raw_items += [dict(i, _texts=[], _urls=[]) for i in prev.get("items", []) if i.get("source") == "reddit"]
+    for name, fn in [
         ("hn", lambda: collect_social.collect_hn(http)),
         ("bluesky", lambda: collect_social.collect_bluesky(http)),
         ("mastodon", lambda: collect_social.collect_mastodon(http)),
@@ -277,6 +315,7 @@ def main(argv: list[str] | None = None) -> int:
             i
             for i in items
             if i["source"] in ("reddit", "hn", "lemmy")
+            and i.get("completeness", "full") == "full"  # partial data (RSS, Bing, young archive posts) never qualifies
             and (i.get("score") or 0) >= cfg_r["weekly_min_score"]
             and (i.get("comments") or 0) > cfg_r["weekly_min_comments"]
             and i["credibility"] != "false"
@@ -327,6 +366,7 @@ def main(argv: list[str] | None = None) -> int:
         "max_reached": max_reached,
         "stats": {"dropped_legal": dropped_legal, "dropped_spoiler": dropped_spoiler, "http_calls": http.calls},
         "phase_changes": history["changes"],
+        "reddit_freshness": collect_reddit.freshness(items, now),
     }
     health_doc = {"generated": iso(now), "sources": runner.health}
     if not args.offline:

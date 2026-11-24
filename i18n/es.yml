@@ -427,6 +427,15 @@ system:
     news: Noticias (Google News y medios)
     trackers: Trackers externos
     youtube: YouTube (búsqueda)
+    reddit_rss: Reddit (RSS)
+    arcticshift: Arctic Shift
+    pullpush: PullPush
+    bing: Bing (descubrimiento)
+  lag: Retraso medio
+  lag_h: '{n} h'
+  paused: en pausa hasta {t} UTC
+  layers: Reddit, capa a capa
+  layers_lead: Reddit se lee sin su API oficial, con cuatro capas públicas que se fusionan por id de post. Cada una muestra su estado por separado.
 footer:
   legal_title: Aviso legal
   legal: Proyecto informativo y no comercial. Sin relación con Rockstar Games, Take-Two Interactive ni Microsoft. No proporcionamos ni enlazamos el juego ni archivos filtrados. Cualquier "descarga de GTA 6 PC" es una estafa o malware.
@@ -489,3 +498,10 @@ faq_extra:
   a: No. No existe ninguna versión de PC, ni oficial ni de la comunidad. Toda web, vídeo o repo que ofrece "GTA 6 PC" para descargar es una estafa o malware. Mira nuestra guía de descargas falsas.
 - q: ¿Qué proyecto va más avanzado?
   a: Según el tracker PortWatch, una build privada llamada CGBJ ha puesto a un jugador dentro del mundo, sin iluminación y muy lenta. Entre los proyectos públicos, VIctory y sus derivados cargan el mundo pero lo ven oscuro. La clasificación de arriba se actualiza cada hora.
+reddit:
+  stale: 'Reddit: datos con retraso'
+  stale_text: El hilo de Reddit más reciente que tenemos es de {rel}. Las capas que lo recogen van con retraso o están bloqueadas.
+  fresh: 'Reddit al día: último hilo {rel}.'
+  partial: datos parciales
+  partial_title: Hilos de Reddit (datos parciales)
+  partial_lead: 'Encontrados por RSS o por buscador, o demasiado recientes en los archivos: sin puntuación ni comentarios definitivos. No cuentan para los hilos destacados.'

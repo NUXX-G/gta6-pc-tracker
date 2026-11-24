@@ -650,3 +650,177 @@ def test_screenshots_from_project_posts():
     assert media[0]["thumb"].startswith("https://github.com/user-attachments/assets/aaaaaaaa")
     # a generic layer needs GTA named in the post
     assert collect_media.media_from_posts(posts[:1], "xcl", "ivall/xcl") == []
+
+
+# ------------------------------------------------------------------ Reddit without the official API: four layers
+
+
+class FakeHttp:
+    """Answers by URL substring: a str body, a dict/list (JSON) or an int (HTTP error status). Records every call."""
+
+    offline = True
+
+    def __init__(self, routes):
+        self.routes = routes
+        self.calls = []
+
+    def get(self, url, headers=None, github=False, retries=None):
+        import json
+
+        from common import HttpError, Response
+
+        self.calls.append(url)
+        for key, answer in self.routes:
+            if key in url:
+                if isinstance(answer, int):
+                    raise HttpError(answer, url)
+                body = answer if isinstance(answer, str) else json.dumps(answer)
+                return Response(200, url, body, {})
+        raise HttpError(404, url)
+
+    def get_json(self, url, **kw):
+        return self.get(url, **kw).json()
+
+
+def _fixture_json(name):
+    import json
+
+    return json.loads((FIX / name).read_text(encoding="utf-8"))
+
+
+ARCTIC = _fixture_json("arcticshift.json")
+RSS = (FIX / "reddit_search.rss").read_text(encoding="utf-8")
+BING = (FIX / "bing.xml").read_text(encoding="utf-8")
+
+
+def test_reddit_rss_layer_success_and_partial():
+    import collect_reddit
+
+    res = collect_reddit.collect_rss(FakeHttp([("search.rss", RSS), ("new.rss", RSS)]))
+    ids = {i["post_id"] for i in res["items"]}
+    assert {"a9", "a2"} <= ids
+    assert all(i["via"] == "rss" and i["completeness"] == "partial" and i["score"] is None for i in res["items"])
+    assert next(i for i in res["items"] if i["post_id"] == "a2")["kind"] == "image"
+
+
+def test_reddit_rss_stops_after_two_blocks_in_a_row():
+    import collect_reddit
+    from common import HttpError
+
+    http = FakeHttp([("reddit.com", 429)])
+    with pytest.raises(HttpError):
+        collect_reddit.collect_rss(http)
+    assert len(http.calls) == 2  # two 403/429 in a row -> no more requests to Reddit this run
+    http = FakeHttp([("search.rss?q=gta%206%20pc&", 403), ("search.rss", RSS), ("new.rss", 429)])
+    res = collect_reddit.collect_rss(http)
+    assert res["count"] >= 1 and "403" in res["seen"]
+
+
+def test_arcticshift_layer_success_timeout_retry_and_bad_format():
+    import collect_reddit
+    from common import HttpError
+
+    res = collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", ARCTIC)]))
+    by_id = {i["post_id"]: i for i in res["items"]}
+    assert by_id["a8"]["completeness"] == "full" and by_id["a8"]["score"] == 900  # 40 h old: final numbers
+    assert by_id["a1"]["completeness"] == "partial"  # 0.5 h old: archived numbers are not settled yet
+    assert by_id["a1"]["via"] == "arcticshift" and by_id["a1"]["kind"] == "video"
+    assert res["lag_h"] is not None
+
+    class Flaky(FakeHttp):
+        def get(self, url, **kw):
+            if not self.calls:
+                self.calls.append(url)
+                raise HttpError(422, url, "Timeout. Maybe slow down a bit")
+            return super().get(url, **kw)
+
+    flaky = Flaky([("arctic-shift", ARCTIC)])
+    assert collect_reddit.collect_arcticshift(flaky)["count"] == res["count"]
+    assert flaky.calls[0] == flaky.calls[1]  # the timed-out query was retried once
+
+    with pytest.raises(HttpError):  # unexpected format on every query: the layer fails, nothing crashes
+        collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", {"data": None, "error": "boom"})]))
+    with pytest.raises(HttpError):
+        collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", 429)]))
+
+
+def test_pullpush_refusal_pauses_the_layer():
+    import collect_reddit
+    from common import SourcePaused
+
+    with pytest.raises(SourcePaused) as exc:
+        collect_reddit.collect_pullpush(FakeHttp([("pullpush", 429)]))
+    assert "HTTP 429" in exc.value.reason
+    http = FakeHttp([("pullpush", ARCTIC)])
+    with pytest.raises(SourcePaused):
+        collect_reddit.collect_pullpush(http, {"paused_until": "2026-11-25T12:00:00Z"})
+    assert http.calls == []  # while paused, PullPush is not called at all
+    res = collect_reddit.collect_pullpush(FakeHttp([("pullpush", ARCTIC)]))
+    assert res["count"] > 0 and all(i["via"] == "pullpush" for i in res["items"])
+
+
+def test_bing_layer_keeps_only_allowed_reddit_threads():
+    import collect_reddit
+
+    res = collect_reddit.collect_bing(FakeHttp([("bing.com", BING)]))
+    assert sorted(i["post_id"] for i in res["items"]) == ["a1", "b1"]  # r/memes and example.com are dropped
+    assert all(i["completeness"] == "partial" and i["via"] == "bing" for i in res["items"])
+
+
+def test_merge_across_layers_keeps_the_most_complete_record():
+    import collect_reddit
+
+    arctic = collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", ARCTIC)]))["items"]
+    rss = collect_reddit.collect_rss(FakeHttp([("search.rss", RSS), ("new.rss", RSS)]))["items"]
+    bing = collect_reddit.collect_bing(FakeHttp([("bing.com", BING)]))["items"]
+    merged = {i["post_id"]: i for i in collect_reddit.merge([rss, arctic, bing])}
+    assert len(merged) == len({i["post_id"] for i in arctic + rss + bing})  # one record per post id
+    a1 = merged["a1"]
+    assert a1["via"] == "arcticshift" and a1["vias"] == ["arcticshift", "bing"] and a1["score"] == 850
+    a2 = merged["a2"]
+    assert a2["vias"] == ["arcticshift", "rss"] and a2["kind"] == "image"
+    assert merged["b1"]["completeness"] == "partial" and merged["b1"]["via"] == "bing"
+    assert len({i["id"] for i in merged.values()}) == len(merged)  # same canonical URL -> same item id
+
+
+def test_reddit_items_still_pass_legal_and_spoiler_filters():
+    import collect_reddit
+
+    posts = [dict(p) for p in ARCTIC["data"]]
+    bad = next(p for p in posts if p["id"] == "a4")
+    bad["url"] = "https://mega.nz/file/abc"  # a post linking a file host
+    items = collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", {"data": posts})]))["items"]
+    kept, dropped_legal = legal_filter.filter_items(items)
+    kept, dropped_spoiler = spoiler_filter.filter_items(kept)
+    ids = {i["post_id"] for i in kept}
+    assert "a4" not in ids and dropped_legal >= 1  # prohibited link: dropped whole
+    assert "a3" not in ids and "a6" not in ids and dropped_spoiler >= 2  # spoiler term / spoiler flag
+
+
+def test_reddit_freshness_and_delayed_notice():
+    import collect_reddit
+    from common import parse_time
+
+    now = parse_time("2026-11-24T12:00:00Z")
+    fresh = collect_reddit.freshness([{"source": "reddit", "created": "2026-11-24T10:00:00Z"}], now)
+    assert fresh == {"newest": "2026-11-24T10:00:00Z", "lag_h": 2.0, "stale": False}
+    late = collect_reddit.freshness([{"source": "reddit", "created": "2026-11-24T04:00:00Z"}], now)
+    assert late["stale"] and late["lag_h"] == 8.0
+    assert collect_reddit.freshness([], now)["stale"]
+    env = build_site.env()
+    tpl = env.from_string('{% import "macros.html" as m %}{{ m.reddit_note(rs, T) }}')
+    t = load_yaml(I18N_DIR / "es.yml")
+    html = tpl.render(rs={"stale": True, "newest_rel": "hace 8 h"}, T=t, fmt=build_site.fmt)
+    assert "Reddit: datos con retraso" in html
+    html = tpl.render(rs={"stale": False, "newest_rel": "hace 2 h"}, T=t, fmt=build_site.fmt)
+    assert "datos con retraso" not in html
+
+
+def test_status_page_lists_each_reddit_layer(site):
+    text = (site / "en" / "status" / "index.html").read_text(encoding="utf-8")
+    for name in ["Reddit (RSS)", "Arctic Shift", "PullPush", "Bing (discovery)"]:
+        assert name in text
+    assert "paused until" in text  # PullPush refused automated clients in the fixtures
+    assert "built-in method" not in text
+    home = (site / "en" / "index.html").read_text(encoding="utf-8")
+    assert "partial data" in home and "r/memes" not in home

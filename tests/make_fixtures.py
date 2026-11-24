@@ -253,9 +253,42 @@ GPL
                     ),
                     post("a6", "GTA 6 PC port thread", "GTA6", 1, 20, 3, spoiler=True),
                     post("a7", "Which GPU for the GTA 6 PC recomp? NVIDIA wave64 discussion", "emulation", 10, 140, 60),
+                    # older than 36 h: the archive's score/comments are final -> "full" data (featured-thread material)
+                    post("a8", "GTA 6 PC port: XCL dev answers questions about the recomp", "pcgaming", 40, 900, 300),
                 ]
             }
         },
+    )
+    # Layer 2 (Arctic Shift) returns the same post objects as a plain list under "data".
+    reddit_posts = json.loads((HERE / "reddit.json").read_text(encoding="utf-8"))["data"]["children"]
+    w("arcticshift.json", {"data": [c["data"] for c in reddit_posts]})
+    # Layer 1 (Reddit RSS): one new post (partial) and a duplicate of a2 that the archive also has.
+    w(
+        "reddit_search.rss",
+        """<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+<entry><title>GTA 6 PC port: TuxBox shows the first screen on Linux</title>
+<link href="https://www.reddit.com/r/GTA6/comments/a9/gta_6_pc_port_tuxbox/"/><updated>2026-11-24T10:30:00+00:00</updated>
+<content type="html">&lt;p&gt;GTA 6 PC port progress with TuxBox&lt;/p&gt;</content></entry>
+<entry><title>GTA 6 PC port screenshot from the XCL dev</title>
+<link href="https://www.reddit.com/r/GTA6/comments/a2/x/"/><updated>2026-11-24T09:00:00+00:00</updated>
+<content type="html">&lt;a href="https://i.redd.it/x.png"&gt;[link]&lt;/a&gt;</content></entry>
+</feed>""",
+    )
+    # Layer 4 (Bing): a new allowed post, a post in a subreddit we do not read, a non-Reddit result, a duplicate.
+    w(
+        "bing.xml",
+        """<?xml version="1.0" encoding="utf-8" ?><rss version="2.0"><channel><title>Bing</title>
+<item><title>GTA 6 PC port VIctory progress thread - Reddit</title>
+<link>https://www.reddit.com/r/pcgaming/comments/b1/gta_6_pc_port/</link>
+<description>VIctory GTA 6 PC port discussion</description><pubDate>Tue, 24 Nov 2026 07:00:00 GMT</pubDate></item>
+<item><title>GTA 6 PC port memes</title><link>https://www.reddit.com/r/memes/comments/b2/gta6/</link>
+<description>GTA 6 PC port</description><pubDate>Tue, 24 Nov 2026 07:00:00 GMT</pubDate></item>
+<item><title>GTA 6 PC port news</title><link>https://example.com/gta6-pc</link>
+<description>GTA 6 PC port</description><pubDate>Tue, 24 Nov 2026 07:00:00 GMT</pubDate></item>
+<item><title>VIctory port progress: GTA 6 PC world now loads</title>
+<link>https://www.reddit.com/r/pcgaming/comments/a1/x/</link>
+<description>GTA 6 PC port</description><pubDate>Tue, 24 Nov 2026 11:30:00 GMT</pubDate></item>
+</channel></rss>""",
     )
     w(
         "hn.json",
@@ -447,8 +480,11 @@ GPL
         ("/releases\\?", {"file": "releases.json"}),
         ("/readme$", {"file": "readme.md"}),
         ("/forks\\?", {"file": "forks.json"}),
-        ("reddit\\.com/r/[^/]+/search\\.json", {"file": "reddit.json"}),
-        ("reddit\\.com/.+\\.rss", {"status": 403}),
+        (r"reddit\.com/r/[^/]+/search\.rss", {"file": "reddit_search.rss"}),
+        (r"reddit\.com/r/[^/]+/new\.rss", {"status": 429}),
+        (r"arctic-shift\.photon-reddit\.com/api/posts/search", {"file": "arcticshift.json"}),
+        (r"api\.pullpush\.io", {"status": 429}),
+        (r"bing\.com/search", {"file": "bing.xml"}),
         ("hn\\.algolia\\.com", {"file": "hn.json"}),
         ("bsky\\.app", {"status": 403}),
         ("mastodon\\.social/api", {"file": "mastodon.json"}),

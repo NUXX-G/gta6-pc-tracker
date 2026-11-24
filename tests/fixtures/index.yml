@@ -74,12 +74,24 @@
   "file": "forks.json"
  },
  {
-  "match": "reddit\\.com/r/[^/]+/search\\.json",
-  "file": "reddit.json"
+  "match": "reddit\\.com/r/[^/]+/search\\.rss",
+  "file": "reddit_search.rss"
  },
  {
-  "match": "reddit\\.com/.+\\.rss",
-  "status": 403
+  "match": "reddit\\.com/r/[^/]+/new\\.rss",
+  "status": 429
+ },
+ {
+  "match": "arctic-shift\\.photon-reddit\\.com/api/posts/search",
+  "file": "arcticshift.json"
+ },
+ {
+  "match": "api\\.pullpush\\.io",
+  "status": 429
+ },
+ {
+  "match": "bing\\.com/search",
+  "file": "bing.xml"
  },
  {
   "match": "hn\\.algolia\\.com",

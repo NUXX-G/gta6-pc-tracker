@@ -127,6 +127,7 @@
   <header class="section__head">
     <h2 id="h-news" class="h-section">{{ T.sections.news }}</h2>
     <p class="section__lead">{{ T.sections.news_lead }}</p>
+    {{ m.reddit_note(reddit_status, T) }}
   </header>
   <div class="tabs" data-tabs>
     <div class="tabs__list" role="tablist" hidden>
@@ -284,6 +285,11 @@
   </div>
   <h3 class="h-sub">{{ T.sections.weekly }}</h3>
   {{ m.entry_list(weekly, T, ui.links_visible, T.sections.weekly_empty) }}
+  {% if reddit_partial %}
+  <h3 class="h-sub">{{ T.reddit.partial_title }}</h3>
+  <p class="note">{{ T.reddit.partial_lead }}</p>
+  {{ m.entry_list(reddit_partial, T, ui.links_visible, '') }}
+  {% endif %}
 </section>
 
 {# ALERTS #}
