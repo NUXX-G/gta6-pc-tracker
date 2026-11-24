@@ -695,7 +695,7 @@
   }
  },
  {
-  "t": "2026-11-24T16:25:33Z",
+  "t": "2026-11-24T16:31:54Z",
   "p": {
    "cgbj": {
     "phase": 5,
@@ -711,8 +711,8 @@
     "phase": 5,
     "partial": false,
     "score": 70.0,
-    "stars": 9783,
-    "forks": 1363,
+    "stars": 9818,
+    "forks": 1366,
     "contributors": 50,
     "commits_24h": 207,
     "status": "active"
@@ -722,9 +722,9 @@
     "partial": false,
     "score": 70.0,
     "stars": 166,
-    "forks": 18,
+    "forks": 19,
     "contributors": 9,
-    "commits_24h": 72,
+    "commits_24h": 74,
     "status": "active"
    },
    "palmwave": {
@@ -741,20 +741,20 @@
     "phase": 5,
     "partial": true,
     "score": 62.5,
-    "stars": 7129,
-    "forks": 892,
+    "stars": 7142,
+    "forks": 893,
     "contributors": 72,
-    "commits_24h": 322,
+    "commits_24h": 321,
     "status": "active"
    },
    "five-star-recomp": {
     "phase": 5,
     "partial": true,
     "score": 62.5,
-    "stars": 114,
+    "stars": 115,
     "forks": 5,
     "contributors": 1,
-    "commits_24h": 390,
+    "commits_24h": 394,
     "status": "active"
    },
    "percyscarlett": {
@@ -781,10 +781,10 @@
     "phase": 4,
     "partial": true,
     "score": 47.5,
-    "stars": 1846,
+    "stars": 1847,
     "forks": 207,
     "contributors": 95,
-    "commits_24h": 1763,
+    "commits_24h": 1759,
     "status": "active"
    },
    "openscarlett-ce": {
@@ -794,7 +794,7 @@
     "stars": 65,
     "forks": 3,
     "contributors": 2,
-    "commits_24h": 41,
+    "commits_24h": 40,
     "status": "active"
    },
    "openscarlett": {
@@ -804,7 +804,7 @@
     "stars": 83,
     "forks": 12,
     "contributors": 5,
-    "commits_24h": 20,
+    "commits_24h": 19,
     "status": "active"
    },
    "tuxbox": {
@@ -824,7 +824,7 @@
     "stars": 7,
     "forks": 0,
     "contributors": 1,
-    "commits_24h": 30,
+    "commits_24h": 29,
     "status": "active"
    },
    "palmetto": {
@@ -834,7 +834,7 @@
     "stars": 130,
     "forks": 54,
     "contributors": 637,
-    "commits_24h": 814,
+    "commits_24h": 811,
     "status": "active"
    },
    "g6recomp": {
@@ -844,7 +844,7 @@
     "stars": 6,
     "forks": 0,
     "contributors": 1,
-    "commits_24h": 32,
+    "commits_24h": 23,
     "status": "active"
    },
    "g6shim": {
@@ -861,17 +861,17 @@
     "phase": 1,
     "partial": false,
     "score": 20.0,
-    "stars": 1452,
-    "forks": 311,
+    "stars": 1461,
+    "forks": 312,
     "contributors": 705,
-    "commits_24h": 1365,
+    "commits_24h": 1354,
     "status": "active"
    },
    "xbox-emulator": {
     "phase": 1,
     "partial": false,
     "score": 20.0,
-    "stars": 1777,
+    "stars": 1778,
     "forks": 118,
     "contributors": 19,
     "commits_24h": 0,
@@ -881,10 +881,10 @@
     "phase": 1,
     "partial": true,
     "score": 10.0,
-    "stars": 420,
+    "stars": 421,
     "forks": 55,
     "contributors": 646,
-    "commits_24h": 800,
+    "commits_24h": 799,
     "status": "active"
    },
    "xvalkyrie": {
