@@ -79,5 +79,128 @@
    "level": 1,
    "partial": true
   }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "cgbj",
+  "from": null,
+  "to": {
+   "level": 5,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "palmwave",
+  "from": null,
+  "to": {
+   "level": 5,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "xcl",
+  "from": {
+   "level": 4,
+   "partial": false
+  },
+  "to": {
+   "level": 5,
+   "partial": true
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "percyscarlett",
+  "from": null,
+  "to": {
+   "level": 4,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "xbox2windows",
+  "from": {
+   "level": 3,
+   "partial": true
+  },
+  "to": {
+   "level": 4,
+   "partial": true
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "openscarlett-ce",
+  "from": null,
+  "to": {
+   "level": 4,
+   "partial": true
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "openscarlett",
+  "from": null,
+  "to": {
+   "level": 4,
+   "partial": true
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "tuxbox",
+  "from": null,
+  "to": {
+   "level": 4,
+   "partial": true
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "holy-interoperability",
+  "from": null,
+  "to": {
+   "level": 3,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "g6recomp",
+  "from": null,
+  "to": {
+   "level": 2,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "g6shim",
+  "from": null,
+  "to": {
+   "level": 2,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "xbox-emulator",
+  "from": null,
+  "to": {
+   "level": 1,
+   "partial": false
+  }
+ },
+ {
+  "t": "2026-11-24T15:30:25Z",
+  "project": "xvalkyrie",
+  "from": null,
+  "to": {
+   "level": 1,
+   "partial": true
+  }
  }
 ]
