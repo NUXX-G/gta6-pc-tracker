@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-24T16:38:16Z",
+ "generated": "2026-11-24T22:00:23Z",
  "sources": {
   "github": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
-   "items": 20,
+   "items": 19,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -12,9 +12,9 @@
    "lag_h": null
   },
   "dmca": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
-   "items": 413,
+   "items": 425,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -22,7 +22,7 @@
    "lag_h": null
   },
   "trackers": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
    "items": 3,
    "error": null,
@@ -32,7 +32,7 @@
    "lag_h": null
   },
   "discovery": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
    "items": 25,
    "error": null,
@@ -42,7 +42,7 @@
    "lag_h": null
   },
   "hn": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
    "items": 8,
    "error": null,
@@ -52,15 +52,17 @@
    "lag_h": null
   },
   "bluesky": {
-   "last_ok": null,
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": "2026-11-24T16:38:16Z",
-   "items": 0,
+   "items": 76,
    "error": "HTTP 403 for bluesky (all queries failed)",
-   "ok_this_run": false,
-   "failing_since": "2026-11-24T12:59:41Z"
+   "ok_this_run": true,
+   "failing_since": null,
+   "note": null,
+   "lag_h": null
   },
   "mastodon": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
    "items": 11,
    "error": null,
@@ -70,9 +72,9 @@
    "lag_h": null
   },
   "lemmy": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
-   "items": 28,
+   "items": 30,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -80,19 +82,19 @@
    "lag_h": null
   },
   "news": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
-   "items": 26,
+   "items": 24,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
-   "note": 162,
+   "note": 188,
    "lag_h": null
   },
   "youtube": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
-   "items": 4,
+   "items": 6,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -103,39 +105,44 @@
    "last_ok": null,
    "last_fail": "2026-11-24T16:38:16Z",
    "items": 0,
-   "error": "HTTP 429 for https://www.reddit.com (blocked from this runner: 429)",
-   "ok_this_run": false,
-   "failing_since": "2026-11-24T16:31:54Z"
+   "error": null,
+   "ok_this_run": null,
+   "failing_since": null,
+   "disabled": "runner_blocked",
+   "note": null,
+   "lag_h": null
   },
   "arcticshift": {
-   "last_ok": "2026-11-24T16:38:16Z",
+   "last_ok": "2026-11-24T22:00:23Z",
    "last_fail": null,
-   "items": 45,
+   "items": 31,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
-   "note": "10 ok / 5 failed queries",
-   "lag_h": 3.9
+   "note": null,
+   "lag_h": 1.9
   },
   "pullpush": {
    "last_ok": null,
    "last_fail": "2026-11-24T16:38:16Z",
    "items": 0,
-   "error": "paused until 2026-11-25T16:36:32Z: HTTP 429: refuses automated clients",
-   "ok_this_run": false,
-   "paused_until": "2026-11-25T16:36:32Z",
-   "pause_reason": "HTTP 429: refuses automated clients",
-   "failing_since": null
+   "error": null,
+   "ok_this_run": null,
+   "failing_since": null,
+   "disabled": "refuses_agents",
+   "note": null,
+   "lag_h": null
   },
   "bing": {
    "last_ok": "2026-11-24T16:38:16Z",
    "last_fail": null,
    "items": 0,
    "error": null,
-   "ok_this_run": true,
+   "ok_this_run": null,
    "failing_since": null,
    "note": null,
-   "lag_h": null
+   "lag_h": null,
+   "disabled": "no_results"
   }
  }
 }
