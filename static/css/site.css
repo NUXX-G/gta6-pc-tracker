@@ -725,3 +725,5 @@ html[data-theme="day"] .sky { opacity: .7; }
   background: color-mix(in srgb, var(--warn) 9%, var(--surface)); }
 .reddit-note--stale strong { color: var(--warn); }
 .tag--partial { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 50%, var(--line)); }
+.tag--third { color: var(--muted); border-style: dashed; text-transform: uppercase; white-space: nowrap; }
+.press__by { margin: 0; font-size: var(--fs-1); color: var(--muted); font-style: italic; }

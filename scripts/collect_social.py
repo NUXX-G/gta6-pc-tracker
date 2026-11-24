@@ -64,7 +64,7 @@ def collect_bluesky(http: Http) -> dict[str, Any]:
     for q in _cfg()["bluesky_queries"]:
         try:
             res = http.get_json(
-                f"https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q={quote(q)}&limit=50&sort=latest"
+                f"https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q={quote(q)}&limit=50&sort=latest"
             )
         except HttpError as exc:
             errors, last = errors + 1, exc

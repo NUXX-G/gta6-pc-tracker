@@ -3,7 +3,7 @@ locale: en
 meta:
   site_name: GTA VI PC Tracker
   title: Can you play GTA 6 on PC? Live status of the ports
-  description: 'Is there GTA 6 for PC? Not yet. Live, spoiler-free tracking of the 20 projects trying to run the Xbox Series build of GTA VI on PC (VIctory, XCL, CGBJ…): phases, progress, GPUs, news and fake-download warnings.'
+  description: 'Is there GTA 6 for PC? Not yet. Live, spoiler-free tracking of the 19 projects trying to run the Xbox Series build of GTA VI on PC (VIctory, XCL, AnyXboxX…): phases, progress, GPUs, news and fake-download warnings.'
   og_alt: 'GTA VI PC Tracker: live status of unofficial ports'
   project_title: '{name} · GTA 6 on PC: status, progress and how it works'
   project_description: '{name}: what it is, how it tries to run GTA VI on PC, its phase ({phase}), what looks good and bad, compatible GPUs and a link to its repository.'
@@ -141,7 +141,7 @@ sections:
   older: Older entries
   system: Source status
   press: In the media
-  press_lead: What newspapers and specialist sites publish. Headlines pass our legal and spoiler filters; links are external.
+  press_lead: 'What newspapers and specialist sites publish. Headlines are third-party: shown as each outlet published them, with its name, and they are not ours nor verified by us. They pass our legal and spoiler filters; links are external.'
   press_empty: No outlet has published anything that passes the filters this week.
   press_all: All news
   press_curated: Editors' picks
@@ -435,7 +435,13 @@ system:
   lag_h: '{n} h'
   paused: paused until {t} UTC
   layers: Reddit, layer by layer
-  layers_lead: Reddit is read without its official API, through four public layers merged by post id. Each one reports its own status.
+  disabled: "off"
+  disabled_reasons:
+    runner_blocked: "Reddit blocks requests from GitHub Actions servers. We do not use proxies, so this layer is off."
+    refuses_agents: "PullPush asks automated clients not to use it, and we respect that."
+    no_results: "Bing's search returns no Reddit threads; it will be switched back on if that changes."
+    "off": "Switched off in config/sources.yml."
+  layers_lead: Reddit is read without its official API, through public layers merged by post id. From GitHub Actions only Arctic Shift (a public Reddit archive) works; the other layers are off, with the reason shown.
 footer:
   legal_title: Legal notice
   legal: Informational, non-commercial project. Not affiliated with Rockstar Games, Take-Two Interactive or Microsoft. We do not provide or link the game or any leaked files. Any 'GTA 6 PC download' is a scam or malware.
@@ -497,7 +503,7 @@ faq_extra:
 - q: Can I download GTA 6 for PC?
   a: No. There is no PC version, official or community-made. Every site, video or repo offering "GTA 6 PC" to download is a scam or malware. See our fake downloads guide.
 - q: Which project is furthest along?
-  a: According to the PortWatch tracker, a private build called CGBJ has put a player inside the world, unlit and very slow. Among public projects, VIctory and its derivatives load the world but see it dark. The standings above update every hour.
+  a: VIctory and its derivatives (such as AnyXboxX) and Palmwave load the world, but still see it dark or as one flat colour, at seconds per frame. None is playable. The standings above update every hour.
 reddit:
   stale: 'Reddit: delayed data'
   stale_text: The newest Reddit thread we have is from {rel}. The layers that collect it are running late or blocked.
@@ -505,3 +511,6 @@ reddit:
   partial: partial data
   partial_title: Reddit threads (partial data)
   partial_lead: 'Found through RSS or search, or too recent in the archives: no settled score or comment count. They never count as featured threads.'
+press:
+  third_party: "Third-party"
+  headline_by: "Original headline by {outlet}, as published. Not ours and not verified by us."

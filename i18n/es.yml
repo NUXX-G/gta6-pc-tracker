@@ -3,7 +3,7 @@ locale: es
 meta:
   site_name: GTA VI PC Tracker
   title: ¿Se puede jugar GTA 6 en PC? Estado de los ports en directo
-  description: '¿Hay GTA 6 para PC? Todavía no. Seguimiento en directo y sin spoilers de los 20 proyectos que intentan ejecutar en PC la versión de Xbox Series de GTA VI (VIctory, XCL, CGBJ…): fases, avance, GPU, noticias y avisos de descargas falsas.'
+  description: '¿Hay GTA 6 para PC? Todavía no. Seguimiento en directo y sin spoilers de los 19 proyectos que intentan ejecutar en PC la versión de Xbox Series de GTA VI (VIctory, XCL, AnyXboxX…): fases, avance, GPU, noticias y avisos de descargas falsas.'
   og_alt: 'GTA VI PC Tracker: estado en directo de los ports no oficiales'
   project_title: '{name} · GTA 6 en PC: estado, avance y cómo funciona'
   project_description: '{name}: qué es, cómo intenta ejecutar GTA VI en PC, en qué fase está ({phase}), lo que pinta bien y mal, GPU compatibles y enlace a su repositorio.'
@@ -141,7 +141,7 @@ sections:
   older: Entradas anteriores
   system: Estado de las fuentes
   press: En los medios
-  press_lead: Lo que publican periódicos y webs especializadas. Los titulares pasan nuestros filtros legales y de spoilers; los enlaces son externos.
+  press_lead: 'Lo que publican periódicos y webs especializadas. Los titulares son de terceros: se muestran tal como los publicó cada medio, con su nombre, y no son nuestros ni están verificados por nosotros. Pasan nuestros filtros legales y de spoilers; los enlaces son externos.'
   press_empty: Ningún medio ha publicado nada que pase los filtros esta semana.
   press_all: Todas las noticias
   press_curated: Selección de la redacción
@@ -435,7 +435,13 @@ system:
   lag_h: '{n} h'
   paused: en pausa hasta {t} UTC
   layers: Reddit, capa a capa
-  layers_lead: Reddit se lee sin su API oficial, con cuatro capas públicas que se fusionan por id de post. Cada una muestra su estado por separado.
+  disabled: desactivada
+  disabled_reasons:
+    runner_blocked: "Reddit bloquea las peticiones desde los servidores de GitHub Actions. No usamos proxies, así que esta capa está apagada."
+    refuses_agents: "PullPush pide que no lo usen clientes automáticos y lo respetamos."
+    no_results: "La búsqueda de Bing no devuelve hilos de Reddit; se reactivará si cambia."
+    "off": "Apagada en config/sources.yml."
+  layers_lead: Reddit se lee sin su API oficial, a través de capas públicas que se fusionan por id de post. Desde GitHub Actions solo funciona Arctic Shift (un archivo público de Reddit); las demás capas están apagadas y se explica por qué.
 footer:
   legal_title: Aviso legal
   legal: Proyecto informativo y no comercial. Sin relación con Rockstar Games, Take-Two Interactive ni Microsoft. No proporcionamos ni enlazamos el juego ni archivos filtrados. Cualquier "descarga de GTA 6 PC" es una estafa o malware.
@@ -497,7 +503,7 @@ faq_extra:
 - q: ¿Puedo descargar GTA 6 para PC?
   a: No. No existe ninguna versión de PC, ni oficial ni de la comunidad. Toda web, vídeo o repo que ofrece "GTA 6 PC" para descargar es una estafa o malware. Mira nuestra guía de descargas falsas.
 - q: ¿Qué proyecto va más avanzado?
-  a: Según el tracker PortWatch, una build privada llamada CGBJ ha puesto a un jugador dentro del mundo, sin iluminación y muy lenta. Entre los proyectos públicos, VIctory y sus derivados cargan el mundo pero lo ven oscuro. La clasificación de arriba se actualiza cada hora.
+  a: VIctory y sus derivados (como AnyXboxX) y Palmwave cargan el mundo, pero aún lo ven oscuro o de un color plano y van a segundos por frame. Ninguno es jugable. La clasificación de arriba se actualiza cada hora.
 reddit:
   stale: 'Reddit: datos con retraso'
   stale_text: El hilo de Reddit más reciente que tenemos es de {rel}. Las capas que lo recogen van con retraso o están bloqueadas.
@@ -505,3 +511,6 @@ reddit:
   partial: datos parciales
   partial_title: Hilos de Reddit (datos parciales)
   partial_lead: 'Encontrados por RSS o por buscador, o demasiado recientes en los archivos: sin puntuación ni comentarios definitivos. No cuentan para los hilos destacados.'
+press:
+  third_party: "De terceros"
+  headline_by: "Titular original de {outlet}, tal como lo publicó. No es nuestro ni lo hemos verificado."

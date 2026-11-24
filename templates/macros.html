@@ -150,9 +150,11 @@
 
 {% macro press_card(n, T) -%}
 <li class="press card" data-ts="{{ n.created }}">
-  <p class="press__outlet"><span class="press__name">{{ n.outlet }}</span>{% if n.lang %} <span class="tag">{{ n.lang }}</span>{% endif %}</p>
-  <a class="press__title" href="{{ n.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ n.headline }}<span class="sr-only"> ({{ T.external }})</span></a>
+  <p class="press__outlet"><span class="press__name">{{ n.outlet }}</span>{% if n.lang %} <span class="tag">{{ n.lang }}</span>{% endif %}{% if n.third_party %} <span class="tag tag--third">{{ T.press.third_party }}</span>{% endif %}</p>
+  {% if n.third_party %}<p class="press__by">{{ fmt(T.press.headline_by, outlet=n.outlet) }}</p>{% endif %}
+  <a class="press__title" href="{{ n.url }}" target="_blank" rel="noopener noreferrer nofollow"{% if n.third_party and n.lang %} lang="{{ n.lang|lower }}"{% endif %}>{% if n.third_party %}«{{ n.headline }}»{% else %}{{ n.headline }}{% endif %}<span class="sr-only"> ({{ T.external }})</span></a>
   <p class="entry__meta">{{ time(n.created, n.rel) }} · {{ cred(n.credibility, T) }}{% if n.project %} · <span class="chip chip--sm">{{ n.project }}</span>{% endif %}</p>
+  {{ ext_warn(T) }}
 </li>
 {%- endmacro %}
 

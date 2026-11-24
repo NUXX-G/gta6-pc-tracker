@@ -1,8 +1,11 @@
 name: Hourly update and deploy
 
 on:
+  # GitHub's scheduler can drop or delay runs (none fired here for the repo's first hours), so there are two slots
+  # per hour; the "Freshness guard" step skips the second one when the data is already less than 40 minutes old.
   schedule:
     - cron: "17 * * * *"
+    - cron: "47 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -20,14 +23,30 @@ jobs:
   collect:
     name: Collect, analyse and build
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     permissions:
       contents: write
+    outputs:
+      skip: ${{ steps.guard.outputs.skip }}
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
+      - name: Freshness guard
+        id: guard
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          skip=false
+          if [ "$EVENT" = "schedule" ] && [ -f data/latest.json ]; then
+            age=$(python3 -c "import json,datetime as d;g=json.load(open('data/latest.json'))['generated'];print(int((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(g.replace('Z','+00:00'))).total_seconds()//60))" || echo 999)
+            echo "Data age: ${age} min"
+            if [ "$age" -lt 40 ]; then skip=true; echo "Data is fresh; skipping this slot."; fi
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+
       - name: Set up Python
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
@@ -35,14 +54,17 @@ jobs:
           cache-dependency-path: requirements.txt
 
       - name: Install dependencies
+        if: steps.guard.outputs.skip != 'true'
         run: python -m pip install -r requirements.txt
 
       - name: Run collectors and build the site
+        if: steps.guard.outputs.skip != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/run_all.py
 
       - name: Commit data/ if it changed
+        if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -59,6 +81,7 @@ jobs:
           echo "::warning::Could not push data/ after 3 attempts"
 
       - name: Upload Pages artifact
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: _site
@@ -66,6 +89,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: collect
+    if: needs.collect.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

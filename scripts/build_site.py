@@ -244,6 +244,7 @@ def press_view(T, it: dict[str, Any], names: dict[str, str], now) -> dict[str, A
         "id": it["id"],
         "url": url,
         "headline": headline or item_title(T, it, names),
+        "third_party": bool(headline),  # the outlet's own words, labelled as such on the page
         "outlet": it.get("source_label") or domain_of(url),
         "host": domain_of(url),
         "lang": (it.get("lang") or "").upper(),
@@ -475,6 +476,9 @@ def view_model(
                 "error": _strip_urls(h.get("error") or "")[:160] if not h.get("ok_this_run") else "",
                 "lag": fmt(T["system"]["lag_h"], n=h["lag_h"]) if h.get("lag_h") is not None else "—",
                 "paused": rel_until(T, h.get("paused_until"), now),
+                "disabled": T["system"]["disabled_reasons"].get(h["disabled"], h["disabled"])
+                if h.get("disabled")
+                else "",
                 "group": "reddit" if name in REDDIT_KEYS else "",
             }
         )

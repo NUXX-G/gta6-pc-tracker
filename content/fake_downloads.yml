@@ -18,7 +18,7 @@ es:
     - {icon: "repo", title: "Repos falsos en GitHub", text: "Copias del README de un proyecto real con un \"instalador\" o \"launcher\" en las releases. Aparecen en redes de decenas de repos idénticos creados en minutos que se dan estrellas entre sí para parecer populares. Los proyectos reales no traen nunca un ejecutable con el juego."}
     - {icon: "survey", title: "Verificación humana y encuestas", text: "Te piden completar una encuesta, instalar dos apps o dejar tu número \"para demostrar que no eres un robot\". Nunca hay juego: solo suscripciones de SMS de pago y tus datos vendidos."}
     - {icon: "mobile", title: "Versiones para móvil", text: "\"GTA 6 para Android/iOS\" o \"emulador de GTA 6\" en APK. No existen. Son apps con publicidad agresiva o con permisos para leer tus mensajes y códigos de verificación."}
-    - {icon: "chat", title: "Mensajes privados en Discord", text: "Alguien te ofrece \"acceso anticipado\", \"la build privada\" de un grupo como CGBJ o una \"key\" de Steam. Te pide iniciar sesión en una web que imita Steam o Discord, o ejecutar un archivo. Es robo de cuentas."}
+    - {icon: "chat", title: "Mensajes privados en Discord", text: "Alguien te ofrece \"acceso anticipado\", \"la build privada\" de un grupo privado o una \"key\" de Steam. Te pide iniciar sesión en una web que imita Steam o Discord, o ejecutar un archivo. Es robo de cuentas."}
     - {icon: "coin", title: "Criptomonedas ligadas a la filtración", text: "Tokens y \"preventas\" que prometen liberar el juego o un port cuando suba el precio. Son esquemas de pump and dump: los de arriba venden y tú te quedas con humo."}
   flags_title: "Señales de alarma"
   flags:
@@ -66,7 +66,7 @@ en:
     - {icon: "repo", title: "Fake GitHub repos", text: "Copies of a real project's README with an \"installer\" or \"launcher\" in the releases. They come in networks of dozens of identical repos created within minutes that star each other to look popular. Real projects never ship an executable with the game."}
     - {icon: "survey", title: "Human verification and surveys", text: "You are asked to complete a survey, install two apps or leave your phone number \"to prove you are not a robot\". There is no game at the end: just premium SMS subscriptions and your data sold."}
     - {icon: "mobile", title: "Mobile versions", text: "\"GTA 6 for Android/iOS\" or a \"GTA 6 emulator\" APK. They do not exist. They are apps with aggressive ads or with permissions to read your messages and verification codes."}
-    - {icon: "chat", title: "Private messages on Discord", text: "Someone offers you \"early access\", \"the private build\" of a group like CGBJ, or a Steam \"key\". They ask you to log in on a site that imitates Steam or Discord, or to run a file. It is account theft."}
+    - {icon: "chat", title: "Private messages on Discord", text: "Someone offers you \"early access\", \"the private build\" of a private group, or a Steam \"key\". They ask you to log in on a site that imitates Steam or Discord, or to run a file. It is account theft."}
     - {icon: "coin", title: "Crypto tied to the leak", text: "Tokens and \"presales\" promising to release the game or a port once the price goes up. They are pump-and-dump schemes: the people at the top sell and you are left holding nothing."}
   flags_title: "Red flags"
   flags:

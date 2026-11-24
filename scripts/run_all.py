@@ -102,6 +102,22 @@ class Runner:
             if not entry.get("failing_since"):
                 entry["failing_since"] = iso(self.now)
             return None
+        if result.get("disabled"):  # switched off in config (see config/sources.yml): neither OK nor failing
+            entry.update(
+                {
+                    "ok_this_run": None,
+                    "disabled": result["disabled"],
+                    "error": None,
+                    "failing_since": None,
+                    "items": 0,
+                    "note": None,
+                    "lag_h": None,
+                }
+            )
+            entry.pop("paused_until", None)
+            entry.pop("pause_reason", None)
+            return None
+        entry.pop("disabled", None)
         entry.update(
             {"last_ok": iso(self.now), "ok_this_run": True, "items": int(result.get("count", 0)), "failing_since": None}
         )

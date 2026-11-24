@@ -128,55 +128,73 @@ def _archive_rows(payload: Any) -> list[dict[str, Any]]:
     return payload["data"]
 
 
+def _arctic_get(http: Http, url: str, cfg: dict[str, Any]) -> list[dict[str, Any]]:
+    """One request; a 422 ("Timeout. Maybe slow down a bit") is retried once after a pause."""
+    for attempt in range(2):
+        try:
+            return _archive_rows(http.get_json(url, retries=0))
+        except HttpError as exc:
+            if exc.status == 422 and attempt == 0:
+                if not http.offline:
+                    time.sleep(cfg["timeout_retry_wait_s"])
+                continue
+            raise
+    return []  # pragma: no cover
+
+
 def collect_arcticshift(http: Http) -> dict[str, Any]:
     cfg = _cfg()["layers"]["arcticshift"]
     if not cfg.get("enabled"):
-        return {"items": [], "count": 0, "seen": "disabled"}
+        return {"items": [], "count": 0, "disabled": cfg.get("disabled_reason") or "off"}
     base = cfg["url"]
-    urls: list[str] = []
+    # One plain "latest posts" listing per subreddit, paged back with "before" while full pages keep coming
+    # (busy subreddits post more than `limit` times in the window), plus optional keyword queries.
+    jobs: list[tuple[str, bool]] = []
     for sub in _cfg()["subreddits"]:
-        urls.append(f"{base}?subreddit={sub}&after={cfg['after']}&limit={cfg['limit']}&sort=desc")
-        for term in _cfg()["terms"][: cfg["term_queries"]]:
-            urls.append(
-                f"{base}?subreddit={sub}&query={quote(term)}&after={cfg['after']}&limit={cfg['limit']}&sort=desc"
+        jobs.append((f"{base}?subreddit={sub}&after={cfg['after']}&limit={cfg['limit']}&sort=desc", True))
+        for term in _cfg()["terms"][: cfg.get("term_queries", 0)]:
+            jobs.append(
+                (
+                    f"{base}?subreddit={sub}&query={quote(term)}&after={cfg['after']}&limit={cfg['limit']}&sort=desc",
+                    False,
+                )
             )
     items: dict[str, dict[str, Any]] = {}
-    ok, errors, last = 0, 0, None
-    for url in urls[: cfg["max_requests"]]:
-        for attempt in range(2):
-            try:
-                rows = _archive_rows(http.get_json(url, retries=0))
-                ok += 1
-                for d in rows:
-                    it = from_post_dict(d, "arcticshift")
-                    if it:
-                        items[it["post_id"]] = it
+    ok, errors, requests_left, last = 0, 0, cfg["max_requests"], None
+    for url, paged in jobs:
+        page_url = url
+        for _page in range(cfg.get("max_pages", 1) if paged else 1):
+            if requests_left <= 0:
                 break
+            requests_left -= 1
+            try:
+                rows = _arctic_get(http, page_url, cfg)
             except HttpError as exc:
-                last = exc
-                if exc.status == 422 and attempt == 0:  # "Timeout. Maybe slow down a bit"
-                    if not http.offline:
-                        time.sleep(cfg["timeout_retry_wait_s"])
-                    continue
-                errors += 1
+                last, errors = exc, errors + 1
                 if exc.status == 429:  # rate limited: stop for this run
-                    break
+                    requests_left = 0
                 break
             except ValueError as exc:
-                last = exc
-                errors += 1
+                last, errors = exc, errors + 1
                 break
-        if isinstance(last, HttpError) and last.status == 429:
-            break
+            ok += 1
+            for d in rows:
+                it = from_post_dict(d, "arcticshift")
+                if it:
+                    items[it["post_id"]] = it
+            oldest = min((int(d.get("created_utc") or 0) for d in rows), default=0)
+            if len(rows) < cfg["limit"] or not oldest:
+                break
+            page_url = f"{url}&before={oldest}"
     if ok == 0:
         raise HttpError(getattr(last, "status", 0) or 0, "arcticshift", f"(no successful query: {last})")
-    return _result(list(items.values()), note=f"{ok} ok / {errors} failed queries" if errors else None)
+    return _result(list(items.values()), note=f"{ok} ok / {errors} failed requests" if errors else None)
 
 
 def collect_pullpush(http: Http, health: dict[str, Any] | None = None) -> dict[str, Any]:
     cfg = _cfg()["layers"]["pullpush"]
     if not cfg.get("enabled"):
-        return {"items": [], "count": 0, "seen": "disabled"}
+        return {"items": [], "count": 0, "disabled": cfg.get("disabled_reason") or "off"}
     paused = (health or {}).get("paused_until")
     now = now_utc()
     if paused and parse_time(paused) and parse_time(paused) > now:
@@ -249,7 +267,7 @@ def from_rss(text: str, via: str = "rss", completeness: str = "partial") -> list
 def collect_rss(http: Http) -> dict[str, Any]:
     cfg = _cfg()["layers"]["rss"]
     if not cfg.get("enabled"):
-        return {"items": [], "count": 0, "seen": "disabled"}
+        return {"items": [], "count": 0, "disabled": cfg.get("disabled_reason") or "off"}
     urls = []
     for sub in _cfg()["subreddits"]:
         for term in _cfg()["terms"]:
@@ -312,7 +330,7 @@ def from_bing(text: str) -> list[dict[str, Any]]:
 def collect_bing(http: Http) -> dict[str, Any]:
     cfg = _cfg()["layers"]["bing"]
     if not cfg.get("enabled"):
-        return {"items": [], "count": 0, "seen": "disabled"}
+        return {"items": [], "count": 0, "disabled": cfg.get("disabled_reason") or "off"}
     items: dict[str, dict[str, Any]] = {}
     ok, last = 0, None
     for q in cfg["queries"]:

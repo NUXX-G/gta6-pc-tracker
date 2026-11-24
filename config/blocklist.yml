@@ -3,3 +3,5 @@
 repos: []
 owners: []
 domains: []
+# names: projects listed by external trackers that we never show (e.g. private builds nobody can reproduce).
+names: [CGBJ]

@@ -3,7 +3,7 @@
 {% macro row(s) %}
     <tr class="{{ 'is-warn' if s.warn }}">
       <th scope="row" data-label="{{ T.system.source }}">{{ s.name }}</th>
-      <td data-label="{{ T.project.status }}">{% if s.ok %}<span class="badge badge--active">{{ T.system.ok }}</span>{% elif s.paused %}<span class="badge badge--est">{{ s.paused }}</span>{% else %}<span class="badge badge--missing">{{ T.system.failing }}</span> <small class="note">{{ T.system.unavailable }}</small>{% endif %}
+      <td data-label="{{ T.project.status }}">{% if s.ok %}<span class="badge badge--active">{{ T.system.ok }}</span>{% elif s.disabled %}<span class="badge badge--muted">{{ T.system.disabled }}</span> <small class="note">{{ s.disabled }}</small>{% elif s.paused %}<span class="badge badge--est">{{ s.paused }}</span>{% else %}<span class="badge badge--missing">{{ T.system.failing }}</span> <small class="note">{{ T.system.unavailable }}</small>{% endif %}
         {% if s.warn %}<span class="badge badge--bad">{{ fmt(T.system.warn, h=warn_h) }}</span>{% endif %}
         {% if s.error %}<small class="note">{{ T.system.error }}: <code>{{ s.error }}</code></small>{% endif %}</td>
       <td data-label="{{ T.system.last_ok }}">{% if s.last_ok_iso %}{{ m.time(s.last_ok_iso, s.last_ok) }}{% else %}{{ s.last_ok }}{% endif %}</td>

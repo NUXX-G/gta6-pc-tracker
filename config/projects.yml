@@ -25,12 +25,12 @@ projects:
     requirements_en: "Windows 10/11 x64, AVX2 CPU, Direct3D 12 GPU with shader model 6.6 and mesh shaders."
     kind: layer
     article_es:
-      - "VIctory es, ahora mismo, la referencia pública: el proyecto que más gente sigue y sobre el que se apoyan otros (AnyXboxX y la build privada CGBJ parten de su código). Lo escribe en Rust un solo autor principal, que enseñó los menús funcionando en directo el mismo día en que apareció el ejecutable."
+      - "VIctory es, ahora mismo, la referencia pública: el proyecto que más gente sigue y sobre el que se apoyan otros (AnyXboxX parte de su código). Lo escribe en Rust un solo autor principal, que enseñó los menús funcionando en directo el mismo día en que apareció el ejecutable."
       - "La idea es sencilla de contar y difícil de hacer: la Xbox Series usa un procesador x86-64 como el de tu PC, así que VIctory no traduce el código del juego, lo carga y lo deja correr tal cual. Lo que hace es fingir que es la consola: le da al juego las bibliotecas de sistema, los archivos, el audio, el mando y, sobre todo, una GPU que entiende sus órdenes, traduciendo cada shader de consola a un formato que tu tarjeta gráfica sí entiende."
       - "Hoy el juego arranca, pasa las pantallas iniciales, enseña los menús a 30 fps y carga el mundo en unos 50 segundos. Dentro del mundo la cosa se complica: muchos shaders de la escena 3D aún no están traducidos, la imagen sale casi negra y cada frame tarda entre medio segundo y casi dos."
       - "Qué vigilar: el porcentaje de shaders del mundo traducidos (es el cuello de botella) y los cuelgues de GPU (TDR). Si esos dos números mejoran, el salto a un mundo visible puede ser rápido."
     article_en:
-      - "VIctory is the public reference point right now: the most followed project, and the base others build on (AnyXboxX and the private CGBJ build start from its code). It is written in Rust by one main author, who showed the menus working live on the day the executable appeared."
+      - "VIctory is the public reference point right now: the most followed project, and the base others build on (AnyXboxX starts from its code). It is written in Rust by one main author, who showed the menus working live on the day the executable appeared."
       - "The idea is simple to explain and hard to do: the Xbox Series has an x86-64 processor like your PC, so VIctory does not translate the game's code; it loads it and lets it run as it is. What it does is pretend to be the console: it hands the game its system libraries, files, audio, gamepad and, above all, a GPU that understands its commands, by translating each console shader into a format your graphics card can run."
       - "Today the game boots, gets through its first screens, shows its menus at 30 fps and loads the world in about 50 seconds. Inside the world it gets hard: many 3D-scene shaders are still untranslated, the picture is nearly black and every frame takes between half a second and almost two."
       - "What to watch: the share of world shaders translated (the bottleneck) and GPU hangs (TDR). If those two numbers improve, the jump to a visible world could be quick."
@@ -315,42 +315,6 @@ projects:
       - {es: "Comunidad pequeña y requisitos de compilación muy pesados.", en: "Small community and very heavy build requirements.", evidence: "https://github.com/luizwidmer/palmetto#build"}
 
   # ---- Promoted from the external trackers (GTA VI PC Race, PortWatch VI) on 2026-11-24 ----
-
-  - name: "CGBJ"
-    slug: cgbj
-    repo: null
-    link: "https://portwatch-vi.xyz/news/2026-11-24-cgbj-in-game.html"
-    language: "—"
-    priority: 0
-    phase: {level: 5, partial: false,
-            note_es: "Según PortWatch, que dice haberlo comprobado, un jugador se mueve con mando y habla con personajes dentro del mundo, sin iluminación y muy lento (unos 3–4 fps). El código es privado: nadie de fuera puede reproducirlo.",
-            note_en: "According to PortWatch, which says it checked it, a player moves with a controller and talks to characters inside the world, unlit and very slowly (about 3–4 fps). The code is private: nobody outside can reproduce it."}
-    goal_es: "Llevar la versión de Xbox Series al mundo jugable en PC a partir de VIctory, con parte del trabajo de XCL."
-    goal_en: "Take the Xbox Series build to a playable world on PC, starting from VIctory with some of XCL's work."
-    approach_es: "Build privada basada en el runtime de VIctory (capa de compatibilidad) con piezas de XCL; sus cambios no son públicos."
-    approach_en: "Private build based on VIctory's runtime (a compatibility layer) with pieces of XCL; its changes are not public."
-    technical_es: "No hay repositorio público. Lo que se sabe viene de un vídeo de 77 segundos publicado en X y de la verificación de PortWatch: control con mando, mundo cargado en colores planos sin luz y un rendimiento de pocos frames por segundo."
-    technical_en: "There is no public repository. What is known comes from a 77-second video posted on X and PortWatch's check: gamepad control, the world loaded in flat unlit colours, and a few frames per second."
-    requirements_es: "Desconocidos: no hay código ni build pública."
-    requirements_en: "Unknown: there is no public code or build."
-    kind: private
-    based_on: [victory, xcl]
-    article_es:
-      - "CGBJ es un grupo que trabaja en privado y que, según el tracker PortWatch, es el primero en meter a un jugador dentro del mundo de GTA VI en PC con control real: caminar, hablar con personajes y abrir el menú de pausa. Es el resultado más avanzado conocido, pero también el más difícil de comprobar."
-      - "No es un proyecto nuevo desde cero: parte de VIctory, la capa de compatibilidad pública más seguida, y le añade parte del trabajo de XCL. Es decir, usa la misma idea (el código del juego corre en tu CPU y se le pone debajo una consola falsa) con cambios propios que no ha publicado."
-      - "La imagen todavía es plana: colores sin iluminación, y en la prueba en la que el jugador caminaba la pantalla estaba en negro. Va muy lento, a unos pocos frames por segundo, lejos de los 30 que hacen falta para jugar."
-      - "Por qué lo marcamos con cautela: el código es privado, así que nadie de fuera puede reproducirlo, y el vídeo no nombra el proyecto. Si alguien te ofrece \"la build de CGBJ\" para descargar, es una estafa: no hay nada público."
-    article_en:
-      - "CGBJ is a group working in private which, according to the PortWatch tracker, is the first to put a player inside GTA VI's world on PC with real control: walking, talking to characters and opening the pause menu. It is the furthest known result, but also the hardest to check."
-      - "It is not a new project from scratch: it starts from VIctory, the most followed public compatibility layer, and adds some of XCL's work. In other words, it uses the same idea (the game's code runs on your CPU on top of a fake console) with changes of its own that it has not published."
-      - "The picture is still flat: colours without lighting, and in the run where the player walked the screen was black. It is very slow, a few frames per second, far from the 30 you need to play."
-      - "Why we flag it with caution: the code is private, so nobody outside can reproduce it, and the video does not name the project. If someone offers you \"the CGBJ build\" to download, it is a scam: nothing is public."
-    strengths:
-      - {es: "El resultado más avanzado conocido: control del jugador dentro del mundo.", en: "The furthest known result: player control inside the world.", evidence: "https://portwatch-vi.xyz/news/2026-11-24-cgbj-in-game.html"}
-      - {es: "Se apoya en dos bases públicas sólidas (VIctory y XCL).", en: "Builds on two solid public bases (VIctory and XCL).", evidence: "https://github.com/Marvisak/VIctory"}
-    weaknesses:
-      - {es: "Código privado: imposible de reproducir o auditar desde fuera.", en: "Private code: impossible to reproduce or audit from outside.", evidence: "https://portwatch-vi.xyz/news/2026-11-24-cgbj-in-game.html"}
-      - {es: "Sin iluminación y a pocos frames por segundo.", en: "No lighting and a few frames per second.", evidence: "https://vuyp.github.io/gta6-pc-race/"}
 
   - name: "Palmwave"
     slug: palmwave

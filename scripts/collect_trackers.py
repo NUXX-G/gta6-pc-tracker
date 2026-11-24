@@ -146,9 +146,12 @@ def merge_external(trackers: list[dict[str, Any]], projects: list[dict[str, Any]
     """One row per repo (or name for private builds), with the stage each tracker reports and our own slug."""
     by_repo = {p["repo"].lower(): p["slug"] for p in projects if p.get("repo")}
     by_name = {p["name"].lower(): p["slug"] for p in projects}
+    hidden = {str(n).lower() for n in (config("blocklist") or {}).get("names") or []}
     rows: dict[str, dict[str, Any]] = {}
     for t in trackers:
         for ep in t.get("projects", []):
+            if ep["name"].lower() in hidden:
+                continue  # config/blocklist.yml → names: never shown
             key = (ep["repo"] or ep["name"]).lower()
             row = rows.setdefault(
                 key,

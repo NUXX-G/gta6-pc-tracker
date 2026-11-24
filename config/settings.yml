@@ -23,7 +23,6 @@ media:
     - "gta vi pc port progress"
     - "gta 6 victory xcl pc"
     - "gta 6 xbox recompilation pc"
-    - "gta 6 cgbj in game"
     - "gta 6 running on pc"
     - "gta 6 boots on pc"
     - "gta 6 in game on pc footage"
@@ -60,7 +59,7 @@ media:
     "can my pc", "can your pc", "specs", "requirements", "theory", "predictions?", "vs", "versus", "exploded", "breaking",
     "rockstar is", "sooner", "early", "finally here", "catch", "is here"]
   # Projects whose whole README is about GTA VI: a screenshot there needs no "GTA" in its caption (other games still excluded).
-  gta_only_projects: [victory, five-star-recomp, gta6-boottest, leonida-continued, leonida-reforge, palmetto, g6recomp, cgbj, palmwave]
+  gta_only_projects: [victory, five-star-recomp, gta6-boottest, leonida-continued, leonida-reforge, palmetto, g6recomp, palmwave]
 
 http:
   user_agent: "gta6-pc-tracker/1.0 (+https://github.com/NUXX-G/gta6-pc-tracker)"
@@ -81,6 +80,7 @@ http:
     mastodon.social: 2.0
     lemmy.world: 2.0
     public.api.bsky.app: 2.0
+    api.bsky.app: 2.0
     news.google.com: 2.0
     www.youtube.com: 2.0
 
@@ -115,7 +115,7 @@ social:
   bluesky_queries: ["gta6 pc port", "gta vi pc port"]
   mastodon_tags: [gta6, gtavi]
   lemmy_queries: ["gta 6 pc", "gta vi pc"]
-  relevance_terms: [pc, port, recomp, victory, xcl, leonida, palmetto, xbox2windows, emulat, "compatibility layer", "five star recomp", anyxboxx, cgbj, palmwave, openscarlett, percyscarlett, tuxbox, g6recomp, g6shim, xvalkyrie]
+  relevance_terms: [pc, port, recomp, victory, xcl, leonida, palmetto, xbox2windows, emulat, "compatibility layer", "five star recomp", anyxboxx, palmwave, openscarlett, percyscarlett, tuxbox, g6recomp, g6shim, xvalkyrie]
 
 news:
   google_news:
@@ -146,7 +146,7 @@ news:
   show_press_headlines: true   # press headlines pass the legal + spoiler filters and are shown (forum titles never are)
   keywords: ["gta 6", "gta vi", "gta6"]
   # Whole-word regexes (case-insensitive): an article must be about PC / the ports, not just mention the game.
-  context_terms: ['pc', 'ports?', 'porting', 'portado', 'recomp\w*', 'recompila\w*', 'emulat\w*', 'emulador\w*', 'executable', 'ejecutable', 'victory', 'xcl', 'leonida', 'cgbj', 'palmwave', 'openscarlett', 'percyscarlett', 'tuxbox', 'compatibility layer', 'capa de compatibilidad']
+  context_terms: ['pc', 'ports?', 'porting', 'portado', 'recomp\w*', 'recompila\w*', 'emulat\w*', 'emulador\w*', 'executable', 'ejecutable', 'victory', 'xcl', 'leonida', 'palmwave', 'openscarlett', 'percyscarlett', 'tuxbox', 'compatibility layer', 'capa de compatibilidad']
 
 trackers:
   - {name: "GTA VI PC Race", url: "https://vuyp.github.io/gta6-pc-race/"}

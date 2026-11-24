@@ -498,14 +498,21 @@ def test_tracker_project_lists_and_merge():
     )
     victory = next(r for r in rows if r["slug"] == "victory")
     assert victory["stages"] == {"Race": 5, "PW": 5}
-    cgbj = next(r for r in rows if r["name"] == "CGBJ")
-    assert cgbj["slug"] == "cgbj"
+    assert not any(r["name"] == "CGBJ" for r in rows)  # config/blocklist.yml → names
     assert any(r["slug"] is None and r["repo"] == "newdev/scarlett-runtime" for r in rows)
 
 
 def test_private_project_has_no_repo_link_and_a_private_signal():
-    cfg = next(p for p in run_all.config("projects")["projects"] if p["slug"] == "cgbj")
-    res = analyze.analyse_project(cfg, {"slug": "cgbj", "repo": None, "private": True}, None, None, [], {})
+    victory = next(p for p in run_all.config("projects")["projects"] if p["slug"] == "victory")
+    cfg = dict(
+        victory,
+        name="Private",
+        slug="private-build",
+        repo=None,
+        kind="private",
+        link="https://portwatch-vi.xyz/news/example.html",
+    )
+    res = analyze.analyse_project(cfg, {"slug": "private-build", "repo": None, "private": True}, None, None, [], {})
     assert res["status"] == "private" and res["private"]
     assert res["url"].startswith("https://portwatch-vi.xyz/")
     assert any(s["code"] == "private" for s in res["signals_bad"])
@@ -533,7 +540,7 @@ def test_new_pages_exist_in_both_languages(site):
         "en/gallery/index.html",
         "es/noticias/index.html",
         "en/news/index.html",
-        "es/proyectos/cgbj/index.html",
+        "es/proyectos/victory/index.html",
         "en/projects/palmwave/index.html",
     ]:
         assert (site / rel).exists(), rel
@@ -561,13 +568,16 @@ def test_counters_and_structured_data(site):
     proj = (site / "en" / "projects" / "victory" / "index.html").read_text(encoding="utf-8")
     assert '"codeRepository": "https://github.com/Marvisak/VIctory"' in proj
     assert 'href="https://github.com/Marvisak/VIctory"' in proj
-    cgbj = (site / "en" / "projects" / "cgbj" / "index.html").read_text(encoding="utf-8")
-    assert "github.com/None" not in cgbj and "codeRepository" not in cgbj
+    assert not (site / "en" / "projects" / "cgbj").exists()
 
 
 def test_press_headlines_shown_but_forum_titles_are_not(site):
     text = (site / "en" / "news" / "index.html").read_text(encoding="utf-8")
     assert "GTA 6 PC port progressing at breakneck speed" in text
+    # a third-party headline always carries its outlet, a "third-party" tag and the external-link warning
+    card = text[text.index("GTA 6 PC port progressing at breakneck speed") - 900 :]
+    card = card[: card.index("</li>")]
+    assert "Third-party" in card and "Original headline by" in card and "may contain spoilers" in card
     home = (site / "en" / "index.html").read_text(encoding="utf-8")
     assert "world now loads" not in home
 
@@ -693,7 +703,21 @@ RSS = (FIX / "reddit_search.rss").read_text(encoding="utf-8")
 BING = (FIX / "bing.xml").read_text(encoding="utf-8")
 
 
-def test_reddit_rss_layer_success_and_partial():
+@pytest.fixture()
+def all_layers(monkeypatch):
+    """Unit tests of every Reddit layer, including those switched off in config/sources.yml."""
+    import copy
+
+    import collect_reddit
+
+    cfg = copy.deepcopy(collect_reddit._cfg())
+    for layer in cfg["layers"].values():
+        layer["enabled"] = True
+    monkeypatch.setattr(collect_reddit, "_cfg", lambda: cfg)
+    return cfg
+
+
+def test_reddit_rss_layer_success_and_partial(all_layers):
     import collect_reddit
 
     res = collect_reddit.collect_rss(FakeHttp([("search.rss", RSS), ("new.rss", RSS)]))
@@ -703,7 +727,7 @@ def test_reddit_rss_layer_success_and_partial():
     assert next(i for i in res["items"] if i["post_id"] == "a2")["kind"] == "image"
 
 
-def test_reddit_rss_stops_after_two_blocks_in_a_row():
+def test_reddit_rss_stops_after_two_blocks_in_a_row(all_layers):
     import collect_reddit
     from common import HttpError
 
@@ -744,7 +768,7 @@ def test_arcticshift_layer_success_timeout_retry_and_bad_format():
         collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", 429)]))
 
 
-def test_pullpush_refusal_pauses_the_layer():
+def test_pullpush_refusal_pauses_the_layer(all_layers):
     import collect_reddit
     from common import SourcePaused
 
@@ -759,7 +783,7 @@ def test_pullpush_refusal_pauses_the_layer():
     assert res["count"] > 0 and all(i["via"] == "pullpush" for i in res["items"])
 
 
-def test_bing_layer_keeps_only_allowed_reddit_threads():
+def test_bing_layer_keeps_only_allowed_reddit_threads(all_layers):
     import collect_reddit
 
     res = collect_reddit.collect_bing(FakeHttp([("bing.com", BING)]))
@@ -767,7 +791,7 @@ def test_bing_layer_keeps_only_allowed_reddit_threads():
     assert all(i["completeness"] == "partial" and i["via"] == "bing" for i in res["items"])
 
 
-def test_merge_across_layers_keeps_the_most_complete_record():
+def test_merge_across_layers_keeps_the_most_complete_record(all_layers):
     import collect_reddit
 
     arctic = collect_reddit.collect_arcticshift(FakeHttp([("arctic-shift", ARCTIC)]))["items"]
@@ -820,7 +844,9 @@ def test_status_page_lists_each_reddit_layer(site):
     text = (site / "en" / "status" / "index.html").read_text(encoding="utf-8")
     for name in ["Reddit (RSS)", "Arctic Shift", "PullPush", "Bing (discovery)"]:
         assert name in text
-    assert "paused until" in text  # PullPush refused automated clients in the fixtures
+    # layers switched off in config/sources.yml are shown as "off" with their reason, never as failing
+    assert text.count(">off<") >= 3 and "Reddit blocks requests from GitHub Actions" in text
+    assert "PullPush asks automated clients not to use it" in text
     assert "built-in method" not in text
     home = (site / "en" / "index.html").read_text(encoding="utf-8")
     assert "partial data" in home and "r/memes" not in home

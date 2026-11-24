@@ -1,4 +1,5 @@
-# Reddit without the official API or OAuth: several public layers, all run every hour and merged by post id.
+# Reddit without the official API or OAuth: several public layers, merged by post id. Only layers that work from
+# GitHub Actions are on (checked from a runner on 2026-11-24); the others are kept in code and shown as "off".
 # Rules: the project's own User-Agent always; no proxies, no IP rotation, no browser impersonation. A layer that
 # blocks us is logged and skipped. Everything still goes through the legal and spoiler filters, and titles shown on
 # the site are generated from templates (never the post's own title).
@@ -11,7 +12,8 @@ reddit:
 
   layers:
     rss:                        # 1. Reddit's own RSS feeds (no score/comment counts → partial)
-      enabled: true
+      enabled: false            # 2026-11-24: Reddit answers 403/404/429 to every GitHub Actions runner (JSON, RSS,
+      disabled_reason: runner_blocked  # old.reddit, api.reddit). No proxies by design, so it stays off.
       min_interval_s: 3
       stop_after_blocks: 2      # two 403/429 in a row → stop calling Reddit for this run
       max_requests: 30
@@ -23,13 +25,15 @@ reddit:
       url: "https://arctic-shift.photon-reddit.com/api/posts/search"
       after: "48hour"           # relative dates are supported by the API
       limit: 100
+      max_pages: 4              # busy subreddits post >100 times in 48 h: page back with "before" until the window ends
       min_interval_s: 6
       timeout_retry_wait_s: 12  # the API answers 422 "Timeout. Maybe slow down a bit" under load: wait, retry once
       max_requests: 30
-      term_queries: 2           # besides one plain "latest posts" request per subreddit, up to N keyword queries
+      term_queries: 0           # keyword queries mostly time out (422) under load; paging the plain listing covers them
 
     pullpush:                   # 3. PullPush public search (api.pullpush.io)
-      enabled: true
+      enabled: false            # it answers 429 "does not provide free scraping resources for agents": respected
+      disabled_reason: refuses_agents
       url: "https://api.pullpush.io/reddit/search/submission/"
       hours: 48
       size: 100
@@ -37,9 +41,8 @@ reddit:
       pause_hours_on_refusal: 24  # it answers 429 "does not provide free scraping resources for agents": respect it
 
     bing:                       # 4. Discovery through Bing's search RSS (no score/comments → partial)
-      enabled: true             # Bing's RSS terms allow personal, non-commercial use; switch off here if needed.
-                                # Note (2026-11-24): Bing's RSS ignores site:/inurl: and returned no reddit.com
-                                # threads in tests; the layer stays on and reports 0 until that changes.
+      enabled: false            # returns no reddit.com threads (ignores site:); kept in code, off until that changes
+      disabled_reason: no_results  # (Bing's RSS terms allow personal, non-commercial use.)
       url: "https://www.bing.com/search?format=rss&setlang=en-US&mkt=en-US&q={q}"  # fixed locale: English dates
       min_interval_s: 3
       queries:
