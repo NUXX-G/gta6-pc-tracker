@@ -5816,5 +5816,16 @@
   "gpu",
   "vendor",
   "docs"
+ ],
+ "b294fce31eb5d20c481a491c3214bd7f0a6808ed": [
+  "shaders",
+  "loader",
+  "docs"
+ ],
+ "e1a40382d35112c2677c2531c6d505c932ad1e7f": [
+  "gpu",
+  "shaders",
+  "loader",
+  "docs"
  ]
 }

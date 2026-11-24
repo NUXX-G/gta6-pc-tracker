@@ -1,6 +1,30 @@
 [
  {
   "kind": "commits",
+  "n": 2,
+  "areas": [
+   "shaders",
+   "loader",
+   "docs"
+  ],
+  "created": "2026-11-24T13:04:05Z",
+  "url": "https://github.com/luizwidmer/palmetto/commits",
+  "project": "palmetto",
+  "source": "github",
+  "credibility": "confirmed",
+  "id": "palmetto-commits-2026-11-24T13:04:05Z"
+ },
+ {
+  "kind": "readme",
+  "created": "2026-11-24T13:03:57Z",
+  "url": "https://github.com/luizwidmer/palmetto#readme",
+  "project": "palmetto",
+  "source": "github",
+  "credibility": "confirmed",
+  "id": "palmetto-readme-2026-11-24T13:03:57Z"
+ },
+ {
+  "kind": "commits",
   "n": 200,
   "areas": [
    "docs",
