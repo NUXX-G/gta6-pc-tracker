@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-24T15:30:25Z",
+ "generated": "2026-11-24T16:08:34Z",
  "candidates": [
   {
    "full_name": "4lwayz/portwatch-vi",
    "url": "https://github.com/4lwayz/portwatch-vi",
-   "stars": 2098,
+   "stars": 2161,
    "created_at": "2026-11-21T23:16:41Z",
    "pushed_at": "2026-11-24T15:23:22Z",
    "age_days": 2,
@@ -21,7 +21,7 @@
   {
    "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
    "url": "https://github.com/Ahmet-Dedeler/awesome-gta6-reverse-engineering",
-   "stars": 662,
+   "stars": 665,
    "created_at": "2026-11-21T17:08:48Z",
    "pushed_at": "2026-11-24T13:19:49Z",
    "age_days": 2,
@@ -40,7 +40,7 @@
    "url": "https://github.com/Shagg88/COGBox",
    "stars": 562,
    "created_at": "2026-10-27T04:28:46Z",
-   "pushed_at": "2026-11-24T04:47:43Z",
+   "pushed_at": "2026-11-24T15:42:06Z",
    "age_days": 28,
    "language": "C++",
    "size_kb": 13061,
@@ -63,33 +63,16 @@
    "similarity": 0.04
   },
   {
-   "full_name": "earthlinkrecall/GTA6-Ported",
-   "url": "https://github.com/earthlinkrecall/GTA6-Ported",
-   "stars": 292,
-   "created_at": "2026-10-12T02:24:48Z",
-   "pushed_at": "2026-11-24T13:20:02Z",
-   "age_days": 43,
-   "language": null,
-   "size_kb": 4,
-   "has_code": false,
-   "commits": 1,
-   "first_seen": "2026-11-24T15:33:55Z",
-   "flagged": false,
-   "inspected": true,
-   "reasons": [],
-   "similarity": 0.061
-  },
-  {
    "full_name": "ProjectLeonidaL/leonida",
    "url": "https://github.com/ProjectLeonidaL/leonida",
-   "stars": 267,
+   "stars": 283,
    "created_at": "2026-11-24T02:20:14Z",
-   "pushed_at": "2026-11-24T14:07:54Z",
+   "pushed_at": "2026-11-24T15:42:53Z",
    "age_days": 0,
    "language": "Python",
    "size_kb": 11907,
    "has_code": true,
-   "commits": 40,
+   "commits": 41,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -99,14 +82,14 @@
   {
    "full_name": "ranveersoni98/Xenora",
    "url": "https://github.com/ranveersoni98/Xenora",
-   "stars": 106,
+   "stars": 111,
    "created_at": "2026-11-22T03:52:19Z",
-   "pushed_at": "2026-11-24T15:31:46Z",
+   "pushed_at": "2026-11-24T16:08:37Z",
    "age_days": 2,
    "language": "Rust",
    "size_kb": 2823,
    "has_code": true,
-   "commits": 513,
+   "commits": 535,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -116,7 +99,7 @@
   {
    "full_name": "drycheetah84/TomBox",
    "url": "https://github.com/drycheetah84/TomBox",
-   "stars": 99,
+   "stars": 100,
    "created_at": "2026-11-17T04:56:20Z",
    "pushed_at": "2026-11-22T22:42:07Z",
    "age_days": 7,
@@ -133,7 +116,7 @@
   {
    "full_name": "WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
    "url": "https://github.com/WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
-   "stars": 59,
+   "stars": 57,
    "created_at": "2026-11-24T12:27:02Z",
    "pushed_at": "2026-11-24T12:27:13Z",
    "age_days": 0,
@@ -160,7 +143,7 @@
   {
    "full_name": "WebConstableReckon/GTA-VI-Windows-Beta-PC",
    "url": "https://github.com/WebConstableReckon/GTA-VI-Windows-Beta-PC",
-   "stars": 59,
+   "stars": 57,
    "created_at": "2026-11-24T12:03:31Z",
    "pushed_at": "2026-11-24T12:03:43Z",
    "age_days": 0,
@@ -254,12 +237,12 @@
    "url": "https://github.com/IAmNotSiob/leonida-ce",
    "stars": 20,
    "created_at": "2026-11-24T01:22:10Z",
-   "pushed_at": "2026-11-24T14:27:39Z",
+   "pushed_at": "2026-11-24T16:07:43Z",
    "age_days": 0,
    "language": "Python",
    "size_kb": 44445,
    "has_code": true,
-   "commits": 11415,
+   "commits": 11419,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": true,
    "inspected": true,
@@ -277,12 +260,12 @@
    "url": "https://github.com/vuyp/gta6-pc-race",
    "stars": 12,
    "created_at": "2026-11-23T17:27:05Z",
-   "pushed_at": "2026-11-24T15:31:48Z",
+   "pushed_at": "2026-11-24T15:51:02Z",
    "age_days": 0,
    "language": "HTML",
    "size_kb": 405,
    "has_code": true,
-   "commits": 80,
+   "commits": 81,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -345,12 +328,12 @@
    "url": "https://github.com/DesignWithTommy/Neonbridge",
    "stars": 4,
    "created_at": "2026-11-23T23:52:16Z",
-   "pushed_at": "2026-11-24T15:27:45Z",
+   "pushed_at": "2026-11-24T16:07:42Z",
    "age_days": 0,
    "language": "Rust",
    "size_kb": 2467,
    "has_code": true,
-   "commits": 426,
+   "commits": 450,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": true,
    "inspected": true,
@@ -359,7 +342,7 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.064
+   "similarity": 0.067
   },
   {
    "full_name": "kry-vex-gta/XBOX-Inspector",
@@ -404,17 +387,17 @@
    "url": "https://github.com/puffnfresh/rebox",
    "stars": 3,
    "created_at": "2026-11-23T12:13:18Z",
-   "pushed_at": "2026-11-24T15:21:37Z",
+   "pushed_at": "2026-11-24T15:34:22Z",
    "age_days": 1,
    "language": "C",
-   "size_kb": 9346,
+   "size_kb": 9463,
    "has_code": true,
-   "commits": 506,
+   "commits": 507,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.038
+   "similarity": 0.039
   },
   {
    "full_name": "anrq0/SeriesX-Emulator",
@@ -442,12 +425,12 @@
    "url": "https://github.com/bc160201983/gta6-pc-port-tracker",
    "stars": 2,
    "created_at": "2026-11-24T08:39:04Z",
-   "pushed_at": "2026-11-24T15:31:08Z",
+   "pushed_at": "2026-11-24T16:01:08Z",
    "age_days": 0,
    "language": "HTML",
-   "size_kb": 2429,
+   "size_kb": 2513,
    "has_code": true,
-   "commits": 46,
+   "commits": 50,
    "first_seen": "2026-11-24T15:33:55Z",
    "flagged": false,
    "inspected": true,
@@ -495,6 +478,23 @@
     }
    ],
    "similarity": 0.057
+  },
+  {
+   "full_name": "idvwork/rebox",
+   "url": "https://github.com/idvwork/rebox",
+   "stars": 2,
+   "created_at": "2026-11-24T07:34:49Z",
+   "pushed_at": "2026-11-24T15:29:11Z",
+   "age_days": 0,
+   "language": "C",
+   "size_kb": 9178,
+   "has_code": true,
+   "commits": 521,
+   "first_seen": "2026-11-24T16:10:59Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.042
   }
  ],
  "forks_flagged": [
@@ -506,7 +506,7 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.55,
+   "similarity": 0.542,
    "similar_to": "ivall/xcl"
   },
   {
@@ -520,7 +520,7 @@
      "code": "external"
     }
    ],
-   "similarity": 0.597,
+   "similarity": 0.481,
    "similar_to": "fablinoo/palmwave"
   },
   {
@@ -534,7 +534,7 @@
      "code": "external"
     }
    ],
-   "similarity": 0.597,
+   "similarity": 0.481,
    "similar_to": "fablinoo/palmwave"
   },
   {

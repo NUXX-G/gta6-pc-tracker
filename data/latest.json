@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T15:30:25Z",
+ "generated": "2026-11-24T16:08:34Z",
  "offline": false,
  "projects": [
   {
@@ -121,9 +121,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "Marvisak/VIctory",
-    "stars": 9475,
-    "forks": 1306,
-    "open_issues": 855,
+    "stars": 9692,
+    "forks": 1352,
+    "open_issues": 909,
     "language": "Rust",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-24T09:55:08Z",
@@ -1855,60 +1855,61 @@
     "commits_24h": 207,
     "commits_7d": 213,
     "commits_sampled": 200,
-    "prs_open": 549,
-    "prs_merged_24h": 19,
+    "prs_open": 584,
+    "prs_merged_24h": 10,
     "problem_issues": [
      {
-      "number": 841,
-      "url": "https://github.com/Marvisak/VIctory/issues/841",
+      "number": 717,
+      "url": "https://github.com/Marvisak/VIctory/issues/717",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1140,
+      "url": "https://github.com/Marvisak/VIctory/issues/1140",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1139,
+      "url": "https://github.com/Marvisak/VIctory/issues/1139",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 468,
+      "url": "https://github.com/Marvisak/VIctory/issues/468",
+      "keywords": [
+       "crash",
+       "tdr",
+       "nvidia",
+       "wave64",
+       "device removed"
+      ]
+     },
+     {
+      "number": 1107,
+      "url": "https://github.com/Marvisak/VIctory/issues/1107",
       "keywords": [
        "hang",
+       "tdr",
+       "nvidia",
+       "wave64",
+       "device removed"
+      ]
+     },
+     {
+      "number": 778,
+      "url": "https://github.com/Marvisak/VIctory/issues/778",
+      "keywords": [
+       "crash",
+       "hang",
+       "tdr",
+       "nvidia",
        "wave64"
-      ]
-     },
-     {
-      "number": 1060,
-      "url": "https://github.com/Marvisak/VIctory/issues/1060",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 71,
-      "url": "https://github.com/Marvisak/VIctory/issues/71",
-      "keywords": [
-       "hang",
-       "tdr",
-       "nvidia"
-      ]
-     },
-     {
-      "number": 885,
-      "url": "https://github.com/Marvisak/VIctory/issues/885",
-      "keywords": [
-       "tdr",
-       "nvidia"
-      ]
-     },
-     {
-      "number": 964,
-      "url": "https://github.com/Marvisak/VIctory/issues/964",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 936,
-      "url": "https://github.com/Marvisak/VIctory/issues/936",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 1062,
-      "url": "https://github.com/Marvisak/VIctory/issues/1062",
-      "keywords": [
-       "crash"
       ]
      },
      {
@@ -1919,73 +1920,137 @@
       ]
      },
      {
-      "number": 1063,
-      "url": "https://github.com/Marvisak/VIctory/issues/1063",
+      "number": 1086,
+      "url": "https://github.com/Marvisak/VIctory/issues/1086",
       "keywords": [
-       "crash",
+       "nvidia",
+       "wave64",
+       "freeze"
+      ]
+     },
+     {
+      "number": 1131,
+      "url": "https://github.com/Marvisak/VIctory/issues/1131",
+      "keywords": [
        "nvidia"
       ]
      },
      {
-      "number": 1044,
-      "url": "https://github.com/Marvisak/VIctory/issues/1044",
+      "number": 1115,
+      "url": "https://github.com/Marvisak/VIctory/issues/1115",
+      "keywords": [
+       "wave64"
+      ]
+     },
+     {
+      "number": 841,
+      "url": "https://github.com/Marvisak/VIctory/issues/841",
+      "keywords": [
+       "hang",
+       "wave64"
+      ]
+     },
+     {
+      "number": 971,
+      "url": "https://github.com/Marvisak/VIctory/issues/971",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
+      "number": 1132,
+      "url": "https://github.com/Marvisak/VIctory/issues/1132",
       "keywords": [
        "nvidia",
        "wave64"
       ]
      },
      {
-      "number": 815,
-      "url": "https://github.com/Marvisak/VIctory/issues/815",
+      "number": 1128,
+      "url": "https://github.com/Marvisak/VIctory/issues/1128",
       "keywords": [
-       "tdr"
-      ]
-     },
-     {
-      "number": 338,
-      "url": "https://github.com/Marvisak/VIctory/issues/338",
-      "keywords": [
-       "device removed"
-      ]
-     },
-     {
-      "number": 1054,
-      "url": "https://github.com/Marvisak/VIctory/issues/1054",
-      "keywords": [
-       "hang",
-       "tdr",
-       "freeze"
-      ]
-     },
-     {
-      "number": 732,
-      "url": "https://github.com/Marvisak/VIctory/issues/732",
-      "keywords": [
-       "hang"
-      ]
-     },
-     {
-      "number": 557,
-      "url": "https://github.com/Marvisak/VIctory/issues/557",
-      "keywords": [
-       "device removed"
-      ]
-     },
-     {
-      "number": 816,
-      "url": "https://github.com/Marvisak/VIctory/issues/816",
-      "keywords": [
-       "crash",
-       "hang",
        "nvidia"
       ]
      },
      {
-      "number": 887,
-      "url": "https://github.com/Marvisak/VIctory/issues/887",
+      "number": 752,
+      "url": "https://github.com/Marvisak/VIctory/issues/752",
+      "keywords": [
+       "crash",
+       "black screen",
+       "nvidia",
+       "device removed"
+      ]
+     },
+     {
+      "number": 1119,
+      "url": "https://github.com/Marvisak/VIctory/issues/1119",
+      "keywords": [
+       "black screen",
+       "nvidia"
+      ]
+     },
+     {
+      "number": 714,
+      "url": "https://github.com/Marvisak/VIctory/issues/714",
+      "keywords": [
+       "hang",
+       "device removed"
+      ]
+     },
+     {
+      "number": 846,
+      "url": "https://github.com/Marvisak/VIctory/issues/846",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1060,
+      "url": "https://github.com/Marvisak/VIctory/issues/1060",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1117,
+      "url": "https://github.com/Marvisak/VIctory/issues/1117",
+      "keywords": [
+       "hang",
+       "tdr",
+       "nvidia",
+       "device removed"
+      ]
+     },
+     {
+      "number": 59,
+      "url": "https://github.com/Marvisak/VIctory/issues/59",
       "keywords": [
        "tdr",
-       "black screen",
+       "device removed"
+      ]
+     },
+     {
+      "number": 400,
+      "url": "https://github.com/Marvisak/VIctory/issues/400",
+      "keywords": [
+       "hang",
+       "nvidia",
+       "device removed"
+      ]
+     },
+     {
+      "number": 1118,
+      "url": "https://github.com/Marvisak/VIctory/issues/1118",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
+      "number": 836,
+      "url": "https://github.com/Marvisak/VIctory/issues/836",
+      "keywords": [
+       "hang",
        "nvidia"
       ]
      }
@@ -2071,7 +2136,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 17,
+     "n": 24,
      "evidence": "https://github.com/Marvisak/VIctory/issues"
     }
    ],
@@ -2094,7 +2159,7 @@
      "models": [],
      "evidence": null,
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/887"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/836"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -2103,12 +2168,14 @@
      ],
      "evidence": "https://github.com/Marvisak/VIctory",
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/816"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/836"
     },
     "intel": {
-     "status": "untested",
+     "status": "issues",
      "models": [],
-     "evidence": null
+     "evidence": null,
+     "known_issue": true,
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/1132"
     }
    },
    "estimates": [
@@ -2155,19 +2222,37 @@
     "exists": true,
     "http_status": 200,
     "full_name": "LooperSalty/AnyXboxX",
-    "stars": 153,
+    "stars": 163,
     "forks": 18,
-    "open_issues": 32,
+    "open_issues": 34,
     "language": "Python",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-24T15:15:11Z",
+    "pushed_at": "2026-11-24T15:34:33Z",
     "created_at": "2026-11-21T00:18:13Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 7,
-    "last_commit": "2026-11-24T15:14:23Z",
+    "contributors": 9,
+    "last_commit": "2026-11-24T15:34:29Z",
     "commits": [
+     {
+      "sha": "49c605a67e",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/49c605a67e682ee3420457c5f3e9215eb733e366",
+      "date": "2026-11-24T15:34:29Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "df39d4d50a",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/df39d4d50a61bc4b202590d629dd340143031d2e",
+      "date": "2026-11-24T15:15:08Z",
+      "areas": [
+       "audio",
+       "vendor",
+       "docs"
+      ]
+     },
      {
       "sha": "becaf7829d",
       "url": "https://github.com/LooperSalty/AnyXboxX/commit/becaf7829d2aa03c293e0b52125fc740c5590ea1",
@@ -3934,29 +4019,13 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "37cf0fd1e5",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/37cf0fd1e5a2da66e138c91187c8f4a6a8c57e62",
-      "date": "2026-11-21T16:25:56Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "d86a87527d",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/d86a87527df97ea8ae7c40b7b2de4bffea3afeff",
-      "date": "2026-11-21T16:21:48Z",
-      "areas": [
-       "shaders"
-      ]
      }
     ],
-    "commits_24h": 76,
-    "commits_7d": 242,
+    "commits_24h": 74,
+    "commits_7d": 244,
     "commits_sampled": 200,
-    "prs_open": 13,
-    "prs_merged_24h": 29,
+    "prs_open": 14,
+    "prs_merged_24h": 28,
     "problem_issues": [
      {
       "number": 140,
@@ -3974,11 +4043,11 @@
      }
     ],
     "releases": [],
-    "readme_hash": "f21b2b774545babc",
+    "readme_hash": "3b1e530c34b630d4",
     "status_rows": []
    },
    "auto_phase": {
-    "level": 4,
+    "level": 5,
     "partial": false
    },
    "phase": {
@@ -3988,37 +4057,37 @@
    },
    "score": 70.0,
    "areas_24h": {
-    "docs": 50,
+    "docs": 48,
     "gpu": 26,
-    "audio": 25,
+    "audio": 23,
     "shaders": 21,
-    "loader": 14,
-    "other": 3,
-    "vendor": 2
+    "loader": 13,
+    "vendor": 3,
+    "other": 1
    },
    "areas_7d": {
-    "docs": 100,
+    "docs": 102,
     "audio": 95,
-    "shaders": 67,
+    "shaders": 66,
     "gpu": 48,
     "loader": 32,
     "other": 24,
-    "vendor": 13,
+    "vendor": 14,
     "perf": 4
    },
-   "commits_24h": 76,
-   "commits_7d": 242,
+   "commits_24h": 74,
+   "commits_7d": 244,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 76,
-     "avg": 27.7,
+     "n24": 74,
+     "avg": 28.3,
      "evidence": "https://github.com/LooperSalty/AnyXboxX/commits"
     },
     {
      "code": "tracker_confirms",
      "tracker": "GTA VI PC Race",
-     "phase": 5,
+     "phase": 6,
      "evidence": "https://vuyp.github.io/gta6-pc-race/"
     }
    ],
@@ -4027,7 +4096,7 @@
     {
      "tracker": "GTA VI PC Race",
      "url": "https://vuyp.github.io/gta6-pc-race/",
-     "phase": 5
+     "phase": 6
     }
    ],
    "claims": [],
@@ -4103,14 +4172,24 @@
     "open_issues": 2,
     "language": "Rust",
     "license": "GPL-2.0",
-    "pushed_at": "2026-11-24T14:22:21Z",
+    "pushed_at": "2026-11-24T15:43:47Z",
     "created_at": "2026-11-23T18:24:29Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 80,
-    "last_commit": "2026-11-24T12:05:53Z",
+    "last_commit": "2026-11-24T15:43:45Z",
     "commits": [
+     {
+      "sha": "eaa3ad6ed6",
+      "url": "https://github.com/fablinoo/palmwave/commit/eaa3ad6ed666cdebf21f8ca7e04095e15f63d21a",
+      "date": "2026-11-24T15:43:45Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
      {
       "sha": "5a54236f96",
       "url": "https://github.com/fablinoo/palmwave/commit/5a54236f9674b01ef69f1a73ca83fe50c067d538",
@@ -5936,18 +6015,10 @@
       "areas": [
        "audio"
       ]
-     },
-     {
-      "sha": "1a4ba26fb6",
-      "url": "https://github.com/fablinoo/palmwave/commit/1a4ba26fb67dd38aeeb46357496bb1a3f6b20427",
-      "date": "2026-11-23T22:36:09Z",
-      "areas": [
-       "gpu"
-      ]
      }
     ],
     "commits_24h": 375,
-    "commits_7d": 747,
+    "commits_7d": 748,
     "commits_sampled": 200,
     "prs_open": 0,
     "prs_merged_24h": 0,
@@ -5968,7 +6039,7 @@
      }
     ],
     "releases": [],
-    "readme_hash": "31b264e024fccb8f",
+    "readme_hash": "651ac63d1c51bc6b",
     "status_rows": []
    },
    "auto_phase": {
@@ -5983,33 +6054,33 @@
    "score": 70.0,
    "areas_24h": {
     "gpu": 139,
-    "loader": 83,
+    "loader": 84,
     "vendor": 48,
     "audio": 46,
     "shaders": 39,
     "perf": 29,
     "other": 26,
-    "docs": 21,
+    "docs": 22,
     "input": 3
    },
    "areas_7d": {
     "gpu": 139,
-    "loader": 83,
+    "loader": 84,
     "vendor": 48,
     "audio": 46,
     "shaders": 39,
     "perf": 29,
     "other": 26,
-    "docs": 21,
+    "docs": 22,
     "input": 3
    },
    "commits_24h": 375,
-   "commits_7d": 747,
+   "commits_7d": 748,
    "signals_good": [
     {
      "code": "activity_up",
      "n24": 375,
-     "avg": 62.0,
+     "avg": 62.2,
      "evidence": "https://github.com/fablinoo/palmwave/commits"
     },
     {
@@ -6093,19 +6164,207 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ivall/xcl",
-    "stars": 6982,
-    "forks": 861,
-    "open_issues": 853,
+    "stars": 7076,
+    "forks": 883,
+    "open_issues": 888,
     "language": "Rust",
     "license": "GPL-2.0",
-    "pushed_at": "2026-11-24T13:38:04Z",
+    "pushed_at": "2026-11-24T15:58:37Z",
     "created_at": "2026-11-20T20:03:21Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 72,
-    "last_commit": "2026-11-24T13:38:00Z",
+    "last_commit": "2026-11-24T15:58:37Z",
     "commits": [
+     {
+      "sha": "b7aa9f3bd2",
+      "url": "https://github.com/ivall/xcl/commit/b7aa9f3bd212088e0d927439284dc5ed325ce3c7",
+      "date": "2026-11-24T15:58:37Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf"
+      ]
+     },
+     {
+      "sha": "c85ce8d12d",
+      "url": "https://github.com/ivall/xcl/commit/c85ce8d12d13a6b174cf37d53631c29e2bec7745",
+      "date": "2026-11-24T15:58:25Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "fc0462b4f4",
+      "url": "https://github.com/ivall/xcl/commit/fc0462b4f442f390e7b9b637c168271b7720935f",
+      "date": "2026-11-24T15:58:13Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "b9789a166b",
+      "url": "https://github.com/ivall/xcl/commit/b9789a166bd38974e1ce6522bd77359634bde624",
+      "date": "2026-11-24T15:58:01Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "345661bc9c",
+      "url": "https://github.com/ivall/xcl/commit/345661bc9cca82b742582a33366d7e1bf4794dad",
+      "date": "2026-11-24T15:57:38Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "53657c6946",
+      "url": "https://github.com/ivall/xcl/commit/53657c69466910ec5a41ff29a1d42448d9568431",
+      "date": "2026-11-24T15:57:26Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "f538b86e0c",
+      "url": "https://github.com/ivall/xcl/commit/f538b86e0c7aa96fc517a6a4c2f79157d76c6e27",
+      "date": "2026-11-24T15:57:14Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "6dd40de1ba",
+      "url": "https://github.com/ivall/xcl/commit/6dd40de1bacb2575eba26438df8e9f4cbe136606",
+      "date": "2026-11-24T15:57:02Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "17216a1463",
+      "url": "https://github.com/ivall/xcl/commit/17216a14638659e550b76e3e8245728209b86b70",
+      "date": "2026-11-24T15:56:50Z",
+      "areas": [
+       "loader"
+      ]
+     },
+     {
+      "sha": "cc1af70cd8",
+      "url": "https://github.com/ivall/xcl/commit/cc1af70cd8beaf2bed21a66d4b5038681f600b15",
+      "date": "2026-11-24T15:56:39Z",
+      "areas": [
+       "loader"
+      ]
+     },
+     {
+      "sha": "43e6ca5fdf",
+      "url": "https://github.com/ivall/xcl/commit/43e6ca5fdfb4a3abe487e8f580a64ecebc3f07bd",
+      "date": "2026-11-24T15:56:27Z",
+      "areas": [
+       "loader"
+      ]
+     },
+     {
+      "sha": "f09ac4c71d",
+      "url": "https://github.com/ivall/xcl/commit/f09ac4c71d068605c7380418af9c453ef53de3b9",
+      "date": "2026-11-24T15:56:15Z",
+      "areas": [
+       "gpu",
+       "docs"
+      ]
+     },
+     {
+      "sha": "cbea87246b",
+      "url": "https://github.com/ivall/xcl/commit/cbea87246bc4983a339caa152b2b5ad68697ec50",
+      "date": "2026-11-24T15:56:04Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "037aecd57e",
+      "url": "https://github.com/ivall/xcl/commit/037aecd57e8a2ae55154d5e0dfb7119e75430f5b",
+      "date": "2026-11-24T15:52:20Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "1d4549e944",
+      "url": "https://github.com/ivall/xcl/commit/1d4549e944011e6a57bc5cc70f0c6b7e8fc9f80f",
+      "date": "2026-11-24T15:52:10Z",
+      "areas": [
+       "gpu",
+       "shaders"
+      ]
+     },
+     {
+      "sha": "a97e66cd70",
+      "url": "https://github.com/ivall/xcl/commit/a97e66cd709c41608bafe1daf2d60b17c6c05a98",
+      "date": "2026-11-24T15:51:59Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "769c7c2b93",
+      "url": "https://github.com/ivall/xcl/commit/769c7c2b93c01e38d452c9386038a5850ab216f7",
+      "date": "2026-11-24T15:51:49Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "797dda15ea",
+      "url": "https://github.com/ivall/xcl/commit/797dda15ea722a41672b11bdae4fe0516e236138",
+      "date": "2026-11-24T15:51:38Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "2008399729",
+      "url": "https://github.com/ivall/xcl/commit/2008399729a5e04f8cc4801e29382fe8e4cb3812",
+      "date": "2026-11-24T15:50:57Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "40c81c1e9e",
+      "url": "https://github.com/ivall/xcl/commit/40c81c1e9e76776c6b23b7b48b7c947538fe0656",
+      "date": "2026-11-24T14:45:59Z",
+      "areas": [
+       "gpu",
+       "docs"
+      ]
+     },
+     {
+      "sha": "60e7603543",
+      "url": "https://github.com/ivall/xcl/commit/60e7603543198157a4f9388cde30cecb8a17922d",
+      "date": "2026-11-24T13:51:17Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "538350681e",
+      "url": "https://github.com/ivall/xcl/commit/538350681e4aac86b4dd5595a0ac229077b07979",
+      "date": "2026-11-24T13:49:28Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader"
+      ]
+     },
      {
       "sha": "930e8b49c1",
       "url": "https://github.com/ivall/xcl/commit/930e8b49c1c2ec683d22c724a398b39111cd0e56",
@@ -6162,6 +6421,65 @@
       ]
      },
      {
+      "sha": "35665aa634",
+      "url": "https://github.com/ivall/xcl/commit/35665aa634173a51aa8d3afecffb649c94873d98",
+      "date": "2026-11-24T13:19:07Z",
+      "areas": [
+       "gpu",
+       "audio"
+      ]
+     },
+     {
+      "sha": "615cb20f39",
+      "url": "https://github.com/ivall/xcl/commit/615cb20f39c516bf40c49add0736cec27500c951",
+      "date": "2026-11-24T13:17:39Z",
+      "areas": [
+       "gpu",
+       "audio"
+      ]
+     },
+     {
+      "sha": "365d7c8040",
+      "url": "https://github.com/ivall/xcl/commit/365d7c80401ccf90be83a1fedad4c1f350ab0121",
+      "date": "2026-11-24T13:17:06Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "560216ba9e",
+      "url": "https://github.com/ivall/xcl/commit/560216ba9e46b9ec06abbd02fa5ff1f457af77fa",
+      "date": "2026-11-24T13:12:27Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf"
+      ]
+     },
+     {
+      "sha": "5bd7cd8e73",
+      "url": "https://github.com/ivall/xcl/commit/5bd7cd8e73129e3cc22e17802a185940bfaf549f",
+      "date": "2026-11-24T12:46:40Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "2e17d3dedd",
+      "url": "https://github.com/ivall/xcl/commit/2e17d3dedd954f4cd487296c1919e62708f77b39",
+      "date": "2026-11-24T12:45:06Z",
+      "areas": [
+       "audio",
+       "loader"
+      ]
+     },
+     {
       "sha": "392dc0c393",
       "url": "https://github.com/ivall/xcl/commit/392dc0c393b0cc669e5c9f15b29e96dae89c7967",
       "date": "2026-11-24T12:35:50Z",
@@ -6174,6 +6492,95 @@
       "sha": "21bc548d98",
       "url": "https://github.com/ivall/xcl/commit/21bc548d98bbab37d8b44a97d4a9e893c41c558d",
       "date": "2026-11-24T12:35:35Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader"
+      ]
+     },
+     {
+      "sha": "38283a8530",
+      "url": "https://github.com/ivall/xcl/commit/38283a8530ef11eabd6b235802bcf2c93a86a0f6",
+      "date": "2026-11-24T12:19:51Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "1d83fd12b8",
+      "url": "https://github.com/ivall/xcl/commit/1d83fd12b8a2e639a823d17f5aaa127456b6af64",
+      "date": "2026-11-24T12:16:32Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "f4bbf268d7",
+      "url": "https://github.com/ivall/xcl/commit/f4bbf268d726d1ab30eabdf2fef2f26298e881a5",
+      "date": "2026-11-24T12:14:29Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader",
+       "perf"
+      ]
+     },
+     {
+      "sha": "66660bd947",
+      "url": "https://github.com/ivall/xcl/commit/66660bd9478c789959df1e0d3342f1081f778610",
+      "date": "2026-11-24T12:06:07Z",
+      "areas": [
+       "audio",
+       "docs"
+      ]
+     },
+     {
+      "sha": "de85f979cb",
+      "url": "https://github.com/ivall/xcl/commit/de85f979cba9e8c15c220f21b6b228efb8047010",
+      "date": "2026-11-24T11:30:55Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "7d834d4bad",
+      "url": "https://github.com/ivall/xcl/commit/7d834d4bad0da13745b6ec98c3d3d60274df46ac",
+      "date": "2026-11-24T11:29:53Z",
+      "areas": [
+       "gpu",
+       "audio"
+      ]
+     },
+     {
+      "sha": "3b6e9eafb7",
+      "url": "https://github.com/ivall/xcl/commit/3b6e9eafb732c55b1921508d9db76f70111a2569",
+      "date": "2026-11-24T11:24:32Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "8f66b3bb5d",
+      "url": "https://github.com/ivall/xcl/commit/8f66b3bb5d5bb7884961b57383d852a775a41e07",
+      "date": "2026-11-24T11:22:51Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "cf244b0d3a",
+      "url": "https://github.com/ivall/xcl/commit/cf244b0d3a66a24f53255642e4eb5ea95bb8fa2f",
+      "date": "2026-11-24T11:19:06Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader"
+      ]
+     },
+     {
+      "sha": "21de1a8e5b",
+      "url": "https://github.com/ivall/xcl/commit/21de1a8e5b11fd4877109234ff5f72feefd87255",
+      "date": "2026-11-24T11:12:49Z",
       "areas": [
        "gpu",
        "audio",
@@ -6409,6 +6816,14 @@
       ]
      },
      {
+      "sha": "e1c4020436",
+      "url": "https://github.com/ivall/xcl/commit/e1c4020436ca392fb25b86d1d9979aabeb0ef9f8",
+      "date": "2026-11-24T09:33:17Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
       "sha": "6bac4b4419",
       "url": "https://github.com/ivall/xcl/commit/6bac4b4419886acc940d479dcf8815d0b1804435",
       "date": "2026-11-24T09:26:56Z",
@@ -6432,6 +6847,14 @@
        "gpu",
        "audio",
        "vendor"
+      ]
+     },
+     {
+      "sha": "9beaa733fb",
+      "url": "https://github.com/ivall/xcl/commit/9beaa733fbead2d7909d22d36d59f6dc9e16dc64",
+      "date": "2026-11-24T09:09:41Z",
+      "areas": [
+       "gpu"
       ]
      },
      {
@@ -7513,362 +7936,14 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "9ab7d76319",
-      "url": "https://github.com/ivall/xcl/commit/9ab7d763197c7f420bff10cd9bf1310f07e2a9aa",
-      "date": "2026-11-23T22:00:23Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "63b9930636",
-      "url": "https://github.com/ivall/xcl/commit/63b99306364326e8170412c88a81b8ba185d00e3",
-      "date": "2026-11-23T21:56:29Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "163b55ede5",
-      "url": "https://github.com/ivall/xcl/commit/163b55ede5a08cd21c72c4221e240868a630ba16",
-      "date": "2026-11-23T21:54:58Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "8adb9ddd37",
-      "url": "https://github.com/ivall/xcl/commit/8adb9ddd37aac7c0c837dea563967851d9e29412",
-      "date": "2026-11-23T21:51:53Z",
-      "areas": [
-       "audio",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "1775ebb385",
-      "url": "https://github.com/ivall/xcl/commit/1775ebb3856a4369338632102fced7744d5e8f73",
-      "date": "2026-11-23T21:51:53Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader"
-      ]
-     },
-     {
-      "sha": "7a033c8cd1",
-      "url": "https://github.com/ivall/xcl/commit/7a033c8cd13194900cd49c01ed60a59c6c9559c7",
-      "date": "2026-11-23T21:49:43Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "77905f6b50",
-      "url": "https://github.com/ivall/xcl/commit/77905f6b50487c3af4e75b1807419280b2aba640",
-      "date": "2026-11-23T21:45:45Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "c858190dde",
-      "url": "https://github.com/ivall/xcl/commit/c858190dde5bbf1ba8559c5d4deecb26347f72b8",
-      "date": "2026-11-23T21:45:30Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "608a79b2fa",
-      "url": "https://github.com/ivall/xcl/commit/608a79b2fae74f9f49c33163e4790f98227a71bc",
-      "date": "2026-11-23T21:45:24Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "5ba2b6a67f",
-      "url": "https://github.com/ivall/xcl/commit/5ba2b6a67fcb152f521d82d2e7dda0499c1035cb",
-      "date": "2026-11-23T21:42:53Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "60565c4738",
-      "url": "https://github.com/ivall/xcl/commit/60565c4738a091e3e54a679d086a299d553c21e3",
-      "date": "2026-11-23T21:30:41Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "a6f5368301",
-      "url": "https://github.com/ivall/xcl/commit/a6f5368301d27531e093b12afb364de70bc66920",
-      "date": "2026-11-23T21:30:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "5c2eaf548d",
-      "url": "https://github.com/ivall/xcl/commit/5c2eaf548d0b9e21f31389cfa8eec7b344f70c08",
-      "date": "2026-11-23T21:30:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "6b9f2ba4fa",
-      "url": "https://github.com/ivall/xcl/commit/6b9f2ba4fab91e86760f1c0be2f31698c85ec348",
-      "date": "2026-11-23T21:28:01Z",
-      "areas": [
-       "audio",
-       "loader"
-      ]
-     },
-     {
-      "sha": "0f34407441",
-      "url": "https://github.com/ivall/xcl/commit/0f344074413f7e67c9d6b39e815ad92ced57ba89",
-      "date": "2026-11-23T21:27:52Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "bc9ef13bec",
-      "url": "https://github.com/ivall/xcl/commit/bc9ef13bec53529dad851405d846aba9a282aa28",
-      "date": "2026-11-23T21:27:02Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "91844fb27c",
-      "url": "https://github.com/ivall/xcl/commit/91844fb27cbe24e718ca16fabf0a9661224c391c",
-      "date": "2026-11-23T21:27:01Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "1eee7adb72",
-      "url": "https://github.com/ivall/xcl/commit/1eee7adb721ddcef8bed155415d1c1dd2d79ac3e",
-      "date": "2026-11-23T21:26:38Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "8c5d16e14c",
-      "url": "https://github.com/ivall/xcl/commit/8c5d16e14cc259eb89da8005e4d571eba938b01d",
-      "date": "2026-11-23T21:26:38Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "0c63fd9e18",
-      "url": "https://github.com/ivall/xcl/commit/0c63fd9e18fbd061e81c06c3f07f803d1bd5c437",
-      "date": "2026-11-23T21:26:37Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "8a98da6b96",
-      "url": "https://github.com/ivall/xcl/commit/8a98da6b96fc7c0e70df7bf7654779be03bf7621",
-      "date": "2026-11-23T21:26:32Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio"
-      ]
-     },
-     {
-      "sha": "05a5fd587b",
-      "url": "https://github.com/ivall/xcl/commit/05a5fd587bf5ae2cbce15cbf58b6e2d220922d6e",
-      "date": "2026-11-23T21:23:39Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "bc596246c4",
-      "url": "https://github.com/ivall/xcl/commit/bc596246c4570922d6510426ea4863d39aad3d7a",
-      "date": "2026-11-23T21:22:21Z",
-      "areas": [
-       "audio",
-       "loader"
-      ]
-     },
-     {
-      "sha": "d4f17ca324",
-      "url": "https://github.com/ivall/xcl/commit/d4f17ca3246b6013bfa39ea2bed543cbe52309a6",
-      "date": "2026-11-23T21:21:11Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "ad289efb0f",
-      "url": "https://github.com/ivall/xcl/commit/ad289efb0f15ab84e2753d9eef29e1fa7d99e376",
-      "date": "2026-11-23T21:21:02Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "594f63a7cd",
-      "url": "https://github.com/ivall/xcl/commit/594f63a7cd212628153137ad12930c0b2c6fd278",
-      "date": "2026-11-23T21:21:01Z",
-      "areas": [
-       "audio",
-       "loader"
-      ]
-     },
-     {
-      "sha": "20271d46ae",
-      "url": "https://github.com/ivall/xcl/commit/20271d46ae6f3bd6aa7022cad171d1ae4e5044a0",
-      "date": "2026-11-23T21:20:43Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio"
-      ]
-     },
-     {
-      "sha": "31def9e93e",
-      "url": "https://github.com/ivall/xcl/commit/31def9e93e3a1d86122147f081174b7089707701",
-      "date": "2026-11-23T21:20:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "f1594412fb",
-      "url": "https://github.com/ivall/xcl/commit/f1594412fb411e1e491452c88acbde1c9c8d6319",
-      "date": "2026-11-23T21:20:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "f0a917b8d3",
-      "url": "https://github.com/ivall/xcl/commit/f0a917b8d31fb7ee9234f9f08a1123a53eb5e5e3",
-      "date": "2026-11-23T21:20:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "2918c9fd3a",
-      "url": "https://github.com/ivall/xcl/commit/2918c9fd3ac11ef5fe9107a1c5103702fc36e10b",
-      "date": "2026-11-23T21:20:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "c118c7c556",
-      "url": "https://github.com/ivall/xcl/commit/c118c7c55699f148214e8c4b1119f8226108088d",
-      "date": "2026-11-23T21:20:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "3242c03ac3",
-      "url": "https://github.com/ivall/xcl/commit/3242c03ac320f9527e0332902a334026de14f9f8",
-      "date": "2026-11-23T21:20:33Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "1200aa4826",
-      "url": "https://github.com/ivall/xcl/commit/1200aa482602b4ac92626fc82c841ca01513ce31",
-      "date": "2026-11-23T21:20:32Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "13bb3e136e",
-      "url": "https://github.com/ivall/xcl/commit/13bb3e136e45bf0c8114cfc4d4f23a72c8b98a2f",
-      "date": "2026-11-23T21:20:32Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "4c1630b537",
-      "url": "https://github.com/ivall/xcl/commit/4c1630b5375a10dbd006048958024af407dbc74c",
-      "date": "2026-11-23T21:20:32Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "327c24c98e",
-      "url": "https://github.com/ivall/xcl/commit/327c24c98ea883f9fa586d647b5898e073ca6d34",
-      "date": "2026-11-23T21:17:59Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "b25582a392",
-      "url": "https://github.com/ivall/xcl/commit/b25582a39244fb9576f2a751ba4603b521f10c20",
-      "date": "2026-11-23T21:17:18Z",
-      "areas": [
-       "loader",
-       "perf"
-      ]
-     },
-     {
-      "sha": "542446872a",
-      "url": "https://github.com/ivall/xcl/commit/542446872a56bb8f5a509536cbcef850bfb9a878",
-      "date": "2026-11-23T21:17:05Z",
-      "areas": [
-       "perf"
-      ]
-     },
-     {
-      "sha": "af20b4b38e",
-      "url": "https://github.com/ivall/xcl/commit/af20b4b38e5a8003234f28091fb45e03aca68167",
-      "date": "2026-11-23T21:17:05Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 284,
-    "commits_7d": 656,
+    "commits_24h": 323,
+    "commits_7d": 696,
     "commits_sampled": 200,
-    "prs_open": 710,
-    "prs_merged_24h": 9,
+    "prs_open": 733,
+    "prs_merged_24h": 27,
     "problem_issues": [
-     {
-      "number": 1096,
-      "url": "https://github.com/ivall/xcl/issues/1096",
-      "keywords": [
-       "nvidia",
-       "wave64"
-      ]
-     },
      {
       "number": 505,
       "url": "https://github.com/ivall/xcl/issues/505",
@@ -7877,26 +7952,10 @@
       ]
      },
      {
-      "number": 175,
-      "url": "https://github.com/ivall/xcl/issues/175",
+      "number": 258,
+      "url": "https://github.com/ivall/xcl/issues/258",
       "keywords": [
-       "nvidia",
-       "wave64"
-      ]
-     },
-     {
-      "number": 1374,
-      "url": "https://github.com/ivall/xcl/issues/1374",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 1360,
-      "url": "https://github.com/ivall/xcl/issues/1360",
-      "keywords": [
-       "nvidia",
-       "wave64"
+       "crash"
       ]
      },
      {
@@ -7908,24 +7967,46 @@
       ]
      },
      {
-      "number": 1337,
-      "url": "https://github.com/ivall/xcl/issues/1337",
+      "number": 232,
+      "url": "https://github.com/ivall/xcl/issues/232",
       "keywords": [
-       "nvidia",
-       "wave64",
-       "device removed"
+       "crash",
+       "nvidia"
       ]
      },
      {
-      "number": 258,
-      "url": "https://github.com/ivall/xcl/issues/258",
+      "number": 846,
+      "url": "https://github.com/ivall/xcl/issues/846",
+      "keywords": [
+       "crash",
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1035,
+      "url": "https://github.com/ivall/xcl/issues/1035",
       "keywords": [
        "crash"
+      ]
+     },
+     {
+      "number": 646,
+      "url": "https://github.com/ivall/xcl/issues/646",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
+      "number": 175,
+      "url": "https://github.com/ivall/xcl/issues/175",
+      "keywords": [
+       "nvidia",
+       "wave64"
       ]
      }
     ],
     "releases": [],
-    "readme_hash": "178614e62e1de7f6",
+    "readme_hash": "60109b4e46f226fc",
     "status_rows": []
    },
    "auto_phase": {
@@ -7939,34 +8020,34 @@
    },
    "score": 62.5,
    "areas_24h": {
-    "gpu": 95,
-    "loader": 60,
-    "other": 59,
-    "audio": 40,
-    "vendor": 25,
-    "shaders": 24,
-    "perf": 24,
-    "docs": 17,
+    "gpu": 111,
+    "loader": 59,
+    "audio": 46,
+    "other": 43,
+    "shaders": 27,
+    "vendor": 26,
+    "perf": 25,
+    "docs": 19,
     "input": 4
    },
    "areas_7d": {
-    "gpu": 95,
-    "loader": 60,
-    "other": 59,
-    "audio": 40,
-    "vendor": 25,
-    "shaders": 24,
-    "perf": 24,
-    "docs": 17,
+    "gpu": 111,
+    "loader": 59,
+    "audio": 46,
+    "other": 43,
+    "shaders": 27,
+    "vendor": 26,
+    "perf": 25,
+    "docs": 19,
     "input": 4
    },
-   "commits_24h": 284,
-   "commits_7d": 656,
+   "commits_24h": 323,
+   "commits_7d": 696,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 284,
-     "avg": 62.0,
+     "n24": 323,
+     "avg": 62.2,
      "evidence": "https://github.com/ivall/xcl/commits"
     },
     {
@@ -8002,7 +8083,7 @@
      "models": [],
      "evidence": null,
      "known_issue": true,
-     "evidence_issue": "https://github.com/ivall/xcl/issues/1337"
+     "evidence_issue": "https://github.com/ivall/xcl/issues/175"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -8011,7 +8092,7 @@
      ],
      "evidence": "https://github.com/ivall/xcl",
      "known_issue": true,
-     "evidence_issue": "https://github.com/ivall/xcl/issues/42"
+     "evidence_issue": "https://github.com/ivall/xcl/issues/175"
     },
     "intel": {
      "status": "untested",
@@ -8071,25 +8152,172 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ThatRecompDev/five-star-recomp",
-    "stars": 112,
+    "stars": 114,
     "forks": 5,
     "open_issues": 2,
     "language": "C#",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-24T15:30:09Z",
+    "pushed_at": "2026-11-24T16:06:33Z",
     "created_at": "2026-11-23T09:57:42Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 1,
-    "last_commit": "2026-11-24T15:29:36Z",
+    "last_commit": "2026-11-24T16:06:32Z",
     "commits": [
+     {
+      "sha": "8709152438",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/8709152438bc6313584c496dc451b82f0961c754",
+      "date": "2026-11-24T16:06:32Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "86c933b83d",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/86c933b83d2f9cc5aec880c8fad09463edf850c5",
+      "date": "2026-11-24T16:05:19Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "ab94e3ce08",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/ab94e3ce08775fb67f6299a53ef22a9baf25c032",
+      "date": "2026-11-24T16:01:06Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "40dc75e4a2",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/40dc75e4a2189ec2eed56078197b8b34ea09fbf9",
+      "date": "2026-11-24T15:55:59Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "657078e945",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/657078e945f26c1b4983e7106dcb360a1d9cd78f",
+      "date": "2026-11-24T15:52:45Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "c6cc7353ba",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/c6cc7353ba30fc6e94359f2e32484cfced3a92be",
+      "date": "2026-11-24T15:47:43Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "9d61a3c888",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/9d61a3c8887d896713f91b180aebdc939bc86596",
+      "date": "2026-11-24T15:46:58Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "52b6741eb5",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/52b6741eb5e6b402bf85d6dcf2a6e8a1b0597bbe",
+      "date": "2026-11-24T15:40:09Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "53e415d478",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/53e415d4786ba557c18b945755cb94f07d1f1e8f",
+      "date": "2026-11-24T15:40:02Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "18034e78d2",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/18034e78d28ea36dfdcd0356a8cc2f583dbc939f",
+      "date": "2026-11-24T15:39:45Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "439dfff7b5",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/439dfff7b5095452731d3b4dc4c2d5035c0448cb",
+      "date": "2026-11-24T15:39:21Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "afdd699843",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/afdd69984347a2917bc842e3fbe39fecc6367387",
+      "date": "2026-11-24T15:33:15Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "vendor"
+      ]
+     },
      {
       "sha": "d4780be2b9",
       "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/d4780be2b934764e14c6dfbb54f03d879acf1da0",
       "date": "2026-11-24T15:29:36Z",
       "areas": [
        "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "c50e6f5388",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/c50e6f5388a07d21fc22f2541b7c19c53698ee28",
+      "date": "2026-11-24T15:29:05Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "acd5260777",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/acd5260777882cdab91d03f04e53ec50441e0329",
+      "date": "2026-11-24T15:23:33Z",
+      "areas": [
+       "gpu",
        "loader",
        "docs"
       ]
@@ -8112,11 +8340,32 @@
       ]
      },
      {
+      "sha": "df5fbbf52c",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/df5fbbf52c07542e9995cdfa324f4f79f35e0630",
+      "date": "2026-11-24T15:19:44Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
       "sha": "a2783e0545",
       "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/a2783e05455d73aed710db951aae2b68c68ce977",
       "date": "2026-11-24T15:19:19Z",
       "areas": [
        "shaders"
+      ]
+     },
+     {
+      "sha": "b1d3644dba",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/b1d3644dbaf800885821b230d043746d0ef649b4",
+      "date": "2026-11-24T15:16:47Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader"
       ]
      },
      {
@@ -9734,142 +9983,10 @@
       "areas": [
        "docs"
       ]
-     },
-     {
-      "sha": "ff8e238eaa",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/ff8e238eaa08e0a803a23c53767b2d88feaf7ce9",
-      "date": "2026-11-23T23:05:02Z",
-      "areas": [
-       "loader",
-       "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "304b735359",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/304b735359829c969b689a58133e6fb8db48cbf8",
-      "date": "2026-11-23T23:04:34Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "4217b6fa05",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4217b6fa05e9a5671bd61d01bd351af2f9fd9706",
-      "date": "2026-11-23T23:04:24Z",
-      "areas": [
-       "shaders",
-       "docs"
-      ]
-     },
-     {
-      "sha": "950e7bba1a",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/950e7bba1a9ecd58eea983c4b6c84fec3b93aaa4",
-      "date": "2026-11-23T23:00:55Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "d2fdde1bc2",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/d2fdde1bc2bbe3bf51732828f518061d99f23047",
-      "date": "2026-11-23T23:00:55Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "57917f63a0",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/57917f63a01903b6e39e8d1cf42e51a08c2c413e",
-      "date": "2026-11-23T22:54:48Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "336744dd2d",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/336744dd2d9decdf8a7c7c7c65b7544240871570",
-      "date": "2026-11-23T22:44:05Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "3cce15a41c",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/3cce15a41c2bc8844ef242b8985d81fa999dd08b",
-      "date": "2026-11-23T22:43:21Z",
-      "areas": [
-       "input"
-      ]
-     },
-     {
-      "sha": "c6ab34a0c0",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/c6ab34a0c089461a500cb62baa9db0f5a1c22c0e",
-      "date": "2026-11-23T22:42:51Z",
-      "areas": [
-       "input",
-       "docs"
-      ]
-     },
-     {
-      "sha": "7b4cbb2e27",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/7b4cbb2e2712eea7fd34fc6517032534cb316b31",
-      "date": "2026-11-23T22:24:27Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "3f1f327e7e",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/3f1f327e7e54d8b461e700447d393cc6cb700f30",
-      "date": "2026-11-23T22:24:07Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "417fb150af",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/417fb150af9fea22ca986f43d0b744891656e383",
-      "date": "2026-11-23T22:22:52Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "0bd06a1a7c",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/0bd06a1a7c4d6ce6c520000d4e73dc200ccbaa02",
-      "date": "2026-11-23T22:22:52Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "278f29b0c6",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/278f29b0c62f107440f7805f7bf94e7b970601ef",
-      "date": "2026-11-23T22:18:34Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "ed49c3536a",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/ed49c3536a4c26e138ea57ad28d853883437b131",
-      "date": "2026-11-23T22:17:47Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "4c2737f4eb",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4c2737f4eb65d2806ae35ebddb71b8790af2e908",
-      "date": "2026-11-23T22:14:27Z",
-      "areas": [
-       "docs"
-      ]
      }
     ],
-    "commits_24h": 395,
-    "commits_7d": 446,
+    "commits_24h": 401,
+    "commits_7d": 462,
     "commits_sampled": 200,
     "prs_open": 0,
     "prs_merged_24h": 0,
@@ -9920,34 +10037,34 @@
    },
    "score": 62.5,
    "areas_24h": {
-    "gpu": 88,
-    "loader": 83,
-    "docs": 83,
-    "shaders": 40,
-    "other": 27,
-    "perf": 26,
-    "input": 19,
-    "vendor": 10,
-    "audio": 7
+    "gpu": 104,
+    "loader": 98,
+    "docs": 88,
+    "shaders": 41,
+    "perf": 28,
+    "other": 20,
+    "input": 17,
+    "vendor": 13,
+    "audio": 10
    },
    "areas_7d": {
-    "gpu": 88,
-    "loader": 83,
-    "docs": 83,
-    "shaders": 40,
-    "other": 27,
-    "perf": 26,
-    "input": 19,
-    "vendor": 10,
-    "audio": 7
+    "gpu": 104,
+    "loader": 98,
+    "docs": 88,
+    "shaders": 41,
+    "perf": 28,
+    "other": 20,
+    "input": 17,
+    "vendor": 13,
+    "audio": 10
    },
-   "commits_24h": 395,
-   "commits_7d": 446,
+   "commits_24h": 401,
+   "commits_7d": 462,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 395,
-     "avg": 8.5,
+     "n24": 401,
+     "avg": 10.2,
      "evidence": "https://github.com/ThatRecompDev/five-star-recomp/commits"
     },
     {
@@ -10918,7 +11035,7 @@
     "full_name": "OnlyMoisties/GTA6-BootTest",
     "stars": 40,
     "forks": 2,
-    "open_issues": 1,
+    "open_issues": 2,
     "language": "C",
     "license": null,
     "pushed_at": "2026-11-24T01:09:59Z",
@@ -11147,6 +11264,13 @@
     "prs_merged_24h": 0,
     "problem_issues": [
      {
+      "number": 2,
+      "url": "https://github.com/OnlyMoisties/GTA6-BootTest/issues/2",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
       "number": 1,
       "url": "https://github.com/OnlyMoisties/GTA6-BootTest/issues/1",
       "keywords": [
@@ -11310,19 +11434,266 @@
     "exists": true,
     "http_status": 200,
     "full_name": "R0Y00/Xbox2Windows",
-    "stars": 1830,
-    "forks": 204,
+    "stars": 1840,
+    "forks": 207,
     "open_issues": 145,
     "language": "Python",
     "license": "MIT",
-    "pushed_at": "2026-11-24T15:29:17Z",
+    "pushed_at": "2026-11-24T16:05:07Z",
     "created_at": "2026-11-20T17:43:52Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 94,
-    "last_commit": "2026-11-24T15:26:12Z",
+    "contributors": 95,
+    "last_commit": "2026-11-24T16:05:07Z",
     "commits": [
+     {
+      "sha": "bb80aa6e72",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/bb80aa6e72a14ea06470b5c127dac40cb69e70b9",
+      "date": "2026-11-24T16:05:07Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "d7c0ac6394",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d7c0ac63940f025b1ff51df2f7bfa7be193ddc82",
+      "date": "2026-11-24T16:04:41Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "e2c24edd86",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e2c24edd86054bc02b3e07203c56fba20fa04d00",
+      "date": "2026-11-24T16:04:24Z",
+      "areas": [
+       "input",
+       "docs"
+      ]
+     },
+     {
+      "sha": "6eb74ba433",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/6eb74ba43367fdde754a3bf65f810533181c5fef",
+      "date": "2026-11-24T16:04:02Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "874cc3fa42",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/874cc3fa42e0e94d70848190df6c861929561891",
+      "date": "2026-11-24T15:59:42Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "b976cf5ede",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b976cf5ede66771667c0938ba7f5033623de94d0",
+      "date": "2026-11-24T15:58:02Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "dd76fd1c3c",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/dd76fd1c3cd348f68ff3d2ce2a24f130fb2ff743",
+      "date": "2026-11-24T15:57:45Z",
+      "areas": [
+       "gpu",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "e200cbaf89",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e200cbaf89160a8974860bdcf3689c6071c2ff79",
+      "date": "2026-11-24T15:57:26Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "8a068d5054",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/8a068d50548dd76026358a32f44c687738669379",
+      "date": "2026-11-24T15:56:21Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "7355cc6ea0",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/7355cc6ea0ea7b7acd645dba80bcb0068674b1a3",
+      "date": "2026-11-24T15:55:49Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "0aa6522c29",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0aa6522c29a0db93848fb33c4e3f01987bace64e",
+      "date": "2026-11-24T15:48:25Z",
+      "areas": [
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "d673eb38cb",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d673eb38cb67db826a857465166bff0c79222ce9",
+      "date": "2026-11-24T15:48:05Z",
+      "areas": [
+       "gpu",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "734217e336",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/734217e3367321e8fad052a157bfe9e7d42d23e1",
+      "date": "2026-11-24T15:47:35Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "2469f68833",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/2469f688334b6b19c80c57b93dae6fc94260049e",
+      "date": "2026-11-24T15:45:58Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "cb94b8caff",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/cb94b8caff25ed8d946e040167265263bc1cb8b5",
+      "date": "2026-11-24T15:38:50Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "2a97c577d2",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/2a97c577d226600ff8ae487ce73fa8be78f520b6",
+      "date": "2026-11-24T15:37:42Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "4147ef2352",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/4147ef2352bac44708c2529e643cbcb4d6ae5f15",
+      "date": "2026-11-24T15:37:04Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "141617bb80",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/141617bb80ae8d2c9349c2104ecae6c0f55ee44c",
+      "date": "2026-11-24T15:34:44Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "845eddbed0",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/845eddbed073f32cf408efb1ac26d7a36696b77f",
+      "date": "2026-11-24T15:33:47Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "7b77483398",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/7b774833987d5af38c947e0f541279a724b4c312",
+      "date": "2026-11-24T15:32:07Z",
+      "areas": [
+       "gpu",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "0a1a01adb9",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0a1a01adb9a15ee1fcc343dcf5324a2c246df543",
+      "date": "2026-11-24T15:30:51Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "9d9310691a",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/9d9310691aa4dffb967f24b83813e9f97ab5813f",
+      "date": "2026-11-24T15:30:09Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "b1669d91f4",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b1669d91f49531d761f6cceb4e41c32df36e269d",
+      "date": "2026-11-24T15:28:29Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "c814754198",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/c81475419871b9a4daf344c31e2ef54bf086ce2c",
+      "date": "2026-11-24T15:28:19Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "ffce6d1e71",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/ffce6d1e716f3d2edd3d8e7999b7c5bf4cef033a",
+      "date": "2026-11-24T15:28:04Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "158626c998",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/158626c998331163b294977f7b9707116a4b2fd2",
+      "date": "2026-11-24T15:27:07Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "9c40e65fe4",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/9c40e65fe4d355a76c51e970f8cc1ee7daff3e2b",
+      "date": "2026-11-24T15:26:43Z",
+      "areas": [
+       "gpu"
+      ]
+     },
      {
       "sha": "d90dd76b3c",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/d90dd76b3cfa5cbe851b1235f719bed1a267995c",
@@ -11424,11 +11795,38 @@
       ]
      },
      {
+      "sha": "26ede1d368",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/26ede1d3685f589834dde9f2148fcfa3255b19e3",
+      "date": "2026-11-24T15:15:16Z",
+      "areas": [
+       "gpu",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
       "sha": "8ca7920338",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/8ca7920338d1176405b1232773a0f5fff7486b0c",
       "date": "2026-11-24T15:15:15Z",
       "areas": [
        "shaders"
+      ]
+     },
+     {
+      "sha": "117ebb8bb2",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/117ebb8bb24485911695d29ac7ef069f6d6e73f3",
+      "date": "2026-11-24T15:13:38Z",
+      "areas": [
+       "shaders",
+       "audio"
+      ]
+     },
+     {
+      "sha": "047a3f19e0",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/047a3f19e0299310bc9a932f06a7164d1177291a",
+      "date": "2026-11-24T15:08:52Z",
+      "areas": [
+       "input"
       ]
      },
      {
@@ -11670,6 +12068,30 @@
       "date": "2026-11-24T14:54:45Z",
       "areas": [
        "other"
+      ]
+     },
+     {
+      "sha": "38cf3c00f3",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/38cf3c00f39e507187eeb7c047a478036d425fdd",
+      "date": "2026-11-24T14:54:04Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "ce99621357",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/ce99621357ace4a0b09b10fe38bc691babab8053",
+      "date": "2026-11-24T14:54:04Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "e9ba20ed89",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e9ba20ed89c1d4e6653b046dcd03fb2785270be2",
+      "date": "2026-11-24T14:53:04Z",
+      "areas": [
+       "perf"
       ]
      },
      {
@@ -11958,6 +12380,15 @@
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/0479b8dece5fe54196605ae106c76199e8287fba",
       "date": "2026-11-24T14:29:37Z",
       "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "0fa4890665",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0fa489066527855b6c5906df83ceb701d86e5c95",
+      "date": "2026-11-24T14:29:25Z",
+      "areas": [
+       "gpu",
        "shaders"
       ]
      },
@@ -12730,314 +13161,26 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "72f9fa6206",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/72f9fa6206cfd83445d9abfb5bc7c3b4c65f5943",
-      "date": "2026-11-24T13:28:51Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "0b1f880b88",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0b1f880b88af43c366bb7227834a744ed89e9e12",
-      "date": "2026-11-24T13:28:46Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "de3894f6aa",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/de3894f6aa03091833fd31a13ea87219b968bfb8",
-      "date": "2026-11-24T13:28:42Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "29e6e94bbf",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/29e6e94bbf616969053ea71a72bb3c0a8cfde9c9",
-      "date": "2026-11-24T13:28:27Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "04f9489374",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/04f94893743150f8a21a40719cac44598e0a176f",
-      "date": "2026-11-24T13:28:11Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "4d8a0a0be1",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/4d8a0a0be1dc5578127f9c3fb99292b37e26af17",
-      "date": "2026-11-24T13:27:47Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "d21e3d6e1a",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d21e3d6e1ac37c78a8c75b5a4fb62c650c220187",
-      "date": "2026-11-24T13:27:37Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "09b3e8ae2e",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/09b3e8ae2e4982cace2f8d17d23eee1d8b78fda5",
-      "date": "2026-11-24T13:26:46Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "d4a99171c8",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d4a99171c8ae3152fbb67093934a7927f4a90d76",
-      "date": "2026-11-24T13:24:01Z",
-      "areas": [
-       "gpu",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "b86bceaa01",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b86bceaa0163aa2a8760a2c6335a74c47f208ef8",
-      "date": "2026-11-24T13:23:38Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "7b0d795484",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/7b0d795484155cced986e687be56e974479bf259",
-      "date": "2026-11-24T13:23:06Z",
-      "areas": [
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "93ba356326",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/93ba3563264d893a46628d400a36667b5fd52de3",
-      "date": "2026-11-24T13:22:45Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "62dc012479",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/62dc012479cb706e8c4f97395830d84824b0a980",
-      "date": "2026-11-24T13:22:40Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "69a3e0ef48",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/69a3e0ef48a13800dbba8428ecb59d765de35a3d",
-      "date": "2026-11-24T13:22:34Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "c99e44749a",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/c99e44749ac6721925f9c4cf6051e62526c90de6",
-      "date": "2026-11-24T13:22:24Z",
-      "areas": [
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "6a87f6a004",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/6a87f6a0048ba31c13298aea1ac4a3fd8cd947a1",
-      "date": "2026-11-24T13:22:18Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "e2294b07c5",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e2294b07c5a9044fd417a951c5ba83b3a118e0a8",
-      "date": "2026-11-24T13:22:06Z",
-      "areas": [
-       "gpu",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "dbb1906f92",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/dbb1906f925c20f72e0533d49ae37dbd7132b0c5",
-      "date": "2026-11-24T13:21:43Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "7536843c8e",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/7536843c8e154a91a2c73ac8fd352ff28c1e9a09",
-      "date": "2026-11-24T13:21:31Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "2f933a45a2",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/2f933a45a205bfe02b96e3fc10b7ad05a037cc37",
-      "date": "2026-11-24T13:18:35Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "4bbbbdc16b",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/4bbbbdc16bcaf3ab92e11698de864cea203fa270",
-      "date": "2026-11-24T13:17:30Z",
-      "areas": [
-       "perf"
-      ]
-     },
-     {
-      "sha": "0ae499c73e",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0ae499c73e32d74d215eabd5095c9a248f654ff2",
-      "date": "2026-11-24T13:15:40Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "6edd861d84",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/6edd861d84c27c9b9cd837a8dd2dcb3767fa87d9",
-      "date": "2026-11-24T13:14:52Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "bc43e6659e",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/bc43e6659ea2971a6cd82bc4baecd685e13f251c",
-      "date": "2026-11-24T13:14:17Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "1fd9d20f87",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/1fd9d20f879346fa37c6241587f90961c4eb3ded",
-      "date": "2026-11-24T13:14:07Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "ccd6fb0409",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/ccd6fb040956d016f58420ef588e3122ee2bf63f",
-      "date": "2026-11-24T13:13:58Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "d9e27f6854",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d9e27f68544ba60732938fe93bfa007b36a5e87e",
-      "date": "2026-11-24T13:12:32Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "04d78f3d93",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/04d78f3d93adf5e61a446766565be7a3861289df",
-      "date": "2026-11-24T13:12:24Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "2993c12c78",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/2993c12c7826026f670d3d44a9be30a36738d3e3",
-      "date": "2026-11-24T13:12:06Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "1b7b2c06be",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/1b7b2c06be0586be5fb8c53bfdf4fc8500fc3c05",
-      "date": "2026-11-24T13:11:30Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "aa0e90b210",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/aa0e90b210e0131f29ef041c4132db7cbd7f18cb",
-      "date": "2026-11-24T13:10:34Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "1a1d58e2bd",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/1a1d58e2bda671826e84abbfee0342007f5163e2",
-      "date": "2026-11-24T13:10:02Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "ca4a983025",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/ca4a98302544117caa71d85cd8c7e89f3749457f",
-      "date": "2026-11-24T13:09:42Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "9bb7e5ec54",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/9bb7e5ec542cfbb9f450e0bc423ca8d819d001cc",
-      "date": "2026-11-24T13:09:36Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 1745,
-    "commits_7d": 3306,
+    "commits_24h": 1751,
+    "commits_7d": 3340,
     "commits_sampled": 200,
-    "prs_open": 75,
+    "prs_open": 73,
     "prs_merged_24h": 49,
     "problem_issues": [
      {
-      "number": 1,
-      "url": "https://github.com/R0Y00/Xbox2Windows/issues/1",
+      "number": 958,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/958",
       "keywords": [
        "wave64"
       ]
      },
      {
-      "number": 1624,
-      "url": "https://github.com/R0Y00/Xbox2Windows/issues/1624",
+      "number": 1,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/1",
       "keywords": [
-       "crash"
+       "wave64"
       ]
      },
      {
@@ -13059,13 +13202,6 @@
       "url": "https://github.com/R0Y00/Xbox2Windows/issues/737",
       "keywords": [
        "nvidia"
-      ]
-     },
-     {
-      "number": 958,
-      "url": "https://github.com/R0Y00/Xbox2Windows/issues/958",
-      "keywords": [
-       "wave64"
       ]
      },
      {
@@ -13097,34 +13233,34 @@
    },
    "score": 47.5,
    "areas_24h": {
-    "other": 66,
-    "loader": 50,
-    "docs": 49,
-    "shaders": 42,
-    "gpu": 42,
-    "vendor": 28,
+    "other": 62,
+    "docs": 60,
+    "loader": 49,
+    "shaders": 47,
+    "gpu": 46,
+    "vendor": 27,
+    "input": 9,
     "audio": 8,
-    "input": 7,
-    "perf": 4
+    "perf": 7
    },
    "areas_7d": {
-    "other": 66,
-    "loader": 50,
-    "docs": 49,
-    "shaders": 42,
-    "gpu": 42,
-    "vendor": 28,
+    "other": 62,
+    "docs": 60,
+    "loader": 49,
+    "shaders": 47,
+    "gpu": 46,
+    "vendor": 27,
+    "input": 9,
     "audio": 8,
-    "input": 7,
-    "perf": 4
+    "perf": 7
    },
-   "commits_24h": 1745,
-   "commits_7d": 3306,
+   "commits_24h": 1751,
+   "commits_7d": 3340,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 1745,
-     "avg": 260.2,
+     "n24": 1751,
+     "avg": 264.8,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/commits"
     },
     {
@@ -13137,7 +13273,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 7,
+     "n": 6,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/issues"
     },
     {
@@ -13189,7 +13325,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/958"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/1"
     },
     "intel": {
      "status": "ok_with_issues",
@@ -13264,19 +13400,37 @@
     "exists": true,
     "http_status": 200,
     "full_name": "OpenCommunityEdition/OpenScarlett",
-    "stars": 62,
+    "stars": 64,
     "forks": 3,
     "open_issues": 1,
     "language": "C++",
     "license": "AGPL-3.0",
-    "pushed_at": "2026-11-24T15:19:04Z",
+    "pushed_at": "2026-11-24T15:42:55Z",
     "created_at": "2026-11-21T04:47:46Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 2,
-    "last_commit": "2026-11-24T15:19:01Z",
+    "last_commit": "2026-11-24T15:42:53Z",
     "commits": [
+     {
+      "sha": "765da8b63d",
+      "url": "https://github.com/OpenCommunityEdition/OpenScarlett/commit/765da8b63df17ca9b9166ec06a2fcaa6b3e3233f",
+      "date": "2026-11-24T15:42:53Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "0fbe1cebe1",
+      "url": "https://github.com/OpenCommunityEdition/OpenScarlett/commit/0fbe1cebe145314dd6089fde8bfdc46a5cc83b49",
+      "date": "2026-11-24T15:42:53Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "perf"
+      ]
+     },
      {
       "sha": "8bee11aa36",
       "url": "https://github.com/OpenCommunityEdition/OpenScarlett/commit/8bee11aa36948364ccac2f7eb5fa478e00b739f3",
@@ -14551,9 +14705,9 @@
       ]
      }
     ],
-    "commits_24h": 40,
-    "commits_7d": 123,
-    "commits_sampled": 123,
+    "commits_24h": 41,
+    "commits_7d": 125,
+    "commits_sampled": 125,
     "prs_open": 1,
     "prs_merged_24h": 0,
     "problem_issues": [],
@@ -14618,34 +14772,34 @@
    },
    "score": 47.5,
    "areas_24h": {
-    "gpu": 28,
-    "shaders": 24,
+    "gpu": 29,
     "loader": 23,
-    "vendor": 18,
-    "perf": 17,
+    "shaders": 23,
+    "perf": 18,
+    "vendor": 17,
     "docs": 9,
     "audio": 5,
     "input": 2,
     "other": 1
    },
    "areas_7d": {
-    "gpu": 99,
+    "gpu": 101,
     "audio": 86,
-    "loader": 64,
+    "loader": 65,
     "shaders": 61,
     "vendor": 38,
-    "perf": 33,
+    "perf": 34,
     "docs": 18,
     "input": 12,
     "other": 1
    },
-   "commits_24h": 40,
-   "commits_7d": 123,
+   "commits_24h": 41,
+   "commits_7d": 125,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 40,
-     "avg": 13.8,
+     "n24": 41,
+     "avg": 14.0,
      "evidence": "https://github.com/OpenCommunityEdition/OpenScarlett/commits"
     },
     {
@@ -14745,7 +14899,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "californiaAlmonds/OpenScarlett",
-    "stars": 81,
+    "stars": 82,
     "forks": 12,
     "open_issues": 16,
     "language": "C++",
@@ -16791,19 +16945,55 @@
     "exists": true,
     "http_status": 200,
     "full_name": "brcly/TuxBox",
-    "stars": 276,
-    "forks": 19,
+    "stars": 280,
+    "forks": 20,
     "open_issues": 22,
     "language": "Rust",
     "license": "Apache-2.0",
-    "pushed_at": "2026-11-24T15:26:49Z",
+    "pushed_at": "2026-11-24T15:54:01Z",
     "created_at": "2026-11-21T12:07:28Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 9,
-    "last_commit": "2026-11-24T15:26:49Z",
+    "last_commit": "2026-11-24T15:53:59Z",
     "commits": [
+     {
+      "sha": "02953b07d6",
+      "url": "https://github.com/brcly/TuxBox/commit/02953b07d6ad973e5714bede933661841adadf71",
+      "date": "2026-11-24T15:53:59Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "fd3a6f491e",
+      "url": "https://github.com/brcly/TuxBox/commit/fd3a6f491e5c74419909b65763db66e521fcc1f5",
+      "date": "2026-11-24T15:33:54Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "cc59e5fbaf",
+      "url": "https://github.com/brcly/TuxBox/commit/cc59e5fbaffb87cf5ff332b2a494b0c7e8c75a6c",
+      "date": "2026-11-24T15:32:53Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "34ba13a3de",
+      "url": "https://github.com/brcly/TuxBox/commit/34ba13a3ded57dcbd1f17a022bef208e732f885e",
+      "date": "2026-11-24T15:27:14Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "docs"
+      ]
+     },
      {
       "sha": "7b7dec7fac",
       "url": "https://github.com/brcly/TuxBox/commit/7b7dec7fac87fa2536204fcae3998d05d39350d5",
@@ -16819,6 +17009,25 @@
       "areas": [
        "audio",
        "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "7ca880e5d2",
+      "url": "https://github.com/brcly/TuxBox/commit/7ca880e5d2d357437206cfb9ef4cad4aa8f05f70",
+      "date": "2026-11-24T15:24:26Z",
+      "areas": [
+       "gpu",
+       "audio"
+      ]
+     },
+     {
+      "sha": "fae402f762",
+      "url": "https://github.com/brcly/TuxBox/commit/fae402f7629129944a33dad45874e1726f20d584",
+      "date": "2026-11-24T15:22:49Z",
+      "areas": [
+       "gpu",
+       "shaders",
        "docs"
       ]
      },
@@ -18459,68 +18668,13 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "accd7e16c2",
-      "url": "https://github.com/brcly/TuxBox/commit/accd7e16c2dcef64cd082f73fc57bea849f5a5c6",
-      "date": "2026-11-22T02:01:15Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "5725d77f77",
-      "url": "https://github.com/brcly/TuxBox/commit/5725d77f772dcd8b231c029102b508ea4cd34b2a",
-      "date": "2026-11-21T23:17:43Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "d5abfc01dd",
-      "url": "https://github.com/brcly/TuxBox/commit/d5abfc01dd551aae4841be7de5038ba78185d2b4",
-      "date": "2026-11-21T21:22:54Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "perf"
-      ]
-     },
-     {
-      "sha": "260e104cce",
-      "url": "https://github.com/brcly/TuxBox/commit/260e104cce6a9429277bb2a996520b0653cc0ad9",
-      "date": "2026-11-21T20:45:18Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "loader"
-      ]
-     },
-     {
-      "sha": "feee4287ba",
-      "url": "https://github.com/brcly/TuxBox/commit/feee4287ba31a04f542b5eff7b78a87dc9ea8fa4",
-      "date": "2026-11-21T15:16:32Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "151c0880ea",
-      "url": "https://github.com/brcly/TuxBox/commit/151c0880ea224818726e7f9a1de72bfa846e0901",
-      "date": "2026-11-21T14:55:10Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 113,
-    "commits_7d": 201,
+    "commits_24h": 119,
+    "commits_7d": 207,
     "commits_sampled": 200,
     "prs_open": 19,
-    "prs_merged_24h": 40,
+    "prs_merged_24h": 42,
     "problem_issues": [
      {
       "number": 39,
@@ -18531,7 +18685,7 @@
      }
     ],
     "releases": [],
-    "readme_hash": "7e7a3163e429326c",
+    "readme_hash": "64db7c7f3454f3bd",
     "status_rows": []
    },
    "auto_phase": {
@@ -18545,33 +18699,33 @@
    },
    "score": 47.5,
    "areas_24h": {
+    "gpu": 44,
+    "shaders": 43,
     "loader": 43,
-    "gpu": 40,
-    "shaders": 40,
-    "audio": 34,
-    "other": 21,
+    "audio": 35,
+    "other": 22,
     "vendor": 14,
     "perf": 13,
-    "docs": 8,
+    "docs": 12,
     "input": 2
    },
    "areas_7d": {
-    "other": 76,
-    "gpu": 54,
-    "shaders": 53,
-    "loader": 49,
-    "audio": 34,
-    "vendor": 16,
-    "perf": 15,
-    "docs": 10,
-    "input": 4
+    "other": 74,
+    "gpu": 55,
+    "shaders": 54,
+    "loader": 48,
+    "audio": 35,
+    "vendor": 15,
+    "docs": 14,
+    "perf": 14,
+    "input": 2
    },
-   "commits_24h": 113,
-   "commits_7d": 201,
+   "commits_24h": 119,
+   "commits_7d": 207,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 113,
+     "n24": 119,
      "avg": 14.7,
      "evidence": "https://github.com/brcly/TuxBox/commits"
     },
@@ -19210,9 +19364,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "luizwidmer/palmetto",
-    "stars": 123,
+    "stars": 128,
     "forks": 54,
-    "open_issues": 5,
+    "open_issues": 6,
     "language": "Python",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-24T15:00:06Z",
@@ -21026,7 +21180,7 @@
       ]
      }
     ],
-    "commits_24h": 1009,
+    "commits_24h": 812,
     "commits_7d": 11602,
     "commits_sampled": 200,
     "prs_open": 0,
@@ -21132,19 +21286,9 @@
     "perf": 5,
     "audio": 2
    },
-   "commits_24h": 1009,
+   "commits_24h": 812,
    "commits_7d": 11602,
-   "signals_good": [
-    {
-     "code": "rows_up",
-     "rows": [
-      "boot",
-      "frame",
-      "frame"
-     ],
-     "evidence": "https://github.com/luizwidmer/palmetto#readme"
-    }
-   ],
+   "signals_good": [],
    "signals_bad": [
     {
      "code": "crash_issues",
@@ -22075,17 +22219,38 @@
     "full_name": "gookie-dev/g6shim",
     "stars": 6,
     "forks": 1,
-    "open_issues": 3,
+    "open_issues": 4,
     "language": "C++",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-24T15:24:49Z",
+    "pushed_at": "2026-11-24T16:06:50Z",
     "created_at": "2026-11-21T08:24:20Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 2,
-    "last_commit": "2026-11-24T15:24:48Z",
+    "last_commit": "2026-11-24T16:06:43Z",
     "commits": [
+     {
+      "sha": "420033691c",
+      "url": "https://github.com/gookie-dev/g6shim/commit/420033691ce806089a974a554affa00312323812",
+      "date": "2026-11-24T16:06:43Z",
+      "areas": [
+       "gpu",
+       "input",
+       "docs"
+      ]
+     },
+     {
+      "sha": "cf29afeb55",
+      "url": "https://github.com/gookie-dev/g6shim/commit/cf29afeb55ecc0236b9d6d60aabc5a6816ddb0b7",
+      "date": "2026-11-24T15:57:10Z",
+      "areas": [
+       "audio",
+       "input",
+       "loader",
+       "docs"
+      ]
+     },
      {
       "sha": "f6ccbdbb6e",
       "url": "https://github.com/gookie-dev/g6shim/commit/f6ccbdbb6e2d0b6d6fbff611d419d16cb4a73375",
@@ -23139,14 +23304,14 @@
       ]
      }
     ],
-    "commits_24h": 40,
-    "commits_7d": 124,
-    "commits_sampled": 124,
-    "prs_open": 1,
-    "prs_merged_24h": 4,
+    "commits_24h": 42,
+    "commits_7d": 126,
+    "commits_sampled": 126,
+    "prs_open": 2,
+    "prs_merged_24h": 5,
     "problem_issues": [],
     "releases": [],
-    "readme_hash": "9ff11f46e7f9fb45",
+    "readme_hash": "b7aa12ed3d400c30",
     "status_rows": []
    },
    "auto_phase": {
@@ -23160,31 +23325,31 @@
    },
    "score": 25.0,
    "areas_24h": {
-    "docs": 26,
+    "docs": 28,
+    "loader": 16,
     "shaders": 15,
-    "loader": 15,
-    "gpu": 12,
-    "audio": 9,
-    "input": 2,
+    "gpu": 13,
+    "audio": 10,
+    "input": 4,
     "perf": 1,
     "other": 1
    },
    "areas_7d": {
-    "gpu": 42,
-    "loader": 41,
+    "gpu": 43,
+    "loader": 42,
     "other": 36,
-    "docs": 30,
+    "docs": 32,
     "shaders": 18,
-    "audio": 11,
-    "input": 4,
+    "audio": 12,
+    "input": 6,
     "perf": 2
    },
-   "commits_24h": 40,
-   "commits_7d": 124,
+   "commits_24h": 42,
+   "commits_7d": 126,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 40,
+     "n24": 42,
      "avg": 14.0,
      "evidence": "https://github.com/gookie-dev/g6shim/commits"
     }
@@ -23294,19 +23459,137 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ubiquitarianism/leonida",
-    "stars": 1374,
-    "forks": 289,
-    "open_issues": 756,
+    "stars": 1435,
+    "forks": 308,
+    "open_issues": 770,
     "language": "Python",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-24T14:58:36Z",
+    "pushed_at": "2026-11-24T16:06:43Z",
     "created_at": "2026-11-23T23:54:39Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 705,
-    "last_commit": "2026-11-24T14:58:35Z",
+    "last_commit": "2026-11-24T16:06:42Z",
     "commits": [
+     {
+      "sha": "0af7753c0a",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/0af7753c0a69fcd2f57438d9c52cdb0264c92e8b",
+      "date": "2026-11-24T16:06:42Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "0b41cf5c13",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/0b41cf5c13349b849472d354db4ee99eaa48ca16",
+      "date": "2026-11-24T16:06:38Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "f8f050e9f5",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/f8f050e9f5b8244afac04d0854c65f8cd866307f",
+      "date": "2026-11-24T16:06:35Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "0d3311cba5",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/0d3311cba53ee3dcb3e98776f0688cf84cb734f2",
+      "date": "2026-11-24T16:06:30Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "10ec8ccf55",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/10ec8ccf5509659504373c1c589129d30f0fd223",
+      "date": "2026-11-24T16:06:26Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "74cd77a4af",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/74cd77a4af86d2cc3f14ee33f4fb4710e0b1cdc4",
+      "date": "2026-11-24T16:06:22Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "2f0d225c9f",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/2f0d225c9f68630ca7be1c82cdcb8f737eaa29f9",
+      "date": "2026-11-24T16:06:18Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "1504c1af63",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/1504c1af63aeab49fb451ee42d3d051b29d4c976",
+      "date": "2026-11-24T15:50:39Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "439b67b115",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/439b67b11592024757e1b41ba44c9817723751e3",
+      "date": "2026-11-24T15:50:33Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "ccf0f8795b",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/ccf0f8795b28fe45ec639caebca08c36a000fed5",
+      "date": "2026-11-24T15:50:28Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "5be5708dfc",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/5be5708dfcc917145668d4709e08fec2e803cedd",
+      "date": "2026-11-24T15:50:24Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "8ebd73ef47",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/8ebd73ef479943a4d38f711fbc6b495cbd19bcbe",
+      "date": "2026-11-24T15:50:19Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "d4b3a001d2",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/d4b3a001d2214d834fba153a0f8d8c9fdc90d691",
+      "date": "2026-11-24T15:50:14Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "7874db1508",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/7874db1508e44e37c1cfdab9a518ef29fa5a1a7d",
+      "date": "2026-11-24T14:59:42Z",
+      "areas": [
+       "audio"
+      ]
+     },
      {
       "sha": "a28927849a",
       "url": "https://github.com/ubiquitarianism/leonida/commit/a28927849adb4e40dfdec8c32fb6758dcd205a37",
@@ -23384,6 +23667,15 @@
       ]
      },
      {
+      "sha": "adc25699fd",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/adc25699fdd6ae0bc33f7c535ebb6f8ad117eac8",
+      "date": "2026-11-24T14:39:32Z",
+      "areas": [
+       "shaders",
+       "audio"
+      ]
+     },
+     {
       "sha": "f3e26be7c6",
       "url": "https://github.com/ubiquitarianism/leonida/commit/f3e26be7c661e97eb4c70464e675a3b32dc149e3",
       "date": "2026-11-24T14:38:02Z",
@@ -23441,6 +23733,75 @@
       "date": "2026-11-24T14:37:40Z",
       "areas": [
        "other"
+      ]
+     },
+     {
+      "sha": "a4c00f4f4d",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/a4c00f4f4d9c4e42124fb0e367ee9679ef7a9053",
+      "date": "2026-11-24T14:29:16Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "80328dca77",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/80328dca772680c61650d7c3aa265eac7c6a3a92",
+      "date": "2026-11-24T14:04:17Z",
+      "areas": [
+       "audio",
+       "docs"
+      ]
+     },
+     {
+      "sha": "0253b381c6",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/0253b381c6ea26d783b3bb222830cd3f406e12c1",
+      "date": "2026-11-24T14:01:46Z",
+      "areas": [
+       "audio",
+       "input"
+      ]
+     },
+     {
+      "sha": "65e13e0250",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/65e13e0250b912f2f2360c6fcbd555853c77f403",
+      "date": "2026-11-24T14:01:46Z",
+      "areas": [
+       "shaders",
+       "audio"
+      ]
+     },
+     {
+      "sha": "15f3599111",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/15f35991116d813ed2b547f8f0f03a0d822867b1",
+      "date": "2026-11-24T14:01:45Z",
+      "areas": [
+       "shaders",
+       "audio"
+      ]
+     },
+     {
+      "sha": "ea10ffd572",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/ea10ffd572c9af0298a98f6427209e2bde402b7c",
+      "date": "2026-11-24T14:01:45Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "dc2931044b",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/dc2931044b0cf89bccab7c149b0fcda99cb4cc99",
+      "date": "2026-11-24T14:01:45Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "a8a09903b4",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/a8a09903b4662717b9d81fe32ee8225310dcca6c",
+      "date": "2026-11-24T14:01:45Z",
+      "areas": [
+       "audio"
       ]
      },
      {
@@ -23639,6 +24000,14 @@
       ]
      },
      {
+      "sha": "13cb507629",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/13cb507629d53f5a80a938cb0c1731008ba2eff3",
+      "date": "2026-11-24T13:33:38Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
       "sha": "d7354f2b91",
       "url": "https://github.com/ubiquitarianism/leonida/commit/d7354f2b91de2917ba6639a053b9fe7cb82a5d23",
       "date": "2026-11-24T13:33:05Z",
@@ -23646,6 +24015,16 @@
        "audio",
        "loader",
        "docs"
+      ]
+     },
+     {
+      "sha": "ee4dfb04c7",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/ee4dfb04c7de6a6a8858b0d8ef9b43f8c9c3b91e",
+      "date": "2026-11-24T13:22:31Z",
+      "areas": [
+       "shaders",
+       "audio",
+       "input"
       ]
      },
      {
@@ -23926,6 +24305,14 @@
       ]
      },
      {
+      "sha": "f05bc53865",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/f05bc53865332bc59f320449d9e26522dfcc7e1d",
+      "date": "2026-11-24T11:09:01Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
       "sha": "68fd157f54",
       "url": "https://github.com/ubiquitarianism/leonida/commit/68fd157f54892629049f205093383cf27df1e077",
       "date": "2026-11-24T11:03:21Z",
@@ -23939,6 +24326,16 @@
       "date": "2026-11-24T10:42:08Z",
       "areas": [
        "other"
+      ]
+     },
+     {
+      "sha": "a9bed902d2",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/a9bed902d2121ac581f707b2827c30c42fd095c0",
+      "date": "2026-11-24T10:40:13Z",
+      "areas": [
+       "shaders",
+       "audio",
+       "docs"
       ]
      },
      {
@@ -24290,6 +24687,27 @@
       "date": "2026-11-24T08:44:00Z",
       "areas": [
        "other"
+      ]
+     },
+     {
+      "sha": "10b0052e57",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/10b0052e570cc6786681bbcf36b61d85b20fc5a8",
+      "date": "2026-11-24T08:41:59Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "ce75f144c7",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/ce75f144c729d22f4b9cae8c310a3bc814a6c56d",
+      "date": "2026-11-24T08:41:59Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "vendor",
+       "docs"
       ]
      },
      {
@@ -24879,253 +25297,12 @@
        "gpu",
        "loader"
       ]
-     },
-     {
-      "sha": "a02134a9c6",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/a02134a9c60af52b8e0c6bdc6e2fa2bad72e7e75",
-      "date": "2026-11-24T06:00:33Z",
-      "areas": [
-       "audio",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "86ba7556ba",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/86ba7556ba0c3e686fbca752ff55efdae95d5cab",
-      "date": "2026-11-24T05:58:15Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "43291a883a",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/43291a883a0b8888c83b7571046870d53252434b",
-      "date": "2026-11-24T05:57:57Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "1840c72706",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/1840c7270696f33550556b041e3010b3153856cf",
-      "date": "2026-11-24T05:55:28Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "2a4f650b7b",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/2a4f650b7b4e13dc280208719681c4cbaacda6de",
-      "date": "2026-11-24T05:52:50Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "aa7223ecfa",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/aa7223ecfac4ac9d7ef06553f0c72e719baf852c",
-      "date": "2026-11-24T05:49:53Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "973593f4a7",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/973593f4a7c14cb70ba9827f2e5e04641294ff20",
-      "date": "2026-11-24T05:47:06Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "d85e326eb7",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/d85e326eb74d7d2e56692b030295ab63f034dde0",
-      "date": "2026-11-24T05:46:14Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "82dcf6dedc",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/82dcf6dedc56bddc189b455f6498e679ecbb4fd6",
-      "date": "2026-11-24T05:46:10Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "72e81f73ff",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/72e81f73ffc5dc43a7cb3be986aac926a0389550",
-      "date": "2026-11-24T05:45:34Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "0db11decd0",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/0db11decd03df3941e89f0536a52eeeab1e852f3",
-      "date": "2026-11-24T05:45:13Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "c932457840",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/c932457840e38c978792d047771b9181ef3bb77a",
-      "date": "2026-11-24T05:45:05Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "d7cdfcf255",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/d7cdfcf25500503fbd694fb6eb949b694ae71bdf",
-      "date": "2026-11-24T05:42:07Z",
-      "areas": [
-       "audio",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "7c2aaebf1a",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/7c2aaebf1a46f91aaf1d425fa3db82a122c8ea16",
-      "date": "2026-11-24T05:41:24Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "fccee2a3c5",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/fccee2a3c5ac6304d46b63a05c8ca81cd460aaad",
-      "date": "2026-11-24T05:41:18Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "3bc75c792f",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/3bc75c792f83067d6ce51056bdb6bb4b7cba7077",
-      "date": "2026-11-24T05:41:11Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "c33f9d6e8d",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/c33f9d6e8d6b56af014c2cdaa65eebfc061273f4",
-      "date": "2026-11-24T05:41:03Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "891fb8f4e2",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/891fb8f4e276b6905d19dd8b3a0b5e74e2d95c64",
-      "date": "2026-11-24T05:40:05Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "bbf2cf1119",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/bbf2cf111924d5dcddcabb6dfdf77835dea12276",
-      "date": "2026-11-24T05:39:02Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "d94a025f5e",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/d94a025f5e07234371fe13b3fca82f32cee75cbe",
-      "date": "2026-11-24T05:38:49Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "75974c532a",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/75974c532af5b13a005553bedf69da2b26424a6a",
-      "date": "2026-11-24T05:38:21Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "1c69700851",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/1c697008516524aa0ee4a7c9e2ae970c7a6b244b",
-      "date": "2026-11-24T05:38:18Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "45c99d977c",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/45c99d977c736eed9a1dd15570a58459e66ce71b",
-      "date": "2026-11-24T05:37:54Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "7f7a596856",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/7f7a5968563718098c3c592193ecb8da14e7d49a",
-      "date": "2026-11-24T05:34:35Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "5523b44169",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/5523b441694bd6ad3e96956533daef94afa4eab3",
-      "date": "2026-11-24T05:33:39Z",
-      "areas": [
-       "input"
-      ]
-     },
-     {
-      "sha": "929ec5f255",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/929ec5f2556a69cd959f34a1bdf7ba2cffb328c1",
-      "date": "2026-11-24T05:18:03Z",
-      "areas": [
-       "gpu",
-       "docs"
-      ]
-     },
-     {
-      "sha": "49c81019c7",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/49c81019c75fc59da5a35d57977337ab7320c01a",
-      "date": "2026-11-24T05:17:22Z",
-      "areas": [
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "31e2ad84c1",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/31e2ad84c19a72925bbd36395302c8914de8043b",
-      "date": "2026-11-24T05:17:08Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "8f481cf16f",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/8f481cf16f261c7f37458aeb45e8f4e19994146d",
-      "date": "2026-11-24T05:09:56Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 1560,
-    "commits_7d": 12200,
+    "commits_24h": 1359,
+    "commits_7d": 12229,
     "commits_sampled": 200,
-    "prs_open": 736,
+    "prs_open": 749,
     "prs_merged_24h": 43,
     "problem_issues": [],
     "releases": [],
@@ -25209,29 +25386,29 @@
    },
    "score": 20.0,
    "areas_24h": {
-    "audio": 85,
-    "loader": 71,
-    "gpu": 63,
-    "docs": 60,
-    "shaders": 43,
-    "other": 36,
-    "vendor": 30,
-    "input": 14,
+    "audio": 94,
+    "loader": 65,
+    "docs": 61,
+    "gpu": 61,
+    "shaders": 54,
+    "other": 32,
+    "vendor": 32,
+    "input": 15,
     "perf": 12
    },
    "areas_7d": {
-    "audio": 85,
-    "loader": 71,
-    "gpu": 63,
-    "docs": 60,
-    "shaders": 43,
-    "other": 36,
-    "vendor": 30,
-    "input": 14,
+    "audio": 94,
+    "loader": 65,
+    "docs": 61,
+    "gpu": 61,
+    "shaders": 54,
+    "other": 32,
+    "vendor": 32,
+    "input": 15,
     "perf": 12
    },
-   "commits_24h": 1560,
-   "commits_7d": 12200,
+   "commits_24h": 1359,
+   "commits_7d": 12229,
    "signals_good": [
     {
      "code": "tracker_confirms",
@@ -25352,7 +25529,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "omonkeyz/xbox-emulator",
-    "stars": 1768,
+    "stars": 1773,
     "forks": 118,
     "open_issues": 150,
     "language": "Rust",
@@ -27269,9 +27446,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "LeonidaReforge/Leonida",
-    "stars": 397,
-    "forks": 52,
-    "open_issues": 120,
+    "stars": 415,
+    "forks": 54,
+    "open_issues": 122,
     "language": "Python",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-24T15:17:23Z",
@@ -27279,7 +27456,7 @@
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 637,
+    "contributors": 646,
     "last_commit": "2026-11-24T15:03:51Z",
     "commits": [
      {
@@ -28956,10 +29133,10 @@
       ]
      }
     ],
-    "commits_24h": 999,
+    "commits_24h": 802,
     "commits_7d": 11592,
     "commits_sampled": 200,
-    "prs_open": 93,
+    "prs_open": 95,
     "prs_merged_24h": 28,
     "problem_issues": [
      {
@@ -29088,7 +29265,7 @@
     "vendor": 4,
     "input": 4
    },
-   "commits_24h": 999,
+   "commits_24h": 802,
    "commits_7d": 11592,
    "signals_good": [
     {
@@ -31064,39 +31241,6 @@
    "headline": "An unofficial GTA 6 PC port is making progress, and developers have the first in-game visuals to show for it"
   },
   {
-   "id": "8f7605d58c5ed63f",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=NS58KVQ-Bpc",
-   "thumb": "https://i.ytimg.com/vi/NS58KVQ-Bpc/hqdefault.jpg",
-   "embed": "NS58KVQ-Bpc",
-   "source": "youtube",
-   "source_label": "YouTube · NeuralDisc",
-   "created": "2026-11-24T14:45:36Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "8e4414681e44b227",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=1sD3O9fe3Gw",
-   "thumb": "https://i.ytimg.com/vi/1sD3O9fe3Gw/hqdefault.jpg",
-   "embed": "1sD3O9fe3Gw",
-   "source": "youtube",
-   "source_label": "YouTube · WiLLiSGaming",
-   "created": "2026-11-24T14:35:34Z",
-   "credibility": "false"
-  },
-  {
-   "id": "48402affc4f1d9ad",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=3AnEZT7sm8M",
-   "thumb": "https://i.ytimg.com/vi/3AnEZT7sm8M/hqdefault.jpg",
-   "embed": "3AnEZT7sm8M",
-   "source": "youtube",
-   "source_label": "YouTube · OP_killer_68",
-   "created": "2026-11-24T14:35:34Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "6d65b5d68eaa3ac6",
    "source": "mastodon",
    "source_label": "Mastodon",
@@ -31163,17 +31307,6 @@
    "headline": "GTA 6: This website lets you track the PC recompilation live"
   },
   {
-   "id": "2fb29bd29bc92d92",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=LH8vnwUzo6M",
-   "thumb": "https://i.ytimg.com/vi/LH8vnwUzo6M/hqdefault.jpg",
-   "embed": "LH8vnwUzo6M",
-   "source": "youtube",
-   "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T12:35:36Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "ce3cbec74efce32d",
    "source": "news",
    "source_label": "dsogaming.com",
@@ -31198,40 +31331,7 @@
    "embed": "ssn9gfV5ZBI",
    "source": "youtube",
    "source_label": "YouTube ·  Hyzee AI",
-   "created": "2026-11-24T11:35:36Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "3ed401db0bbda199",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=lX1LvckTRCo",
-   "thumb": "https://i.ytimg.com/vi/lX1LvckTRCo/hqdefault.jpg",
-   "embed": "lX1LvckTRCo",
-   "source": "youtube",
-   "source_label": "YouTube · Dapper Gaming",
-   "created": "2026-11-24T11:35:34Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "c6e00522b34cabf4",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=W3ikbV7U3j0",
-   "thumb": "https://i.ytimg.com/vi/W3ikbV7U3j0/hqdefault.jpg",
-   "embed": "W3ikbV7U3j0",
-   "source": "youtube",
-   "source_label": "YouTube · Undocumented Behavior",
-   "created": "2026-11-24T10:35:38Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "e336180c92806fcc",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=2Q_56_Xf0s4",
-   "thumb": "https://i.ytimg.com/vi/2Q_56_Xf0s4/hqdefault.jpg",
-   "embed": "2Q_56_Xf0s4",
-   "source": "youtube",
-   "source_label": "YouTube · Sh00ter Stu",
-   "created": "2026-11-24T09:35:34Z",
+   "created": "2026-11-24T11:13:08Z",
    "credibility": "unverified"
   },
   {
@@ -31243,22 +31343,11 @@
    "kind": "discussion",
    "project": null,
    "score": 1,
-   "comments": 0,
+   "comments": 1,
    "lang": null,
    "by_owner": false,
    "thumb": null,
    "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "a1d115b5350024a4",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=P0o-Fh-VSxo",
-   "thumb": "https://i.ytimg.com/vi/P0o-Fh-VSxo/hqdefault.jpg",
-   "embed": "P0o-Fh-VSxo",
-   "source": "youtube",
-   "source_label": "YouTube · Code Bear",
-   "created": "2026-11-24T08:35:38Z",
    "credibility": "unverified"
   },
   {
@@ -31269,29 +31358,7 @@
    "embed": "xgQXhFxWfvo",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T08:35:36Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "15d8ed6600d9a495",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=fG8dbzPORGc",
-   "thumb": "https://i.ytimg.com/vi/fG8dbzPORGc/hqdefault.jpg",
-   "embed": "fG8dbzPORGc",
-   "source": "youtube",
-   "source_label": "YouTube · NeuralDisc",
-   "created": "2026-11-24T06:35:34Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "a6acfb2a5eafa4f3",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Gtfb6EzQw0w",
-   "thumb": "https://i.ytimg.com/vi/Gtfb6EzQw0w/hqdefault.jpg",
-   "embed": "Gtfb6EzQw0w",
-   "source": "youtube",
-   "source_label": "YouTube · ApTreX",
-   "created": "2026-11-24T05:35:34Z",
+   "created": "2026-11-24T08:13:08Z",
    "credibility": "unverified"
   },
   {
@@ -31302,29 +31369,7 @@
    "embed": "V19k4n4zA8k",
    "source": "youtube",
    "source_label": "YouTube · Glitching Queen",
-   "created": "2026-11-24T04:35:36Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "6c2c7d9c8e6c844f",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=opN_vbilWSA",
-   "thumb": "https://i.ytimg.com/vi/opN_vbilWSA/hqdefault.jpg",
-   "embed": "opN_vbilWSA",
-   "source": "youtube",
-   "source_label": "YouTube · GoldenRoblox",
-   "created": "2026-11-24T04:35:34Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "0e0239899882d945",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Oao_vuAFeFY",
-   "thumb": "https://i.ytimg.com/vi/Oao_vuAFeFY/hqdefault.jpg",
-   "embed": "Oao_vuAFeFY",
-   "source": "youtube",
-   "source_label": "YouTube · Nerpah",
-   "created": "2026-11-24T03:35:34Z",
+   "created": "2026-11-24T04:13:05Z",
    "credibility": "unverified"
   },
   {
@@ -31335,8 +31380,8 @@
    "created": "2026-11-24T02:08:09Z",
    "kind": "discussion",
    "project": null,
-   "score": 190,
-   "comments": 229,
+   "score": 212,
+   "comments": 309,
    "lang": null,
    "by_owner": false,
    "thumb": null,
@@ -31357,28 +31402,6 @@
    "by_owner": false,
    "thumb": null,
    "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "9b0dad50c05d6fd0",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=oO2brov3WrI",
-   "thumb": "https://i.ytimg.com/vi/oO2brov3WrI/hqdefault.jpg",
-   "embed": "oO2brov3WrI",
-   "source": "youtube",
-   "source_label": "YouTube · Vice Doodles",
-   "created": "2026-11-24T01:35:38Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "ce66ef226e51c7d2",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=J8cpmAt3GAM",
-   "thumb": "https://i.ytimg.com/vi/J8cpmAt3GAM/hqdefault.jpg",
-   "embed": "J8cpmAt3GAM",
-   "source": "youtube",
-   "source_label": "YouTube · Allves Games",
-   "created": "2026-11-24T01:35:36Z",
    "credibility": "unverified"
   },
   {
@@ -31406,18 +31429,7 @@
    "embed": "1l0suSnAn8s",
    "source": "youtube",
    "source_label": "YouTube · AlphaBolt",
-   "created": "2026-11-23T23:35:32Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "dcf113fc2f1cb168",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=S4Nl3XcnMyE",
-   "thumb": "https://i.ytimg.com/vi/S4Nl3XcnMyE/hqdefault.jpg",
-   "embed": "S4Nl3XcnMyE",
-   "source": "youtube",
-   "source_label": "YouTube · Marko Pegan",
-   "created": "2026-11-23T23:35:32Z",
+   "created": "2026-11-23T23:13:05Z",
    "credibility": "unverified"
   },
   {
@@ -31437,17 +31449,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "a9395d9233580eca",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=ejcospBKWF0",
-   "thumb": "https://i.ytimg.com/vi/ejcospBKWF0/hqdefault.jpg",
-   "embed": "ejcospBKWF0",
-   "source": "youtube",
-   "source_label": "YouTube · TheQuartering",
-   "created": "2026-11-23T20:35:38Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "b9359e0e31bfad8d",
    "source": "hn",
    "source_label": "Hacker News",
@@ -31464,28 +31465,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "b54b6e7790fdcfef",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Z0uGWbtdcyQ",
-   "thumb": "https://i.ytimg.com/vi/Z0uGWbtdcyQ/hqdefault.jpg",
-   "embed": "Z0uGWbtdcyQ",
-   "source": "youtube",
-   "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-23T16:35:38Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "9b1c1382aa90aa5d",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=siNYXaL6m18",
-   "thumb": "https://i.ytimg.com/vi/siNYXaL6m18/hqdefault.jpg",
-   "embed": "siNYXaL6m18",
-   "source": "youtube",
-   "source_label": "YouTube · PEXT",
-   "created": "2026-11-23T15:35:38Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "3939538dde5d8d29",
    "kind": "video",
    "url": "https://www.youtube.com/watch?v=GTmvDfFBKw4",
@@ -31493,18 +31472,7 @@
    "embed": "GTmvDfFBKw4",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-23T15:35:38Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "b660ec56127dd098",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=xety8MwsqGE",
-   "thumb": "https://i.ytimg.com/vi/xety8MwsqGE/hqdefault.jpg",
-   "embed": "xety8MwsqGE",
-   "source": "youtube",
-   "source_label": "YouTube · SomeOrdinaryGamers",
-   "created": "2026-11-23T15:35:32Z",
+   "created": "2026-11-23T16:12:53Z",
    "credibility": "unverified"
   },
   {
@@ -31676,6 +31644,184 @@
   }
  ],
  "events": [
+  {
+   "kind": "readme",
+   "created": "2026-11-24T16:08:34Z",
+   "url": "https://github.com/LooperSalty/AnyXboxX#readme",
+   "project": "anyxboxx",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "anyxboxx-readme-2026-11-24T16:08:34Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-24T16:08:34Z",
+   "url": "https://github.com/fablinoo/palmwave#readme",
+   "project": "palmwave",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "palmwave-readme-2026-11-24T16:08:34Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-24T16:08:34Z",
+   "url": "https://github.com/ivall/xcl#readme",
+   "project": "xcl",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xcl-readme-2026-11-24T16:08:34Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-24T16:08:34Z",
+   "url": "https://github.com/brcly/TuxBox#readme",
+   "project": "tuxbox",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "tuxbox-readme-2026-11-24T16:08:34Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-24T16:08:34Z",
+   "url": "https://github.com/gookie-dev/g6shim#readme",
+   "project": "g6shim",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "g6shim-readme-2026-11-24T16:08:34Z"
+  },
+  {
+   "kind": "commits",
+   "n": 2,
+   "areas": [
+    "input",
+    "docs",
+    "gpu"
+   ],
+   "created": "2026-11-24T16:06:43Z",
+   "url": "https://github.com/gookie-dev/g6shim/commits",
+   "project": "g6shim",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "g6shim-commits-2026-11-24T16:06:43Z"
+  },
+  {
+   "kind": "commits",
+   "n": 13,
+   "areas": [
+    "other",
+    "shaders",
+    "docs"
+   ],
+   "created": "2026-11-24T16:06:42Z",
+   "url": "https://github.com/ubiquitarianism/leonida/commits",
+   "project": "leonida-continued",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "leonida-continued-commits-2026-11-24T16:06:42Z"
+  },
+  {
+   "kind": "commits",
+   "n": 12,
+   "areas": [
+    "gpu",
+    "loader",
+    "docs"
+   ],
+   "created": "2026-11-24T16:06:32Z",
+   "url": "https://github.com/ThatRecompDev/five-star-recomp/commits",
+   "project": "five-star-recomp",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "five-star-recomp-commits-2026-11-24T16:06:32Z"
+  },
+  {
+   "kind": "commits",
+   "n": 21,
+   "areas": [
+    "docs",
+    "shaders",
+    "gpu"
+   ],
+   "created": "2026-11-24T16:05:07Z",
+   "url": "https://github.com/R0Y00/Xbox2Windows/commits",
+   "project": "xbox2windows",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xbox2windows-commits-2026-11-24T16:05:07Z"
+  },
+  {
+   "kind": "commits",
+   "n": 19,
+   "areas": [
+    "gpu",
+    "loader",
+    "other"
+   ],
+   "created": "2026-11-24T15:58:37Z",
+   "url": "https://github.com/ivall/xcl/commits",
+   "project": "xcl",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xcl-commits-2026-11-24T15:58:37Z"
+  },
+  {
+   "kind": "commits",
+   "n": 3,
+   "areas": [
+    "docs",
+    "gpu",
+    "shaders"
+   ],
+   "created": "2026-11-24T15:53:59Z",
+   "url": "https://github.com/brcly/TuxBox/commits",
+   "project": "tuxbox",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "tuxbox-commits-2026-11-24T15:53:59Z"
+  },
+  {
+   "kind": "commits",
+   "n": 1,
+   "areas": [
+    "gpu",
+    "loader",
+    "docs"
+   ],
+   "created": "2026-11-24T15:43:45Z",
+   "url": "https://github.com/fablinoo/palmwave/commits",
+   "project": "palmwave",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "palmwave-commits-2026-11-24T15:43:45Z"
+  },
+  {
+   "kind": "commits",
+   "n": 2,
+   "areas": [
+    "gpu",
+    "loader",
+    "perf"
+   ],
+   "created": "2026-11-24T15:42:53Z",
+   "url": "https://github.com/OpenCommunityEdition/OpenScarlett/commits",
+   "project": "openscarlett-ce",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "openscarlett-ce-commits-2026-11-24T15:42:53Z"
+  },
+  {
+   "kind": "commits",
+   "n": 1,
+   "areas": [
+    "docs"
+   ],
+   "created": "2026-11-24T15:34:29Z",
+   "url": "https://github.com/LooperSalty/AnyXboxX/commits",
+   "project": "anyxboxx",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "anyxboxx-commits-2026-11-24T15:34:29Z"
+  },
   {
    "kind": "readme",
    "created": "2026-11-24T15:30:25Z",
@@ -32120,210 +32266,13 @@
   "6ba962df0cbbf3a5"
  ],
  "media": [
-  "6d65b5d68eaa3ac6",
-  "8f7605d58c5ed63f",
-  "e47fc20d86ce2405",
-  "48402affc4f1d9ad",
-  "2fb29bd29bc92d92",
   "89b5e0187042f34d",
-  "3ed401db0bbda199",
-  "c6e00522b34cabf4",
-  "e336180c92806fcc",
-  "a1d115b5350024a4",
   "a0b9d2d65b888dac",
-  "15d8ed6600d9a495",
-  "a6acfb2a5eafa4f3",
   "87a4901531d421ca",
-  "6c2c7d9c8e6c844f",
-  "0e0239899882d945",
-  "9b0dad50c05d6fd0",
-  "ce66ef226e51c7d2",
   "701f513db14a4c9e",
-  "dcf113fc2f1cb168",
-  "a9395d9233580eca",
-  "b54b6e7790fdcfef",
-  "9b1c1382aa90aa5d",
-  "3939538dde5d8d29",
-  "b660ec56127dd098"
+  "3939538dde5d8d29"
  ],
  "media_items": [
-  {
-   "id": "f40a0c74d87d9bdf",
-   "kind": "video",
-   "url": "https://github.com/user-attachments/assets/c82c22e9-eafd-4a22-b8ca-fed18cf52263",
-   "thumb": null,
-   "embed": null,
-   "source": "github",
-   "source_label": "README · OpenScarlett",
-   "origin": "project",
-   "project": "openscarlett-ce",
-   "credibility": "confirmed",
-   "created": "2026-11-24T15:19:04Z"
-  },
-  {
-   "id": "20a2cb5b5eea9164",
-   "kind": "image",
-   "url": "https://portwatch-vi.xyz/news/2026-11-24-xcl-30fps-in-game.html",
-   "thumb": "https://opengraph.githubassets.com/55105f3151bd37eaaca9d6bec3a4a1c7d4cdff884c82656c389260ca34eb0f7e/ivall/xcl/pull/516",
-   "source": "tracker",
-   "source_label": "PortWatch VI",
-   "origin": "tracker",
-   "created": "2026-11-24",
-   "project": "xcl",
-   "credibility": "community",
-   "embed": null
-  },
-  {
-   "id": "6d65b5d68eaa3ac6",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@mr2x/117671776575730463",
-   "created": "2026-11-24T14:00:17Z",
-   "kind": "image",
-   "project": null,
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://files.mastodon.social/media_attachments/files/117/671/776/496/325/525/small/c21e96bfe13091a6.png",
-   "embed": null,
-   "credibility": "unverified",
-   "origin": "community"
-  },
-  {
-   "id": "8f7605d58c5ed63f",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=NS58KVQ-Bpc",
-   "thumb": "https://i.ytimg.com/vi/NS58KVQ-Bpc/hqdefault.jpg",
-   "embed": "NS58KVQ-Bpc",
-   "source": "youtube",
-   "source_label": "YouTube · NeuralDisc",
-   "created": "2026-11-24T14:45:36Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "32cedaa9c0c1d5f8",
-   "kind": "video",
-   "url": "https://github.com/user-attachments/assets/7e01f974-c23e-4f67-9e05-39103014cb84",
-   "thumb": null,
-   "embed": null,
-   "source": "github",
-   "source_label": "README · OpenScarlett",
-   "origin": "project",
-   "project": "openscarlett-ce",
-   "credibility": "confirmed",
-   "created": "2026-11-24T15:19:04Z"
-  },
-  {
-   "id": "6b5d1117df31d47e",
-   "kind": "image",
-   "url": "https://portwatch-vi.xyz/news/2026-11-23-leonida-discord-down.html",
-   "thumb": "https://opengraph.githubassets.com/ca8338e1cd5dbe9b1ed082875cf193e7051cf038680ca1fe453ca16332fc7553/ProjectLeonida/Leonida",
-   "source": "tracker",
-   "source_label": "PortWatch VI",
-   "origin": "tracker",
-   "created": "2026-11-23",
-   "project": null,
-   "credibility": "community",
-   "embed": null
-  },
-  {
-   "id": "e47fc20d86ce2405",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@news4itc.wordpress.com@news4itc.wordpress.com/117671698764236366",
-   "created": "2026-11-24T13:40:11Z",
-   "kind": "image",
-   "project": null,
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://files.mastodon.social/cache/media_attachments/files/117/671/698/715/526/608/small/451b9ee5755405e6.jpg",
-   "embed": null,
-   "credibility": "unverified",
-   "origin": "community"
-  },
-  {
-   "id": "48402affc4f1d9ad",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=3AnEZT7sm8M",
-   "thumb": "https://i.ytimg.com/vi/3AnEZT7sm8M/hqdefault.jpg",
-   "embed": "3AnEZT7sm8M",
-   "source": "youtube",
-   "source_label": "YouTube · OP_killer_68",
-   "created": "2026-11-24T14:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "d59367c53bdc7faf",
-   "kind": "image",
-   "url": "https://github.com/LooperSalty/AnyXboxX#readme",
-   "thumb": "https://raw.githubusercontent.com/LooperSalty/AnyXboxX/main/docs/images/simpletriangle-anyxboxx.png",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · AnyXboxX",
-   "origin": "project",
-   "project": "anyxboxx",
-   "credibility": "confirmed",
-   "created": "2026-11-24T15:15:11Z"
-  },
-  {
-   "id": "508a23170b086fea",
-   "kind": "image",
-   "url": "https://portwatch-vi.xyz/news/2026-11-23-leonida-exe-runs.html",
-   "thumb": "https://opengraph.githubassets.com/725a3bb54ed0edb934ec86c33f6d22b15cedc99ac084fa91a61a9887ab07ba4e/ItsNotRexed/Leonida/issues/7154",
-   "source": "tracker",
-   "source_label": "PortWatch VI",
-   "origin": "tracker",
-   "created": "2026-11-23",
-   "project": null,
-   "credibility": "community",
-   "embed": null
-  },
-  {
-   "id": "2fb29bd29bc92d92",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=LH8vnwUzo6M",
-   "thumb": "https://i.ytimg.com/vi/LH8vnwUzo6M/hqdefault.jpg",
-   "embed": "LH8vnwUzo6M",
-   "source": "youtube",
-   "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T12:35:36Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "78c724bd67b90f65",
-   "kind": "image",
-   "url": "https://github.com/LooperSalty/AnyXboxX#readme",
-   "thumb": "https://raw.githubusercontent.com/LooperSalty/AnyXboxX/main/docs/images/demo-virage.png",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · AnyXboxX",
-   "origin": "project",
-   "project": "anyxboxx",
-   "credibility": "confirmed",
-   "created": "2026-11-24T15:15:11Z"
-  },
-  {
-   "id": "ca7a5717e38ec3e7",
-   "kind": "image",
-   "url": "https://portwatch-vi.xyz/news/2026-11-23-exe-readme.html",
-   "thumb": "https://portwatch-vi.xyz/assets/img/news/2026-11-23-exe-readme.png",
-   "source": "tracker",
-   "source_label": "PortWatch VI",
-   "origin": "tracker",
-   "created": "2026-11-23",
-   "project": null,
-   "credibility": "community",
-   "embed": null
-  },
   {
    "id": "89b5e0187042f34d",
    "kind": "video",
@@ -32332,140 +32281,10 @@
    "embed": "ssn9gfV5ZBI",
    "source": "youtube",
    "source_label": "YouTube ·  Hyzee AI",
-   "created": "2026-11-24T11:35:36Z",
+   "created": "2026-11-24T11:13:08Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
-  },
-  {
-   "id": "c16920095d148ec3",
-   "kind": "image",
-   "url": "https://github.com/LooperSalty/AnyXboxX#readme",
-   "thumb": "https://raw.githubusercontent.com/LooperSalty/AnyXboxX/main/docs/images/rapport-compatibilite.png",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · AnyXboxX",
-   "origin": "project",
-   "project": "anyxboxx",
-   "credibility": "confirmed",
-   "created": "2026-11-24T15:15:11Z"
-  },
-  {
-   "id": "78a3b3997b1e0a93",
-   "kind": "image",
-   "url": "https://portwatch-vi.xyz/news/2026-11-23-exe-released.html",
-   "thumb": "https://portwatch-vi.xyz/assets/img/news/2026-11-23-exe-released.png",
-   "source": "tracker",
-   "source_label": "PortWatch VI",
-   "origin": "tracker",
-   "created": "2026-11-23",
-   "project": null,
-   "credibility": "community",
-   "embed": null
-  },
-  {
-   "id": "3ed401db0bbda199",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=lX1LvckTRCo",
-   "thumb": "https://i.ytimg.com/vi/lX1LvckTRCo/hqdefault.jpg",
-   "embed": "lX1LvckTRCo",
-   "source": "youtube",
-   "source_label": "YouTube · Dapper Gaming",
-   "created": "2026-11-24T11:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "60493e7fd07949fa",
-   "kind": "image",
-   "url": "https://github.com/rpatty-dev/PercyScarlett#readme",
-   "thumb": "https://raw.githubusercontent.com/rpatty-dev/PercyScarlett/main/docs/proof/minecraft_ingame_percy.png",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · PercyScarlett",
-   "origin": "project",
-   "project": "percyscarlett",
-   "credibility": "confirmed",
-   "created": "2026-11-24T09:38:35Z"
-  },
-  {
-   "id": "c6e00522b34cabf4",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=W3ikbV7U3j0",
-   "thumb": "https://i.ytimg.com/vi/W3ikbV7U3j0/hqdefault.jpg",
-   "embed": "W3ikbV7U3j0",
-   "source": "youtube",
-   "source_label": "YouTube · Undocumented Behavior",
-   "created": "2026-11-24T10:35:38Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "f38a235e0b3c5777",
-   "kind": "image",
-   "url": "https://github.com/rpatty-dev/PercyScarlett#readme",
-   "thumb": "https://raw.githubusercontent.com/rpatty-dev/PercyScarlett/main/docs/proof/minecraft_xsx_main_menu.png",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · PercyScarlett",
-   "origin": "project",
-   "project": "percyscarlett",
-   "credibility": "confirmed",
-   "created": "2026-11-24T09:38:35Z"
-  },
-  {
-   "id": "e336180c92806fcc",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=2Q_56_Xf0s4",
-   "thumb": "https://i.ytimg.com/vi/2Q_56_Xf0s4/hqdefault.jpg",
-   "embed": "2Q_56_Xf0s4",
-   "source": "youtube",
-   "source_label": "YouTube · Sh00ter Stu",
-   "created": "2026-11-24T09:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "c214cde928373555",
-   "kind": "image",
-   "url": "https://github.com/rpatty-dev/PercyScarlett#readme",
-   "thumb": "https://raw.githubusercontent.com/rpatty-dev/PercyScarlett/main/docs/proof/minecraft_xsx_loading_render.png",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · PercyScarlett",
-   "origin": "project",
-   "project": "percyscarlett",
-   "credibility": "confirmed",
-   "created": "2026-11-24T09:38:35Z"
-  },
-  {
-   "id": "a1d115b5350024a4",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=P0o-Fh-VSxo",
-   "thumb": "https://i.ytimg.com/vi/P0o-Fh-VSxo/hqdefault.jpg",
-   "embed": "P0o-Fh-VSxo",
-   "source": "youtube",
-   "source_label": "YouTube · Code Bear",
-   "created": "2026-11-24T08:35:38Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "b8340651b2b7f63b",
-   "kind": "image",
-   "url": "https://github.com/sammwyy/xvalkyrie#readme",
-   "thumb": "https://raw.githubusercontent.com/sammwyy/xvalkyrie/main/docs/img/compat/undertale.webp",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · xvalkyrie",
-   "origin": "project",
-   "project": "xvalkyrie",
-   "credibility": "confirmed",
-   "created": "2026-11-23T19:24:06Z"
   },
   {
    "id": "a0b9d2d65b888dac",
@@ -32475,75 +32294,10 @@
    "embed": "xgQXhFxWfvo",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T08:35:36Z",
+   "created": "2026-11-24T08:13:08Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
-  },
-  {
-   "id": "cc6705a7ff790b37",
-   "kind": "image",
-   "url": "https://github.com/sammwyy/xvalkyrie#readme",
-   "thumb": "https://raw.githubusercontent.com/sammwyy/xvalkyrie/main/docs/img/compat/dragon-ball-fighterz.webp",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · xvalkyrie",
-   "origin": "project",
-   "project": "xvalkyrie",
-   "credibility": "confirmed",
-   "created": "2026-11-23T19:24:06Z"
-  },
-  {
-   "id": "15d8ed6600d9a495",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=fG8dbzPORGc",
-   "thumb": "https://i.ytimg.com/vi/fG8dbzPORGc/hqdefault.jpg",
-   "embed": "fG8dbzPORGc",
-   "source": "youtube",
-   "source_label": "YouTube · NeuralDisc",
-   "created": "2026-11-24T06:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "c7e6395d48344a05",
-   "kind": "image",
-   "url": "https://github.com/sammwyy/xvalkyrie#readme",
-   "thumb": "https://raw.githubusercontent.com/sammwyy/xvalkyrie/main/docs/img/compat/terraria.webp",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · xvalkyrie",
-   "origin": "project",
-   "project": "xvalkyrie",
-   "credibility": "confirmed",
-   "created": "2026-11-23T19:24:06Z"
-  },
-  {
-   "id": "a6acfb2a5eafa4f3",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Gtfb6EzQw0w",
-   "thumb": "https://i.ytimg.com/vi/Gtfb6EzQw0w/hqdefault.jpg",
-   "embed": "Gtfb6EzQw0w",
-   "source": "youtube",
-   "source_label": "YouTube · ApTreX",
-   "created": "2026-11-24T05:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "3b5981cfdb2984e5",
-   "kind": "image",
-   "url": "https://github.com/sammwyy/xvalkyrie#readme",
-   "thumb": "https://raw.githubusercontent.com/sammwyy/xvalkyrie/main/docs/img/compat/puyo-puyo-champions.webp",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · xvalkyrie",
-   "origin": "project",
-   "project": "xvalkyrie",
-   "credibility": "confirmed",
-   "created": "2026-11-23T19:24:06Z"
   },
   {
    "id": "87a4901531d421ca",
@@ -32553,85 +32307,7 @@
    "embed": "V19k4n4zA8k",
    "source": "youtube",
    "source_label": "YouTube · Glitching Queen",
-   "created": "2026-11-24T04:35:36Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "ab450697b64b2111",
-   "kind": "image",
-   "url": "https://github.com/sammwyy/xvalkyrie#readme",
-   "thumb": "https://raw.githubusercontent.com/sammwyy/xvalkyrie/main/docs/img/compat/rayman-legends.webp",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · xvalkyrie",
-   "origin": "project",
-   "project": "xvalkyrie",
-   "credibility": "confirmed",
-   "created": "2026-11-23T19:24:06Z"
-  },
-  {
-   "id": "6c2c7d9c8e6c844f",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=opN_vbilWSA",
-   "thumb": "https://i.ytimg.com/vi/opN_vbilWSA/hqdefault.jpg",
-   "embed": "opN_vbilWSA",
-   "source": "youtube",
-   "source_label": "YouTube · GoldenRoblox",
-   "created": "2026-11-24T04:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "5a450201b78f3c68",
-   "kind": "image",
-   "url": "https://github.com/sammwyy/xvalkyrie#readme",
-   "thumb": "https://raw.githubusercontent.com/sammwyy/xvalkyrie/main/docs/img/compat/fortnite.webp",
-   "embed": null,
-   "source": "github",
-   "source_label": "README · xvalkyrie",
-   "origin": "project",
-   "project": "xvalkyrie",
-   "credibility": "confirmed",
-   "created": "2026-11-23T19:24:06Z"
-  },
-  {
-   "id": "0e0239899882d945",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Oao_vuAFeFY",
-   "thumb": "https://i.ytimg.com/vi/Oao_vuAFeFY/hqdefault.jpg",
-   "embed": "Oao_vuAFeFY",
-   "source": "youtube",
-   "source_label": "YouTube · Nerpah",
-   "created": "2026-11-24T03:35:34Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "9b0dad50c05d6fd0",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=oO2brov3WrI",
-   "thumb": "https://i.ytimg.com/vi/oO2brov3WrI/hqdefault.jpg",
-   "embed": "oO2brov3WrI",
-   "source": "youtube",
-   "source_label": "YouTube · Vice Doodles",
-   "created": "2026-11-24T01:35:38Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "ce66ef226e51c7d2",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=J8cpmAt3GAM",
-   "thumb": "https://i.ytimg.com/vi/J8cpmAt3GAM/hqdefault.jpg",
-   "embed": "J8cpmAt3GAM",
-   "source": "youtube",
-   "source_label": "YouTube · Allves Games",
-   "created": "2026-11-24T01:35:36Z",
+   "created": "2026-11-24T04:13:05Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -32644,59 +32320,7 @@
    "embed": "1l0suSnAn8s",
    "source": "youtube",
    "source_label": "YouTube · AlphaBolt",
-   "created": "2026-11-23T23:35:32Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "dcf113fc2f1cb168",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=S4Nl3XcnMyE",
-   "thumb": "https://i.ytimg.com/vi/S4Nl3XcnMyE/hqdefault.jpg",
-   "embed": "S4Nl3XcnMyE",
-   "source": "youtube",
-   "source_label": "YouTube · Marko Pegan",
-   "created": "2026-11-23T23:35:32Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "a9395d9233580eca",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=ejcospBKWF0",
-   "thumb": "https://i.ytimg.com/vi/ejcospBKWF0/hqdefault.jpg",
-   "embed": "ejcospBKWF0",
-   "source": "youtube",
-   "source_label": "YouTube · TheQuartering",
-   "created": "2026-11-23T20:35:38Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "b54b6e7790fdcfef",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Z0uGWbtdcyQ",
-   "thumb": "https://i.ytimg.com/vi/Z0uGWbtdcyQ/hqdefault.jpg",
-   "embed": "Z0uGWbtdcyQ",
-   "source": "youtube",
-   "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-23T16:35:38Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "9b1c1382aa90aa5d",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=siNYXaL6m18",
-   "thumb": "https://i.ytimg.com/vi/siNYXaL6m18/hqdefault.jpg",
-   "embed": "siNYXaL6m18",
-   "source": "youtube",
-   "source_label": "YouTube · PEXT",
-   "created": "2026-11-23T15:35:38Z",
+   "created": "2026-11-23T23:13:05Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -32709,20 +32333,7 @@
    "embed": "GTmvDfFBKw4",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-23T15:35:38Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "b660ec56127dd098",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=xety8MwsqGE",
-   "thumb": "https://i.ytimg.com/vi/xety8MwsqGE/hqdefault.jpg",
-   "embed": "xety8MwsqGE",
-   "source": "youtube",
-   "source_label": "YouTube · SomeOrdinaryGamers",
-   "created": "2026-11-23T15:35:32Z",
+   "created": "2026-11-23T16:12:53Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -32745,6 +32356,16 @@
  ],
  "external": [
   {
+   "name": "AnyXboxX",
+   "repo": "LooperSalty/AnyXboxX",
+   "stages": {
+    "GTA VI PC Race": 6,
+    "PortWatch VI": 0
+   },
+   "watch": false,
+   "slug": "anyxboxx"
+  },
+  {
    "name": "CGBJ",
    "repo": null,
    "stages": {
@@ -32763,16 +32384,6 @@
    },
    "watch": false,
    "slug": "victory"
-  },
-  {
-   "name": "AnyXboxX",
-   "repo": "LooperSalty/AnyXboxX",
-   "stages": {
-    "GTA VI PC Race": 5,
-    "PortWatch VI": 0
-   },
-   "watch": false,
-   "slug": "anyxboxx"
   },
   {
    "name": "five-star-recomp",
@@ -33328,10 +32939,6 @@
    ]
   },
   {
-   "code": "hoax",
-   "item": "8e4414681e44b227"
-  },
-  {
    "code": "gta_notice",
    "url": "https://github.com/github/dmca/blob/master/2026/11/2026-11-18-take-two.md",
    "date": "2026-11-18"
@@ -33366,7 +32973,7 @@
     "victory": 6,
     "xcl": 6,
     "five-star-recomp": 5,
-    "anyxboxx": 5,
+    "anyxboxx": 6,
     "gta6-boottest": 5,
     "xbox2windows": 5,
     "leonida-continued": 4,
@@ -33402,7 +33009,7 @@
    "name": "mtwildwood GTA 6 PC",
    "url": "https://gta.mtwildwood.net/es/gta-6-pc/",
    "ok": true,
-   "updated": "2026-11-24T15:31:31Z",
+   "updated": "2026-11-24T16:10:00Z",
    "phases": {}
   }
  ],
@@ -33414,7 +33021,7 @@
  "stats": {
   "dropped_legal": 26,
   "dropped_spoiler": 4,
-  "http_calls": 858
+  "http_calls": 593
  },
  "phase_changes": [
   {
