@@ -188,5 +188,100 @@
     "status": "active"
    }
   }
+ },
+ {
+  "t": "2026-11-24T13:08:11Z",
+  "p": {
+   "victory": {
+    "phase": 5,
+    "partial": false,
+    "score": 70.0,
+    "stars": 8622,
+    "forks": 1166,
+    "contributors": 50,
+    "commits_24h": 211,
+    "status": "active"
+   },
+   "anyxboxx": {
+    "phase": 5,
+    "partial": false,
+    "score": 70.0,
+    "stars": 138,
+    "forks": 16,
+    "contributors": 6,
+    "commits_24h": 66,
+    "status": "active"
+   },
+   "five-star-recomp": {
+    "phase": 5,
+    "partial": true,
+    "score": 62.5,
+    "stars": 99,
+    "forks": 4,
+    "contributors": 1,
+    "commits_24h": 349,
+    "status": "active"
+   },
+   "xcl": {
+    "phase": 4,
+    "partial": false,
+    "score": 55.0,
+    "stars": 6574,
+    "forks": 808,
+    "contributors": 70,
+    "commits_24h": 316,
+    "status": "active"
+   },
+   "gta6-boottest": {
+    "phase": 4,
+    "partial": true,
+    "score": 47.5,
+    "stars": 38,
+    "forks": 2,
+    "contributors": 1,
+    "commits_24h": 22,
+    "status": "active"
+   },
+   "xbox2windows": {
+    "phase": 3,
+    "partial": true,
+    "score": 32.5,
+    "stars": 1799,
+    "forks": 198,
+    "contributors": 93,
+    "commits_24h": 1584,
+    "status": "active"
+   },
+   "palmetto": {
+    "phase": 2,
+    "partial": false,
+    "score": 25.0,
+    "stars": 114,
+    "forks": 51,
+    "contributors": 637,
+    "commits_24h": 1127,
+    "status": "active"
+   },
+   "leonida-continued": {
+    "phase": 1,
+    "partial": false,
+    "score": 20.0,
+    "stars": 1183,
+    "forks": 244,
+    "contributors": 694,
+    "commits_24h": 1586,
+    "status": "active"
+   },
+   "leonida-reforge": {
+    "phase": 1,
+    "partial": true,
+    "score": 10.0,
+    "stars": 350,
+    "forks": 44,
+    "contributors": 637,
+    "commits_24h": 1053,
+    "status": "active"
+   }
+  }
  }
 ]

@@ -5827,5 +5827,58 @@
   "shaders",
   "loader",
   "docs"
+ ],
+ "28cba308acba68a116d6d2da0de47ab83afd78f0": [
+  "loader",
+  "docs"
+ ],
+ "3e23ce2c636d4a1da9cb9b04719e1413cb3c8aad": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "b76c34eda3a31510f3f03cb12b9cab10c3e840a8": [
+  "shaders",
+  "docs"
+ ],
+ "2ba386bf3564fecc1ea1d822b55412fa073d17c3": [
+  "loader",
+  "docs"
+ ],
+ "928d3feec9d4f7c9351ced19384860a1ea231b03": [
+  "docs"
+ ],
+ "0468663422ef91cb3c82dc06819eb4325f0281cd": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "a8815ee61e771fdad7bae1768e212b451ca19744": [
+  "shaders",
+  "docs"
+ ],
+ "d043bd913313a4db6493ed611eb88b7ba1fa4472": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "3ed5928a0f7566820c4044b0fbca5d6c53d45fb5": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "3f4455365a8f3b63c1ddc986e020b07672db481e": [
+  "docs"
+ ],
+ "14dd94ded545a6b59590b3084681a915c3dfe90c": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "bb82d0a60ec70758aa072fca96520115ce86891a": [
+  "docs"
+ ],
+ "9600cf0c648a8b2c4ce18521e416815d3d43eeb2": [
+  "docs"
  ]
 }

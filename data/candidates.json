@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-24T13:03:57Z",
+ "generated": "2026-11-24T13:08:11Z",
  "candidates": [
   {
    "full_name": "4lwayz/portwatch-vi",
    "url": "https://github.com/4lwayz/portwatch-vi",
-   "stars": 1771,
+   "stars": 1784,
    "created_at": "2026-11-21T23:16:41Z",
    "pushed_at": "2026-11-24T13:00:21Z",
    "age_days": 2,
@@ -77,7 +77,7 @@
      "code": "password"
     }
    ],
-   "similarity": 0.038
+   "similarity": 0.04
   },
   {
    "full_name": "ProjectLeonidaL/leonida",
@@ -94,7 +94,7 @@
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.269
+   "similarity": 0.272
   },
   {
    "full_name": "sammwyy/xvalkyrie",
@@ -166,7 +166,7 @@
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.095
+   "similarity": 0.093
   },
   {
    "full_name": "fablinoo/palmwave",
@@ -228,9 +228,30 @@
    "similarity": 0.036
   },
   {
+   "full_name": "ViceroyModulator/gta6-ps5-pro-to-windows",
+   "url": "https://github.com/ViceroyModulator/gta6-ps5-pro-to-windows",
+   "stars": 26,
+   "created_at": "2026-11-24T12:03:14Z",
+   "pushed_at": "2026-11-24T12:03:24Z",
+   "age_days": 0,
+   "language": null,
+   "size_kb": 4,
+   "has_code": false,
+   "commits": 2,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "password"
+    }
+   ],
+   "similarity": 0.038
+  },
+  {
    "full_name": "WebConstableReckon/GTA-VI-Windows-Beta-PC",
    "url": "https://github.com/WebConstableReckon/GTA-VI-Windows-Beta-PC",
-   "stars": 22,
+   "stars": 25,
    "created_at": "2026-11-24T12:03:31Z",
    "pushed_at": "2026-11-24T12:03:43Z",
    "age_days": 0,
@@ -255,32 +276,11 @@
    "similarity": 0.033
   },
   {
-   "full_name": "ViceroyModulator/gta6-ps5-pro-to-windows",
-   "url": "https://github.com/ViceroyModulator/gta6-ps5-pro-to-windows",
-   "stars": 21,
-   "created_at": "2026-11-24T12:03:14Z",
-   "pushed_at": "2026-11-24T12:03:24Z",
-   "age_days": 0,
-   "language": null,
-   "size_kb": 4,
-   "has_code": false,
-   "commits": 2,
-   "first_seen": "2026-11-24T13:01:19Z",
-   "flagged": true,
-   "inspected": true,
-   "reasons": [
-    {
-     "code": "password"
-    }
-   ],
-   "similarity": 0.038
-  },
-  {
    "full_name": "IAmNotSiob/leonida-ce",
    "url": "https://github.com/IAmNotSiob/leonida-ce",
    "stars": 19,
    "created_at": "2026-11-24T01:22:10Z",
-   "pushed_at": "2026-11-24T12:58:48Z",
+   "pushed_at": "2026-11-24T13:05:14Z",
    "age_days": 0,
    "language": "Python",
    "size_kb": 44009,
@@ -296,7 +296,34 @@
      "repo": "ubiquitarianism/leonida"
     }
    ],
-   "similarity": 0.881
+   "similarity": 0.879
+  },
+  {
+   "full_name": "WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
+   "url": "https://github.com/WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
+   "stars": 12,
+   "created_at": "2026-11-24T12:27:02Z",
+   "pushed_at": "2026-11-24T12:27:13Z",
+   "age_days": 0,
+   "language": null,
+   "size_kb": 0,
+   "has_code": false,
+   "commits": 2,
+   "first_seen": "2026-11-24T13:01:19Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "password"
+    },
+    {
+     "code": "setup"
+    },
+    {
+     "code": "external"
+    }
+   ],
+   "similarity": 0.032
   },
   {
    "full_name": "vuyp/gta6-pc-race",
@@ -331,33 +358,6 @@
    "inspected": true,
    "reasons": [],
    "similarity": 0.026
-  },
-  {
-   "full_name": "WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
-   "url": "https://github.com/WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
-   "stars": 9,
-   "created_at": "2026-11-24T12:27:02Z",
-   "pushed_at": "2026-11-24T12:27:13Z",
-   "age_days": 0,
-   "language": null,
-   "size_kb": 0,
-   "has_code": false,
-   "commits": 2,
-   "first_seen": "2026-11-24T13:01:19Z",
-   "flagged": true,
-   "inspected": true,
-   "reasons": [
-    {
-     "code": "password"
-    },
-    {
-     "code": "setup"
-    },
-    {
-     "code": "external"
-    }
-   ],
-   "similarity": 0.032
   },
   {
    "full_name": "Mizushi148/MizuBox",
@@ -419,7 +419,7 @@
    "url": "https://github.com/DesignWithTommy/Neonbridge",
    "stars": 4,
    "created_at": "2026-11-23T23:52:16Z",
-   "pushed_at": "2026-11-24T12:58:52Z",
+   "pushed_at": "2026-11-24T13:05:29Z",
    "age_days": 0,
    "language": "Rust",
    "size_kb": 3240,
@@ -460,7 +460,7 @@
    "pushed_at": "2026-11-24T13:01:49Z",
    "age_days": 1,
    "language": "C",
-   "size_kb": 8811,
+   "size_kb": 9181,
    "has_code": true,
    "commits": 491,
    "first_seen": "2026-11-24T13:01:19Z",

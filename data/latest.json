@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T13:03:57Z",
+ "generated": "2026-11-24T13:08:11Z",
  "offline": false,
  "projects": [
   {
@@ -16,9 +16,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "Marvisak/VIctory",
-    "stars": 8600,
-    "forks": 1159,
-    "open_issues": 671,
+    "stars": 8622,
+    "forks": 1166,
+    "open_issues": 673,
     "language": "Rust",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-24T09:55:08Z",
@@ -1754,12 +1754,26 @@
     "prs_merged_24h": 26,
     "problem_issues": [
      {
+      "number": 817,
+      "url": "https://github.com/Marvisak/VIctory/issues/817",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
       "number": 653,
       "url": "https://github.com/Marvisak/VIctory/issues/653",
       "keywords": [
        "tdr",
        "nvidia",
        "device removed"
+      ]
+     },
+     {
+      "number": 846,
+      "url": "https://github.com/Marvisak/VIctory/issues/846",
+      "keywords": [
+       "nvidia"
       ]
      },
      {
@@ -1857,13 +1871,6 @@
       ]
      },
      {
-      "number": 817,
-      "url": "https://github.com/Marvisak/VIctory/issues/817",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
       "number": 789,
       "url": "https://github.com/Marvisak/VIctory/issues/789",
       "keywords": [
@@ -1938,22 +1945,6 @@
       "url": "https://github.com/Marvisak/VIctory/issues/732",
       "keywords": [
        "hang"
-      ]
-     },
-     {
-      "number": 728,
-      "url": "https://github.com/Marvisak/VIctory/issues/728",
-      "keywords": [
-       "nvidia",
-       "wave64"
-      ]
-     },
-     {
-      "number": 858,
-      "url": "https://github.com/Marvisak/VIctory/issues/858",
-      "keywords": [
-       "crash",
-       "nvidia"
       ]
      }
     ],
@@ -2038,7 +2029,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 26,
+     "n": 25,
      "evidence": "https://github.com/Marvisak/VIctory/issues"
     }
    ],
@@ -2061,7 +2052,7 @@
      "models": [],
      "evidence": null,
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/858"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/468"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -2116,7 +2107,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "LooperSalty/AnyXboxX",
-    "stars": 136,
+    "stars": 138,
     "forks": 16,
     "open_issues": 26,
     "language": "Python",
@@ -3909,7 +3900,7 @@
       ]
      }
     ],
-    "commits_24h": 67,
+    "commits_24h": 66,
     "commits_7d": 229,
     "commits_sampled": 200,
     "prs_open": 9,
@@ -3955,13 +3946,13 @@
     "vendor": 13,
     "perf": 5
    },
-   "commits_24h": 67,
+   "commits_24h": 66,
    "commits_7d": 229,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 67,
-     "avg": 27.0,
+     "n24": 66,
+     "avg": 27.2,
      "evidence": "https://github.com/LooperSalty/AnyXboxX/commits"
     },
     {
@@ -5972,9 +5963,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ivall/xcl",
-    "stars": 6556,
-    "forks": 807,
-    "open_issues": 675,
+    "stars": 6574,
+    "forks": 808,
+    "open_issues": 682,
     "language": "Rust",
     "license": "GPL-2.0",
     "pushed_at": "2026-11-24T11:03:43Z",
@@ -7729,9 +7720,24 @@
     "commits_24h": 316,
     "commits_7d": 646,
     "commits_sampled": 200,
-    "prs_open": 549,
+    "prs_open": 556,
     "prs_merged_24h": 3,
     "problem_issues": [
+     {
+      "number": 846,
+      "url": "https://github.com/ivall/xcl/issues/846",
+      "keywords": [
+       "crash",
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1035,
+      "url": "https://github.com/ivall/xcl/issues/1035",
+      "keywords": [
+       "crash"
+      ]
+     },
      {
       "number": 1190,
       "url": "https://github.com/ivall/xcl/issues/1190",
@@ -7767,22 +7773,6 @@
       "url": "https://github.com/ivall/xcl/issues/258",
       "keywords": [
        "crash"
-      ]
-     },
-     {
-      "number": 1164,
-      "url": "https://github.com/ivall/xcl/issues/1164",
-      "keywords": [
-       "black screen",
-       "nvidia"
-      ]
-     },
-     {
-      "number": 232,
-      "url": "https://github.com/ivall/xcl/issues/232",
-      "keywords": [
-       "crash",
-       "nvidia"
       ]
      }
     ],
@@ -7864,7 +7854,7 @@
      "models": [],
      "evidence": null,
      "known_issue": true,
-     "evidence_issue": "https://github.com/ivall/xcl/issues/232"
+     "evidence_issue": "https://github.com/ivall/xcl/issues/42"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -8319,19 +8309,64 @@
     "exists": true,
     "http_status": 200,
     "full_name": "R0Y00/Xbox2Windows",
-    "stars": 1798,
+    "stars": 1799,
     "forks": 198,
-    "open_issues": 114,
+    "open_issues": 109,
     "language": "Python",
     "license": "MIT",
-    "pushed_at": "2026-11-24T12:53:14Z",
+    "pushed_at": "2026-11-24T13:07:54Z",
     "created_at": "2026-11-20T17:43:52Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 93,
-    "last_commit": "2026-11-24T12:53:14Z",
+    "last_commit": "2026-11-24T13:07:54Z",
     "commits": [
+     {
+      "sha": "28cba308ac",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/28cba308acba68a116d6d2da0de47ab83afd78f0",
+      "date": "2026-11-24T13:07:54Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "3e23ce2c63",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/3e23ce2c636d4a1da9cb9b04719e1413cb3c8aad",
+      "date": "2026-11-24T13:07:34Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "b76c34eda3",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b76c34eda3a31510f3f03cb12b9cab10c3e840a8",
+      "date": "2026-11-24T13:07:11Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "2ba386bf35",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/2ba386bf3564fecc1ea1d822b55412fa073d17c3",
+      "date": "2026-11-24T13:06:52Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "928d3feec9",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/928d3feec9d4f7c9351ced19384860a1ea231b03",
+      "date": "2026-11-24T13:06:31Z",
+      "areas": [
+       "docs"
+      ]
+     },
      {
       "sha": "3c6273ac14",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/3c6273ac143db35abd10c914c81f1e20341cddc8",
@@ -8419,6 +8454,16 @@
       ]
      },
      {
+      "sha": "0468663422",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0468663422ef91cb3c82dc06819eb4325f0281cd",
+      "date": "2026-11-24T12:43:19Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
       "sha": "6df679bf97",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/6df679bf979d21b1be32d6b5ac1513bebd82d6a8",
       "date": "2026-11-24T12:42:34Z",
@@ -8454,6 +8499,25 @@
       "areas": [
        "loader",
        "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "a8815ee61e",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/a8815ee61e771fdad7bae1768e212b451ca19744",
+      "date": "2026-11-24T12:41:27Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "d043bd9133",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d043bd913313a4db6493ed611eb88b7ba1fa4472",
+      "date": "2026-11-24T12:39:13Z",
+      "areas": [
+       "gpu",
+       "loader",
        "docs"
       ]
      },
@@ -8521,6 +8585,24 @@
       "areas": [
        "loader",
        "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "3ed5928a0f",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/3ed5928a0f7566820c4044b0fbca5d6c53d45fb5",
+      "date": "2026-11-24T12:32:59Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "3f4455365a",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/3f4455365a8f3b63c1ddc986e020b07672db481e",
+      "date": "2026-11-24T12:31:24Z",
+      "areas": [
        "docs"
       ]
      },
@@ -8915,6 +8997,16 @@
       ]
      },
      {
+      "sha": "14dd94ded5",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/14dd94ded545a6b59590b3084681a915c3dfe90c",
+      "date": "2026-11-24T11:59:28Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
       "sha": "c44bd0ad78",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/c44bd0ad785cc4a01110bd05360710fdf3a498f0",
       "date": "2026-11-24T11:58:10Z",
@@ -9130,6 +9222,14 @@
       "date": "2026-11-24T11:45:05Z",
       "areas": [
        "gpu"
+      ]
+     },
+     {
+      "sha": "bb82d0a60e",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/bb82d0a60ec70758aa072fca96520115ce86891a",
+      "date": "2026-11-24T11:43:36Z",
+      "areas": [
+       "docs"
       ]
      },
      {
@@ -9984,113 +10084,12 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "33237f61f6",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/33237f61f6d289848d6391834b7b6ded2a60a955",
-      "date": "2026-11-24T10:32:18Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "4875082d29",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/4875082d295b0f8647d6ec161355204326757fff",
-      "date": "2026-11-24T10:32:03Z",
-      "areas": [
-       "shaders",
-       "perf"
-      ]
-     },
-     {
-      "sha": "da8bfc74fd",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/da8bfc74fd99c35b1b858aed40b23f365800256f",
-      "date": "2026-11-24T10:31:43Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "e60714288a",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e60714288a1ba2e6142a9672053726d9a247c72c",
-      "date": "2026-11-24T10:30:41Z",
-      "areas": [
-       "audio",
-       "loader"
-      ]
-     },
-     {
-      "sha": "57659afcf9",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/57659afcf9d51712f992d9b7a91593ccaed183f2",
-      "date": "2026-11-24T10:30:28Z",
-      "areas": [
-       "perf",
-       "docs"
-      ]
-     },
-     {
-      "sha": "1f0244de01",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/1f0244de0107791b405b93ac5ad1df14dbaaa720",
-      "date": "2026-11-24T10:29:47Z",
-      "areas": [
-       "audio"
-      ]
-     },
-     {
-      "sha": "7a14701685",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/7a1470168570bfe51e7ce98f5ee0b7d8f0a80845",
-      "date": "2026-11-24T10:29:44Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "f1b205666e",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/f1b205666eeb95ce82e876cb87b30f90323b1ba9",
-      "date": "2026-11-24T10:29:09Z",
-      "areas": [
-       "shaders",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "eebdd91d11",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/eebdd91d1118d52c3b2af27a78ac8dcc0972079a",
-      "date": "2026-11-24T10:28:08Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "f59ce4e4ba",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/f59ce4e4bad24412414a1881288d14a6bc891fa6",
-      "date": "2026-11-24T10:27:52Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "de21f76cd1",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/de21f76cd17f48af05a6fe74658d908cdf969f4a",
-      "date": "2026-11-24T10:26:33Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "ba073fcad3",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/ba073fcad33532ee79fbafaf78d624d9b6c64a4d",
-      "date": "2026-11-24T10:22:32Z",
-      "areas": [
-       "shaders"
-      ]
      }
     ],
-    "commits_24h": 1573,
-    "commits_7d": 3057,
+    "commits_24h": 1584,
+    "commits_7d": 3069,
     "commits_sampled": 200,
-    "prs_open": 53,
+    "prs_open": 48,
     "prs_merged_24h": 48,
     "problem_issues": [
      {
@@ -10155,6 +10154,20 @@
       "keywords": [
        "nvidia"
       ]
+     },
+     {
+      "number": 312,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/312",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 737,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/737",
+      "keywords": [
+       "nvidia"
+      ]
      }
     ],
     "releases": [
@@ -10164,7 +10177,7 @@
       "has_binaries": true
      }
     ],
-    "readme_hash": "36763c1028e6dcdf",
+    "readme_hash": "4f03bcc3c048b997",
     "status_rows": []
    },
    "auto_phase": {
@@ -10178,34 +10191,34 @@
    },
    "score": 32.5,
    "areas_24h": {
-    "docs": 89,
-    "gpu": 60,
-    "loader": 48,
-    "shaders": 42,
+    "docs": 97,
+    "gpu": 65,
+    "loader": 53,
+    "shaders": 41,
     "vendor": 39,
-    "other": 35,
-    "audio": 19,
+    "other": 31,
+    "audio": 17,
     "input": 14,
-    "perf": 8
+    "perf": 6
    },
    "areas_7d": {
-    "docs": 89,
-    "gpu": 60,
-    "loader": 48,
-    "shaders": 42,
+    "docs": 97,
+    "gpu": 65,
+    "loader": 53,
+    "shaders": 41,
     "vendor": 39,
-    "other": 35,
-    "audio": 19,
+    "other": 31,
+    "audio": 17,
     "input": 14,
-    "perf": 8
+    "perf": 6
    },
-   "commits_24h": 1573,
-   "commits_7d": 3057,
+   "commits_24h": 1584,
+   "commits_7d": 3069,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 1573,
-     "avg": 247.3,
+     "n24": 1584,
+     "avg": 247.5,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/commits"
     },
     {
@@ -10218,7 +10231,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 9,
+     "n": 11,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/issues"
     },
     {
@@ -10254,7 +10267,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/584"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/737"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -10270,7 +10283,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/584"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/312"
     },
     "intel": {
      "status": "ok_with_issues",
@@ -10280,7 +10293,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/1115"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/737"
     }
    },
    "estimates": [
@@ -10351,7 +10364,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "luizwidmer/palmetto",
-    "stars": 113,
+    "stars": 114,
     "forks": 51,
     "open_issues": 3,
     "language": "Python",
@@ -12350,19 +12363,27 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ubiquitarianism/leonida",
-    "stars": 1179,
-    "forks": 242,
-    "open_issues": 587,
+    "stars": 1183,
+    "forks": 244,
+    "open_issues": 588,
     "language": "Python",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-24T12:57:31Z",
+    "pushed_at": "2026-11-24T13:06:59Z",
     "created_at": "2026-11-23T23:54:39Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 694,
-    "last_commit": "2026-11-24T12:47:23Z",
+    "last_commit": "2026-11-24T13:05:58Z",
     "commits": [
+     {
+      "sha": "9600cf0c64",
+      "url": "https://github.com/ubiquitarianism/leonida/commit/9600cf0c648a8b2c4ce18521e416815d3d43eeb2",
+      "date": "2026-11-24T13:05:58Z",
+      "areas": [
+       "docs"
+      ]
+     },
      {
       "sha": "51f3160923",
       "url": "https://github.com/ubiquitarianism/leonida/commit/51f31609236a952badeb9c9aba9efc2a6e4dc2ff",
@@ -14083,20 +14104,12 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "d411c98c8d",
-      "url": "https://github.com/ubiquitarianism/leonida/commit/d411c98c8d9f87d4a61dae4f1ddec2329a12578a",
-      "date": "2026-11-24T02:27:29Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 1585,
-    "commits_7d": 12099,
+    "commits_24h": 1586,
+    "commits_7d": 12100,
     "commits_sampled": 200,
-    "prs_open": 567,
+    "prs_open": 568,
     "prs_merged_24h": 38,
     "problem_issues": [
      {
@@ -14108,7 +14121,7 @@
      }
     ],
     "releases": [],
-    "readme_hash": "37b96b656c422b0b",
+    "readme_hash": "c27df93e66e04be2",
     "status_rows": [
      {
       "stage": "boot",
@@ -14190,10 +14203,10 @@
    "areas_24h": {
     "audio": 64,
     "gpu": 56,
-    "other": 47,
     "loader": 46,
+    "other": 46,
     "shaders": 41,
-    "docs": 28,
+    "docs": 29,
     "vendor": 20,
     "perf": 16,
     "input": 11
@@ -14201,16 +14214,16 @@
    "areas_7d": {
     "audio": 64,
     "gpu": 56,
-    "other": 47,
     "loader": 46,
+    "other": 46,
     "shaders": 41,
-    "docs": 28,
+    "docs": 29,
     "vendor": 20,
     "perf": 16,
     "input": 11
    },
-   "commits_24h": 1585,
-   "commits_7d": 12099,
+   "commits_24h": 1586,
+   "commits_7d": 12100,
    "signals_good": [
     {
      "code": "tracker_confirms",
@@ -14329,7 +14342,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "LeonidaReforge/Leonida",
-    "stars": 347,
+    "stars": 350,
     "forks": 44,
     "open_issues": 110,
     "language": "Python",
@@ -15997,15 +16010,15 @@
     "prs_merged_24h": 23,
     "problem_issues": [
      {
-      "number": 20,
-      "url": "https://github.com/LeonidaReforge/Leonida/issues/20",
+      "number": 99,
+      "url": "https://github.com/LeonidaReforge/Leonida/issues/99",
       "keywords": [
        "wave64"
       ]
      },
      {
-      "number": 99,
-      "url": "https://github.com/LeonidaReforge/Leonida/issues/99",
+      "number": 20,
+      "url": "https://github.com/LeonidaReforge/Leonida/issues/20",
       "keywords": [
        "wave64"
       ]
@@ -16375,8 +16388,8 @@
    "created": "2026-11-24T02:08:09Z",
    "kind": "discussion",
    "project": null,
-   "score": 77,
-   "comments": 80,
+   "score": 78,
+   "comments": 82,
    "lang": null,
    "by_owner": false,
    "credibility": "community"
@@ -16818,6 +16831,52 @@
  ],
  "events": [
   {
+   "kind": "readme",
+   "created": "2026-11-24T13:08:11Z",
+   "url": "https://github.com/R0Y00/Xbox2Windows#readme",
+   "project": "xbox2windows",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xbox2windows-readme-2026-11-24T13:08:11Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-24T13:08:11Z",
+   "url": "https://github.com/ubiquitarianism/leonida#readme",
+   "project": "leonida-continued",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "leonida-continued-readme-2026-11-24T13:08:11Z"
+  },
+  {
+   "kind": "commits",
+   "n": 5,
+   "areas": [
+    "docs",
+    "loader",
+    "gpu"
+   ],
+   "created": "2026-11-24T13:07:54Z",
+   "url": "https://github.com/R0Y00/Xbox2Windows/commits",
+   "project": "xbox2windows",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xbox2windows-commits-2026-11-24T13:07:54Z"
+  },
+  {
+   "kind": "commits",
+   "n": 1,
+   "areas": [
+    "docs"
+   ],
+   "created": "2026-11-24T13:05:58Z",
+   "url": "https://github.com/ubiquitarianism/leonida/commits",
+   "project": "leonida-continued",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "leonida-continued-commits-2026-11-24T13:05:58Z"
+  },
+  {
    "kind": "commits",
    "n": 2,
    "areas": [
@@ -17036,6 +17095,15 @@
   },
   {
    "code": "clone",
+   "repo": "ViceroyModulator/gta6-ps5-pro-to-windows",
+   "reasons": [
+    {
+     "code": "password"
+    }
+   ]
+  },
+  {
+   "code": "clone",
    "repo": "WebConstableReckon/GTA-VI-Windows-Beta-PC",
    "reasons": [
     {
@@ -17046,15 +17114,6 @@
     },
     {
      "code": "external"
-    }
-   ]
-  },
-  {
-   "code": "clone",
-   "repo": "ViceroyModulator/gta6-ps5-pro-to-windows",
-   "reasons": [
-    {
-     "code": "password"
     }
    ]
   },
@@ -17180,7 +17239,7 @@
    "name": "mtwildwood GTA 6 PC",
    "url": "https://gta.mtwildwood.net/gta-6-pc",
    "ok": true,
-   "updated": "2026-11-24T13:04:03Z",
+   "updated": "2026-11-24T13:08:42Z",
    "phases": {}
   }
  ],
@@ -17192,7 +17251,7 @@
  "stats": {
   "dropped_legal": 42,
   "dropped_spoiler": 7,
-  "http_calls": 295
+  "http_calls": 306
  },
  "phase_changes": [
   {
