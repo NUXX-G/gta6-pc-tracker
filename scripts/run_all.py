@@ -119,7 +119,13 @@ class Runner:
             return None
         entry.pop("disabled", None)
         entry.update(
-            {"last_ok": iso(self.now), "ok_this_run": True, "items": int(result.get("count", 0)), "failing_since": None}
+            {
+                "last_ok": iso(self.now),
+                "ok_this_run": True,
+                "items": int(result.get("count", 0)),
+                "failing_since": None,
+                "error": None,  # a recovered source keeps no stale error text
+            }
         )
         extra = result.get("blocked") or result.get("seen")
         entry["note"] = extra if extra else None
