@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "figures.html" as fig %}
+{% block main %}
+<article class="wrap sheet longform longform--warn">
+  <nav class="crumbs" aria-label="breadcrumb"><a href="{{ site.base }}{{ path_for(lang, 'home') }}">{{ T.crumbs.home }}</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ T.nav.fake }}</span></nav>
+  <header class="longform__head longform__head--art">
+    <div>
+      <p class="h-eyebrow h-eyebrow--warn">{{ C.eyebrow }}</p>
+      <h1 class="h-display h-display--long">{{ C.h1 }}</h1>
+      <p class="lead">{{ C.lead }}</p>
+    </div>
+    {{ fig.shield() }}
+  </header>
+
+  <section class="section" aria-labelledby="f-live">
+    <h2 id="f-live" class="h-section">{{ C.live_title }}</h2>
+    <div class="summary summary--3">
+      <div class="stat card stat--alert"><p class="stat__value">{{ scam.clones }}</p><p class="stat__sub">{{ C.live_clones }}</p></div>
+      <div class="stat card stat--alert"><p class="stat__value">{{ scam.copies }}</p><p class="stat__sub">{{ C.live_networks }}</p></div>
+      <div class="stat card"><p class="stat__value">{{ scam.hoaxes }}</p><p class="stat__sub">{{ C.live_hoaxes }}</p></div>
+    </div>
+    <p class="note">{{ C.live_note }} <a href="{{ site.base }}{{ path_for(lang, 'home') }}#alerts">{{ C.live_link }} →</a></p>
+  </section>
+
+  <section class="section" aria-labelledby="f-types">
+    <h2 id="f-types" class="h-section">{{ C.types_title }}</h2>
+    <ul class="scamgrid">
+      {% for t in C.types %}
+      <li class="scam card"><span class="scam__icon">{{ fig.fake_icon(t.icon) }}</span><h3 class="h-card">{{ t.title }}</h3><p>{{ t.text }}</p></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <div class="sheet__grid">
+    <section class="card proscons__bad" aria-labelledby="f-flags">
+      <h2 id="f-flags" class="h-card">{{ C.flags_title }}</h2>
+      <ul class="signals signals--bad">{% for f in C.flags %}<li><span class="signals__icon" aria-hidden="true">!</span><span>{{ f }}</span></li>{% endfor %}</ul>
+    </section>
+    <section class="card proscons__good" aria-labelledby="f-real">
+      <h2 id="f-real" class="h-card">{{ C.real_title }}</h2>
+      <ul class="signals signals--good">{% for f in C.real %}<li><span class="signals__icon" aria-hidden="true">✓</span><span>{{ f }}</span></li>{% endfor %}</ul>
+      <p><a href="{{ site.base }}{{ path_for(lang, 'home') }}#projects">{{ C.real_link }} →</a></p>
+    </section>
+  </div>
+
+  <section class="section" aria-labelledby="f-done">
+    <h2 id="f-done" class="h-section">{{ C.done_title }}</h2>
+    <ol class="steps">{% for d in C.done %}<li class="card">{{ d }}</li>{% endfor %}</ol>
+    <aside class="callout callout--warn">{{ C.done_note }}</aside>
+  </section>
+</article>
+{% endblock %}

@@ -13,7 +13,7 @@ from spoiler_filter import find_spoiler
 
 def collect(http: Http, tracked_readmes: dict[str, str]) -> dict[str, Any]:
     cfg = config("settings")["discovery"]
-    tracked = {p["repo"].lower() for p in config("projects")["projects"]}
+    tracked = {p["repo"].lower() for p in config("projects")["projects"] if p.get("repo")}
     previous = {
         c["full_name"].lower(): c for c in (load_json(DATA_DIR / "candidates.json", {}) or {}).get("candidates", [])
     }

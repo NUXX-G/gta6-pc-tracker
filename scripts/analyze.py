@@ -213,7 +213,10 @@ def analyse_project(
 
     exists = base.get("exists", True)
     dmca = dmca_hits.get(project["slug"])
-    if dmca:
+    private = not project.get("repo")
+    if private:
+        status = "private"
+    elif dmca:
         status = "dmca"
     elif base and not exists:
         status = "missing"
@@ -238,7 +241,7 @@ def analyse_project(
     # Signals
     good: list[dict[str, Any]] = []
     bad: list[dict[str, Any]] = []
-    repo_url = f"https://github.com/{project['repo']}"
+    repo_url = f"https://github.com/{project['repo']}" if not private else (project.get("link") or "")
     commits_url = f"{repo_url}/commits"
     avg = (n7 - n24) / 6 if n7 > n24 else 0.0
     if n7 >= th["min_commits_for_ratio"]:
@@ -247,7 +250,7 @@ def analyse_project(
         elif avg >= th["min_commits_for_ratio"] and n24 < avg * th["activity_ratio_bad"]:
             bad.append({"code": "activity_down", "n24": n24, "avg": round(avg, 1), "evidence": commits_url})
     h_last = hours_since(base.get("last_commit"), now)
-    if exists and h_last is not None and h_last > th["stale_hours_bad"]:
+    if not private and exists and h_last is not None and h_last > th["stale_hours_bad"]:
         bad.append({"code": "stale", "h": int(h_last), "evidence": commits_url})
     prev_rows = (prev.get("gh") or {}).get("status_rows") or []
     if available and prev_rows and rows:
@@ -268,6 +271,8 @@ def analyse_project(
     problems = base.get("problem_issues", [])
     if len(problems) >= th["crash_issues_bad"]:
         bad.append({"code": "crash_issues", "n": len(problems), "evidence": f"{repo_url}/issues"})
+    if private:
+        bad.append({"code": "private", "evidence": repo_url})
     if best_tracker and best_tracker["phase"] >= eff["level"] - (1 if eff["partial"] else 0):
         good.append(
             {
@@ -297,8 +302,12 @@ def analyse_project(
     return {
         "slug": project["slug"],
         "name": project["name"],
-        "repo": project["repo"],
+        "repo": project.get("repo"),
         "url": repo_url,
+        "private": private,
+        "kind": project.get("kind", "layer"),
+        "based_on": project.get("based_on", []),
+        "priority": project.get("priority", 99),
         "status": status,
         "available": available,
         "gh": {k: v for k, v in base.items() if not k.startswith("_")},
@@ -314,7 +323,7 @@ def analyse_project(
         "trackers": tracker_phases,
         "claims": claims,
         "gpu": gpus,
-        "estimates": estimate(eff["level"], eff["partial"], n7, status),
+        "estimates": estimate(eff["level"], eff["partial"], 20 if private else n7, status),
         "dmca": dmca,
     }
 

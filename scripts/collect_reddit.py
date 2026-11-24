@@ -7,19 +7,24 @@ from urllib.parse import quote
 
 import feedparser
 
+from collect_media import YT_ID
 from common import Http, HttpError, config, log
 from items import make_item, relevant
 
 
 def _owners() -> set[str]:
-    return {p["repo"].split("/")[0].lower() for p in config("projects")["projects"]}
+    return {p["repo"].split("/")[0].lower() for p in config("projects")["projects"] if p.get("repo")}
 
 
 def _kind(d: dict[str, Any]) -> str:
     domain = (d.get("domain") or "").lower()
     hint = d.get("post_hint") or ""
     flair = (d.get("link_flair_text") or "").lower()
-    if d.get("is_video") or domain == "v.redd.it" or hint in ("hosted:video", "rich:video"):
+    if (
+        d.get("is_video")
+        or domain in ("v.redd.it", "youtube.com", "youtu.be")
+        or hint in ("hosted:video", "rich:video")
+    ):
         return "video"
     if hint == "image" or domain == "i.redd.it" or d.get("is_gallery"):
         return "image"
@@ -41,6 +46,13 @@ def from_json(payload: dict[str, Any], sub: str) -> list[dict[str, Any]]:
         permalink = "https://www.reddit.com" + d.get("permalink", "")
         link = d.get("url_overridden_by_dest") or d.get("url") or ""
         urls = [link] if link and link != permalink and not link.startswith("/") else []
+        thumb = None
+        try:
+            thumb = d["preview"]["images"][0]["resolutions"][-1]["url"].replace("&amp;", "&")
+        except (KeyError, IndexError, TypeError):
+            if (d.get("thumbnail") or "").startswith("https://"):
+                thumb = d["thumbnail"]
+        yt = YT_ID.search(link)
         out.append(
             make_item(
                 source="reddit",
@@ -54,6 +66,8 @@ def from_json(payload: dict[str, Any], sub: str) -> list[dict[str, Any]]:
                 comments=d.get("num_comments"),
                 spoiler_flag=bool(d.get("spoiler")),
                 by_owner=(d.get("author") or "").lower() in owners,
+                thumb=thumb,
+                embed=yt.group(1) if yt else None,
             )
         )
     return out

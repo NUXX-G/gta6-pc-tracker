@@ -12,5 +12,24 @@
   "card": null,
   "favourites_count": 12,
   "replies_count": 3
+ },
+ {
+  "id": "2",
+  "content": "<p>GTA 6 PC port XCL screenshot of the settings screen</p>",
+  "account": {
+   "acct": "fan@example.social"
+  },
+  "created_at": "2026-11-24T10:00:00Z",
+  "sensitive": false,
+  "spoiler_text": "",
+  "media_attachments": [
+   {
+    "type": "image",
+    "preview_url": "https://files.mastodon.social/media_attachments/small/1.png"
+   }
+  ],
+  "card": null,
+  "favourites_count": 3,
+  "replies_count": 0
  }
 ]

@@ -1,19 +1,32 @@
 {% extends "base.html" %}
+{% import "figures.html" as fig %}
 {% block main %}
 <article class="wrap sheet">
-  <p class="crumbs"><a href="{{ site.base }}{{ path_for(lang, 'home') }}#projects">← {{ T.project.back }}</a></p>
+  <nav class="crumbs" aria-label="breadcrumb"><a href="{{ site.base }}{{ path_for(lang, 'home') }}">{{ T.crumbs.home }}</a> <span aria-hidden="true">/</span> <a href="{{ site.base }}{{ path_for(lang, 'home') }}#projects">{{ T.crumbs.projects }}</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ p.name }}</span></nav>
 
-  {# 1. Header #}
   <header class="sheet__head card card--glow">
     <div class="sheet__title">
       <h1 class="h-display">{{ p.name }}</h1>
       {{ m.status_badge(p.status, p.status_label) }}
     </div>
-    <p class="sheet__repo"><a href="{{ p.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ p.repo }} ↗</a> <span class="muted">· {{ T.project.view_repo }}</span></p>
+    <p class="pcard__tags"><span class="kind kind--{{ p.kind }}">{{ fig.kind_icon(p.kind) }}{{ p.kind_label }}</span>
+      {% if p.based_on_view %}<span class="muted">{{ T.project.based_on }}:</span> {% for b in p.based_on_view %}<a class="chip chip--link" href="{{ site.base }}{{ path_for(lang, 'project', b.slug) }}">{{ b.name }}</a>{% endfor %}{% endif %}</p>
+    <p class="lead sheet__goal">{{ p.goal }}</p>
     <div class="sheet__pct">
       <p class="hero__pct"><span class="num">{{ p.score|round|int }}</span><span class="pct">%</span> <span class="muted">{{ T.project_card.of_total }}</span></p>
       {{ m.meter(p.score) }}
+      <p class="hero__phase">{{ p.phase_label }} · <strong>{{ p.phase_name }}</strong> <span class="muted">({{ p.phase_tech }})</span></p>
     </div>
+    <p class="sheet__actions">
+      {% if not p.private %}
+      <a class="btn" href="{{ p.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.project.repo_btn }} ↗</a>
+      <code class="sheet__repo">{{ p.repo }}</code>
+      {% else %}
+      <span class="badge badge--muted">{{ T.project.no_repo }}</span>
+      {% if p.url %}<a class="btn btn--ghost" href="{{ p.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.project.source_btn }} ↗</a>{% endif %}
+      {% endif %}
+    </p>
+    {% if not p.private %}
     <dl class="kv">
       <div><dt>{{ T.project.language }}</dt><dd>{{ p.gh.language or '—' }}</dd></div>
       <div><dt>{{ T.project.license }}</dt><dd>{{ p.gh.license or '—' }}</dd></div>
@@ -22,6 +35,7 @@
       <div><dt>{{ T.project.contributors }}</dt><dd>{{ p.gh.contributors|num }}</dd></div>
       <div><dt>{{ T.project.last_commit }}</dt><dd>{% if p.gh.last_commit %}{{ m.time(p.gh.last_commit, p.last_commit_rel) }}{% else %}—{% endif %}</dd></div>
     </dl>
+    {% endif %}
   </header>
 
   {% if p.claims_view %}
@@ -31,22 +45,56 @@
   </aside>
   {% endif %}
 
+  {# Article #}
+  {% if p.article %}
+  <section class="section prose" aria-labelledby="s-article">
+    <h2 id="s-article" class="h-section">{{ T.project.article }}</h2>
+    {% for para in p.article %}<p{% if loop.first %} class="lead"{% endif %}>{{ para }}</p>{% endfor %}
+  </section>
+  {% endif %}
+
   <div class="sheet__grid">
-    {# 2. Goal #}
-    <section class="card" aria-labelledby="s-goal">
-      <h2 id="s-goal" class="h-card">{{ T.project.goal }}</h2>
-      <p class="lead">{{ p.goal }}</p>
-    </section>
-    {# 3. How #}
     <section class="card" aria-labelledby="s-how">
       <h2 id="s-how" class="h-card">{{ T.project.how }}</h2>
       <p>{{ p.approach }}</p>
       <details class="why"><summary>{{ T.project.tech_detail }}</summary><p>{{ p.technical }}</p>
         {% if p.requirements %}<p><strong>{{ T.project.requirements }}:</strong> {{ p.requirements }}</p>{% endif %}</details>
     </section>
+    <section class="card" aria-labelledby="s-trk">
+      <h2 id="s-trk" class="h-card">{{ T.project.trackers }}</h2>
+      {% if p.trackers %}
+      <ul class="plain">{% for t in p.trackers %}<li><a href="{{ t.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ t.tracker }} ↗</a> · {{ fmt(T.sections.external_stage, n=t.phase) }}</li>{% endfor %}</ul>
+      {% else %}<p class="empty">{{ T.project.trackers_none }}</p>{% endif %}
+    </section>
   </div>
 
-  {# 4. Now #}
+  {# Progress #}
+  <section class="section" aria-labelledby="s-progress">
+    <h2 id="s-progress" class="h-section">{{ T.project.progress }}</h2>
+    <div class="card">
+      {{ m.phasebar(p.phase, T) }}
+      <ol class="phaselegend phaselegend--inline">
+        {% for i in range(1, 8) %}<li class="{{ 'is-done' if i < p.phase.level or (i == p.phase.level and not p.phase.partial) else ('is-half' if i == p.phase.level else '') }}"><strong>{{ i }}. {{ T.phases.heist[i] }}</strong> <span class="muted">{{ T.phases.tech[i] }}</span></li>{% endfor %}
+      </ol>
+      {% if p.phase_note %}<p class="note"><strong>{{ T.project.phase_note }}:</strong> {{ p.phase_note }}</p>{% endif %}
+    </div>
+    {% if not p.private %}
+    <h3 class="h-sub">{{ T.project.readme_table }}</h3>
+    {% if p.rows_view %}
+    <ul class="rows">
+      {% for stage, state in p.rows_view %}<li><span>{{ stage }}</span><span class="badge badge--row-{{ state }}">{{ T.project['state_' ~ state] }}</span></li>{% endfor %}
+    </ul>
+    {% else %}<p class="empty">{{ T.project.readme_table_none }}</p>{% endif %}
+    {% endif %}
+    <h3 class="h-sub">{{ T.project.timeline }}</h3>
+    <ol class="hist">
+      {% for h in history if h.project == p.slug %}<li><time datetime="{{ h.t }}">{{ h.t[:10] }} {{ h.t[11:16] }} UTC</time> <span>{{ h.text }}</span></li>
+      {% else %}<li class="empty">{{ T.sections.history_empty }}</li>{% endfor %}
+    </ol>
+  </section>
+
+  {# Activity #}
+  {% if not p.private %}
   <section class="section" aria-labelledby="s-now">
     <h2 id="s-now" class="h-section">{{ T.project.now }}</h2>
     <p class="lead">{{ p.now_line }}</p>
@@ -64,32 +112,9 @@
     {% if p.gh.commits_sampled and p.gh.commits_sampled < p.commits_7d %}<p class="note">{{ fmt(T.project.sample, n=p.gh.commits_sampled) }}</p>{% endif %}
     <p class="muted">{{ T.project.prs }}: {{ p.gh.prs_open|num }} / {{ p.gh.prs_merged_24h|num }}</p>
   </section>
+  {% endif %}
 
-  {# 5. Progress #}
-  <section class="section" aria-labelledby="s-progress">
-    <h2 id="s-progress" class="h-section">{{ T.project.progress }}</h2>
-    <div class="card">
-      <p class="hero__phase">{{ p.phase_label }} · <strong>{{ p.phase_name }}</strong> <span class="muted">({{ p.phase_tech }})</span></p>
-      {{ m.phasebar(p.phase, T) }}
-      <ol class="phaselegend phaselegend--inline">
-        {% for i in range(1, 8) %}<li class="{{ 'is-done' if i < p.phase.level or (i == p.phase.level and not p.phase.partial) else ('is-half' if i == p.phase.level else '') }}"><strong>{{ i }}. {{ T.phases.heist[i] }}</strong> <span class="muted">{{ T.phases.tech[i] }}</span></li>{% endfor %}
-      </ol>
-      {% if p.phase_note %}<p class="note"><strong>{{ T.project.phase_note }}:</strong> {{ p.phase_note }}</p>{% endif %}
-    </div>
-    <h3 class="h-sub">{{ T.project.readme_table }}</h3>
-    {% if p.rows_view %}
-    <ul class="rows">
-      {% for stage, state in p.rows_view %}<li><span>{{ stage }}</span><span class="badge badge--row-{{ state }}">{{ T.project['state_' ~ state] }}</span></li>{% endfor %}
-    </ul>
-    {% else %}<p class="empty">{{ T.project.readme_table_none }}</p>{% endif %}
-    <h3 class="h-sub">{{ T.project.timeline }}</h3>
-    <ol class="hist">
-      {% for h in history if h.project == p.slug %}<li><time datetime="{{ h.t }}">{{ h.t[:10] }} {{ h.t[11:16] }} UTC</time> <span>{{ h.text }}</span></li>
-      {% else %}<li class="empty">{{ T.sections.history_empty }}</li>{% endfor %}
-    </ol>
-  </section>
-
-  {# 6. Good / bad #}
+  {# Good / bad #}
   <section class="section" aria-labelledby="s-signals">
     <h2 id="s-signals" class="h-section">{{ T.project.signals }}</h2>
     <div class="proscons">
@@ -98,13 +123,23 @@
     </div>
   </section>
 
-  {# 7. GPU #}
+  {# Media #}
+  <section class="section" aria-labelledby="s-media">
+    <h2 id="s-media" class="h-section">{{ T.project.media }}</h2>
+    {% if media_project %}
+    <ul class="mediagrid">{% for e in media_project[:9] %}{{ m.media_card(e, T) }}{% endfor %}</ul>
+    {% else %}<p class="empty">{{ T.sections.media_empty }}</p>{% endif %}
+  </section>
+
+  {# GPU #}
+  {% if not p.private %}
   <section class="section" aria-labelledby="s-gpu">
     <h2 id="s-gpu" class="h-section">{{ T.gpu.title }}</h2>
     {{ m.gpu_matrix(p.gpu, T) }}
   </section>
+  {% endif %}
 
-  {# 8. ETA #}
+  {# ETA #}
   <section class="section" aria-labelledby="s-eta">
     <h2 id="s-eta" class="h-section">{{ T.project.eta }}</h2>
     {% if p.estimates_view %}
@@ -123,25 +158,24 @@
     {% else %}<p class="empty">—</p>{% endif %}
   </section>
 
-  {# 9. Deeper #}
+  {# Press + deeper #}
+  {% if press_project or deeper_project %}
   <section class="section" aria-labelledby="s-deeper">
     <h2 id="s-deeper" class="h-section">{{ T.project.deeper }}</h2>
-    {% if deeper_project %}<ul class="links">{% for l in deeper_project %}{{ m.link_item(l, T) }}{% endfor %}</ul>
-    {% else %}<p class="empty">—</p>{% endif %}
+    <ul class="pressgrid">
+      {% for n in press_project[:6] %}{{ m.press_card(n, T) }}{% endfor %}
+      {% for l in deeper_project %}{{ m.curated_card(l, T) }}{% endfor %}
+    </ul>
   </section>
+  {% endif %}
 
-  {# 10. Media #}
-  <section class="section" aria-labelledby="s-media">
-    <h2 id="s-media" class="h-section">{{ T.project.media }}</h2>
-    {{ m.entry_list(media_project, T, 6, T.sections.media_empty) }}
-  </section>
-
-  {# 11. Claims #}
+  {% if p.claims_view %}
   <section class="section" aria-labelledby="s-claims">
     <h2 id="s-claims" class="h-section">{{ T.project.claims }}</h2>
-    {% if p.claims_view %}
     <ul class="signals">{% for c in p.claims_view %}<li><span class="badge badge--est">{{ T.summary.pending_claim }}</span> {{ c.text }}</li>{% endfor %}</ul>
-    {% else %}<p class="empty">{{ T.project.claims_none }}</p>{% endif %}
   </section>
+  {% endif %}
+
+  <p class="scam-strip" role="note"><span aria-hidden="true">⚠</span> {{ T.hero.scam }} <a href="{{ site.base }}{{ path_for(lang, 'fake') }}">{{ T.alerts.scam_more }} →</a></p>
 </article>
 {% endblock %}

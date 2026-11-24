@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="wrap sheet">
+  <nav class="crumbs" aria-label="breadcrumb"><a href="{{ site.base }}{{ path_for(lang, 'home') }}">{{ T.crumbs.home }}</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ T.sections.media }}</span></nav>
+  <header class="longform__head">
+    <h1 class="h-display h-display--long">{{ T.sections.media }}</h1>
+    <p class="lead">{{ T.sections.media_lead }}</p>
+    <p class="muted">{{ fmt(T.media.count, n=media|length) }}</p>
+  </header>
+  {% if media %}
+  <div class="filters" role="group" aria-label="{{ T.media.filter }}" data-filter-for="gallery" hidden>
+    <button type="button" class="chip chip--btn" aria-pressed="true" data-filter="all">{{ T.media.all }}</button>
+    {% for o in media_origins %}<button type="button" class="chip chip--btn" aria-pressed="false" data-filter="{{ o }}">{{ T.origins[o] }}</button>{% endfor %}
+  </div>
+  <ul class="mediagrid" id="gallery">
+    {% for e in media %}{{ m.media_card(e, T) }}{% endfor %}
+  </ul>
+  {% else %}<p class="empty">{{ T.sections.media_empty }}</p>{% endif %}
+  <h2 class="h-sub">{{ T.credibility.label }}</h2>
+  <ul class="credlegend">{% for c in ['confirmed', 'community', 'unverified'] %}<li>{{ m.cred(c, T) }} {{ T.credibility[c ~ '_desc'] }}</li>{% endfor %}</ul>
+</article>
+{% endblock %}

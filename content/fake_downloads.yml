@@ -1,0 +1,97 @@
+# "Fake downloads" warning page. Our own words. Scam pages are NEVER linked or named by URL.
+es:
+  title: "Descargas falsas de GTA 6 para PC: cómo reconocer la estafa"
+  description: "No existe GTA 6 para PC. Cómo son las webs, vídeos y repos falsos que prometen descargarlo, señales de alarma y qué hacer si ya has ejecutado uno."
+  eyebrow: "Aviso de seguridad"
+  h1: "Descargas falsas: no existe GTA 6 para PC"
+  lead: "Ni gratis, ni de pago, ni \"beta\", ni \"repack\". Rockstar no ha publicado versión de PC y ningún proyecto de la comunidad distribuye el juego. Todo lo que se presenta como \"GTA 6 PC descargar\" es, en el mejor caso, una filtración pirata y, casi siempre, malware que roba tus cuentas."
+  live_title: "Lo que detectamos ahora mismo"
+  live_clones: "repos sospechosos de ser clones o malware en nuestro radar"
+  live_networks: "copias idénticas en redes de repos falsos detectadas por PortWatch"
+  live_hoaxes: "bulos desmontados en los últimos 7 días"
+  live_note: "No enlazamos ninguno a propósito. Los nombres sospechosos aparecen sin enlace en la sección de alertas."
+  live_link: "Ver alertas"
+  types_title: "Cómo son las estafas"
+  types:
+    - {icon: "web", title: "Webs de \"descarga directa\"", text: "Una web con capturas del juego, un contador de descargas inventado y un botón enorme. Lo que bajas es un instalador pequeño que \"descarga el resto\": en realidad instala un programa que roba contraseñas, cookies de sesión y carteras de criptomonedas."}
+    - {icon: "video", title: "Vídeos con enlace en la descripción", text: "\"GTA 6 PC GAMEPLAY + DOWNLOAD\": vídeos con imágenes de consola o de otro juego, comentarios desactivados o llenos de bots y un enlace acortado. El archivo viene en un ZIP con contraseña para que el antivirus no pueda mirar dentro."}
+    - {icon: "repo", title: "Repos falsos en GitHub", text: "Copias del README de un proyecto real con un \"instalador\" o \"launcher\" en las releases. Aparecen en redes de decenas de repos idénticos creados en minutos que se dan estrellas entre sí para parecer populares. Los proyectos reales no traen nunca un ejecutable con el juego."}
+    - {icon: "survey", title: "Verificación humana y encuestas", text: "Te piden completar una encuesta, instalar dos apps o dejar tu número \"para demostrar que no eres un robot\". Nunca hay juego: solo suscripciones de SMS de pago y tus datos vendidos."}
+    - {icon: "mobile", title: "Versiones para móvil", text: "\"GTA 6 para Android/iOS\" o \"emulador de GTA 6\" en APK. No existen. Son apps con publicidad agresiva o con permisos para leer tus mensajes y códigos de verificación."}
+    - {icon: "chat", title: "Mensajes privados en Discord", text: "Alguien te ofrece \"acceso anticipado\", \"la build privada\" de un grupo como CGBJ o una \"key\" de Steam. Te pide iniciar sesión en una web que imita Steam o Discord, o ejecutar un archivo. Es robo de cuentas."}
+    - {icon: "coin", title: "Criptomonedas ligadas a la filtración", text: "Tokens y \"preventas\" que prometen liberar el juego o un port cuando suba el precio. Son esquemas de pump and dump: los de arriba venden y tú te quedas con humo."}
+  flags_title: "Señales de alarma"
+  flags:
+    - "Te pide desactivar el antivirus o Windows Defender."
+    - "El archivo es un .zip o .rar con contraseña."
+    - "Un ejecutable de pocos MB promete \"instalar\" más de 100 GB."
+    - "Promete 60 fps, \"versión completa\" o \"sin errores\" cuando ningún proyecto ha pasado de la fase 5."
+    - "La cuenta, la web o el repo tienen días de vida y comentarios todos iguales."
+    - "Te pide iniciar sesión con Steam, Discord, Google o tu móvil para \"desbloquear\" la descarga."
+    - "Hay prisa: \"solo hoy\", \"quedan 50 plazas\", \"antes de que Rockstar lo borre\"."
+  real_title: "Cómo es un proyecto real"
+  real:
+    - "Código fuente público en GitHub, con un historial de commits largo y gente discutiendo en los issues."
+    - "No incluye el juego ni partes de él; te pide tu propia copia y se niega a explicar cómo conseguirla."
+    - "Se compila desde el código y su README dice con honestidad lo que no funciona."
+    - "Nadie te pide dinero, datos ni desactivar el antivirus para probarlo."
+    - "Todos los proyectos que seguimos tienen su enlace oficial en su ficha."
+  real_link: "Ver los proyectos y sus repos oficiales"
+  done_title: "¿Ya lo has ejecutado? Haz esto ahora"
+  done:
+    - "Desconecta el PC de internet."
+    - "Pasa un análisis completo con Microsoft Defender y, después, el \"Examen de Microsoft Defender sin conexión\" (Seguridad de Windows → Protección contra virus → Opciones de examen)."
+    - "Desde otro dispositivo limpio, cambia las contraseñas: primero el correo, después Steam, Discord, Epic, redes sociales y banca."
+    - "Activa la verificación en dos pasos en todas esas cuentas y cierra todas las sesiones abiertas (en Discord: Ajustes → Dispositivos)."
+    - "Revisa las extensiones de tu navegador y borra las que no reconozcas."
+    - "Si tienes carteras de criptomonedas en ese PC, da por perdidas sus claves: mueve los fondos a una cartera nueva desde un dispositivo limpio."
+    - "Si el antivirus encuentra algo grave o el PC se comporta raro, haz copia de tus archivos personales y reinstala Windows."
+  done_note: "Los ladrones de contraseñas actúan en segundos: no esperes a ver algo raro para cambiar tus claves."
+en:
+  title: "Fake GTA 6 PC downloads: how to spot the scam"
+  description: "There is no GTA 6 for PC. What the fake sites, videos and repos that promise a download look like, red flags, and what to do if you already ran one."
+  eyebrow: "Safety warning"
+  h1: "Fake downloads: there is no GTA 6 for PC"
+  lead: "Not free, not paid, not \"beta\", not \"repack\". Rockstar has not released a PC version and no community project distributes the game. Anything sold as a \"GTA 6 PC download\" is, at best, a pirated leak and, almost always, malware that steals your accounts."
+  live_title: "What we detect right now"
+  live_clones: "repos suspected of being clones or malware on our radar"
+  live_networks: "identical copies in fake-repo networks detected by PortWatch"
+  live_hoaxes: "hoaxes debunked in the last 7 days"
+  live_note: "We deliberately link none of them. Suspicious names appear without a link in the alerts section."
+  live_link: "See alerts"
+  types_title: "What the scams look like"
+  types:
+    - {icon: "web", title: "\"Direct download\" sites", text: "A site with game screenshots, a made-up download counter and a huge button. What you get is a small installer that \"downloads the rest\": in reality it installs a program that steals passwords, session cookies and crypto wallets."}
+    - {icon: "video", title: "Videos with a link in the description", text: "\"GTA 6 PC GAMEPLAY + DOWNLOAD\": videos with console footage or another game, comments switched off or full of bots, and a shortened link. The file comes in a password-protected ZIP so your antivirus cannot look inside."}
+    - {icon: "repo", title: "Fake GitHub repos", text: "Copies of a real project's README with an \"installer\" or \"launcher\" in the releases. They come in networks of dozens of identical repos created within minutes that star each other to look popular. Real projects never ship an executable with the game."}
+    - {icon: "survey", title: "Human verification and surveys", text: "You are asked to complete a survey, install two apps or leave your phone number \"to prove you are not a robot\". There is no game at the end: just premium SMS subscriptions and your data sold."}
+    - {icon: "mobile", title: "Mobile versions", text: "\"GTA 6 for Android/iOS\" or a \"GTA 6 emulator\" APK. They do not exist. They are apps with aggressive ads or with permissions to read your messages and verification codes."}
+    - {icon: "chat", title: "Private messages on Discord", text: "Someone offers you \"early access\", \"the private build\" of a group like CGBJ, or a Steam \"key\". They ask you to log in on a site that imitates Steam or Discord, or to run a file. It is account theft."}
+    - {icon: "coin", title: "Crypto tied to the leak", text: "Tokens and \"presales\" promising to release the game or a port once the price goes up. They are pump-and-dump schemes: the people at the top sell and you are left holding nothing."}
+  flags_title: "Red flags"
+  flags:
+    - "It asks you to turn off your antivirus or Windows Defender."
+    - "The file is a password-protected .zip or .rar."
+    - "An executable of a few MB promises to \"install\" over 100 GB."
+    - "It promises 60 fps, a \"full version\" or \"no bugs\" when no project has passed phase 5."
+    - "The account, site or repo is days old and the comments all look the same."
+    - "It asks you to log in with Steam, Discord, Google or your phone to \"unlock\" the download."
+    - "There is a rush: \"today only\", \"50 spots left\", \"before Rockstar takes it down\"."
+  real_title: "What a real project looks like"
+  real:
+    - "Public source code on GitHub, with a long commit record and people discussing in the issues."
+    - "It does not include the game or any part of it; it asks for your own copy and refuses to explain how to get one."
+    - "It is built from source and its README says honestly what does not work."
+    - "Nobody asks you for money, data or to switch off your antivirus to try it."
+    - "Every project we track has its official link on its page."
+  real_link: "See the projects and their official repos"
+  done_title: "Already ran it? Do this now"
+  done:
+    - "Disconnect the PC from the internet."
+    - "Run a full Microsoft Defender scan and then the \"Microsoft Defender Offline scan\" (Windows Security → Virus & threat protection → Scan options)."
+    - "From another clean device, change your passwords: email first, then Steam, Discord, Epic, social networks and banking."
+    - "Turn on two-step verification on all those accounts and sign out every open session (on Discord: Settings → Devices)."
+    - "Check your browser extensions and remove any you do not recognise."
+    - "If you keep crypto wallets on that PC, treat their keys as lost: move the funds to a new wallet from a clean device."
+    - "If the antivirus finds something serious or the PC acts strangely, back up your personal files and reinstall Windows."
+  done_note: "Password stealers work in seconds: do not wait to notice something odd before changing your passwords."

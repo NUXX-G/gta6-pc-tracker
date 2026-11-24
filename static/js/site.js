@@ -124,6 +124,84 @@
     select(firstEmpty && tabs.length > 1 ? 1 : 0);
   });
 
+  /* ---------------- live "time since" counters */
+  var counters = document.querySelectorAll("[data-since]");
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function tickCounters() {
+    counters.forEach(function (box) {
+      var t = Date.parse(box.getAttribute("data-since"));
+      if (isNaN(t)) return;
+      var s = Math.max(0, Math.floor((Date.now() - t) / 1000));
+      var parts = { d: String(Math.floor(s / 86400)), h: pad(Math.floor(s % 86400 / 3600)), m: pad(Math.floor(s % 3600 / 60)), s: pad(s % 60) };
+      box.querySelectorAll("[data-u]").forEach(function (el) { el.textContent = parts[el.getAttribute("data-u")]; });
+    });
+  }
+  if (counters.length) {
+    tickCounters();
+    setInterval(tickCounters, 1000);
+  }
+
+  /* ---------------- media: nothing external loads until the viewer clicks */
+  document.querySelectorAll(".mcard__reveal").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var frame = btn.parentNode;
+      var id = btn.getAttribute("data-embed");
+      var src = btn.getAttribute("data-src");
+      if (id && /^[\w-]{11}$/.test(id)) {
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+        f.title = btn.getAttribute("aria-label") || "";
+        f.allow = "autoplay; encrypted-media; picture-in-picture";
+        f.setAttribute("allowfullscreen", "");
+        f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+        f.loading = "lazy";
+        frame.replaceChildren(f);
+      } else if (src && /^https:\/\//.test(src)) {
+        var img = document.createElement("img");
+        img.src = src;
+        img.alt = btn.getAttribute("aria-label") || "";
+        img.decoding = "async";
+        img.referrerPolicy = "no-referrer";
+        img.addEventListener("error", function () { frame.classList.add("is-broken"); });
+        var link = frame.parentNode.querySelector(".mcard__title");
+        if (link) {
+          var a = document.createElement("a");
+          a.href = link.href; a.target = "_blank"; a.rel = "noopener noreferrer nofollow";
+          a.appendChild(img);
+          frame.replaceChildren(a);
+        } else {
+          frame.replaceChildren(img);
+        }
+      }
+      frame.classList.add("is-open");
+    });
+  });
+
+  /* ---------------- gallery filters by origin */
+  document.querySelectorAll("[data-filter-for]").forEach(function (bar) {
+    var grid = document.getElementById(bar.getAttribute("data-filter-for"));
+    if (!grid) return;
+    bar.hidden = false;
+    var buttons = bar.querySelectorAll("[data-filter]");
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var f = b.getAttribute("data-filter");
+        buttons.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        grid.querySelectorAll("[data-origin]").forEach(function (card) {
+          card.hidden = f !== "all" && card.getAttribute("data-origin") !== f;
+        });
+      });
+    });
+  });
+
+  /* ---------------- "more" menu: close on outside click, Escape or navigation */
+  var menu = document.querySelector(".more-menu");
+  if (menu) {
+    document.addEventListener("click", function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+    menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { menu.open = false; }); });
+  }
+
   /* ---------------- motion layer (skipped entirely with reduced motion) */
   if (reduce || !("IntersectionObserver" in window)) return;
   doc.classList.add("motion");
@@ -145,7 +223,8 @@
   // Stagger index for grids of cards and phase segments.
   var groups = [".summary > .stat", ".projects > .pcard", ".mediagrid > .mcard", ".linkgroups > .linkgroup",
     ".newsgroups > .newsgroup", ".faq > .faq__item", ".glossary > div", ".alerts > .alert", ".timeline > li",
-    ".sheet__grid > .card", ".proscons > .card", ".areas > .card"];
+    ".sheet__grid > .card", ".proscons > .card", ".areas > .card", ".pressgrid > .press", ".guides > .guide",
+    ".scamgrid > .scam", ".counters > .counter", ".routecards > .routecard", ".phasecards > li", ".steps > li"];
   groups.forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el, i) {
       el.classList.add("reveal");

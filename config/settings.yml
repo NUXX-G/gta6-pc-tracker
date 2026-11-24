@@ -5,7 +5,27 @@ site:
   repo: "NUXX-G/gta6-pc-tracker"
   languages: [es, en]
   default_language: en
-  show_thumbnails: false                 # thumbnails are off by default (spoiler safety)
+  show_thumbnails: false                 # external previews never load on their own: the viewer clicks to reveal them
+
+# Live counters on the home page (UTC). Shown as "time since"; the leaked file itself is never linked.
+milestones:
+  console_launch: "2026-11-19T00:00:00Z"   # GTA VI launch on PS5 and Xbox Series X|S
+  exe_leak: "2026-11-23T14:36:00Z"         # the Xbox Series executable was published by Cyberleek
+  exe_leak_by: "Cyberleek"
+  exe_leak_source: "https://www.xda-developers.com/gta-6-xbox-executable-leaked-opening-door-for-pc-recompilation-projects-begin-testing/"
+
+# Media catalogue: every image/video that passes the legal filter is listed, labelled by origin and credibility.
+media:
+  max_items: 60
+  readme_max_per_project: 6
+  youtube_queries:
+    - "gta 6 pc port"
+    - "gta vi pc port progress"
+    - "gta 6 victory xcl pc"
+    - "gta 6 xbox recompilation pc"
+  youtube_max_per_query: 12
+  youtube_days: 10
+  skip_image_patterns: ["shields.io", "badge", "/badges/", "sponsor", "paypal", "ko-fi", "kofi", "discord", "logo", "mascot", "banner", "favicon"]
 
 http:
   user_agent: "gta6-pc-tracker/1.0 (+https://github.com/NUXX-G/gta6-pc-tracker)"
@@ -24,6 +44,7 @@ http:
     lemmy.world: 2.0
     public.api.bsky.app: 2.0
     news.google.com: 2.0
+    www.youtube.com: 2.0
 
 github:
   forks_to_check: 4                 # most-starred forks per tracked project run through the clone detector
@@ -56,7 +77,7 @@ social:
   bluesky_queries: ["gta6 pc port", "gta vi pc port"]
   mastodon_tags: [gta6, gtavi]
   lemmy_queries: ["gta 6 pc", "gta vi pc"]
-  relevance_terms: [pc, port, recomp, victory, xcl, leonida, palmetto, xbox2windows, emulat, "compatibility layer", "five star recomp", anyxboxx]
+  relevance_terms: [pc, port, recomp, victory, xcl, leonida, palmetto, xbox2windows, emulat, "compatibility layer", "five star recomp", anyxboxx, cgbj, palmwave, openscarlett, percyscarlett, tuxbox, g6recomp, g6shim, xvalkyrie]
 
 news:
   google_news:
@@ -66,13 +87,33 @@ news:
     - {lang: en, url: "https://www.notebookcheck.net/News.152.100.html"}
     - {lang: en, url: "https://videocardz.com/feed"}
     - {lang: en, url: "https://www.dsogaming.com/feed/"}
+    - {lang: en, url: "https://www.pcgamer.com/rss/"}
+    - {lang: en, url: "https://www.videogameschronicle.com/feed/"}
+    - {lang: en, url: "https://www.eurogamer.net/feed"}
+    - {lang: en, url: "https://www.gamesradar.com/feeds/all/"}
+    - {lang: en, url: "https://wccftech.com/feed/"}
+    - {lang: en, url: "https://www.tomshardware.com/feeds/all"}
+    - {lang: en, url: "https://www.xda-developers.com/feed/"}
+    - {lang: en, url: "https://www.windowscentral.com/feeds/all"}
+    - {lang: en, url: "https://www.pcgamesn.com/mainrss.xml"}
+    - {lang: en, url: "https://kotaku.com/rss"}
+    - {lang: es, url: "https://www.3djuegos.com/feedburner.xml"}
+    - {lang: es, url: "https://vandal.elespanol.com/xml.cgi"}
+    - {lang: es, url: "https://www.hobbyconsolas.com/rss"}
+    - {lang: es, url: "https://www.vidaextra.com/feedburner.xml"}
+    - {lang: es, url: "https://www.xataka.com/feedburner.xml"}
+    - {lang: es, url: "https://www.eurogamer.es/feed"}
+  # Headlines with any of these (case-insensitive substrings) are dropped: guides, in-game places/characters, gameplay tips.
+  exclude_terms: ["how to", "guide", "guía", "cómo conseguir", "trucos", "cheats", "códigos", "codes", "easter egg", "money", "dinero", "port gellhorn", "lucia", "jason", "vice city", "leonida keys", "best settings", "all locations", "ubicaci"]
+  show_press_headlines: true   # press headlines pass the legal + spoiler filters and are shown (forum titles never are)
   keywords: ["gta 6", "gta vi", "gta6"]
-  context_terms: [pc, port, recomp, emulat, xbox, executable, victory, xcl, leonida]
+  # Whole-word regexes (case-insensitive): an article must be about PC / the ports, not just mention the game.
+  context_terms: ['pc', 'ports?', 'porting', 'portado', 'recomp\w*', 'recompila\w*', 'emulat\w*', 'emulador\w*', 'executable', 'ejecutable', 'victory', 'xcl', 'leonida', 'cgbj', 'palmwave', 'openscarlett', 'percyscarlett', 'tuxbox', 'compatibility layer', 'capa de compatibilidad']
 
 trackers:
   - {name: "GTA VI PC Race", url: "https://vuyp.github.io/gta6-pc-race/"}
   - {name: "PortWatch VI", url: "https://portwatch-vi.xyz/", json: "https://portwatch-vi.xyz/data/tracker.json"}
-  - {name: "mtwildwood GTA 6 PC", url: "https://gta.mtwildwood.net/gta-6-pc"}
+  - {name: "mtwildwood GTA 6 PC", url: "https://gta.mtwildwood.net/es/gta-6-pc/"}
 
 health:
   warn_after_hours: 6

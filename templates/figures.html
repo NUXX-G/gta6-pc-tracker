@@ -1,0 +1,138 @@
+{# Original inline SVG illustrations. No third-party art. Colours come from CSS classes (CSP: no inline styles). #}
+
+{% macro hero_art() -%}
+<svg class="art art--hero" viewBox="0 0 520 360" role="presentation" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-orange"/><stop offset="1" class="st-pink"/></linearGradient>
+    <linearGradient id="g-line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" class="st-pink"/><stop offset="1" class="st-cyan"/></linearGradient>
+  </defs>
+  <circle class="art-sun" cx="260" cy="190" r="118" fill="url(#g-sun)"/>
+  <g class="art-stripes">
+    <rect x="120" y="196" width="280" height="7"/><rect x="120" y="216" width="280" height="9"/><rect x="120" y="238" width="280" height="11"/><rect x="120" y="262" width="280" height="14"/>
+  </g>
+  <g class="art-grid">
+    <path d="M0 310 H520 M0 330 H520 M0 350 H520"/>
+    <path d="M260 300 L60 360 M260 300 L160 360 M260 300 L260 360 M260 300 L360 360 M260 300 L460 360"/>
+  </g>
+  <g class="art-city">
+    <path d="M24 300 V236 h26 v-18 h22 v82 M88 300 V206 h30 v94 M128 300 V246 h18 v-26 h20 v80 M392 300 V226 h22 v-20 h24 v94 M446 300 V190 h28 v110 M480 300 V244 h22 v56"/>
+  </g>
+  <g class="art-palm">
+    <path d="M98 300 C102 260 104 228 112 196"/>
+    <path d="M112 196 C92 186 72 190 58 204 M112 196 C98 176 80 170 62 172 M112 196 C120 176 136 168 156 170 M112 196 C130 188 150 194 162 208 M112 196 C112 182 116 168 126 160"/>
+  </g>
+  <g class="art-device">
+    <rect class="art-console" x="150" y="96" width="62" height="132" rx="10"/>
+    <circle class="art-dot" cx="181" cy="116" r="5"/>
+    <path class="art-flow" d="M216 162 C248 162 262 150 290 150" stroke="url(#g-line)"/>
+    <path class="art-flow" d="M216 182 C250 182 262 196 290 196" stroke="url(#g-line)"/>
+    <rect class="art-monitor" x="292" y="104" width="132" height="90" rx="8"/>
+    <path class="art-monitor-stand" d="M346 194 v20 M326 216 h42"/>
+    <path class="art-code" d="M310 124 h40 M310 138 h70 M310 152 h52 M310 166 h84 M310 180 h36"/>
+  </g>
+</svg>
+{%- endmacro %}
+
+{% macro shield() -%}
+<svg class="art art--shield" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  <path class="art-shield" d="M60 8 L102 24 V58 C102 84 84 102 60 112 C36 102 18 84 18 58 V24 Z"/>
+  <path class="art-shield-x" d="M44 44 L76 76 M76 44 L44 76"/>
+</svg>
+{%- endmacro %}
+
+{% macro kind_icon(kind) -%}
+<svg class="kicon kicon--{{ kind }}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+{% if kind == 'layer' %}<path d="M12 3 L21 8 L12 13 L3 8 Z M3 12 L12 17 L21 12 M3 16 L12 21 L21 16"/>
+{% elif kind == 'recomp' %}<path d="M4 7 h11 l-3 -3 M20 17 H9 l3 3 M7 12 h10"/>
+{% elif kind == 'emulator' %}<rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 12 h3 M9.5 10.5 v3 M15 11 h.01 M17 13 h.01"/>
+{% elif kind == 'harness' %}<path d="M9 3 h6 M10 3 v6 L5 19 a1.5 1.5 0 0 0 1.3 2 h11.4 a1.5 1.5 0 0 0 1.3 -2 L14 9 V3 M7.5 14 h9"/>
+{% else %}<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 v3"/>
+{% endif %}
+</svg>
+{%- endmacro %}
+
+{% macro fake_icon(name) -%}
+<svg class="ficon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+{% if name == 'web' %}<circle cx="12" cy="12" r="9"/><path d="M3 12 h18 M12 3 c3 3 3 15 0 18 M12 3 c-3 3 -3 15 0 18"/>
+{% elif name == 'video' %}<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9 L15 12 L10 15 Z"/>
+{% elif name == 'repo' %}<path d="M6 3 h11 a1 1 0 0 1 1 1 v16 H7 a2 2 0 0 1 -2 -2 V4 a1 1 0 0 1 1 -1 Z M5 18 a2 2 0 0 1 2 -2 h11"/>
+{% elif name == 'survey' %}<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8 h8 M8 12 h8 M8 16 h5"/>
+{% elif name == 'mobile' %}<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18 h2"/>
+{% elif name == 'chat' %}<path d="M4 5 h16 v11 H9 l-5 4 Z"/>
+{% else %}<circle cx="12" cy="12" r="9"/><path d="M12 6 v12 M9 9 h4.5 a2 2 0 0 1 0 4 H10 a2 2 0 0 0 0 4 H15"/>
+{% endif %}
+</svg>
+{%- endmacro %}
+
+{% macro anatomy(L) -%}
+<figure class="fig">
+<svg class="diagram" viewBox="0 0 640 300" role="img" aria-label="{{ L.alt }}">
+  <g class="d-box d-box--pink"><rect x="20" y="20" width="180" height="84" rx="12"/><text x="110" y="56" class="d-t">{{ L.exe }}</text><text x="110" y="80" class="d-s">{{ L.exe_sub }}</text></g>
+  <g class="d-box d-box--orange"><rect x="230" y="20" width="180" height="84" rx="12"/><text x="320" y="56" class="d-t">{{ L.assets }}</text><text x="320" y="80" class="d-s">{{ L.assets_sub }}</text></g>
+  <g class="d-box d-box--cyan"><rect x="440" y="20" width="180" height="84" rx="12"/><text x="530" y="56" class="d-t">{{ L.shaders }}</text><text x="530" y="80" class="d-s">{{ L.shaders_sub }}</text></g>
+  <path class="d-arrow" d="M110 108 V150 M320 108 V150 M530 108 V150"/>
+  <g class="d-box d-box--violet"><rect x="20" y="152" width="600" height="56" rx="12"/><text x="320" y="186" class="d-t">{{ L.libs }}</text></g>
+  <path class="d-arrow" d="M320 212 V236"/>
+  <g class="d-box d-box--muted"><rect x="20" y="238" width="600" height="50" rx="12"/><text x="320" y="269" class="d-t">{{ L.hw }}</text></g>
+</svg>
+</figure>
+{%- endmacro %}
+
+{% macro stack(L) -%}
+<figure class="fig">
+<svg class="diagram" viewBox="0 0 640 380" role="img" aria-label="{{ L.alt }}">
+  <text x="140" y="26" class="d-h">{{ L.xbox }}</text>
+  <text x="500" y="26" class="d-h">{{ L.pc }}</text>
+  <g class="d-box d-box--good"><rect x="20" y="40" width="600" height="56" rx="12"/><text x="320" y="66" class="d-t">{{ L.code }}</text><text x="320" y="86" class="d-s">✓ {{ L.same }}</text></g>
+  {% for row in [(L.os_x, L.os_p), (L.api_x, L.api_p), (L.sh_x, L.sh_p), (L.mem_x, L.mem_p)] %}
+  {% set y = 112 + loop.index0 * 64 %}
+  <g class="d-box d-box--pink"><rect x="20" y="{{ y }}" width="240" height="50" rx="10"/><text x="140" y="{{ y + 31 }}" class="d-t d-t--sm">{{ row[0] }}</text></g>
+  <path class="d-arrow d-arrow--flow" d="M270 {{ y + 25 }} H370"/>
+  <g class="d-box d-box--cyan"><rect x="380" y="{{ y }}" width="240" height="50" rx="10"/><text x="500" y="{{ y + 31 }}" class="d-t d-t--sm">{{ row[1] }}</text></g>
+  {% endfor %}
+  <text x="320" y="372" class="d-s d-s--accent">↔ {{ L.translate }}</text>
+</svg>
+</figure>
+{%- endmacro %}
+
+{% macro routes(L) -%}
+<figure class="fig">
+<svg class="diagram" viewBox="0 0 640 330" role="img" aria-label="{{ L.alt }}">
+  {% for r in [(L.emu, L.emu_sub, 'muted', L.slow), (L.layer, L.layer_sub, 'pink', L.most), (L.recomp, L.recomp_sub, 'cyan', L.fast)] %}
+  {% set y = 20 + loop.index0 * 104 %}
+  <g class="d-box d-box--muted"><rect x="20" y="{{ y + 14 }}" width="96" height="58" rx="10"/><text x="68" y="{{ y + 49 }}" class="d-t d-t--sm">{{ L.game }}</text></g>
+  <path class="d-arrow d-arrow--flow" d="M122 {{ y + 43 }} H170"/>
+  <g class="d-box d-box--{{ r[2] }}"><rect x="176" y="{{ y }}" width="288" height="86" rx="12"/><text x="320" y="{{ y + 38 }}" class="d-t">{{ r[0] }}</text><text x="320" y="{{ y + 62 }}" class="d-s">{{ r[1] }}</text></g>
+  <path class="d-arrow d-arrow--flow" d="M470 {{ y + 43 }} H518"/>
+  <g class="d-box d-box--muted"><rect x="524" y="{{ y + 14 }}" width="96" height="58" rx="10"/><text x="572" y="{{ y + 41 }}" class="d-t d-t--sm">{{ L.pc }}</text><text x="572" y="{{ y + 60 }}" class="d-s d-s--xs">{{ r[3] }}</text></g>
+  {% endfor %}
+</svg>
+</figure>
+{%- endmacro %}
+
+{% macro shaders(L) -%}
+<figure class="fig">
+<svg class="diagram" viewBox="0 0 640 250" role="img" aria-label="{{ L.alt }}">
+  {% for s in [(L.s1, L.s1b, 'pink'), (L.s2, L.s2b, 'orange'), (L.s3, L.s3b, 'violet'), (L.s4, L.s4b, 'cyan'), (L.s5, L.s5b, 'good')] %}
+  {% set x = 12 + loop.index0 * 126 %}
+  {% set y = 30 if loop.index0 is even else 120 %}
+  <g class="d-box d-box--{{ s[2] }}"><rect x="{{ x }}" y="{{ y }}" width="112" height="96" rx="12"/><text x="{{ x + 56 }}" y="{{ y + 44 }}" class="d-t d-t--sm">{{ s[0] }}</text><text x="{{ x + 56 }}" y="{{ y + 68 }}" class="d-s d-s--xs">{{ s[1] }}</text></g>
+  {% if not loop.last %}<path class="d-arrow d-arrow--flow" d="M{{ x + 112 }} {{ y + 48 }} L{{ x + 126 }} {{ (120 if loop.index0 is even else 30) + 48 }}"/>{% endif %}
+  {% endfor %}
+</svg>
+</figure>
+{%- endmacro %}
+
+{% macro phases_road(T) -%}
+<figure class="fig">
+<svg class="diagram diagram--road" viewBox="0 0 700 170" role="img" aria-label="{{ T.faq[2].q }}">
+  <path class="d-road" d="M30 120 C130 40 210 160 330 90 S540 30 670 100"/>
+  {% for i in range(1, 8) %}
+  {% set pts = {1: (40, 112), 2: (135, 78), 3: (225, 118), 4: (330, 90), 5: (440, 62), 6: (555, 64), 7: (662, 96)} %}
+  {% set p = pts[i] %}
+  <g class="d-stop d-stop--{{ i }}"><circle cx="{{ p[0] }}" cy="{{ p[1] }}" r="17"/><text x="{{ p[0] }}" y="{{ p[1] + 6 }}" class="d-n">{{ i }}</text>
+  <text x="{{ p[0] }}" y="{{ p[1] + (42 if i is odd else -26) }}" class="d-s d-s--xs">{{ T.phases.heist[i] }}</text></g>
+  {% endfor %}
+</svg>
+</figure>
+{%- endmacro %}

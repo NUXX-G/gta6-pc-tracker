@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -10,10 +11,11 @@ from typing import Any
 from xml.sax.saxutils import escape as xml_escape
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from markupsafe import Markup, escape
 
 import legal_filter
 import spoiler_filter
-from common import ROOT, SITE_DIR, config, iso, load_json, parse_time
+from common import ROOT, SITE_DIR, config, domain_of, iso, load_json, load_yaml, parse_time
 from summarize import (
     event_title,
     feed_entries,
@@ -32,14 +34,48 @@ from summarize import (
 
 TEMPLATES = ROOT / "templates"
 STATIC = ROOT / "static"
+CONTENT = ROOT / "content"
 LANGS = ["es", "en"]
 SECTION_PATHS = {
-    "es": {"home": "es/", "project": "es/proyectos/{slug}/", "status": "es/estado/", "feed": "es/feed.xml"},
-    "en": {"home": "en/", "project": "en/projects/{slug}/", "status": "en/status/", "feed": "en/feed.xml"},
+    "es": {
+        "home": "es/",
+        "project": "es/proyectos/{slug}/",
+        "status": "es/estado/",
+        "feed": "es/feed.xml",
+        "how": "es/como-funciona/",
+        "fake": "es/descargas-falsas/",
+        "media": "es/galeria/",
+        "news": "es/noticias/",
+    },
+    "en": {
+        "home": "en/",
+        "project": "en/projects/{slug}/",
+        "status": "en/status/",
+        "feed": "en/feed.xml",
+        "how": "en/how-it-works/",
+        "fake": "en/fake-downloads/",
+        "media": "en/gallery/",
+        "news": "en/news/",
+    },
 }
+# Hosts a preview image may load from (only after a click; see static/js/site.js). Video embeds: youtube-nocookie.
+IMG_HOSTS = [
+    "raw.githubusercontent.com",
+    "user-images.githubusercontent.com",
+    "opengraph.githubassets.com",
+    "i.redd.it",
+    "preview.redd.it",
+    "external-preview.redd.it",
+    "files.mastodon.social",
+    "lemmy.world",
+    "i.ytimg.com",
+    "portwatch-vi.xyz",
+]
 CSP = (
-    "default-src 'self'; img-src 'self' https://preview.redd.it https://i.redd.it; script-src 'self'; "
-    "style-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    "default-src 'self'; img-src 'self' "
+    + " ".join(f"https://{h}" for h in IMG_HOSTS)
+    + "; script-src 'self'; style-src 'self'; frame-src https://www.youtube-nocookie.com; "
+    "object-src 'none'; base-uri 'none'; form-action 'none'"
 )
 
 
@@ -53,6 +89,12 @@ def path_for(lang: str, kind: str, slug: str = "") -> str:
     return SECTION_PATHS[lang][kind].format(slug=slug)
 
 
+def md_inline(text: str) -> Markup:
+    """Escape, then allow **bold** only. Used for our own long-form content."""
+    safe = str(escape(text))
+    return Markup(re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", safe))
+
+
 def env() -> Environment:
     e = Environment(
         loader=FileSystemLoader(str(TEMPLATES)),
@@ -61,16 +103,14 @@ def env() -> Environment:
         lstrip_blocks=True,
     )
     e.globals["fmt"] = fmt
-    e.filters["num"] = lambda v: f"{v:,}".replace(",", " ") if isinstance(v, int) and not isinstance(v, bool) else "—"
+    e.filters["num"] = lambda v: f"{v:,}".replace(",", " ") if isinstance(v, int) and not isinstance(v, bool) else "—"
+    e.filters["md"] = md_inline
+    e.filters["host"] = domain_of
     return e
 
 
 def _strip_urls(text: str) -> str:
     """Error messages may contain API URLs: show only the host, never a link or a non-allowlisted URL."""
-    import re
-
-    from common import domain_of
-
     return re.sub(r"https?://\S+", lambda m: domain_of(m.group(0)), text)
 
 
@@ -79,6 +119,17 @@ def _safe_link(url: str | None) -> str | None:
     if not url:
         return None
     return url if legal_filter.url_violation(url) is None else None
+
+
+def _safe_img(url: str | None) -> str | None:
+    if not url or _safe_link(url) is None:
+        return None
+    host = domain_of(url)
+    return url if any(host == h or host.endswith("." + h) for h in IMG_HOSTS) else None
+
+
+def content(name: str, lang: str) -> dict[str, Any]:
+    return load_yaml(CONTENT / f"{name}.yml")[lang]
 
 
 def curated(lang: str) -> dict[str, list[dict[str, Any]]]:
@@ -96,6 +147,7 @@ def curated(lang: str) -> dict[str, list[dict[str, Any]]]:
                 "project": link.get("project"),
                 "date": link.get("date"),
                 "type": link["type"],
+                "host": domain_of(link["url"]),
             }
         )
     for g in groups.values():
@@ -127,6 +179,76 @@ def _group(entries: list[dict[str, Any]], names: dict[str, str], T) -> list[dict
     return [{"name": names.get(k, T["kinds"]["general"]), "slug": k, "entries": groups[k]} for k in order]
 
 
+def media_view(T, m: dict[str, Any], names: dict[str, str], now) -> dict[str, Any] | None:
+    url = _safe_link(m.get("url"))
+    if not url:
+        return None
+    thumb = _safe_img(m.get("thumb"))
+    embed = m.get("embed") if m.get("embed") and re.fullmatch(r"[\w-]{11}", m["embed"]) else None
+    project = names.get(m.get("project") or "")
+    kind = T["kinds"].get(m.get("kind", "image"), T["kinds"]["image"])
+    return {
+        "id": m["id"],
+        "kind": m.get("kind", "image"),
+        "kind_label": kind,
+        "title": " · ".join(x for x in (kind, project or T["kinds"]["general"]) if x),
+        "source_label": m.get("source_label") or "",
+        "url": url,
+        "thumb": thumb,
+        "thumb_host": domain_of(thumb) if thumb else "",
+        "embed": embed,
+        "origin": m.get("origin", "community"),
+        "origin_label": T["origins"].get(m.get("origin", "community"), m.get("origin", "")),
+        "credibility": m.get("credibility", "unverified"),
+        "project": m.get("project"),
+        "created": m.get("created"),
+        "rel": rel_time(T, m.get("created"), now) if m.get("created") else "",
+    }
+
+
+def press_view(T, it: dict[str, Any], names: dict[str, str], now) -> dict[str, Any] | None:
+    url = _safe_link(it.get("url"))
+    if not url:
+        return None
+    headline = it.get("headline") or ""
+    if headline and (spoiler_filter.find_spoiler(headline) or legal_filter.text_violation(headline)):
+        headline = ""
+    return {
+        "id": it["id"],
+        "url": url,
+        "headline": headline or item_title(T, it, names),
+        "outlet": it.get("source_label") or domain_of(url),
+        "host": domain_of(url),
+        "lang": (it.get("lang") or "").upper(),
+        "created": it.get("created"),
+        "rel": rel_time(T, it.get("created"), now),
+        "credibility": it.get("credibility", "community"),
+        "project": names.get(it.get("project") or ""),
+    }
+
+
+def external_view(T, rows: list[dict[str, Any]], names: dict[str, str]) -> list[dict[str, Any]]:
+    out = []
+    for r in rows or []:
+        if legal_filter.text_violation(r.get("name") or "") or spoiler_filter.find_spoiler(r.get("name") or ""):
+            continue
+        repo = r.get("repo")
+        url = _safe_link(f"https://github.com/{repo}") if repo else None
+        stages = r.get("stages") or {}
+        out.append(
+            {
+                "name": names.get(r.get("slug") or "", r.get("name")),
+                "repo": repo,
+                "url": url,
+                "slug": r.get("slug"),
+                "stages": stages,
+                "best": max(stages.values() or [0]),
+                "watch": r.get("watch"),
+            }
+        )
+    return out
+
+
 def view_model(
     lang: str, data: dict[str, Any], health: dict[str, Any], candidates: list[dict[str, Any]]
 ) -> dict[str, Any]:
@@ -143,10 +265,18 @@ def view_model(
     entries.sort(key=lambda e: e["created"] or "", reverse=True)
     hour = [e for e in entries if in_window(e["created"], 1, now)]
     day = [e for e in entries if in_window(e["created"], 24, now)]
-    media = [_entry(T, items_by_id[i], names, now, False) for i in data["media"] if i in items_by_id]
     weekly = [_entry(T, items_by_id[i], names, now, False) for i in data["weekly"] if i in items_by_id]
-    media = [m for m in media if m["url"]]
     weekly = [m for m in weekly if m["url"]]
+
+    media_src = data.get("media_items")
+    if media_src is None:  # older snapshots: only ids of items
+        media_src = [items_by_id[i] for i in data.get("media", []) if i in items_by_id]
+    media = [v for v in (media_view(T, m, names, now) for m in media_src) if v]
+    origins = [o for o in ("project", "tracker", "community", "video", "press") if any(m["origin"] == o for m in media)]
+
+    press = [
+        v for v in (press_view(T, items_by_id[i], names, now) for i in data.get("press", []) if i in items_by_id) if v
+    ]
 
     # Milestones: who reached each phase, else the most optimistic indicative range among active projects.
     milestones = []
@@ -200,6 +330,8 @@ def view_model(
 
     # Alerts
     alerts_view = []
+    clones = 0
+    hoaxes = 0
     for a in data["alerts"]:
         c = a["code"]
         if c == "dmca":
@@ -228,6 +360,7 @@ def view_model(
                 }
             )
         elif c == "clone":
+            clones += 1
             reasons = []
             for r in a["reasons"]:
                 reasons.append(fmt(T["clone_reasons"][r["code"]], pct=r.get("pct", ""), repo=r.get("repo", "")))
@@ -240,6 +373,7 @@ def view_model(
                 }
             )
         elif c == "hoax" and a["item"] in items_by_id:
+            hoaxes += 1
             it = items_by_id[a["item"]]
             alerts_view.append(
                 {
@@ -273,6 +407,7 @@ def view_model(
                 ),
             }
         )
+    flagged_candidates = sum(1 for c in candidates if c.get("flagged"))
 
     # History (phase changes), newest first
     history = []
@@ -295,7 +430,19 @@ def view_model(
     # Sources health
     sources = []
     warn_h = config("settings")["health"]["warn_after_hours"]
-    for name in ["github", "dmca", "discovery", "reddit", "hn", "bluesky", "mastodon", "lemmy", "news", "trackers"]:
+    for name in [
+        "github",
+        "dmca",
+        "discovery",
+        "reddit",
+        "hn",
+        "bluesky",
+        "mastodon",
+        "lemmy",
+        "youtube",
+        "news",
+        "trackers",
+    ]:
         h = (health.get("sources") or {}).get(name, {})
         failing_h = None
         if h.get("failing_since"):
@@ -314,9 +461,30 @@ def view_model(
             }
         )
 
+    trackers_view = []
+    for t in data.get("trackers", []):
+        trackers_view.append({"name": t["name"], "url": _safe_link(t["url"]), "ok": t.get("ok")})
+
+    ms = data.get("milestones") or config("settings")["milestones"]
+
+    def parts(value: Any) -> dict[str, str]:
+        dt = parse_time(value)
+        secs = max(0, int((now - dt).total_seconds())) if dt else 0
+        return {"d": str(secs // 86400), "h": f"{secs % 86400 // 3600:02d}", "m": f"{secs % 3600 // 60:02d}"}
+
+    counters = {
+        "console_parts": parts(ms.get("console_launch")),
+        "exe_parts": parts(ms.get("exe_leak")),
+        "console": ms.get("console_launch"),
+        "exe": ms.get("exe_leak"),
+        "exe_by": ms.get("exe_leak_by") or "",
+        "exe_source": _safe_link(ms.get("exe_leak_source")),
+    }
+
     gpu_faq = [{"name": p["name"], "req": p["requirements"]} for p in projects if p["requirements"]]
     max_reached = data.get("max_reached", 0)
     ticker = [e for e in entries if e["credibility"] != "false"][:3]
+    faq = list(T["faq"]) + list(T.get("faq_extra", []))
     return {
         "T": T,
         "lang": lang,
@@ -331,6 +499,8 @@ def view_model(
         "news_hour": _group(hour, names, T),
         "news_day": _group(day, names, T),
         "media": media,
+        "media_origins": origins,
+        "press": press,
         "weekly": weekly,
         "milestones": milestones,
         "radar": radar,
@@ -344,6 +514,15 @@ def view_model(
         "ticker": ticker,
         "entries": entries,
         "names": names,
+        "external": external_view(T, data.get("external", []), names),
+        "trackers": trackers_view,
+        "counters": counters,
+        "faq": faq,
+        "scam": {
+            "clones": flagged_candidates + clones,
+            "copies": (data.get("scam") or {}).get("copies") or 0,
+            "hoaxes": hoaxes,
+        },
     }
 
 
@@ -352,16 +531,114 @@ def write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8", newline="\n")
 
 
-def faq_jsonld(T: dict[str, Any], vm: dict[str, Any]) -> str:
-    entities = []
-    for f in T["faq"]:
-        answer = f["a"]
-        if f is T["faq"][3]:
-            answer += " " + " ".join(f"{g['name']}: {g['req']}" for g in vm["gpu_faq"])
-        entities.append({"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": answer}})
-    doc = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": T["locale"], "mainEntity": entities}
+def _ld(doc: Any) -> str:
     # Escape '<' so the JSON can never close the script element.
     return json.dumps(doc, ensure_ascii=False).replace("<", "\\u003c")
+
+
+def faq_jsonld(T: dict[str, Any], vm: dict[str, Any]) -> dict[str, Any]:
+    entities = []
+    for i, f in enumerate(vm["faq"]):
+        answer = f["a"]
+        if i == 3:
+            answer += " " + " ".join(f"{g['name']}: {g['req']}" for g in vm["gpu_faq"])
+        entities.append({"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": answer}})
+    return {"@type": "FAQPage", "inLanguage": T["locale"], "mainEntity": entities}
+
+
+def home_jsonld(T, vm, s, lang) -> str:
+    home = s["origin"] + s["base"] + path_for(lang, "home")
+    graph = [
+        {
+            "@type": "WebSite",
+            "@id": home + "#website",
+            "url": home,
+            "name": T["meta"]["site_name"],
+            "description": T["meta"]["description"],
+            "inLanguage": T["locale"],
+        },
+        {
+            "@type": "WebPage",
+            "@id": home + "#page",
+            "url": home,
+            "name": T["meta"]["title"],
+            "isPartOf": {"@id": home + "#website"},
+            "dateModified": vm["now_iso"],
+            "inLanguage": T["locale"],
+            "about": {
+                "@type": "VideoGame",
+                "name": "Grand Theft Auto VI",
+                "gamePlatform": ["PlayStation 5", "Xbox Series X|S"],
+            },
+        },
+        {
+            "@type": "ItemList",
+            "name": T["sections"]["projects"],
+            "itemListOrder": "https://schema.org/ItemListOrderDescending",
+            "numberOfItems": len(vm["projects"]),
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": i + 1,
+                    "name": p["name"],
+                    "url": s["origin"] + s["base"] + path_for(lang, "project", p["slug"]),
+                }
+                for i, p in enumerate(vm["projects"])
+            ],
+        },
+        faq_jsonld(T, vm),
+    ]
+    return _ld({"@context": "https://schema.org", "@graph": graph})
+
+
+def page_jsonld(T, s, lang, kind: str, title: str, description: str, now_iso: str, crumb: str, extra=None) -> str:
+    url = s["origin"] + s["base"] + path_for(lang, kind) if kind != "project" else extra["url"]
+    home = s["origin"] + s["base"] + path_for(lang, "home")
+    crumbs = [{"@type": "ListItem", "position": 1, "name": T["crumbs"]["home"], "item": home}]
+    if kind == "project":
+        crumbs.append({"@type": "ListItem", "position": 2, "name": T["crumbs"]["projects"], "item": home + "#projects"})
+    crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": crumb, "item": url})
+    graph: list[dict[str, Any]] = [{"@type": "BreadcrumbList", "itemListElement": crumbs}]
+    if kind in ("how", "fake"):
+        graph.append(
+            {
+                "@type": "Article",
+                "headline": title[:110],
+                "description": description,
+                "inLanguage": T["locale"],
+                "dateModified": now_iso,
+                "mainEntityOfPage": url,
+                "author": {"@type": "Organization", "name": T["meta"]["site_name"], "url": home},
+                "publisher": {"@type": "Organization", "name": T["meta"]["site_name"], "url": home},
+                "image": s["origin"] + s["base"] + "assets/og.png",
+            }
+        )
+    elif kind in ("media", "news"):
+        graph.append(
+            {
+                "@type": "CollectionPage",
+                "name": title,
+                "description": description,
+                "url": url,
+                "inLanguage": T["locale"],
+                "dateModified": now_iso,
+            }
+        )
+    elif kind == "project" and extra:
+        doc = {
+            "@type": "SoftwareSourceCode" if extra.get("repo_url") else "CreativeWork",
+            "name": extra["name"],
+            "description": description,
+            "url": url,
+            "inLanguage": T["locale"],
+            "dateModified": now_iso,
+        }
+        if extra.get("repo_url"):
+            doc["codeRepository"] = extra["repo_url"]
+            if extra.get("language"):
+                doc["programmingLanguage"] = extra["language"]
+        graph.append(doc)
+    return _ld({"@context": "https://schema.org", "@graph": graph})
 
 
 def rss(lang: str, data: dict[str, Any], s: dict[str, Any]) -> str:
@@ -415,6 +692,7 @@ def build(
 
     for lang in LANGS:
         vm = view_model(lang, data, health, candidates)
+        T = vm["T"]
         other = "en" if lang == "es" else "es"
         common = {
             **vm,
@@ -422,55 +700,135 @@ def build(
             "csp": CSP,
             "other": other,
             "path_for": path_for,
-            "faq_jsonld": faq_jsonld(vm["T"], vm),
             "feed_url": s["base"] + path_for(lang, "feed"),
             "ui": config("settings")["ui"],
         }
-        alt = alternates("home")
-        write(
-            out / path_for(lang, "home") / "index.html",
-            e.get_template("index.html").render(
-                **common,
-                page="home",
-                alt=alt,
-                canonical=s["origin"] + alt[lang],
-                title=vm["T"]["meta"]["title"],
-                description=vm["T"]["meta"]["description"],
-            ),
-        )
-        pages.append({"alt": alt, "priority": "1.0"})
-        for p in vm["projects"]:
-            alt = alternates("project", p["slug"])
+
+        def render(kind: str, template: str, title: str, description: str, ld: str, slug: str = "", **kw: Any) -> None:
+            alt = alternates(kind, slug)
             write(
-                out / path_for(lang, "project", p["slug"]) / "index.html",
-                e.get_template("project.html").render(
+                out / path_for(lang, kind, slug) / "index.html",
+                e.get_template(template).render(
                     **common,
-                    page="project",
-                    p=p,
+                    page=kind,
                     alt=alt,
                     canonical=s["origin"] + alt[lang],
-                    title=fmt(vm["T"]["meta"]["project_title"], name=p["name"]),
-                    description=fmt(vm["T"]["meta"]["project_description"], name=p["name"]),
-                    deeper_project=[x for g in vm["deeper"].values() for x in g if x.get("project") == p["slug"]],
-                    media_project=[m for m in vm["media"] if m.get("project") == p["slug"]],
+                    title=title,
+                    description=description,
+                    jsonld=ld,
+                    **kw,
                 ),
             )
+
+        render(
+            "home",
+            "index.html",
+            T["meta"]["title"],
+            T["meta"]["description"],
+            home_jsonld(T, vm, s, lang),
+        )
+        if lang == "es":
+            pages.append({"alt": alternates("home"), "priority": "1.0"})
+        for p in vm["projects"]:
+            title = fmt(T["meta"]["project_title"], name=p["name"])
+            desc = fmt(T["meta"]["project_description"], name=p["name"], phase=p["phase_label"])
+            url = s["origin"] + s["base"] + path_for(lang, "project", p["slug"])
+            render(
+                "project",
+                "project.html",
+                title,
+                desc,
+                page_jsonld(
+                    T,
+                    s,
+                    lang,
+                    "project",
+                    title,
+                    desc,
+                    vm["now_iso"],
+                    p["name"],
+                    {
+                        "url": url,
+                        "name": p["name"],
+                        "repo_url": None if p["private"] else p["url"],
+                        "language": p["gh"].get("language"),
+                    },
+                ),
+                slug=p["slug"],
+                p=p,
+                deeper_project=[x for g in vm["deeper"].values() for x in g if x.get("project") == p["slug"]],
+                media_project=[m for m in vm["media"] if m.get("project") == p["slug"]],
+                press_project=[x for x in vm["press"] if x.get("project") == p["name"]],
+            )
             if lang == "es":
-                pages.append({"alt": alt, "priority": "0.8"})
-        alt = alternates("status")
-        write(
-            out / path_for(lang, "status") / "index.html",
-            e.get_template("status.html").render(
-                **common,
-                page="status",
-                alt=alt,
-                canonical=s["origin"] + alt[lang],
-                title=vm["T"]["meta"]["status_title"],
-                description=vm["T"]["meta"]["status_description"],
+                pages.append({"alt": alternates("project", p["slug"]), "priority": "0.8"})
+        for kind, name, template, prio in (
+            ("how", "explainer", "how.html", "0.9"),
+            ("fake", "fake_downloads", "fake.html", "0.9"),
+        ):
+            C = content(name, lang)
+            render(
+                kind,
+                template,
+                C["title"],
+                C["description"],
+                page_jsonld(T, s, lang, kind, C["title"], C["description"], vm["now_iso"], C["h1"]),
+                C=C,
+            )
+            if lang == "es":
+                pages.append({"alt": alternates(kind), "priority": prio})
+        render(
+            "media",
+            "media.html",
+            T["meta"]["media_title"],
+            T["meta"]["media_description"],
+            page_jsonld(
+                T,
+                s,
+                lang,
+                "media",
+                T["meta"]["media_title"],
+                T["meta"]["media_description"],
+                vm["now_iso"],
+                T["sections"]["media"],
+            ),
+        )
+        render(
+            "news",
+            "news.html",
+            T["meta"]["news_title"],
+            T["meta"]["news_description"],
+            page_jsonld(
+                T,
+                s,
+                lang,
+                "news",
+                T["meta"]["news_title"],
+                T["meta"]["news_description"],
+                vm["now_iso"],
+                T["sections"]["press"],
+            ),
+        )
+        render(
+            "status",
+            "status.html",
+            T["meta"]["status_title"],
+            T["meta"]["status_description"],
+            page_jsonld(
+                T,
+                s,
+                lang,
+                "status",
+                T["meta"]["status_title"],
+                T["meta"]["status_description"],
+                vm["now_iso"],
+                T["system"]["title"],
             ),
         )
         if lang == "es":
-            pages.append({"alt": alt, "priority": "0.3"})
+            pages.append({"alt": alternates("media"), "priority": "0.7"})
+            pages.append({"alt": alternates("news"), "priority": "0.7"})
+            pages.append({"alt": alternates("status"), "priority": "0.3"})
         write(out / path_for(lang, "feed"), rss(lang, data, s))
 
     write(
@@ -498,7 +856,9 @@ def build(
             sm.append(
                 f'<xhtml:link rel="alternate" hreflang="x-default" href="{xml_escape(s["origin"] + pg["alt"]["en"])}"/>'
             )
-            sm.append(f"<lastmod>{lastmod}</lastmod><priority>{pg['priority']}</priority>")
+            sm.append(
+                f"<lastmod>{lastmod}</lastmod><changefreq>hourly</changefreq><priority>{pg['priority']}</priority>"
+            )
             sm.append("</url>")
     sm.append("</urlset>\n")
     write(out / "sitemap.xml", "\n".join(sm))

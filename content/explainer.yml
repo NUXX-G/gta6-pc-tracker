@@ -1,0 +1,183 @@
+# "How it works" guide for players. Our own words; no game content. Figures are inline SVGs (templates/figures.html).
+es:
+  title: "Cómo funciona un port de GTA 6 a PC, explicado para jugadores"
+  description: "Qué es un emulador, una capa de compatibilidad y una recompilación; por qué un juego de Xbox Series no arranca en PC sin más, qué son los shaders y por qué es tan difícil. Sin tecnicismos."
+  eyebrow: "Guía para jugadores"
+  h1: "Cómo funciona todo esto (sin tecnicismos)"
+  lead: "Si te preguntas qué hacen exactamente VIctory, XCL y compañía, por qué unos dicen \"recomp\" y otros \"capa de compatibilidad\", y por qué ver un menú no significa que puedas jugar, esta es la guía. Diez minutos de lectura y entenderás las noticias mejor que la mitad de los comentarios de YouTube."
+  toc: "En esta guía"
+  sections:
+    - id: "que-es-un-juego"
+      h: "1. Qué hay dentro de un juego"
+      figure: anatomy
+      paras:
+        - "Un juego como GTA VI son, a grandes rasgos, tres cosas. La primera es el ejecutable: el \"cerebro\", millones de instrucciones que le dicen al procesador (CPU) qué hacer en cada momento: física, inteligencia de los personajes, lógica de juego, cargar cosas del disco."
+        - "La segunda son los assets: modelos 3D, texturas, sonidos, vídeos y mapas, guardados en archivos enormes y comprimidos. Es la mayor parte de los más de 100 GB que ocupa."
+        - "La tercera, y la que más guerra da, son los shaders: miles de programas pequeños que corren en la tarjeta gráfica (GPU) y deciden cómo se pinta cada píxel, cómo cae la luz, cómo se ven el agua o los reflejos."
+        - "Ninguna de las tres funciona sola. El juego le pide cosas al sistema operativo y al hardware a través de bibliotecas (piezas de software del sistema) y de una API gráfica, que es el idioma con el que el juego le habla a la GPU."
+    - id: "por-que-no-arranca"
+      h: "2. Por qué un juego de Xbox no arranca en tu PC sin más"
+      figure: stack
+      paras:
+        - "La buena noticia: la Xbox Series tiene por dentro un procesador AMD de la familia x86-64, la misma que la de tu PC. El cerebro del juego habla, literalmente, el mismo idioma que tu CPU. Por eso nadie necesita emular el procesador, y por eso esto avanza mucho más rápido que con consolas antiguas."
+        - "La mala noticia: todo lo que hay alrededor del cerebro es distinto."
+      bullets:
+        - "**Otro sistema operativo.** La consola usa un Windows recortado y muy modificado, con sus propias bibliotecas (el kit de Microsoft para Xbox se llama GDK). El juego llama a funciones que en tu PC no existen."
+        - "**Otra API gráfica.** En Xbox se usa Direct3D 12.X, una versión de consola de DirectX 12 que deja al juego tocar la GPU mucho más de cerca. En PC hay que traducirla a DirectX 12 normal o a Vulkan."
+        - "**Shaders ya compilados.** En PC, los juegos traen sus shaders en un formato intermedio y tu driver los termina de compilar para tu tarjeta (por eso ves pantallas de \"compilando shaders\"). En consola vienen ya convertidos en código máquina para su GPU exacta, una AMD RDNA2. Tu NVIDIA o tu AMD de PC no entienden ese código tal cual."
+        - "**Memoria compartida.** La consola tiene 16 GB que comparten CPU y GPU. Tu PC tiene la RAM por un lado y la VRAM de la gráfica por otro, unidas por un bus mucho más lento. Si el juego deja datos de la GPU en el sitio equivocado, todo va a cámara lenta."
+        - "**Archivos a su manera.** Las texturas se guardan con un orden de píxeles (\"tiling\") pensado para esa GPU y comprimidas con un formato propio (BCPack) que la consola descomprime con hardware dedicado. En PC hay que hacerlo por software."
+      callout: "Resumen: el código de CPU corre casi gratis. Todo el trabajo está en fingir ser una Xbox: sus servicios, su API gráfica, su memoria y, sobre todo, sus shaders."
+    - id: "tres-caminos"
+      h: "3. Los tres caminos: emulador, capa de compatibilidad y recompilación"
+      figure: routes
+      paras:
+        - "Cuando lees sobre estos proyectos aparecen siempre tres palabras. No son sinónimos."
+      cards:
+        - title: "Emulador"
+          tag: "lento pero universal"
+          text: "Un programa que imita el hardware entero de la consola, instrucción a instrucción, como PCSX2 con PS2 o Dolphin con GameCube. Funciona con cualquier juego, pero imitar un procesador cuesta muchísima potencia. Con Xbox Series no tiene sentido emular la CPU, porque tu PC ya habla su idioma; por eso casi nadie va por aquí, aunque algunos proyectos usen la palabra \"emulador\" por costumbre."
+        - title: "Capa de compatibilidad"
+          tag: "el camino de casi todos"
+          text: "Como Wine o Proton, que permiten jugar juegos de Windows en Linux y Steam Deck. El código del juego corre tal cual en tu CPU, y la capa se hace pasar por el sistema de la consola: cuando el juego pide \"dame la memoria de la GPU\" o \"dibuja esto\", la capa responde con el equivalente de PC. VIctory, XCL, OpenScarlett, PercyScarlett o TuxBox van por aquí."
+        - title: "Recompilación estática"
+          tag: "traducir de antemano"
+          text: "Traducir el programa entero a otro programa nuevo antes de ejecutarlo, como hicieron N64Recomp o UnleashedRecomp con juegos de Nintendo 64 y Xbox 360. El resultado puede ir muy fino, pero exige entender cada rincón del ejecutable. Con un procesador que ya es compatible, varios proyectos que empezaron como \"recomp\" (G6Recomp, por ejemplo) se han pasado al enfoque de capa."
+      after: "Y luego está el cuarto camino, el único jugable de verdad a largo plazo: el port oficial, hecho por Rockstar con el código fuente. Ese no depende de nada de esto."
+    - id: "shaders"
+      h: "4. Los shaders: el gran muro"
+      figure: shaders
+      paras:
+        - "Si has seguido las noticias habrás visto cifras como \"26.503 shaders\". Es el paquete de programas de GPU del juego, y cada uno viene en código máquina de la GPU de la consola. Para que tu tarjeta lo ejecute, los proyectos tienen que leer ese código instrucción a instrucción, entender qué hace y reescribirlo en un formato de PC (DXIL para DirectX 12 o SPIR-V para Vulkan). Después tu driver lo compila como cualquier otro juego."
+        - "No basta con traducir: hay que traducir bien. Un shader de luz mal traducido no da error, simplemente pinta negro. Por eso tantos proyectos llegan al mundo y lo ven oscuro o de un solo color: la geometría está ahí, pero los pasos de iluminación aún no salen bien."
+      bullets:
+        - "**wave64 contra wave32.** La GPU de la consola trabaja con grupos de 64 hilos. Las NVIDIA usan grupos de 32. Muchos shaders del juego dan por hecho los 64, así que en NVIDIA hay que simularlo con dos mitades que cooperan. En AMD de PC funciona de forma nativa."
+        - "**Mesh shaders.** El mundo se dibuja con una técnica moderna llamada mesh shaders. Hace falta una gráfica relativamente reciente (en NVIDIA, de la serie RTX 20 en adelante; en AMD, RDNA2 en adelante)."
+        - "**Tiempo de compilación.** Algunos shaders del mundo son gigantes y el driver tarda minutos en compilarlos. Mientras tanto el juego cree que se ha colgado y se cierra solo, o Windows reinicia el driver."
+    - id: "rendimiento"
+      h: "5. Por qué \"carga el mundo\" no significa \"se puede jugar\""
+      paras:
+        - "Ver un menú es un gran hito, pero es la parte fácil: una imagen 2D y unos pocos shaders. El mundo abierto es otra liga: miles de objetos, streaming constante desde el disco, luces, sombras y reflejos, todo 30 veces por segundo."
+        - "Hoy los proyectos más avanzados tardan entre medio segundo y varios minutos en pintar un solo frame del mundo. Para jugar hacen falta unos 33 milisegundos por frame (30 fps). Es decir, hay que ir entre 15 y miles de veces más rápido, y esa optimización es el tramo más largo."
+      bullets:
+        - "**TDR.** Si la GPU tarda más de 2 segundos en una tarea, Windows cree que se ha colgado y reinicia el driver: pantallazo negro un momento y el juego se cierra."
+        - "**El vigilante del propio juego.** GTA VI comprueba que su hilo principal da señales de vida. Si pasa medio minuto sin hacerlo (por ejemplo, compilando shaders), se cierra a sí mismo."
+        - "**La memoria.** Si los datos que lee la GPU están en la RAM del PC en vez de en la VRAM, cada acceso cruza el bus y todo va cientos de veces más lento."
+    - id: "fases"
+      h: "6. Qué significa cada fase de nuestro tracker"
+      figure: phases
+      paras:
+        - "Dividimos el camino en siete fases con nombre de golpe, porque a esto se le parece: preparar, entrar, mirar, moverse dentro y salir con el botín. Cada una tiene un porcentaje fijo y documentado, y una fase alcanzada a medias cuenta a medio camino."
+      phases: true
+      after: "La fase la decidimos a mano a partir de lo que publica cada proyecto y de lo que reproducen los trackers independientes. Si un README promete más de lo que podemos confirmar, lo marcamos como afirmación pendiente."
+    - id: "legal"
+      h: "7. ¿Es legal? ¿Lo puedo probar yo?"
+      paras:
+        - "Los proyectos de código abierto no incluyen nada del juego: solo su propio código. Todos piden que pongas tu propia copia, y los serios se niegan a explicar cómo conseguirla. El problema es que, hoy, la única forma de tener el ejecutable de Xbox en un PC es una filtración: alguien lo publicó sin permiso el 23 de noviembre. Usarlo es piratería, y no lo enlazamos ni lo enlazaremos."
+        - "Además, ninguno es jugable todavía. Para probar algo hace falta compilar el proyecto desde el código fuente, tener una gráfica moderna y muchísima paciencia para ver, como mucho, unos menús. No es una experiencia para jugar, es un experimento."
+      callout: "Y sobre todo: ninguno de estos proyectos se descarga como \"GTA 6 PC listo para jugar\". Si ves eso, es una estafa. Lee nuestra guía de descargas falsas."
+      callout_link: fake
+    - id: "port-oficial"
+      h: "8. ¿Y el port oficial?"
+      paras:
+        - "Rockstar no ha anunciado versión de PC. Históricamente, sus grandes juegos han llegado a PC tiempo después que a consolas: GTA V tardó un año y medio (septiembre de 2013 en consolas, abril de 2015 en PC) y Red Dead Redemption 2, alrededor de un año (octubre de 2018 y noviembre de 2019)."
+        - "Un port oficial se hace con el código fuente original, así que no tiene ninguno de los muros de esta guía. Por eso, si llega, será la forma buena de jugar en PC. Los proyectos de la comunidad son, sobre todo, una demostración técnica impresionante y una forma de aprender cómo funciona una consola moderna."
+  fig:
+    anatomy: {exe: "Ejecutable", exe_sub: "lógica · CPU", assets: "Assets", assets_sub: "modelos · texturas · audio", shaders: "Shaders", shaders_sub: "programas de GPU", libs: "Bibliotecas del sistema + API gráfica", hw: "Hardware: CPU · GPU · memoria", alt: "Esquema: un juego tiene ejecutable, assets y shaders, que hablan con el hardware a través de las bibliotecas del sistema."}
+    stack: {xbox: "Xbox Series", pc: "Tu PC", code: "Código del juego (x86-64)", same: "igual: corre tal cual", os_x: "Sistema GDK / kernelx", os_p: "Windows", api_x: "Direct3D 12.X", api_p: "Direct3D 12 / Vulkan", sh_x: "Shaders RDNA2 compilados", sh_p: "DXIL / SPIR-V", mem_x: "16 GB compartidos", mem_p: "RAM + VRAM separadas", translate: "el proyecto traduce", alt: "Comparación por capas entre Xbox Series y PC: el código del juego es igual; sistema, API gráfica, shaders y memoria hay que traducirlos."}
+    routes: {emu: "Emulador", emu_sub: "imita el hardware entero", layer: "Capa de compatibilidad", layer_sub: "código nativo + consola falsa", recomp: "Recompilación", recomp_sub: "traduce todo antes de jugar", slow: "lento", fast: "rápido", most: "la vía de casi todos", game: "Juego", pc: "PC", alt: "Tres caminos para llevar un juego de consola a PC: emulador, capa de compatibilidad y recompilación."}
+    shaders: {s1: "Shader de consola", s1b: "código RDNA2", s2: "Leer", s2b: "instrucción a instrucción", s3: "Reescribir", s3b: "HLSL / IR", s4: "Compilar", s4b: "DXIL / SPIR-V", s5: "Tu GPU", s5b: "NVIDIA · AMD · Intel", alt: "Cadena de traducción de un shader: código de consola, lectura, reescritura, compilación y ejecución en tu GPU."}
+  cta_title: "Ya lo entiendes. ¿Cómo va la carrera?"
+  cta_text: "Mira el estado de cada proyecto, actualizado cada hora."
+  cta_btn: "Ver los proyectos"
+en:
+  title: "How a GTA 6 PC port works, explained for players"
+  description: "What an emulator, a compatibility layer and a recompilation are; why an Xbox Series game does not just run on PC, what shaders are and why it is so hard. No jargon."
+  eyebrow: "A guide for players"
+  h1: "How all this works (no jargon)"
+  lead: "If you wonder what VIctory, XCL and friends actually do, why some say \"recomp\" and others \"compatibility layer\", and why seeing a menu does not mean you can play, this is the guide. Ten minutes of reading and you will understand the news better than half the YouTube comments."
+  toc: "In this guide"
+  sections:
+    - id: "inside-a-game"
+      h: "1. What is inside a game"
+      figure: anatomy
+      paras:
+        - "A game like GTA VI is, roughly, three things. The first is the executable: the \"brain\", millions of instructions telling the processor (CPU) what to do at every moment: physics, character AI, game logic, loading things from disk."
+        - "The second is the assets: 3D models, textures, sounds, videos and maps, stored in huge compressed archives. That is most of the 100+ GB it takes up."
+        - "The third, and the most troublesome, is the shaders: thousands of small programs that run on the graphics card (GPU) and decide how every pixel is painted, how light falls, how water and reflections look."
+        - "None of the three works alone. The game asks the operating system and the hardware for things through libraries (pieces of system software) and a graphics API, the language the game uses to talk to the GPU."
+    - id: "why-it-does-not-run"
+      h: "2. Why an Xbox game does not just run on your PC"
+      figure: stack
+      paras:
+        - "The good news: inside, the Xbox Series has an AMD processor of the x86-64 family, the same as your PC. The game's brain literally speaks the same language as your CPU. That is why nobody needs to emulate the processor, and why this moves much faster than with older consoles."
+        - "The bad news: everything around the brain is different."
+      bullets:
+        - "**Another operating system.** The console runs a cut-down, heavily modified Windows with its own libraries (Microsoft's Xbox kit is called the GDK). The game calls functions that do not exist on your PC."
+        - "**Another graphics API.** Xbox uses Direct3D 12.X, a console version of DirectX 12 that lets the game touch the GPU much more directly. On PC it has to be translated into regular DirectX 12 or Vulkan."
+        - "**Shaders already compiled.** On PC, games ship their shaders in an intermediate format and your driver finishes compiling them for your card (that is why you see \"compiling shaders\" screens). On console they arrive already turned into machine code for its exact GPU, an AMD RDNA2. Your PC's NVIDIA or AMD card cannot read that code as it is."
+        - "**Shared memory.** The console has 16 GB shared by the CPU and GPU. Your PC has RAM on one side and the graphics card's VRAM on the other, joined by a much slower bus. If the game leaves GPU data in the wrong place, everything crawls."
+        - "**Files its own way.** Textures are stored with a pixel order (\"tiling\") designed for that GPU and compressed with its own format (BCPack), which the console unpacks with dedicated hardware. On PC it has to be done in software."
+      callout: "In short: CPU code runs almost for free. All the work is in pretending to be an Xbox: its services, its graphics API, its memory and, above all, its shaders."
+    - id: "three-roads"
+      h: "3. The three roads: emulator, compatibility layer and recompilation"
+      figure: routes
+      paras:
+        - "Three words come up whenever you read about these projects. They are not synonyms."
+      cards:
+        - title: "Emulator"
+          tag: "slow but universal"
+          text: "A program that imitates the console's whole hardware, instruction by instruction, like PCSX2 for PS2 or Dolphin for GameCube. It works with any game, but imitating a processor costs a huge amount of power. With the Xbox Series there is no point emulating the CPU, because your PC already speaks its language; that is why almost nobody takes this road, even if some projects use the word \"emulator\" out of habit."
+        - title: "Compatibility layer"
+          tag: "the road almost everyone takes"
+          text: "Like Wine or Proton, which let you play Windows games on Linux and Steam Deck. The game's code runs as it is on your CPU, and the layer pretends to be the console's system: when the game asks \"give me GPU memory\" or \"draw this\", the layer answers with the PC equivalent. VIctory, XCL, OpenScarlett, PercyScarlett and TuxBox take this road."
+        - title: "Static recompilation"
+          tag: "translate ahead of time"
+          text: "Translating the whole program into a new program before running it, as N64Recomp and UnleashedRecomp did with Nintendo 64 and Xbox 360 games. The result can run very smoothly, but it requires understanding every corner of the executable. With a processor that is already compatible, several projects that started as a \"recomp\" (G6Recomp, for example) have switched to the layer approach."
+      after: "And then there is the fourth road, the only truly playable one in the long run: the official port, made by Rockstar with the source code. That one depends on none of this."
+    - id: "shaders"
+      h: "4. Shaders: the big wall"
+      figure: shaders
+      paras:
+        - "If you follow the news you will have seen figures like \"26,503 shaders\". That is the game's pack of GPU programs, and each one comes as machine code for the console's GPU. For your card to run it, the projects have to read that code instruction by instruction, understand what it does and rewrite it in a PC format (DXIL for DirectX 12 or SPIR-V for Vulkan). Then your driver compiles it like any other game."
+        - "Translating is not enough: it has to be translated right. A badly translated lighting shader does not throw an error, it just paints black. That is why so many projects reach the world and see it dark or a single colour: the geometry is there, but the lighting passes do not come out right yet."
+      bullets:
+        - "**wave64 versus wave32.** The console's GPU works in groups of 64 threads. NVIDIA cards use groups of 32. Many of the game's shaders assume 64, so on NVIDIA it has to be simulated with two cooperating halves. On PC AMD cards it works natively."
+        - "**Mesh shaders.** The world is drawn with a modern technique called mesh shaders. You need a fairly recent graphics card (NVIDIA RTX 20 series or newer; AMD RDNA2 or newer)."
+        - "**Compile time.** Some world shaders are giants and the driver takes minutes to compile them. Meanwhile the game thinks it has hung and closes itself, or Windows resets the driver."
+    - id: "performance"
+      h: "5. Why \"loads the world\" does not mean \"playable\""
+      paras:
+        - "Seeing a menu is a big milestone, but it is the easy part: a 2D image and a few shaders. The open world is another league: thousands of objects, constant streaming from disk, lights, shadows and reflections, all 30 times a second."
+        - "Today the most advanced projects take between half a second and several minutes to paint a single world frame. To play you need about 33 milliseconds per frame (30 fps). In other words, it has to get between 15 and thousands of times faster, and that optimisation is the longest stretch."
+      bullets:
+        - "**TDR.** If the GPU takes more than 2 seconds on a task, Windows thinks it has hung and resets the driver: a moment of black screen and the game closes."
+        - "**The game's own watchdog.** GTA VI checks that its main thread shows signs of life. If half a minute goes by without one (for example, while compiling shaders), it closes itself."
+        - "**Memory.** If the data the GPU reads sits in the PC's RAM instead of VRAM, every access crosses the bus and everything runs hundreds of times slower."
+    - id: "phases"
+      h: "6. What each phase of our tracker means"
+      figure: phases
+      paras:
+        - "We split the road into seven phases named after a heist, because that is what it looks like: prepare, get in, look around, move inside and walk out with the loot. Each has a fixed, documented percentage, and a phase reached in part counts half-way."
+      phases: true
+      after: "We set the phase by hand from what each project publishes and what independent trackers reproduce. If a README promises more than we can confirm, we flag it as a pending claim."
+    - id: "legal"
+      h: "7. Is it legal? Can I try it?"
+      paras:
+        - "The open-source projects contain nothing from the game: only their own code. All of them ask you to supply your own copy, and the serious ones refuse to explain how to get it. The problem is that, today, the only way to have the Xbox executable on a PC is a leak: someone published it without permission on 23 November. Using it is piracy, and we do not and will not link it."
+        - "Besides, none is playable yet. To try anything you have to build the project from source, have a modern graphics card and a lot of patience to see, at most, some menus. It is not a way to play, it is an experiment."
+      callout: "Above all: none of these projects downloads as \"GTA 6 PC ready to play\". If you see that, it is a scam. Read our fake downloads guide."
+      callout_link: fake
+    - id: "official-port"
+      h: "8. What about the official port?"
+      paras:
+        - "Rockstar has not announced a PC version. Historically, its big games have reached PC some time after consoles: GTA V took a year and a half (September 2013 on consoles, April 2015 on PC) and Red Dead Redemption 2 about a year (October 2018 and November 2019)."
+        - "An official port is made with the original source code, so it has none of the walls in this guide. If it arrives, it will be the right way to play on PC. The community projects are, above all, an impressive technical demonstration and a way to learn how a modern console works."
+  fig:
+    anatomy: {exe: "Executable", exe_sub: "logic · CPU", assets: "Assets", assets_sub: "models · textures · audio", shaders: "Shaders", shaders_sub: "GPU programs", libs: "System libraries + graphics API", hw: "Hardware: CPU · GPU · memory", alt: "Diagram: a game has an executable, assets and shaders, which talk to the hardware through the system libraries."}
+    stack: {xbox: "Xbox Series", pc: "Your PC", code: "Game code (x86-64)", same: "same: runs as it is", os_x: "GDK / kernelx system", os_p: "Windows", api_x: "Direct3D 12.X", api_p: "Direct3D 12 / Vulkan", sh_x: "Compiled RDNA2 shaders", sh_p: "DXIL / SPIR-V", mem_x: "16 GB shared", mem_p: "Separate RAM + VRAM", translate: "the project translates", alt: "Layer-by-layer comparison of Xbox Series and PC: the game code is the same; system, graphics API, shaders and memory have to be translated."}
+    routes: {emu: "Emulator", emu_sub: "imitates the whole hardware", layer: "Compatibility layer", layer_sub: "native code + fake console", recomp: "Recompilation", recomp_sub: "translates everything first", slow: "slow", fast: "fast", most: "the road almost everyone takes", game: "Game", pc: "PC", alt: "Three roads to bring a console game to PC: emulator, compatibility layer and recompilation."}
+    shaders: {s1: "Console shader", s1b: "RDNA2 code", s2: "Read", s2b: "instruction by instruction", s3: "Rewrite", s3b: "HLSL / IR", s4: "Compile", s4b: "DXIL / SPIR-V", s5: "Your GPU", s5b: "NVIDIA · AMD · Intel", alt: "A shader's translation chain: console code, reading, rewriting, compiling and running on your GPU."}
+  cta_title: "Now you get it. How is the race going?"
+  cta_text: "See where each project stands, updated every hour."
+  cta_btn: "See the projects"

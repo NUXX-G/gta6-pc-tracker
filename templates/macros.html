@@ -118,3 +118,57 @@
   {{ ext_warn(T) }}
 </li>
 {%- endmacro %}
+
+{% macro origin_tag(m) -%}
+<span class="otag otag--{{ m.origin }}">{{ m.origin_label }}</span>
+{%- endmacro %}
+
+{# Media card: nothing external loads until the viewer clicks (data-src / data-embed are read by site.js). #}
+{% macro media_card(e, T) -%}
+<li class="mcard card" data-ts="{{ e.created or '' }}" data-origin="{{ e.origin }}">
+  <div class="mcard__frame{{ ' has-preview' if e.thumb or e.embed }}">
+    {% if e.embed %}
+    <button type="button" class="mcard__reveal" data-embed="{{ e.embed }}" data-src="{{ e.thumb or '' }}" aria-label="{{ T.media.play }}: {{ e.title }}">
+      <span class="mcard__play" aria-hidden="true">▶</span><span>{{ T.media.play }}</span>
+    </button>
+    {% elif e.thumb %}
+    <button type="button" class="mcard__reveal" data-src="{{ e.thumb }}" aria-label="{{ T.media.reveal }}: {{ e.title }}">
+      <span class="mcard__play" aria-hidden="true">{{ '▶' if e.kind == 'video' else '◉' }}</span><span>{{ T.media.reveal }}</span>
+    </button>
+    {% else %}
+    <span class="mcard__none"><span class="mcard__play" aria-hidden="true">{{ '▶' if e.kind == 'video' else '◉' }}</span>{{ T.media.no_preview }}</span>
+    {% endif %}
+  </div>
+  <div class="mcard__body">
+    <p class="mcard__tags">{{ origin_tag(e) }} {{ cred(e.credibility, T) }}</p>
+    {{ ext(e.url, e.title, T, 'mcard__title') }}
+    <span class="entry__meta">{{ e.source_label }}{% if e.created %} · {{ time(e.created, e.rel) }}{% endif %}</span>
+    {% if e.thumb_host %}<small class="ext-warn">{{ fmt(T.media.note, host=e.thumb_host) }}</small>{% else %}{{ ext_warn(T) }}{% endif %}
+  </div>
+</li>
+{%- endmacro %}
+
+{% macro press_card(n, T) -%}
+<li class="press card" data-ts="{{ n.created }}">
+  <p class="press__outlet"><span class="press__name">{{ n.outlet }}</span>{% if n.lang %} <span class="tag">{{ n.lang }}</span>{% endif %}</p>
+  <a class="press__title" href="{{ n.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ n.headline }}<span class="sr-only"> ({{ T.external }})</span></a>
+  <p class="entry__meta">{{ time(n.created, n.rel) }} · {{ cred(n.credibility, T) }}{% if n.project %} · <span class="chip chip--sm">{{ n.project }}</span>{% endif %}</p>
+</li>
+{%- endmacro %}
+
+{% macro curated_card(l, T) -%}
+<li class="press card press--curated">
+  <p class="press__outlet"><span class="press__name">{{ l.host }}</span> <span class="tag">{{ l.lang|upper }}</span></p>
+  <a class="press__title" href="{{ l.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ l.title }}<span class="sr-only"> ({{ T.external }})</span></a>
+  <p class="press__why">{{ l.why }}</p>
+  {% if l.date %}<p class="entry__meta">{{ l.date }}</p>{% endif %}
+</li>
+{%- endmacro %}
+
+{% macro counter(id, iso, parts, label, sub, T, link=None) -%}
+<div class="counter card" data-since="{{ iso }}" id="{{ id }}">
+  <p class="counter__label">{{ label }}</p>
+  <p class="counter__value" aria-live="off"><span data-u="d">{{ parts.d }}</span><small>{{ T.counters.d }}</small> <span data-u="h">{{ parts.h }}</span><small>{{ T.counters.h }}</small> <span data-u="m">{{ parts.m }}</span><small>{{ T.counters.m }}</small> <span data-u="s" class="counter__s">00</span><small class="counter__s">{{ T.counters.s }}</small></p>
+  <p class="counter__sub">{{ sub }}{% if link %} <a class="evidence" href="{{ link }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.counters.source }} ↗</a>{% endif %}</p>
+</div>
+{%- endmacro %}

@@ -14,6 +14,14 @@
 
 Tested on one machine: Windows 11, AMD RX 6700 XT. Also measured on an NVIDIA RTX 4090.
 
+![Menus at 30 fps](docs/img/menus.png)
+![build](https://img.shields.io/badge/build-passing-green)
+<img src="assets/logo.png" alt="logo" width="200">
+
+https://github.com/user-attachments/assets/0123abcd-4567-89ef-0123-456789abcdef
+
+Stream recap: https://www.youtube.com/watch?v=AbCdEfGhIjK
+
 ## License
 GPL
 

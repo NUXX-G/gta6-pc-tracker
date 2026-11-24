@@ -19,16 +19,23 @@ Una web estática que responde, cada hora, a: *¿Se puede jugar GTA 6 en PC? ¿Q
 - Actualización **cada hora**, 100 % gratuita: solo GitHub Actions + GitHub Pages. Sin servidores, sin claves, sin IA en ejecución.
 - Ficha profunda por proyecto con lo que pinta bien y lo que pinta mal, **cada punto con su evidencia enlazada**.
 - Credibilidad por fuente, detección de clones y malware, compatibilidad de GPU y **cero spoilers**.
+- **20 proyectos** seguidos (incluida la build privada CGBJ), descubiertos también a partir de otros trackers (GTA VI PC Race y PortWatch VI), cada uno con su artículo, su enlace al repo y la etapa que le da cada tracker.
+- **Galería de imágenes y vídeos** de todas las fuentes (READMEs de los proyectos, trackers, YouTube, Mastodon, Lemmy, Reddit), etiquetados por origen y credibilidad. Nada externo se carga hasta que el visitante pulsa.
+- **Prensa**: titulares de medios en ES/EN que pasan los filtros legal y de spoilers, más selección propia.
+- **Contadores en directo**: tiempo desde el lanzamiento en consolas y desde la publicación del ejecutable de Xbox (sin enlazarlo).
+- **Guías**: "Cómo funciona" (emulador vs. capa de compatibilidad vs. recompilación, shaders, fases) y "Descargas falsas" (cómo reconocer estafas y qué hacer si has picado).
 
 ### Cómo funciona
 `scripts/run_all.py` (cron `17 * * * *`):
-1. **Recolecta**: API de GitHub (`collect_github.py`), registro DMCA público (`collect_dmca.py`), radar de repos nuevos (`collect_discovery.py`), Reddit JSON/RSS (`collect_reddit.py`), Hacker News, Bluesky, Mastodon y Lemmy (`collect_social.py`), Google News + RSS de medios (`collect_news.py`) y trackers externos (`collect_trackers.py`). Si una fuente falla, el resto sigue y la web lo indica.
+1. **Recolecta**: API de GitHub (`collect_github.py`), imágenes y vídeos de READMEs, trackers y YouTube sin clave (`collect_media.py`), registro DMCA público (`collect_dmca.py`), radar de repos nuevos (`collect_discovery.py`), Reddit JSON/RSS (`collect_reddit.py`), Hacker News, Bluesky, Mastodon y Lemmy (`collect_social.py`), Google News + RSS de medios (`collect_news.py`) y trackers externos (`collect_trackers.py`). Si una fuente falla, el resto sigue y la web lo indica.
 2. **Filtra**: `legal_filter.py` (allowlist de dominios + palabras/extensiones prohibidas; descarta el elemento entero) y `spoiler_filter.py`.
 3. **Clasifica**: `credibility.py`, `clone_detector.py`.
 4. **Analiza**: `analyze.py` (fases, %, áreas de commits, señales, GPU, estimaciones, diffs e historial).
 5. **Genera**: `summarize.py` (plantillas ES/EN, sin IA), `build_site.py` (Jinja2 con autoescape) y `make_og_image.py`.
 
-Datos en `data/`: `latest.json`, `candidates.json`, `sources_health.json`, `events.json` y `history/` (7 días horarios + resumen diario + cambios de fase). Los textos de terceros **nunca** se guardan ni se publican: solo metadatos, números y títulos generados por plantilla.
+Páginas: inicio, ficha por proyecto, `como-funciona/`, `descargas-falsas/`, `galeria/`, `noticias/` y `estado/` (y sus equivalentes en inglés). Los textos largos están en `content/*.yml`.
+
+Datos en `data/`: `latest.json` (incluye `media_items`, `press`, `external` y `milestones`), `candidates.json`, `sources_health.json`, `events.json` y `history/` (7 días horarios + resumen diario + cambios de fase). Los textos de terceros de foros y redes **nunca** se guardan ni se publican: solo metadatos, números y títulos generados por plantilla. Excepción: los **titulares de prensa** (solo medios de la allowlist, solo si hablan de PC/ports y pasan los filtros legal, de spoilers y de exclusión), configurable con `news.show_press_headlines`.
 
 Modo sin red: `python scripts/run_all.py --offline` (usa `tests/fixtures/`).
 
@@ -55,19 +62,20 @@ GitHub REST (con el `GITHUB_TOKEN` automático), `github/dmca`, búsqueda de Git
 Una fase **parcial** cuenta a medio camino entre la anterior y esa. La fase se detecta por palabras clave y por la tabla de estado del README, pero **la fase manual de `projects.yml` manda**. Si el README apunta más alto que la fase confirmada, sale el aviso *"Afirmación del propio proyecto, pendiente de reproducción"* hasta que un tracker lo respalde. Las estimaciones son reglas con rangos amplios, siempre etiquetadas como orientativas.
 
 ### Cómo editar
-- **Proyectos**: `config/projects.yml` (nombre, slug, repo, textos ES/EN, fase manual, puntos fuertes/débiles con evidencia). Los candidatos del radar nunca entran solos: se promocionan añadiéndolos aquí.
+- **Proyectos**: `config/projects.yml` (nombre, slug, repo —`null` para builds privadas, con `link` a la fuente—, `kind`, `based_on`, artículo `article_es/article_en`, textos ES/EN, fase manual, puntos fuertes/débiles con evidencia). La tabla "Lo que siguen otros trackers" muestra qué proyectos de los trackers aún no están en esta lista.
+- **Contadores**: `config/settings.yml → milestones`. **Galería**: `config/settings.yml → media`. Los candidatos del radar nunca entran solos: se promocionan añadiéndolos aquí.
 - **Enlaces curados**: `config/curated_links.yml` (solo dominios de `config/allowlist.yml`, títulos neutros escritos a mano).
 - **Spoilers**: `config/spoiler_terms.yml`. **Lista negra**: `config/blocklist.yml`. **Allowlist**: `config/allowlist.yml`.
 - **Base path**: `config/settings.yml → site.base_path` (único sitio).
 
 ### Política de spoilers
-La web no contiene nada del contenido del juego. Nunca se muestran títulos de terceros: cada elemento lleva un título generado ("Vídeo de progreso · VIctory · r/pcgaming") y el aviso *"Enlace externo: puede contener spoilers"*. Se descartan los posts marcados como spoiler y los que contienen términos de `spoiler_terms.yml`. Miniaturas desactivadas. Un test garantiza que ningún HTML generado contiene esos términos.
+La web no contiene nada del contenido del juego. Las imágenes y vídeos externos están ocultos tras un botón ("Mostrar vista previa") con aviso de spoilers; la CSP solo permite cargar previsualizaciones de hosts concretos. Nunca se muestran títulos de foros o redes: cada elemento lleva un título generado ("Vídeo de progreso · VIctory · r/pcgaming") y el aviso *"Enlace externo: puede contener spoilers"*. Se descartan los posts marcados como spoiler y los que contienen términos de `spoiler_terms.yml`. Miniaturas desactivadas. Un test garantiza que ningún HTML generado contiene esos términos.
 
 ### Política de retirada
 Abre un issue con la plantilla **"Takedown request"**. **Retiramos primero y revisamos después.** Ningún contenido de issues o PRs de terceros se publica automáticamente.
 
 ### Aviso legal
-Proyecto informativo y no comercial, sin relación con Rockstar Games, Take-Two Interactive ni Microsoft. No proporciona ni enlaza el juego, archivos filtrados, torrents, ejecutables, claves ni hashes. Sin marcas ni assets de Rockstar/Take-Two. Sin cookies, analítica ni peticiones a terceros.
+Proyecto informativo y no comercial, sin relación con Rockstar Games, Take-Two Interactive ni Microsoft. No proporciona ni enlaza el juego, archivos filtrados, torrents, ejecutables, claves ni hashes. Sin marcas ni assets de Rockstar/Take-Two (las ilustraciones son SVG propios). Sin cookies ni analítica; solo se hacen peticiones a terceros si el visitante pulsa para ver una vista previa.
 
 ---
 
@@ -77,7 +85,7 @@ Proyecto informativo y no comercial, sin relación con Rockstar Games, Take-Two 
 A static site that answers, every hour: *Can you play GTA 6 on PC? Which projects exist, what does each do, how far along are they, what looks good, what looks bad, how far is left and where can I read more?*
 
 ### What makes it different
-Truly bilingual ES/EN, hourly updates, a deep sheet per project with good and bad signs (each with linked evidence), per-source credibility, clone/malware detection, GPU compatibility, zero spoilers, and a serious design with personality. 100 % free: GitHub Actions + Pages only, no servers, no API keys, no runtime AI.
+Truly bilingual ES/EN, hourly updates, a deep sheet and article per project (20 tracked, including the private CGBJ build, several found through GTA VI PC Race and PortWatch VI), per-source credibility, clone/malware detection, GPU compatibility, zero spoilers, a media gallery labelled by origin and credibility (click-to-load), press headlines, live counters (time since the console launch and since the Xbox executable surfaced), a "How it works" guide and a "Fake downloads" warning page. Mobile-first layout. 100 % free: GitHub Actions + Pages only, no servers, no API keys, no runtime AI.
 
 ### How it works
 See the Spanish section above for the pipeline: collect → legal & spoiler filters → credibility & clone detection → analysis → template-based ES/EN texts → static build. Offline mode: `python scripts/run_all.py --offline`.

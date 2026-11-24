@@ -170,8 +170,16 @@ def project_view(T: dict[str, Any], lang: str, p: dict[str, Any], now: datetime)
             }
         )
     gh = p["gh"]
+    all_cfg = {x["slug"]: x for x in config("projects")["projects"]}
+    kind = cfg.get("kind", "layer")
     return {
         **p,
+        "private": not cfg.get("repo"),
+        "kind": kind,
+        "kind_label": T["approach"].get(kind, kind),
+        "based_on_view": [{"slug": b, "name": all_cfg[b]["name"]} for b in cfg.get("based_on", []) if b in all_cfg],
+        "article": cfg.get(f"article_{lang}", []),
+        "link": cfg.get("link"),
         "goal": cfg[f"goal_{lang}"],
         "approach": cfg[f"approach_{lang}"],
         "technical": cfg[f"technical_{lang}"],

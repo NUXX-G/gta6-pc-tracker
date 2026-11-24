@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="wrap sheet">
+  <nav class="crumbs" aria-label="breadcrumb"><a href="{{ site.base }}{{ path_for(lang, 'home') }}">{{ T.crumbs.home }}</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ T.nav.news }}</span></nav>
+  <header class="longform__head">
+    <h1 class="h-display h-display--long">{{ T.meta.news_title }}</h1>
+    <p class="lead">{{ T.sections.press_lead }}</p>
+  </header>
+  <section class="section" aria-labelledby="n-latest">
+    <h2 id="n-latest" class="h-section">{{ T.sections.press }}</h2>
+    {% if press %}
+    <ul class="pressgrid">{% for n in press %}{{ m.press_card(n, T) }}{% endfor %}</ul>
+    {% else %}<p class="empty">{{ T.sections.press_empty }}</p>{% endif %}
+  </section>
+  {% set picks = deeper.get('press', []) %}
+  {% if picks %}
+  <section class="section" aria-labelledby="n-picks">
+    <h2 id="n-picks" class="h-section">{{ T.sections.press_curated }}</h2>
+    <ul class="pressgrid">{% for l in picks %}{{ m.curated_card(l, T) }}{% endfor %}</ul>
+  </section>
+  {% endif %}
+  <section class="section" aria-labelledby="n-updates">
+    <h2 id="n-updates" class="h-section">{{ T.sections.news }}</h2>
+    <p class="section__lead">{{ T.sections.news_lead }}</p>
+    {{ m.entry_list(entries[:40], T, 15, T.sections.news_empty) }}
+  </section>
+</article>
+{% endblock %}

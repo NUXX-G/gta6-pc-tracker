@@ -1,389 +1,491 @@
-lang_name: "Español"
-locale: "es"
+lang_name: Español
+locale: es
 meta:
-  site_name: "GTA VI PC Tracker"
-  title: "¿Se puede jugar GTA 6 en PC? Estado de los ports en tiempo real"
-  description: "Seguimiento en directo y sin spoilers de los proyectos open source que intentan ejecutar en PC la versión de Xbox Series de GTA VI: fases, avance, señales, compatibilidad de GPU y fuentes."
-  og_alt: "GTA VI PC Tracker: estado en directo de los ports no oficiales"
-  project_title: "{name}: estado del port no oficial para PC"
-  project_description: "{name}: qué quiere conseguir, cómo lo hace, en qué está, su avance, lo que pinta bien y mal, compatibilidad de GPU y cuánto le falta."
-  status_title: "Estado del sistema: fuentes de datos"
-  status_description: "Cuándo respondió bien cada fuente por última vez, cuándo falló y cuántos elementos devolvió."
+  site_name: GTA VI PC Tracker
+  title: ¿Se puede jugar GTA 6 en PC? Estado de los ports en directo
+  description: '¿Hay GTA 6 para PC? Todavía no. Seguimiento en directo y sin spoilers de los 20 proyectos que intentan ejecutar en PC la versión de Xbox Series de GTA VI (VIctory, XCL, CGBJ…): fases, avance, GPU, noticias y avisos de descargas falsas.'
+  og_alt: 'GTA VI PC Tracker: estado en directo de los ports no oficiales'
+  project_title: '{name} · GTA 6 en PC: estado, avance y cómo funciona'
+  project_description: '{name}: qué es, cómo intenta ejecutar GTA VI en PC, en qué fase está ({phase}), lo que pinta bien y mal, GPU compatibles y enlace a su repositorio.'
+  status_title: 'Estado del sistema: fuentes de datos'
+  status_description: Cuándo respondió bien cada fuente por última vez, cuándo falló y cuántos elementos devolvió.
+  media_title: Imágenes y vídeos de los ports de GTA 6 a PC
+  media_description: Capturas y vídeos de progreso de los proyectos para jugar GTA VI en PC, catalogados por origen y fiabilidad. Nada se carga hasta que pulsas.
+  news_title: 'Noticias de GTA 6 en PC: prensa y medios'
+  news_description: Lo que publican los medios sobre GTA VI en PC y los ports no oficiales, filtrado sin spoilers y con su nivel de credibilidad.
+  keywords_line: GTA 6 PC · GTA VI PC · port · emulador · VIctory · XCL
 nav:
-  skip: "Saltar al contenido"
-  index: "Índice"
-  status: "Estado"
-  projects: "Proyectos"
-  news: "Novedades"
-  media: "Media"
-  eta: "Cuánto falta"
-  radar: "Radar"
-  deeper: "Profundizar"
-  faq: "FAQ"
-  history: "Historial"
-  alerts: "Alertas"
-  system: "Estado del sistema"
-  home: "Inicio"
-  theme: "Tema"
-  theme_day: "Modo día"
-  theme_night: "Modo noche"
-  lang_switch: "Read in English"
-  lang_short_other: "EN"
+  skip: Saltar al contenido
+  index: Índice
+  status: Estado
+  projects: Proyectos
+  news: Noticias
+  media: Media
+  eta: Cuánto falta
+  radar: Radar
+  deeper: Profundizar
+  faq: FAQ
+  history: Historial
+  alerts: Alertas
+  system: Estado del sistema
+  home: Inicio
+  theme: Tema
+  theme_day: Modo día
+  theme_night: Modo noche
+  lang_switch: Read in English
+  lang_short_other: EN
+  updates: Novedades
+  how: Cómo funciona
+  fake: Descargas falsas
+  more: Más
+  trackers: Otros trackers
+  press: Prensa
+  media_page: Galería
 header:
-  ticker: "Última hora"
-  ticker_empty: "Hora tranquila. Nada nuevo en las últimas 24 h."
-  new_since_one: "1 cosa nueva desde tu última visita"
-  new_since_many: "{n} cosas nuevas desde tu última visita"
-  new_badge: "NUEVO"
+  ticker: Última hora
+  ticker_empty: Hora tranquila. Nada nuevo en las últimas 24 h.
+  new_since_one: 1 cosa nueva desde tu última visita
+  new_since_many: '{n} cosas nuevas desde tu última visita'
+  new_badge: NUEVO
 hero:
-  question: "¿Se puede jugar GTA 6 en PC hoy?"
-  answer_no: "Todavía no"
-  answer_partial: "Parcialmente"
-  answer_yes: "Sí"
-  tagline_no: "¿Ya se puede jugar en PC? Todavía no, colega. Nadie ha pasado de la fase {phase} de 7."
-  tagline_partial: "Va cogiendo forma: algo funciona, pero no lo bastante como para llamarlo jugable."
-  tagline_yes: "Un proyecto informa de partidas estables. Mira la evidencia antes de creerte a nadie."
-  leader: "Proyecto líder"
-  phase: "Fase"
-  progress: "Avance"
-  updated: "Actualizado"
-  updated_utc: "UTC"
-  local_time: "tu hora"
-  scam: "Ojo: si alguien te vende GTA 6 para PC, te está timando."
+  question: ¿Se puede jugar GTA 6 en PC hoy?
+  answer_no: Todavía no
+  answer_partial: Parcialmente
+  answer_yes: Sí
+  tagline_no: ¿Ya se puede jugar en PC? Todavía no, colega. Nadie ha pasado de la fase {phase} de 7.
+  tagline_partial: 'Va cogiendo forma: algo funciona, pero no lo bastante como para llamarlo jugable.'
+  tagline_yes: Un proyecto informa de partidas estables. Mira la evidencia antes de creerte a nadie.
+  leader: Proyecto líder
+  phase: Fase
+  progress: Avance
+  updated: Actualizado
+  updated_utc: UTC
+  local_time: tu hora
+  scam: 'Ojo: si alguien te vende GTA 6 para PC, te está timando.'
 cards:
-  leader: "Líder"
-  max_phase: "Fase máxima"
-  changes: "Cambios"
-  last_hour: "última hora"
-  last_day: "24 h"
-  alerts: "Alertas activas"
-  alerts_none: "ninguna"
+  leader: Líder
+  max_phase: Fase máxima
+  changes: Cambios
+  last_hour: última hora
+  last_day: 24 h
+  alerts: Alertas activas
+  alerts_none: ninguna
 phases:
-  label: "Fase {n}/7"
-  partial: "parcial"
-  partial_long: "alcanzada en parte"
+  label: Fase {n}/7
+  partial: parcial
+  partial_long: alcanzada en parte
   heist:
-    1: "Reconocimiento"
-    2: "Entrar"
-    3: "Primer vistazo"
-    4: "Menús"
-    5: "Dentro del mapa"
-    6: "Luces encendidas"
-    7: "Golpe completado"
+    1: Reconocimiento
+    2: Entrar
+    3: Primer vistazo
+    4: Menús
+    5: Dentro del mapa
+    6: Luces encendidas
+    7: Golpe completado
   tech:
-    1: "shaders y assets preparados"
-    2: "el exe arranca"
-    3: "primer frame en pantalla"
-    4: "los menús funcionan"
-    5: "carga el mundo"
-    6: "mundo renderizado e iluminado"
-    7: "jugable a fps reales"
+    1: shaders y assets preparados
+    2: el exe arranca
+    3: primer frame en pantalla
+    4: los menús funcionan
+    5: carga el mundo
+    6: mundo renderizado e iluminado
+    7: jugable a fps reales
 states:
-  active: "activo"
-  stale: "parado > 48 h"
-  missing: "desaparecido"
-  dmca: "DMCA"
-  unknown: "sin datos"
+  active: activo
+  stale: parado > 48 h
+  missing: desaparecido
+  dmca: DMCA
+  unknown: sin datos
+  private: privado
 project_card:
-  goal: "Qué quieren"
-  now: "En qué están ahora"
-  best: "Lo mejor"
-  worst: "Lo peor"
-  gpus: "GPU probadas"
-  gpus_none: "sin datos de GPU"
-  full: "Ver ficha completa"
-  of_total: "del camino"
+  goal: Qué quieren
+  now: En qué están ahora
+  best: Lo mejor
+  worst: Lo peor
+  gpus: GPU probadas
+  gpus_none: sin datos de GPU
+  full: Ver ficha completa
+  of_total: del camino
+  repo: Repo
+  details: Más datos
+  private: Sin código público
 sections:
-  status_lead: "La respuesta, de un vistazo."
-  projects: "Proyectos"
-  projects_lead: "Ordenados por avance. Cada porcentaje sale de reglas documentadas, no del hype."
-  news: "Novedades"
-  news_lead: "Lo que se ha movido, agrupado por proyecto y con su nivel de credibilidad."
-  tab_hour: "Última hora"
-  tab_day: "24 h"
-  news_empty: "Nada se ha movido en esta ventana."
-  more: "Ver más"
-  media: "Imágenes y vídeos"
-  media_lead: "Clips y capturas de progreso compartidos por desarrolladores y comunidad. Solo los enlazamos; los títulos los escribimos nosotros."
-  media_empty: "Ningún contenido de progreso ha pasado los filtros en esta actualización."
-  eta: "¿Cuánto falta?"
-  eta_lead: "Hitos y estimaciones orientativas. Son rangos amplios a propósito: nadie lo sabe."
-  radar: "Nuevos en el radar"
-  radar_lead: "Repos encontrados automáticamente. Sin revisar: nunca entran solos en el ranking."
-  radar_empty: "Ningún candidato nuevo esta hora."
-  deeper: "Para profundizar"
-  deeper_lead: "Prensa, trackers, hilos y documentación que merecen la pena."
-  weekly: "Hilos destacados de la semana"
-  weekly_empty: "Ningún hilo ha superado el umbral esta semana (o la fuente no responde)."
-  alerts: "Alertas"
-  alerts_lead: "Retiradas, repos desaparecidos, clones sospechosos y bulos desmontados."
-  faq: "Preguntas frecuentes"
-  glossary: "Mini glosario"
-  history: "Historial"
-  history_lead: "Cambios de fase a lo largo del tiempo."
-  history_empty: "Todavía no hay cambios de fase registrados."
-  older: "Entradas anteriores"
-  system: "Estado de las fuentes"
+  status_lead: La respuesta, de un vistazo.
+  projects: Proyectos
+  projects_lead: Ordenados por avance. Cada porcentaje sale de reglas documentadas, no del hype.
+  news: Novedades
+  news_lead: Lo que se ha movido, agrupado por proyecto y con su nivel de credibilidad.
+  tab_hour: Última hora
+  tab_day: 24 h
+  news_empty: Nada se ha movido en esta ventana.
+  more: Ver más
+  media: Imágenes y vídeos
+  media_lead: Capturas y vídeos de progreso de cualquier origen, etiquetados por fuente y fiabilidad. Las vistas previas solo se cargan si pulsas.
+  media_empty: Ningún contenido ha pasado los filtros en esta actualización.
+  eta: ¿Cuánto falta?
+  eta_lead: 'Hitos y estimaciones orientativas. Son rangos amplios a propósito: nadie lo sabe.'
+  radar: Nuevos en el radar
+  radar_lead: 'Repos encontrados automáticamente. Sin revisar: nunca entran solos en el ranking.'
+  radar_empty: Ningún candidato nuevo esta hora.
+  deeper: Para profundizar
+  deeper_lead: Prensa, trackers, hilos y documentación que merecen la pena.
+  weekly: Hilos destacados de la semana
+  weekly_empty: Ningún hilo ha superado el umbral esta semana (o la fuente no responde).
+  alerts: Alertas
+  alerts_lead: Retiradas, repos desaparecidos, clones sospechosos y bulos desmontados.
+  faq: Preguntas frecuentes
+  glossary: Mini glosario
+  history: Historial
+  history_lead: Cambios de fase a lo largo del tiempo.
+  history_empty: Todavía no hay cambios de fase registrados.
+  older: Entradas anteriores
+  system: Estado de las fuentes
+  press: En los medios
+  press_lead: Lo que publican periódicos y webs especializadas. Los titulares pasan nuestros filtros legales y de spoilers; los enlaces son externos.
+  press_empty: Ningún medio ha publicado nada que pase los filtros esta semana.
+  press_all: Todas las noticias
+  press_curated: Selección de la redacción
+  media_all: Ver la galería completa
+  how_title: ¿Emulador, recomp, capa de compatibilidad?
+  how_text: Qué hace exactamente cada proyecto, por qué un juego de Xbox no arranca en PC sin más y por qué ver un menú no significa poder jugar. Explicado para jugadores.
+  how_btn: Leer la guía
+  fake_title: Ojo con las descargas falsas
+  fake_text: No existe GTA 6 para PC. Cómo reconocer las webs, vídeos y repos que roban cuentas, y qué hacer si ya has picado.
+  fake_btn: Ver cómo protegerte
+  external: Lo que siguen otros trackers
+  external_lead: Proyectos que listan GTA VI PC Race y PortWatch VI, con la etapa que les da cada uno (sobre 7). Usamos sus datos para encontrar proyectos y contrastar fases; sus textos no se copian.
+  external_empty: Los trackers externos no han respondido en esta actualización.
+  external_tracked: en nuestra lista
+  external_not: aún no en nuestra lista
+  external_private: código privado
+  external_watch: en vigilancia
+  external_stage: etapa {n}/7
+  external_blocked: '{name} bloquea las lecturas automáticas: solo lo enlazamos.'
 link_types:
-  press: "Prensa"
-  tracker: "Trackers"
-  thread: "Hilos"
-  repo: "Repos y docs"
-external: "Enlace externo: puede contener spoilers"
-external_short: "externo"
+  press: Prensa
+  tracker: Trackers
+  thread: Hilos
+  repo: Repos y docs
+external: 'Enlace externo: puede contener spoilers'
+external_short: externo
 credibility:
-  label: "Credibilidad"
-  confirmed: "Confirmado"
-  community: "Comunidad"
-  unverified: "Sin verificar"
-  "false": "Probablemente falso"
-  confirmed_desc: "Lo dice el README o un commit del propio proyecto, o lo reproduce un tracker o un segundo PC."
-  community_desc: "Medios especializados o hilos con evidencia (enlace al repo, captura del propio dev)."
-  unverified_desc: "Posts anónimos o lenguaje de rumor."
-  false_desc: "Rumor más algo técnicamente imposible según el estado conocido. No cuenta para nada."
+  label: Credibilidad
+  confirmed: Confirmado
+  community: Comunidad
+  unverified: Sin verificar
+  'false': Probablemente falso
+  confirmed_desc: Lo dice el README o un commit del propio proyecto, o lo reproduce un tracker o un segundo PC.
+  community_desc: Medios especializados o hilos con evidencia (enlace al repo, captura del propio dev).
+  unverified_desc: Posts anónimos o lenguaje de rumor.
+  false_desc: Rumor más algo técnicamente imposible según el estado conocido. No cuenta para nada.
 kinds:
-  video: "Vídeo de progreso"
-  image: "Captura de progreso"
-  progress: "Post de progreso"
-  discussion: "Debate"
-  news: "Noticia"
-  release: "Release publicada"
-  commits: "{n} commits nuevos"
-  commit_one: "1 commit nuevo"
-  readme: "README actualizado"
-  phase_up: "Sube de fase: {from} → {to}"
-  phase_down: "Baja de fase: {from} → {to}"
-  status_change: "Estado del repositorio: {status}"
-  stars: "+{n} estrellas"
-  tracker: "Actualización de tracker"
-  general: "General"
+  video: Vídeo de progreso
+  image: Captura de progreso
+  progress: Post de progreso
+  discussion: Debate
+  news: Noticia
+  release: Release publicada
+  commits: '{n} commits nuevos'
+  commit_one: 1 commit nuevo
+  readme: README actualizado
+  phase_up: 'Sube de fase: {from} → {to}'
+  phase_down: 'Baja de fase: {from} → {to}'
+  status_change: 'Estado del repositorio: {status}'
+  stars: +{n} estrellas
+  tracker: Actualización de tracker
+  general: General
 time:
-  just_now: "ahora mismo"
-  min_ago: "hace {n} min"
-  h_ago: "hace {n} h"
-  d_ago: "hace {n} d"
-  never: "nunca"
+  just_now: ahora mismo
+  min_ago: hace {n} min
+  h_ago: hace {n} h
+  d_ago: hace {n} d
+  never: nunca
 areas:
-  gpu: "GPU/gráficos"
-  shaders: "shaders"
-  audio: "audio"
-  input: "entrada"
-  loader: "loader/runtime"
-  perf: "rendimiento"
-  vendor: "compatibilidad NVIDIA/AMD"
-  docs: "docs"
-  other: "otros"
+  gpu: GPU/gráficos
+  shaders: shaders
+  audio: audio
+  input: entrada
+  loader: loader/runtime
+  perf: rendimiento
+  vendor: compatibilidad NVIDIA/AMD
+  docs: docs
+  other: otros
 summary:
-  now_active: "Últimos 7 días: {n7} commits ({n24} en 24 h), sobre todo {areas}."
-  now_quiet: "Sin commits en los últimos 7 días."
-  now_missing: "El repositorio no responde ahora mismo."
-  and: "y"
-  pending_claim: "Afirmación del propio proyecto, pendiente de reproducción"
-  pending_claim_text: "El README apunta a la fase {auto} ({name}), pero nuestro nivel confirmado es la fase {phase}. Sigue marcado hasta que un tracker o una segunda fuente lo respalde."
+  now_active: 'Últimos 7 días: {n7} commits ({n24} en 24 h), sobre todo {areas}.'
+  now_quiet: Sin commits en los últimos 7 días.
+  now_missing: El repositorio no responde ahora mismo.
+  and: y
+  pending_claim: Afirmación del propio proyecto, pendiente de reproducción
+  pending_claim_text: El README apunta a la fase {auto} ({name}), pero nuestro nivel confirmado es la fase {phase}. Sigue marcado hasta que un tracker o una segunda fuente lo respalde.
 signals:
-  good: "Lo que pinta bien"
-  bad: "Lo que pinta mal"
-  none_good: "Ninguna señal positiva detectada esta hora."
-  none_bad: "Ninguna señal negativa detectada esta hora."
-  evidence: "evidencia"
-  manual: "Según el README"
-  activity_up: "Actividad por encima de su ritmo: {n24} commits en 24 h frente a {avg}/día de media."
-  activity_down: "Actividad muy por debajo de su ritmo: {n24} commits en 24 h frente a {avg}/día de media."
-  stale: "Sin commits desde hace {h} horas."
-  rows_up: "Mejora la tabla de estado del README: {rows}."
-  rows_down: "Empeora la tabla de estado del README: {rows}."
-  stars_up: "+{n} estrellas en 24 h."
-  contributors_up: "+{n} contribuidores en 24 h."
-  crash_issues: "{n} issues abiertos hablan de cuelgues, crashes o problemas de GPU."
-  tracker_confirms: "Un tracker externo ({tracker}) lo sitúa en la fase {phase}."
-  missing: "El repositorio devuelve HTTP {code}."
-  dmca: "Un aviso DMCA lo menciona."
-  binaries: "Una release incluye binarios: cuidado."
+  good: Lo que pinta bien
+  bad: Lo que pinta mal
+  none_good: Ninguna señal positiva detectada esta hora.
+  none_bad: Ninguna señal negativa detectada esta hora.
+  evidence: evidencia
+  manual: Según el README
+  activity_up: 'Actividad por encima de su ritmo: {n24} commits en 24 h frente a {avg}/día de media.'
+  activity_down: 'Actividad muy por debajo de su ritmo: {n24} commits en 24 h frente a {avg}/día de media.'
+  stale: Sin commits desde hace {h} horas.
+  rows_up: 'Mejora la tabla de estado del README: {rows}.'
+  rows_down: 'Empeora la tabla de estado del README: {rows}.'
+  stars_up: +{n} estrellas en 24 h.
+  contributors_up: +{n} contribuidores en 24 h.
+  crash_issues: '{n} issues abiertos hablan de cuelgues, crashes o problemas de GPU.'
+  tracker_confirms: Un tracker externo ({tracker}) lo sitúa en la fase {phase}.
+  missing: El repositorio devuelve HTTP {code}.
+  dmca: Un aviso DMCA lo menciona.
+  binaries: 'Una release incluye binarios: cuidado.'
+  private: 'Código privado: nadie de fuera puede reproducir ni auditar el resultado.'
 gpu:
-  title: "Compatibilidad de GPU"
-  vendor: "Fabricante"
-  status: "Estado"
-  models: "Modelos mencionados"
-  ok: "probado OK"
-  issues: "problemas"
-  untested: "sin probar"
-  nvidia: "NVIDIA"
-  amd: "AMD"
-  intel: "Intel"
-  note: "Extraído automáticamente del README y de los issues abiertos. Que se mencione un modelo no es una garantía."
+  title: Compatibilidad de GPU
+  vendor: Fabricante
+  status: Estado
+  models: Modelos mencionados
+  ok: probado OK
+  issues: problemas
+  untested: sin probar
+  nvidia: NVIDIA
+  amd: AMD
+  intel: Intel
+  note: Extraído automáticamente del README y de los issues abiertos. Que se mencione un modelo no es una garantía.
 eta:
-  milestone: "Hito"
-  reached: "Alcanzado por {name}"
-  estimate: "Estimación orientativa"
-  range_days: "{a}–{b} días"
-  range_weeks: "{a}–{b} semanas"
-  range_months: "{a}–{b} meses"
-  why: "¿Por qué este rango?"
-  reason: "De la fase {from} a la {to} hay {steps} paso(s). Sumamos un rango por paso según reglas ({per}) y lo ajustamos por la actividad reciente ({activity}: ×{factor}). Amplio a propósito."
-  stale: "Sin estimación: el proyecto lleva demasiado tiempo inactivo."
-  activity_high: "alta"
-  activity_normal: "normal"
-  activity_low: "baja"
-  label: "estimación orientativa"
+  milestone: Hito
+  reached: Alcanzado por {name}
+  estimate: Estimación orientativa
+  range_days: '{a}–{b} días'
+  range_weeks: '{a}–{b} semanas'
+  range_months: '{a}–{b} meses'
+  why: ¿Por qué este rango?
+  reason: 'De la fase {from} a la {to} hay {steps} paso(s). Sumamos un rango por paso según reglas ({per}) y lo ajustamos por la actividad reciente ({activity}: ×{factor}). Amplio a propósito.'
+  stale: 'Sin estimación: el proyecto lleva demasiado tiempo inactivo.'
+  activity_high: alta
+  activity_normal: normal
+  activity_low: baja
+  label: estimación orientativa
 radar:
-  stars: "estrellas"
-  age: "edad"
-  commits: "commits"
-  code: "tiene código"
-  readme_only: "solo README"
-  days: "{n} d"
-  flagged: "Posible clon o malware"
-  unreviewed: "sin revisar"
+  stars: estrellas
+  age: edad
+  commits: commits
+  code: tiene código
+  readme_only: solo README
+  days: '{n} d'
+  flagged: Posible clon o malware
+  unreviewed: sin revisar
 alerts:
-  dmca: "DMCA confirmado"
-  missing: "Repositorio desaparecido"
-  missing_text: "{name} devuelve HTTP {code} y no hay aviso DMCA: probablemente lo han borrado sus dueños."
-  dmca_text: "{name}: un aviso DMCA de GitHub lo menciona."
-  notice: "Aviso"
-  clone: "Posible clon o malware"
-  clone_text: "{repo} (sin enlace a propósito): {reasons}."
-  hoax: "Bulo"
-  hoax_text: "{title}: afirma algo que ningún proyecto ha alcanzado."
-  binaries: "Release con binarios"
-  binaries_text: "{name} ha publicado una release con archivos binarios. No enlazamos binarios."
-  source_down: "Fuente caída"
-  source_down_text: "{source} lleva más de {h} horas fallando."
-  scam_title: "Aviso permanente"
-  scam: "No existe GTA 6 oficial para PC. Cualquier \"descarga de GTA 6 PC\" es una estafa o malware. No ejecutes nada que te pase un desconocido."
-  none: "Sin alertas activas. Calles tranquilas."
+  dmca: DMCA confirmado
+  missing: Repositorio desaparecido
+  missing_text: '{name} devuelve HTTP {code} y no hay aviso DMCA: probablemente lo han borrado sus dueños.'
+  dmca_text: '{name}: un aviso DMCA de GitHub lo menciona.'
+  notice: Aviso
+  clone: Posible clon o malware
+  clone_text: '{repo} (sin enlace a propósito): {reasons}.'
+  hoax: Bulo
+  hoax_text: '{title}: afirma algo que ningún proyecto ha alcanzado.'
+  binaries: Release con binarios
+  binaries_text: '{name} ha publicado una release con archivos binarios. No enlazamos binarios.'
+  source_down: Fuente caída
+  source_down_text: '{source} lleva más de {h} horas fallando.'
+  scam_title: Aviso permanente
+  scam: No existe GTA 6 oficial para PC. Cualquier "descarga de GTA 6 PC" es una estafa o malware. No ejecutes nada que te pase un desconocido.
+  none: Sin alertas activas. Calles tranquilas.
+  scam_more: Cómo reconocer una descarga falsa
 clone_reasons:
-  similar: "README {pct}% parecido al de {repo}"
-  binaries: "release con binarios"
-  hosting: "enlaces a sitios de alojamiento de archivos"
-  password: "menciona una contraseña"
-  setup: "menciona un instalador o launcher"
-  external: "enlaces fuera de la lista permitida"
-  blocklist: "está en la lista negra"
+  similar: README {pct}% parecido al de {repo}
+  binaries: release con binarios
+  hosting: enlaces a sitios de alojamiento de archivos
+  password: menciona una contraseña
+  setup: menciona un instalador o launcher
+  external: enlaces fuera de la lista permitida
+  blocklist: está en la lista negra
 project:
-  repo: "Repositorio"
-  status: "Estado"
-  language: "Lenguaje"
-  license: "Licencia"
-  stars: "Estrellas"
-  forks: "Forks"
-  contributors: "Contribuidores"
-  last_commit: "Último commit"
-  goal: "Qué quieren conseguir"
-  how: "Cómo lo hacen"
-  tech_detail: "Detalle técnico"
-  requirements: "Requisitos (según el README)"
-  now: "En qué están ahora"
-  activity: "Actividad por área"
-  h24: "24 h"
-  d7: "7 días"
-  sample: "Áreas calculadas sobre los {n} commits más recientes."
-  prs: "PRs abiertos / mergeados en 24 h"
-  progress: "Progreso"
-  readme_table: "Tabla de estado del README (filas normalizadas por nosotros)"
-  readme_table_none: "No hemos encontrado tabla de estado en el README."
-  stage: "Etapa"
-  state: "Estado"
-  state_ok: "funciona"
-  state_partial: "parcial"
-  state_no: "no"
-  timeline: "Mini timeline"
-  signals: "Lo que pinta bien / lo que pinta mal"
-  strengths: "Puntos fuertes (según el README)"
-  weaknesses: "Puntos débiles (según el README)"
-  eta: "Cuánto le falta"
-  deeper: "Para profundizar"
-  media: "Imágenes y vídeos"
-  claims: "Afirmaciones pendientes de verificar"
-  claims_none: "No hay afirmaciones pendientes."
-  back: "Volver a todos los proyectos"
-  phase_note: "Nota de fase"
-  view_repo: "Ver el código en GitHub"
+  repo: Repositorio
+  status: Estado
+  language: Lenguaje
+  license: Licencia
+  stars: Estrellas
+  forks: Forks
+  contributors: Contribuidores
+  last_commit: Último commit
+  goal: Qué quieren conseguir
+  how: Cómo lo hacen
+  tech_detail: Detalle técnico
+  requirements: Requisitos (según el README)
+  now: En qué están ahora
+  activity: Actividad por área
+  h24: 24 h
+  d7: 7 días
+  sample: Áreas calculadas sobre los {n} commits más recientes.
+  prs: PRs abiertos / mergeados en 24 h
+  progress: Progreso
+  readme_table: Tabla de estado del README (filas normalizadas por nosotros)
+  readme_table_none: No hemos encontrado tabla de estado en el README.
+  stage: Etapa
+  state: Estado
+  state_ok: funciona
+  state_partial: parcial
+  state_no: 'no'
+  timeline: Mini timeline
+  signals: Lo que pinta bien / lo que pinta mal
+  strengths: Puntos fuertes (según el README)
+  weaknesses: Puntos débiles (según el README)
+  eta: Cuánto le falta
+  deeper: Para profundizar
+  media: Imágenes y vídeos
+  claims: Afirmaciones pendientes de verificar
+  claims_none: No hay afirmaciones pendientes.
+  back: Volver a todos los proyectos
+  phase_note: Nota de fase
+  view_repo: Ver el código en GitHub
+  article: El proyecto, explicado
+  based_on: Se basa en
+  repo_btn: Ver el repositorio en GitHub
+  no_repo: Sin repositorio público
+  source_btn: Ver la fuente
+  trackers: Qué dicen los trackers
+  trackers_none: Ningún tracker externo lo sitúa todavía en una etapa.
+  kind: Enfoque
+  facts: Ficha
 stages:
-  shaders: "Shaders"
-  textures: "Texturas"
-  assets: "Modelos y archivos"
-  loader: "Cargador y plataforma"
-  boot: "Arranque"
-  frame: "Frames en pantalla"
-  video: "Vídeo de introducción"
-  menus: "Menús y guardado"
-  loading: "Carga"
-  world: "Primera escena jugable del mundo"
-  lighting: "Iluminación"
-  audio: "Audio"
-  input: "Entrada"
-  gpu: "GPU"
-  network: "Red"
-  storage: "Archivos y almacenamiento"
-  series_s: "Modo Series S"
-  other: "Otros"
+  shaders: Shaders
+  textures: Texturas
+  assets: Modelos y archivos
+  loader: Cargador y plataforma
+  boot: Arranque
+  frame: Frames en pantalla
+  video: Vídeo de introducción
+  menus: Menús y guardado
+  loading: Carga
+  world: Primera escena jugable del mundo
+  lighting: Iluminación
+  audio: Audio
+  input: Entrada
+  gpu: GPU
+  network: Red
+  storage: Archivos y almacenamiento
+  series_s: Modo Series S
+  other: Otros
 faq:
-  - q: "Recompilación o capa de compatibilidad: ¿qué diferencia hay?"
-    a: "Una capa de compatibilidad (como Wine/Proton) ejecuta el código original del juego y cambia las bibliotecas de sistema de la consola por unas propias. La recompilación estática traduce el código de antemano a un programa nuevo. En Xbox Series las dos comparten un truco: la CPU es x86-64 como la de un PC, así que el código de CPU corre casi tal cual. Lo difícil es la GPU: sus shaders están compilados para el chip RDNA2 de la consola y hay que traducirlos."
-  - q: "¿Por qué no hay un emulador de Xbox Series?"
-    a: "Porque para la CPU no hace falta y para el resto es muy difícil. Emular el procesador sería lento e inútil cuando el PC ya habla x86-64. El trabajo está en reimplementar los servicios de sistema de la consola, su API gráfica Direct3D 12.X y traducir decenas de miles de shaders de GPU."
-  - q: "¿Qué significa cada fase y el porcentaje?"
-    a: "La fase 1 prepara shaders y assets (0–25 %). Fase 2: el exe arranca (25 %). Fase 3: primer frame (40 %). Fase 4: menús (55 %). Fase 5: carga el mundo (70 %). Fase 6: mundo renderizado e iluminado (80 %). Fase 7: jugable a unos 30 fps (90 %), estable (100 %). Una fase alcanzada en parte cuenta a medio camino. Las reglas están en config/scoring.yml."
-  - q: "¿Qué GPU hace falta?"
-    a: "No hay respuesta oficial. Esto es lo que dicen los propios proyectos:"
-  - q: "¿Hay un port oficial?"
-    a: "No está anunciado. Hasta que lo confirme una fuente oficial, cualquier fecha es un rumor."
-  - q: "¿Por qué toda descarga es una estafa?"
-    a: "Ninguno de estos proyectos distribuye el juego, y los serios se niegan a explicar cómo conseguirlo. Quien te ofrece \"GTA 6 PC\" como archivo listo para usar te ofrece, en el mejor caso, una filtración pirata y muy a menudo malware o una trampa de phishing. Nunca enlazamos archivos, torrents ni webs de alojamiento."
-  - q: "¿Cómo clasificáis la credibilidad?"
-    a: "Verde: el README o los commits del propio proyecto, o una reproducción de un tracker o un segundo PC. Amarillo: prensa especializada o hilos con evidencia. Rojo: posts anónimos o lenguaje de rumor. ⛔: rumor más algo técnicamente imposible según el estado conocido; no cuenta para nada."
+- q: 'Recompilación o capa de compatibilidad: ¿qué diferencia hay?'
+  a: 'Una capa de compatibilidad (como Wine/Proton) ejecuta el código original del juego y cambia las bibliotecas de sistema de la consola por unas propias. La recompilación estática traduce el código de antemano a un programa nuevo. En Xbox Series las dos comparten un truco: la CPU es x86-64 como la de un PC, así que el código de CPU corre casi tal cual. Lo difícil es la GPU: sus shaders están compilados para el chip RDNA2 de la consola y hay que traducirlos.'
+- q: ¿Por qué no hay un emulador de Xbox Series?
+  a: Porque para la CPU no hace falta y para el resto es muy difícil. Emular el procesador sería lento e inútil cuando el PC ya habla x86-64. El trabajo está en reimplementar los servicios de sistema de la consola, su API gráfica Direct3D 12.X y traducir decenas de miles de shaders de GPU.
+- q: ¿Qué significa cada fase y el porcentaje?
+  a: 'La fase 1 prepara shaders y assets (0–25 %). Fase 2: el exe arranca (25 %). Fase 3: primer frame (40 %). Fase 4: menús (55 %). Fase 5: carga el mundo (70 %). Fase 6: mundo renderizado e iluminado (80 %). Fase 7: jugable a unos 30 fps (90 %), estable (100 %). Una fase alcanzada en parte cuenta a medio camino. Las reglas están en config/scoring.yml.'
+- q: ¿Qué GPU hace falta?
+  a: 'No hay respuesta oficial. Esto es lo que dicen los propios proyectos:'
+- q: ¿Hay un port oficial?
+  a: No está anunciado. Hasta que lo confirme una fuente oficial, cualquier fecha es un rumor.
+- q: ¿Por qué toda descarga es una estafa?
+  a: Ninguno de estos proyectos distribuye el juego, y los serios se niegan a explicar cómo conseguirlo. Quien te ofrece "GTA 6 PC" como archivo listo para usar te ofrece, en el mejor caso, una filtración pirata y muy a menudo malware o una trampa de phishing. Nunca enlazamos archivos, torrents ni webs de alojamiento.
+- q: ¿Cómo clasificáis la credibilidad?
+  a: 'Verde: el README o los commits del propio proyecto, o una reproducción de un tracker o un segundo PC. Amarillo: prensa especializada o hilos con evidencia. Rojo: posts anónimos o lenguaje de rumor. ⛔: rumor más algo técnicamente imposible según el estado conocido; no cuenta para nada.'
 glossary:
-  - {term: "Shader", def: "Programa pequeño que corre en la GPU para dibujar geometría, color y luz. Los de consola están compilados para su chip y hay que traducirlos."}
-  - {term: "Recomp", def: "Recompilación estática: traducir de antemano el código máquina de un programa a código nuevo para otra plataforma."}
-  - {term: "Capa de compatibilidad", def: "Software que responde a las llamadas que un programa espera de su sistema original, para que funcione sin cambios en otro (como Wine/Proton)."}
-  - {term: "D3D12", def: "Direct3D 12, la API gráfica de bajo nivel de Microsoft. La consola usa una variante, D3D12.X."}
-  - {term: "Vulkan", def: "API gráfica de bajo nivel multiplataforma, alternativa a D3D12."}
-  - {term: "wave64", def: "Programas de GPU que trabajan en grupos de 64 hilos. AMD los ejecuta de forma nativa; NVIDIA e Intel usan grupos de 32, así que necesitan emulación."}
-  - {term: "Mesh shader", def: "Forma moderna de generar geometría en la GPU. Exige tarjetas gráficas bastante recientes."}
-  - {term: "TDR", def: "Timeout Detection and Recovery: Windows reinicia el driver gráfico cuando la GPU se cuelga (las pantallas se quedan en negro un momento)."}
-  - {term: "DMCA", def: "Procedimiento de retirada por derechos de autor de EE. UU. GitHub publica los avisos que recibe en un repositorio público."}
+- term: Shader
+  def: Programa pequeño que corre en la GPU para dibujar geometría, color y luz. Los de consola están compilados para su chip y hay que traducirlos.
+- term: Recomp
+  def: 'Recompilación estática: traducir de antemano el código máquina de un programa a código nuevo para otra plataforma.'
+- term: Capa de compatibilidad
+  def: Software que responde a las llamadas que un programa espera de su sistema original, para que funcione sin cambios en otro (como Wine/Proton).
+- term: D3D12
+  def: Direct3D 12, la API gráfica de bajo nivel de Microsoft. La consola usa una variante, D3D12.X.
+- term: Vulkan
+  def: API gráfica de bajo nivel multiplataforma, alternativa a D3D12.
+- term: wave64
+  def: Programas de GPU que trabajan en grupos de 64 hilos. AMD los ejecuta de forma nativa; NVIDIA e Intel usan grupos de 32, así que necesitan emulación.
+- term: Mesh shader
+  def: Forma moderna de generar geometría en la GPU. Exige tarjetas gráficas bastante recientes.
+- term: TDR
+  def: 'Timeout Detection and Recovery: Windows reinicia el driver gráfico cuando la GPU se cuelga (las pantallas se quedan en negro un momento).'
+- term: DMCA
+  def: Procedimiento de retirada por derechos de autor de EE. UU. GitHub publica los avisos que recibe en un repositorio público.
 history:
-  change: "{name}: {from} → {to}"
-  initial: "{name}: primer registro en {to}"
+  change: '{name}: {from} → {to}'
+  initial: '{name}: primer registro en {to}'
 system:
-  title: "Estado de las fuentes"
-  source: "Fuente"
-  last_ok: "Último OK"
-  last_fail: "Último fallo"
-  items: "Elementos"
-  ok: "OK"
-  failing: "fallando"
-  warn: "Fallando desde hace más de {h} h"
-  unavailable: "fuente no disponible en esta actualización"
-  error: "Último error"
-  intro: "Todas las fuentes son opcionales. Si una falla, las demás siguen funcionando y esta tabla lo indica."
-  see_all: "Estado completo del sistema"
+  title: Estado de las fuentes
+  source: Fuente
+  last_ok: Último OK
+  last_fail: Último fallo
+  items: Elementos
+  ok: OK
+  failing: fallando
+  warn: Fallando desde hace más de {h} h
+  unavailable: fuente no disponible en esta actualización
+  error: Último error
+  intro: Todas las fuentes son opcionales. Si una falla, las demás siguen funcionando y esta tabla lo indica.
+  see_all: Estado completo del sistema
   sources:
-    github: "API de GitHub"
-    dmca: "Registro DMCA de GitHub"
-    discovery: "Búsqueda en GitHub (radar)"
-    reddit: "Reddit"
-    hn: "Hacker News (Algolia)"
-    bluesky: "Bluesky"
-    mastodon: "Mastodon"
-    lemmy: "Lemmy"
-    news: "Noticias (Google News y medios)"
-    trackers: "Trackers externos"
+    github: API de GitHub
+    dmca: Registro DMCA de GitHub
+    discovery: Búsqueda en GitHub (radar)
+    reddit: Reddit
+    hn: Hacker News (Algolia)
+    bluesky: Bluesky
+    mastodon: Mastodon
+    lemmy: Lemmy
+    news: Noticias (Google News y medios)
+    trackers: Trackers externos
+    youtube: YouTube (búsqueda)
 footer:
-  legal_title: "Aviso legal"
-  legal: "Proyecto informativo y no comercial. Sin relación con Rockstar Games, Take-Two Interactive ni Microsoft. No proporcionamos ni enlazamos el juego ni archivos filtrados. Cualquier \"descarga de GTA 6 PC\" es una estafa o malware."
-  takedown: "Retiradas: abre un issue en GitHub con la plantilla \"Takedown request\". Retiramos primero y revisamos después."
-  takedown_link: "Pedir una retirada"
-  suggest: "Sugerir una fuente"
-  wrong: "Avisar de una fase incorrecta"
-  license: "Código bajo licencia MIT."
-  source_code: "Código fuente"
-  privacy: "Sin cookies, sin analítica, sin peticiones a terceros."
-  rss: "Feed RSS"
+  legal_title: Aviso legal
+  legal: Proyecto informativo y no comercial. Sin relación con Rockstar Games, Take-Two Interactive ni Microsoft. No proporcionamos ni enlazamos el juego ni archivos filtrados. Cualquier "descarga de GTA 6 PC" es una estafa o malware.
+  takedown: 'Retiradas: abre un issue en GitHub con la plantilla "Takedown request". Retiramos primero y revisamos después.'
+  takedown_link: Pedir una retirada
+  suggest: Sugerir una fuente
+  wrong: Avisar de una fase incorrecta
+  license: Código bajo licencia MIT.
+  source_code: Código fuente
+  privacy: Sin cookies ni analítica. Las imágenes y vídeos externos solo se cargan si pulsas en ellos.
+  rss: Feed RSS
+  guides: Guías
+  updated_hourly: Se actualiza cada hora con GitHub Actions.
 feed:
-  title: "GTA VI PC Tracker: novedades"
-  description: "Novedades cada hora, sin spoilers, de los proyectos no oficiales para jugar GTA VI en PC."
+  title: 'GTA VI PC Tracker: novedades'
+  description: Novedades cada hora, sin spoilers, de los proyectos no oficiales para jugar GTA VI en PC.
 root:
-  title: "GTA VI PC Tracker"
-  choose: "Elige tu idioma"
-  notfound: "Te has perdido, colega."
+  title: GTA VI PC Tracker
+  choose: Elige tu idioma
+  notfound: Te has perdido, colega.
+counters:
+  label: Contadores
+  console: GTA VI lleva en consolas
+  console_sub: Salió el 19 de noviembre de 2026 en PS5 y Xbox Series X|S.
+  exe: El ejecutable de Xbox se publicó hace
+  exe_sub: 'Lo publicó {by} el 23 de noviembre. No lo enlazamos: es una filtración.'
+  d: d
+  h: h
+  m: min
+  s: s
+  source: fuente
+media:
+  all: Todo
+  filter: Filtrar por origen
+  reveal: Mostrar vista previa
+  play: Reproducir aquí
+  open: Abrir en la fuente
+  note: Se carga desde {host} solo al pulsar. Puede contener spoilers.
+  no_preview: 'Sin vista previa: abre el enlace para verlo.'
+  count: '{n} elementos'
+origins:
+  project: Del propio proyecto
+  tracker: Tracker externo
+  community: Comunidad
+  video: Vídeo (YouTube)
+  press: Prensa
+approach:
+  layer: Capa de compatibilidad
+  recomp: Recompilación
+  emulator: Emulador
+  harness: Banco de pruebas
+  private: Build privada
+crumbs:
+  home: Inicio
+  projects: Proyectos
+faq_extra:
+- q: ¿Cuándo sale GTA 6 para PC?
+  a: Rockstar no ha anunciado fecha ni versión de PC. GTA VI salió el 19 de noviembre de 2026 solo en PS5 y Xbox Series X|S. Con GTA V el port de PC llegó un año y medio después, y con Red Dead Redemption 2, uno. Lo que hay hoy son proyectos de la comunidad, ninguno jugable.
+- q: ¿Puedo descargar GTA 6 para PC?
+  a: No. No existe ninguna versión de PC, ni oficial ni de la comunidad. Toda web, vídeo o repo que ofrece "GTA 6 PC" para descargar es una estafa o malware. Mira nuestra guía de descargas falsas.
+- q: ¿Qué proyecto va más avanzado?
+  a: Según el tracker PortWatch, una build privada llamada CGBJ ha puesto a un jugador dentro del mundo, sin iluminación y muy lenta. Entre los proyectos públicos, VIctory y sus derivados cargan el mundo pero lo ven oscuro. La clasificación de arriba se actualiza cada hora.

@@ -6,7 +6,7 @@
 #  false      ⛔  rumour + something technically impossible given the known state. Never counts; shown struck through in Alerts.
 
 project_sources: [github]           # items generated from the tracked repos themselves
-tracker_sources: [tracker]          # external trackers
+tracker_sources: [tracker]          # external trackers (their own images count as community until reproduced)
 press_sources: [news]               # publisher / Google News items
 press_domains:
   - videocardz.com
@@ -21,6 +21,28 @@ press_domains:
   - ign.com
   - kotaku.com
   - videogameschronicle.com
+  - wccftech.com
+  - tomshardware.com
+  - windowscentral.com
+  - pcgamesn.com
+  - techradar.com
+  - theverge.com
+  - gamespot.com
+  - dexerto.com
+  - insider-gaming.com
+  - rockpapershotgun.com
+  - techspot.com
+  - tweaktown.com
+  - thegamer.com
+  - gamerant.com
+  - 3djuegos.com
+  - vandal.elespanol.com
+  - hobbyconsolas.com
+  - vidaextra.com
+  - xataka.com
+  - eurogamer.es
+  - meristation.as.com
+  - levelup.com
 
 # Evidence that lifts a community post (reddit/hn/lemmy/bluesky/mastodon) to "community"
 evidence:

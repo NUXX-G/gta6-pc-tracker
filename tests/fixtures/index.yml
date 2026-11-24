@@ -120,5 +120,13 @@
  {
   "match": "mtwildwood",
   "status": 403
+ },
+ {
+  "match": "youtube\\.com/results",
+  "file": "youtube.html"
+ },
+ {
+  "match": "feed|rss|\\.xml|xml\\.cgi",
+  "status": 404
  }
 ]

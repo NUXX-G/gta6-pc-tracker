@@ -25,7 +25,7 @@ def _month_dirs() -> list[str]:
 
 def collect(http: Http) -> dict[str, Any]:
     projects = config("projects")["projects"]
-    owners = {p["repo"].split("/")[0].lower() for p in projects}
+    owners = {p["repo"].split("/")[0].lower() for p in projects if p.get("repo")}
     files: list[dict[str, Any]] = []
     for d in _month_dirs():
         try:
@@ -52,7 +52,7 @@ def collect(http: Http) -> dict[str, Any]:
         if re.search(r"\bgta\b|grand theft auto|rockstar|take-two", low):
             gta_notices.append(notice)
         for p in projects:
-            if p["repo"].lower() in low:
+            if p.get("repo") and p["repo"].lower() in low:
                 hits[p["slug"]] = notice
     return {
         "scanned": len(files),

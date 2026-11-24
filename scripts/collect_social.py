@@ -11,6 +11,7 @@ from urllib.parse import quote
 
 from bs4 import BeautifulSoup
 
+from collect_media import IMG_EXT, YT_ID
 from common import Http, HttpError, config, now_utc
 from items import make_item, relevant
 
@@ -109,14 +110,25 @@ def collect_mastodon(http: Http) -> dict[str, Any]:
                 continue
             acct = s.get("account", {}).get("acct", "")
             card = s.get("card") or {}
+            media = [m for m in s.get("media_attachments") or [] if isinstance(m, dict)]
+            first = media[0] if media else {}
+            kind = "discussion"
+            if first:
+                kind = "video" if first.get("type") in ("video", "gifv") else "image"
+            yt = YT_ID.search(card.get("url", "") or "")
+            if not first and yt:
+                kind = "video"
             it = make_item(
                 source="mastodon",
                 source_label="Mastodon",
                 url=f"https://mastodon.social/@{acct}/{s['id']}",
                 created=s.get("created_at"),
-                kind="image" if s.get("media_attachments") else "discussion",
+                kind=kind,
                 texts=texts,
                 urls=[card.get("url", "")],
+                thumb=first.get("preview_url")
+                or (f"https://i.ytimg.com/vi/{yt.group(1)}/hqdefault.jpg" if yt else None),
+                embed=yt.group(1) if yt and not first else None,
                 score=s.get("favourites_count"),
                 comments=s.get("replies_count"),
                 spoiler_flag=bool(s.get("sensitive") or s.get("spoiler_text")),
@@ -143,12 +155,20 @@ def collect_lemmy(http: Http) -> dict[str, Any]:
             if not relevant(texts):
                 continue
             counts = pv.get("counts", {})
+            link = post.get("url") or ""
+            yt = YT_ID.search(link)
+            kind = "video" if yt else ("image" if IMG_EXT.search(link) else "discussion")
+            thumb = post.get("thumbnail_url") or (link if kind == "image" else None)
+            if yt:
+                thumb = f"https://i.ytimg.com/vi/{yt.group(1)}/hqdefault.jpg"
             it = make_item(
                 source="lemmy",
                 source_label="Lemmy",
                 url=f"https://lemmy.world/post/{post['id']}",
                 created=post.get("published"),
-                kind="discussion",
+                kind=kind,
+                thumb=thumb,
+                embed=yt.group(1) if yt else None,
                 texts=texts,
                 urls=[post.get("url") or ""],
                 score=counts.get("score"),

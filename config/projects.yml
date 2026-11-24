@@ -23,6 +23,17 @@ projects:
     technical_en: "Own loader for the executable and its DLLs, offline system services, archive reading and streaming with zlib and BCPack decoding, XMA and Opus audio, and console shaders recompiled to DXIL on first use with a disk cache. Some 3D-scene shaders are still untranslated (mesh 8,191 of 8,506; vertex/pixel 10,617 of 12,346; compute 1,643 of 2,539)."
     requirements_es: "Windows 10/11 x64, CPU con AVX2, GPU Direct3D 12 con shader model 6.6 y mesh shaders."
     requirements_en: "Windows 10/11 x64, AVX2 CPU, Direct3D 12 GPU with shader model 6.6 and mesh shaders."
+    kind: layer
+    article_es:
+      - "VIctory es, ahora mismo, la referencia pública: el proyecto que más gente sigue y sobre el que se apoyan otros (AnyXboxX y la build privada CGBJ parten de su código). Lo escribe en Rust un solo autor principal, que enseñó los menús funcionando en directo el mismo día en que apareció el ejecutable."
+      - "La idea es sencilla de contar y difícil de hacer: la Xbox Series usa un procesador x86-64 como el de tu PC, así que VIctory no traduce el código del juego, lo carga y lo deja correr tal cual. Lo que hace es fingir que es la consola: le da al juego las bibliotecas de sistema, los archivos, el audio, el mando y, sobre todo, una GPU que entiende sus órdenes, traduciendo cada shader de consola a un formato que tu tarjeta gráfica sí entiende."
+      - "Hoy el juego arranca, pasa las pantallas iniciales, enseña los menús a 30 fps y carga el mundo en unos 50 segundos. Dentro del mundo la cosa se complica: muchos shaders de la escena 3D aún no están traducidos, la imagen sale casi negra y cada frame tarda entre medio segundo y casi dos."
+      - "Qué vigilar: el porcentaje de shaders del mundo traducidos (es el cuello de botella) y los cuelgues de GPU (TDR). Si esos dos números mejoran, el salto a un mundo visible puede ser rápido."
+    article_en:
+      - "VIctory is the public reference point right now: the most followed project, and the base others build on (AnyXboxX and the private CGBJ build start from its code). It is written in Rust by one main author, who showed the menus working live on the day the executable appeared."
+      - "The idea is simple to explain and hard to do: the Xbox Series has an x86-64 processor like your PC, so VIctory does not translate the game's code; it loads it and lets it run as it is. What it does is pretend to be the console: it hands the game its system libraries, files, audio, gamepad and, above all, a GPU that understands its commands, by translating each console shader into a format your graphics card can run."
+      - "Today the game boots, gets through its first screens, shows its menus at 30 fps and loads the world in about 50 seconds. Inside the world it gets hard: many 3D-scene shaders are still untranslated, the picture is nearly black and every frame takes between half a second and almost two."
+      - "What to watch: the share of world shaders translated (the bottleneck) and GPU hangs (TDR). If those two numbers improve, the jump to a visible world could be quick."
     strengths:
       - {es: "Es el que más lejos ha llegado en público: menús a 30 fps y carga del mundo en unos 50 s.", en: "Furthest public progress: menus at 30 fps and the world loads in about 50 s.", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
       - {es: "Tabla de estado honesta, con lo que funciona y lo que falta por subsistema.", en: "Honest status table listing what works and what is missing per subsystem.", evidence: "https://github.com/Marvisak/VIctory#status-2026-11-23"}
@@ -37,9 +48,9 @@ projects:
     repo: ivall/xcl
     language: Rust
     priority: 2
-    phase: {level: 4, partial: false,
-            note_es: "Arranca en unos 4 s y muestra sus menús a 30 fps estables; todavía no entra en partida.",
-            note_en: "Starts in about 4 s and shows its menus at a steady 30 fps; gameplay not reached yet."}
+    phase: {level: 5, partial: true,
+            note_es: "Arranca en unos 4 s y muestra menús y ajustes a 30 fps estables; un fork con el mismo código (Palmwave) mide la carga del mundo. Su propio README dice que aún no llega a la partida.",
+            note_en: "Starts in about 4 s and shows menus and settings at a steady 30 fps; a fork on the same code (Palmwave) measures world loading. Its own README says gameplay is not reached yet."}
     goal_es: "Capa de compatibilidad general (al estilo Wine/Proton) para ejecutar en Windows juegos de Xbox Series que poseas."
     goal_en: "General compatibility layer (in the spirit of Wine/Proton) to run Xbox Series games you own on Windows."
     approach_es: "Sin emulación de CPU: reimplementa las bibliotecas de sistema de la consola y recompila el código de GPU RDNA2 a HLSL y DXIL."
@@ -48,6 +59,17 @@ projects:
     technical_en: "Full PE loader, kernelx, CPU/GPU shared graphics memory up to 16 GB, DirectStorage with BCPack, offline XGameRuntime, GameInput, XAudio2, an RDNA2→HLSL→DXIL shader recompiler (26,698 of 26,698 programs of a retail game), GFX10 texture detiling, ray tracing through the game's own BVH builder and the console FSR 4 running on a PC GPU."
     requirements_es: "Windows x64 con GPU Direct3D 12; el README indica ~15 GB de memoria comprometida en menús (pensado para 32 GB)."
     requirements_en: "Windows x64 with a Direct3D 12 GPU; the README reports ~15 GB committed in menus (fits a 32 GB machine)."
+    kind: layer
+    article_es:
+      - "XCL no nació para un solo juego: es una capa de compatibilidad general para juegos de Xbox Series, en el espíritu de Wine o Proton. Antes de GTA VI ya ejecutaba otros títulos de la consola de principio a fin, y por eso su base es de las más sólidas. Palmwave es un fork directo de su código."
+      - "Funciona así: el código del juego corre directamente en tu CPU y XCL reimplementa por debajo las piezas que solo existen en la consola (el núcleo del sistema, la memoria compartida entre CPU y GPU, DirectStorage, el mando, el audio). La parte más espectacular es su recompilador de shaders: convierte el código de la GPU RDNA2 de la consola en HLSL y luego en DXIL, y traduce el 100 % de los programas del paquete de shaders del juego."
+      - "Con GTA VI arranca en unos 4 segundos y muestra sus menús y ajustes a 30 fps estables. Su propia tabla dice que aún no llega a la partida; un fork con el mismo código mide la carga del mundo, por eso lo situamos a medio camino de la fase 5."
+      - "Qué vigilar: el paso de los menús al mundo y el consumo de memoria, que ya ronda los 15 GB en menús."
+    article_en:
+      - "XCL was not built for one game: it is a general compatibility layer for Xbox Series games, in the spirit of Wine or Proton. Before GTA VI it already ran other console titles from start to end, which is why its foundation is one of the strongest. Palmwave is a direct fork of its code."
+      - "It works like this: the game's code runs straight on your CPU and XCL reimplements underneath the pieces that only exist on the console (the system kernel, memory shared between CPU and GPU, DirectStorage, the gamepad, audio). The most impressive part is its shader recompiler: it turns the console's RDNA2 GPU code into HLSL and then DXIL, and translates 100% of the programs in the game's shader pack."
+      - "With GTA VI it starts in about 4 seconds and shows its menus and settings at a steady 30 fps. Its own table says gameplay is not reached yet; a fork on the same code measures world loading, so we place it half-way into phase 5."
+      - "What to watch: the step from menus to the world, and memory use, already around 15 GB in the menus."
     strengths:
       - {es: "Ya ejecuta otros juegos de Xbox Series completos (Minecraft Preview, Unicorn Overlord), lo que avala la base.", en: "Already runs other Xbox Series games fully (Minecraft Preview, Unicorn Overlord), which backs the foundation.", evidence: "https://github.com/ivall/xcl#games"}
       - {es: "Traduce el 100 % de los shaders del juego objetivo y tiene más de 370 tests automáticos.", en: "Translates 100% of the target game's shaders and has 370+ automated tests.", evidence: "https://github.com/ivall/xcl#highlights"}
@@ -72,6 +94,17 @@ projects:
     technical_en: "All 25,908 shader programs compile; structured control flow; archive reader that works without the encrypted file table; texture decoding with user-supplied BCPack tables; geometry export; console GPU address map and bounded GPU hangs."
     requirements_es: "SDK de .NET 10 y el compilador DXC del Windows SDK."
     requirements_en: ".NET 10 SDK and DXC from the Windows SDK."
+    kind: recomp
+    article_es:
+      - "Five Star Recomp se presenta como una caja de herramientas de recompilación para la versión de Xbox Series: formatos de archivo, traducción de shaders y un runtime de consola sin conexión. Está escrito en C# (.NET), algo poco habitual en esta escena."
+      - "Explicado sin tecnicismos: igual que los demás, deja que el código del juego corra en tu CPU y le pone debajo una consola falsa. Su traductor convierte los shaders RDNA de la consola a HLSL, y su dispositivo D3D12.X traduce las órdenes gráficas de la consola a las de Direct3D 12 de escritorio."
+      - "Ya presenta frames propios: logo, vídeo de introducción y las pantallas de primer arranque con todo su texto, y en una ejecución llegó a la tarjeta de título del principio del juego. Arregló la corrupción de memoria que lo frenaba; ahora el juego se cierra solo al terminar la carga, probablemente por su detector de cuelgues mientras aún compila shaders."
+      - "Qué vigilar: si consigue que el detector de cuelgues del juego no lo tumbe durante la compilación de shaders."
+    article_en:
+      - "Five Star Recomp presents itself as a recompilation toolkit for the Xbox Series build: file formats, shader translation and an offline console runtime. It is written in C# (.NET), unusual in this scene."
+      - "Without jargon: like the others, it lets the game's code run on your CPU and puts a fake console underneath. Its translator turns the console's RDNA shaders into HLSL, and its D3D12.X device translates the console's graphics commands into desktop Direct3D 12."
+      - "It already presents its own frames: logo, intro video and first-run screens with all their text, and one run reached the title card at the start of the game. It fixed the memory corruption that held it back; now the game closes itself late in the load, most likely through its own hang detector while shaders are still compiling."
+      - "What to watch: whether it can stop the game's hang detector from killing it during shader compilation."
     strengths:
       - {es: "Ya presenta frames propios: logo, vídeo de introducción y menús con el texto completo.", en: "Already presents its own frames: logo, intro video and menus with full UI text.", evidence: "https://github.com/ThatRecompDev/five-star-recomp#status"}
       - {es: "Todos los shaders que usa el juego se traducen y compilan.", en: "Every shader stage the game uses translates and compiles.", evidence: "https://github.com/ThatRecompDev/five-star-recomp#status"}
@@ -95,6 +128,18 @@ projects:
     technical_en: "C++ runtime in native mode and Python code in the isolated machine; 210 of 396 GDK runtime functions written; early RDNA2→DXIL recompiler; integrates VIctory plus 24 community pull requests in its own fork."
     requirements_es: "GPU NVIDIA o AMD con SM 6.6 y mesh shaders, y Rust."
     requirements_en: "NVIDIA or AMD GPU with SM 6.6 and mesh shaders, and Rust."
+    kind: emulator
+    based_on: [victory]
+    article_es:
+      - "AnyXboxX empezó como un prototipo de emulador de Xbox Series (su README está en francés) y hoy su avance con GTA VI viene sobre todo de integrar VIctory con 24 pull requests de la comunidad que aún no están en el proyecto original."
+      - "Tiene dos caras. Por un lado, un emulador de alto nivel del GDK, el kit de Microsoft con el que se hacen los juegos de Xbox, que ejecuta código en una máquina aislada con Unicorn. Por otro, un modo nativo que, como VIctory, deja correr el código del juego directamente y traduce lo que la consola hace distinto."
+      - "En una RTX 4070 SUPER llega a la primera escena, muestra los créditos iniciales y aguanta 5 minutos en el mundo sin colgar la GPU. La pega: la escena sigue negra y va a 0,3–0,5 frames por segundo, porque los pasos de iluminación no están traducidos."
+      - "Qué vigilar: si los parches que integra acaban en VIctory, y si su motor propio llega a aportar algo más allá de esa base."
+    article_en:
+      - "AnyXboxX started as an Xbox Series emulator prototype (its README is in French), and today its GTA VI progress comes mostly from integrating VIctory with 24 community pull requests that are not in the original project yet."
+      - "It has two sides. One is a high-level emulator of the GDK, Microsoft's kit for making Xbox games, which runs code in an isolated machine with Unicorn. The other is a native mode that, like VIctory, lets the game's code run directly and translates what the console does differently."
+      - "On an RTX 4070 SUPER it reaches the first scene, shows the opening credits and stays 5 minutes in the world without hanging the GPU. The catch: the scene is still black and runs at 0.3–0.5 frames per second, because the lighting passes are not translated."
+      - "What to watch: whether the patches it carries land in VIctory, and whether its own engine adds anything beyond that base."
     strengths:
       - {es: "Informa de 5 minutos en el mundo sin cuelgue de GPU en una RTX 4070 SUPER.", en: "Reports 5 minutes in the world with no GPU hang on an RTX 4070 SUPER.", evidence: "https://github.com/LooperSalty/AnyXboxX"}
       - {es: "Reconoce de forma explícita el código que toma de VIctory y acredita cada parche.", en: "Explicitly credits the VIctory code it builds on and each patch author.", evidence: "https://github.com/LooperSalty/AnyXboxX"}
@@ -118,6 +163,17 @@ projects:
     technical_en: "GPU memory backed by a shared pool (zero copy), a D3D12.X device with command-list recording and replay, synchronous DirectStorage with zlib and a debugger with breakpoints and watchpoints. Audio is silent."
     requirements_es: "Visual Studio 2022, Gaming Services, Python 3 y DXC."
     requirements_en: "Visual Studio 2022, Gaming Services, Python 3 and DXC."
+    kind: harness
+    article_es:
+      - "GTA6-BootTest no pretende ser un port para jugar: es un banco de pruebas. Son DLL sustitutas y un arnés de depuración para estudiar, paso a paso, cómo arranca el juego en Windows y dónde se para. No contiene código ni datos del juego."
+      - "Para entenderlo: un juego de consola espera encontrar ciertas bibliotecas del sistema. BootTest le da unas falsas, escritas en C, que hacen lo justo para que siga avanzando, y un depurador con puntos de ruptura para mirar qué pasa dentro. Sus shaders se traducen con un traductor propio escrito en Python."
+      - "Ya arranca el juego, ejecuta su bucle de frames y dibuja su primera pantalla de interfaz con shaders traducidos en una GPU de PC real. Le faltan los shaders de cálculo, las texturas en tiles y el blending, imprescindibles para ir más allá."
+      - "Qué vigilar: su informe técnico, que documenta muy bien lo que descubre y le sirve a todo el mundo."
+    article_en:
+      - "GTA6-BootTest does not try to be a port you can play: it is a test bench. It is stand-in DLLs and a debugging harness to study, step by step, how the game boots on Windows and where it stops. It contains no game code or data."
+      - "To picture it: a console game expects certain system libraries. BootTest gives it fake ones, written in C, that do just enough for it to keep going, plus a debugger with breakpoints to look inside. Its shaders go through its own translator written in Python."
+      - "It already boots the game, runs its frame loop and draws its first interface screen through translated shaders on a real PC GPU. It still lacks compute shaders, tiled textures and blending, which it needs to go further."
+      - "What to watch: its technical report, which documents its findings well and helps everyone."
     strengths:
       - {es: "Ya pinta su primera pantalla de interfaz en una GPU de PC.", en: "Already draws its first UI screen on a PC GPU.", evidence: "https://github.com/OnlyMoisties/GTA6-BootTest"}
       - {es: "Informe técnico detallado de los hallazgos.", en: "Detailed technical report of its findings.", evidence: "https://github.com/OnlyMoisties/GTA6-BootTest/blob/main/REPORT.md"}
@@ -130,7 +186,7 @@ projects:
     repo: R0Y00/Xbox2Windows
     language: Python
     priority: 6
-    phase: {level: 3, partial: true,
+    phase: {level: 4, partial: true,
             note_es: "Con un ejecutable de diagnóstico modificado mostró la introducción y llegó a la carga; el arranque del ejecutable original no está verificado.",
             note_en: "A modified diagnostic executable played the intro and reached loading; startup of the original executable is unverified."}
     goal_es: "Investigación de recompilación estática de Xbox Series X|S a Windows x64."
@@ -141,6 +197,17 @@ projects:
     technical_en: "Exact comparisons between native, mapped-PE and AOT runs; a DXIL compilation route for 26,500 of 26,503 shaders; pixel, compute and mesh shader tests on RTX 4060 Laptop and WARP; a GPU check tool so the community can report results."
     requirements_es: "Windows; los tests públicos no necesitan el juego."
     requirements_en: "Windows; the public tests need no game installation."
+    kind: recomp
+    article_es:
+      - "Xbox2Windows es el proyecto más académico de la lista: investigación de recompilación estática de software de Xbox Series a Windows x64, con tests reproducibles para cada paso. No nombra el juego en su README."
+      - "La recompilación estática consiste en traducir de antemano el código máquina a otro programa. Xbox2Windows lo hace con trozos seleccionados de código x64 (a C++) y de shaders gfx1013 (a DXIL), y compara el resultado píxel a píxel con el original para demostrar que la traducción es exacta."
+      - "Con una copia de diagnóstico modificada del ejecutable y un depurador que continúa tras las aserciones, una ejecución en una RTX 4060 de portátil mostró el vídeo de introducción, pasó la configuración y llegó a la carga. El propio proyecto avisa de que el arranque del ejecutable original no está verificado."
+      - "Qué vigilar: que repita esos pasos con el ejecutable sin modificar. Ofrece además una herramienta para que cualquiera compruebe su GPU sin compilar nada."
+    article_en:
+      - "Xbox2Windows is the most academic project on the list: static recompilation research from Xbox Series software to x64 Windows, with reproducible tests for every step. Its README does not name the game."
+      - "Static recompilation means translating machine code into another program ahead of time. Xbox2Windows does it for selected pieces of x64 code (to C++) and gfx1013 shaders (to DXIL), and compares the result pixel by pixel with the original to prove the translation is exact."
+      - "With a modified diagnostic copy of the executable and a debugger that continues past assertions, a run on an RTX 4060 laptop played the intro video, got through setup and reached loading. The project itself warns that startup of the original executable is unverified."
+      - "What to watch: repeating those steps with the unmodified executable. It also offers a tool so anyone can check their GPU without building anything."
     strengths:
       - {es: "Método muy riguroso: cada avance va con un test reproducible.", en: "Very rigorous method: each step comes with a reproducible test.", evidence: "https://github.com/R0Y00/Xbox2Windows#current-results-and-open-work"}
       - {es: "Abierto a que cualquiera pruebe su GPU sin compilar nada.", en: "Open for anyone to test their GPU without building anything.", evidence: "https://github.com/R0Y00/Xbox2Windows#run-the-gpu-check"}
@@ -164,6 +231,17 @@ projects:
     technical_en: "All 26,503 shaders translate to SPIR-V and pass spirv-val; 23,841 are wave64 (exact on AMD; emulated on NVIDIA and Intel); model, texture and audio export; PE loader and shims tested with a stand-in executable; Xbox D3D12 on Vulkan in progress."
     requirements_es: "GPU con Vulkan; wave64 nativo solo en AMD (en NVIDIA e Intel, emulado)."
     requirements_en: "Vulkan GPU; native wave64 only on AMD (emulated on NVIDIA and Intel)."
+    kind: recomp
+    article_es:
+      - "Leonida fue el primer gran proyecto de recompilación de GTA VI. Su creador lo dejó y el repositorio original desapareció; esta continuación conserva todo su historial y le ha sumado cientos de commits nuevos."
+      - "Su enfoque: el código x86-64 corre de forma nativa y los programas de GPU RDNA2 se traducen a SPIR-V para Vulkan, la API gráfica multiplataforma. Su gran logro heredado es el trabajo de shaders: los 26.503 se traducen y pasan el validador oficial de Vulkan."
+      - "El problema es que su README sigue diciendo que el juego no arranca. Tiene la preparación hecha (shaders y exportación de modelos, texturas y audio), pero no el runtime que pone el juego en marcha."
+      - "Qué vigilar: si alguno de sus colaboradores consigue el arranque. Palmetto, otra continuación, ya ha avanzado más por ese camino."
+    article_en:
+      - "Leonida was the first big GTA VI recompilation project. Its creator stepped away and the original repository disappeared; this continuation keeps its full record and has added hundreds of new commits."
+      - "Its approach: x86-64 code runs natively and RDNA2 GPU programs are translated to SPIR-V for Vulkan, the cross-platform graphics API. Its big inherited achievement is the shader work: all 26,503 translate and pass Vulkan's official validator."
+      - "The problem is that its README still says the game does not boot. It has the preparation done (shaders, plus model, texture and audio export), but not the runtime that sets the game going."
+      - "What to watch: whether one of its contributors gets it to boot. Palmetto, another continuation, has gone further down that road."
     strengths:
       - {es: "Conserva el historial completo del Leonida original y su trabajo de shaders validado.", en: "Keeps the original Leonida's full history and its validated shader work.", evidence: "https://github.com/ubiquitarianism/leonida#project-status"}
       - {es: "Pruebas del traductor de shaders en más de 30 combinaciones de GPU y driver.", en: "Shader translator tests on more than 30 GPU and driver combinations.", evidence: "https://github.com/ubiquitarianism/leonida#project-status"}
@@ -187,6 +265,15 @@ projects:
     technical_en: "Starts from Leonida's code and historical results; its status table is an inherited snapshot, not a current compatibility report."
     requirements_es: "Las mismas que Leonida: GPU con Vulkan."
     requirements_en: "Same as Leonida: a Vulkan GPU."
+    kind: recomp
+    article_es:
+      - "Leonida (Reforge) es otra continuación comunitaria de Leonida. Parte del mismo código y de los mismos resultados históricos que el original."
+      - "Usa la misma receta: código de CPU nativo y shaders traducidos a SPIR-V para Vulkan. Lo que lo distingue es la honestidad de su README: avisa de que su tabla de estado es una instantánea heredada y de que no ha reproducido esos resultados por su cuenta."
+      - "Por eso lo dejamos en la fase de preparación: hasta que publique un arranque propio, no hay nada nuevo que contar."
+    article_en:
+      - "Leonida (Reforge) is another community continuation of Leonida. It starts from the same code and historical results as the original."
+      - "It uses the same recipe: native CPU code and shaders translated to SPIR-V for Vulkan. What sets it apart is its README's honesty: it warns that its status table is an inherited snapshot and that it has not reproduced those results itself."
+      - "That is why we leave it in the preparation phase: until it publishes a boot of its own, there is nothing new to report."
     strengths:
       - {es: "Transparente: dice claramente qué no ha verificado.", en: "Transparent: it says clearly what it has not verified.", evidence: "https://github.com/LeonidaReforge/Leonida#project-status"}
     weaknesses:
@@ -209,9 +296,387 @@ projects:
     technical_en: "11,986 D3D12 calls in a boot with 0 pipeline failures; 26,616 SPIR-V modules indexed; 29 of 29 FidelityFX programs translated. It stops on a null pointer inside render code that is under investigation."
     requirements_es: "Unos 400 GiB libres, Python 3.12, .NET 8, Visual Studio 2022, Vulkan SDK y LLVM con target AMDGPU."
     requirements_en: "About 400 GiB free, Python 3.12, .NET 8, Visual Studio 2022, Vulkan SDK and LLVM with the AMDGPU target."
+    kind: recomp
+    article_es:
+      - "Palmetto es una continuación en solitario de Leonida, nacida cuando el repositorio original pasó a ser privado. Se define como un runtime de sala limpia, es decir, escrito sin copiar código de Microsoft, que ejecuta la versión de Xbox Series desde tu propia copia."
+      - "Lleva el runtime de Leonida más lejos: mapea la imagen del ejecutable en memoria, responde a sus importaciones con shims propios y traduce el D3D12 de consola a Vulkan. En una RTX 4090 el juego pasa la configuración del renderizador y entra en su propio código de render."
+      - "Ahí se para, en un puntero nulo que está investigando, sin completar todavía ningún frame. Sus mediciones son muy detalladas (11.986 llamadas D3D12 en un arranque sin fallos de pipeline), pero los requisitos para compilarlo son enormes: unos 400 GiB libres."
+      - "Qué vigilar: el primer frame. Si lo consigue, sería la primera ruta Vulkan en pantalla."
+    article_en:
+      - "Palmetto is a solo continuation of Leonida, started when the original repository went private. It calls itself a clean-room runtime, meaning written without copying Microsoft code, that runs the Xbox Series build from your own copy."
+      - "It carries Leonida's runtime further: it maps the executable's image into memory, answers its imports with its own shims and translates console D3D12 to Vulkan. On an RTX 4090 the game gets past renderer set-up and into its own render code."
+      - "It stops there, on a null pointer it is investigating, without completing a frame yet. Its measurements are very detailed (11,986 D3D12 calls in a boot with no pipeline failures), but the build requirements are huge: about 400 GiB free."
+      - "What to watch: the first frame. If it gets there, it would be the first Vulkan route on screen."
     strengths:
       - {es: "Mediciones muy detalladas de dónde se para y por qué.", en: "Very detailed measurements of where it stops and why.", evidence: "https://github.com/luizwidmer/palmetto#status"}
       - {es: "0 fallos de creación de pipelines en el arranque medido.", en: "0 pipeline creation failures in the measured boot.", evidence: "https://github.com/luizwidmer/palmetto#status"}
     weaknesses:
       - {es: "Todavía no presenta ningún frame.", en: "No presented frame yet.", evidence: "https://github.com/luizwidmer/palmetto#status"}
       - {es: "Comunidad pequeña y requisitos de compilación muy pesados.", en: "Small community and very heavy build requirements.", evidence: "https://github.com/luizwidmer/palmetto#build"}
+
+  # ---- Promoted from the external trackers (GTA VI PC Race, PortWatch VI) on 2026-11-24 ----
+
+  - name: "CGBJ"
+    slug: cgbj
+    repo: null
+    link: "https://portwatch-vi.xyz/news/2026-11-24-cgbj-in-game.html"
+    language: "—"
+    priority: 0
+    phase: {level: 5, partial: false,
+            note_es: "Según PortWatch, que dice haberlo comprobado, un jugador se mueve con mando y habla con personajes dentro del mundo, sin iluminación y muy lento (unos 3–4 fps). El código es privado: nadie de fuera puede reproducirlo.",
+            note_en: "According to PortWatch, which says it checked it, a player moves with a controller and talks to characters inside the world, unlit and very slowly (about 3–4 fps). The code is private: nobody outside can reproduce it."}
+    goal_es: "Llevar la versión de Xbox Series al mundo jugable en PC a partir de VIctory, con parte del trabajo de XCL."
+    goal_en: "Take the Xbox Series build to a playable world on PC, starting from VIctory with some of XCL's work."
+    approach_es: "Build privada basada en el runtime de VIctory (capa de compatibilidad) con piezas de XCL; sus cambios no son públicos."
+    approach_en: "Private build based on VIctory's runtime (a compatibility layer) with pieces of XCL; its changes are not public."
+    technical_es: "No hay repositorio público. Lo que se sabe viene de un vídeo de 77 segundos publicado en X y de la verificación de PortWatch: control con mando, mundo cargado en colores planos sin luz y un rendimiento de pocos frames por segundo."
+    technical_en: "There is no public repository. What is known comes from a 77-second video posted on X and PortWatch's check: gamepad control, the world loaded in flat unlit colours, and a few frames per second."
+    requirements_es: "Desconocidos: no hay código ni build pública."
+    requirements_en: "Unknown: there is no public code or build."
+    kind: private
+    based_on: [victory, xcl]
+    article_es:
+      - "CGBJ es un grupo que trabaja en privado y que, según el tracker PortWatch, es el primero en meter a un jugador dentro del mundo de GTA VI en PC con control real: caminar, hablar con personajes y abrir el menú de pausa. Es el resultado más avanzado conocido, pero también el más difícil de comprobar."
+      - "No es un proyecto nuevo desde cero: parte de VIctory, la capa de compatibilidad pública más seguida, y le añade parte del trabajo de XCL. Es decir, usa la misma idea (el código del juego corre en tu CPU y se le pone debajo una consola falsa) con cambios propios que no ha publicado."
+      - "La imagen todavía es plana: colores sin iluminación, y en la prueba en la que el jugador caminaba la pantalla estaba en negro. Va muy lento, a unos pocos frames por segundo, lejos de los 30 que hacen falta para jugar."
+      - "Por qué lo marcamos con cautela: el código es privado, así que nadie de fuera puede reproducirlo, y el vídeo no nombra el proyecto. Si alguien te ofrece \"la build de CGBJ\" para descargar, es una estafa: no hay nada público."
+    article_en:
+      - "CGBJ is a group working in private which, according to the PortWatch tracker, is the first to put a player inside GTA VI's world on PC with real control: walking, talking to characters and opening the pause menu. It is the furthest known result, but also the hardest to check."
+      - "It is not a new project from scratch: it starts from VIctory, the most followed public compatibility layer, and adds some of XCL's work. In other words, it uses the same idea (the game's code runs on your CPU on top of a fake console) with changes of its own that it has not published."
+      - "The picture is still flat: colours without lighting, and in the run where the player walked the screen was black. It is very slow, a few frames per second, far from the 30 you need to play."
+      - "Why we flag it with caution: the code is private, so nobody outside can reproduce it, and the video does not name the project. If someone offers you \"the CGBJ build\" to download, it is a scam: nothing is public."
+    strengths:
+      - {es: "El resultado más avanzado conocido: control del jugador dentro del mundo.", en: "The furthest known result: player control inside the world.", evidence: "https://portwatch-vi.xyz/news/2026-11-24-cgbj-in-game.html"}
+      - {es: "Se apoya en dos bases públicas sólidas (VIctory y XCL).", en: "Builds on two solid public bases (VIctory and XCL).", evidence: "https://github.com/Marvisak/VIctory"}
+    weaknesses:
+      - {es: "Código privado: imposible de reproducir o auditar desde fuera.", en: "Private code: impossible to reproduce or audit from outside.", evidence: "https://portwatch-vi.xyz/news/2026-11-24-cgbj-in-game.html"}
+      - {es: "Sin iluminación y a pocos frames por segundo.", en: "No lighting and a few frames per second.", evidence: "https://vuyp.github.io/gta6-pc-race/"}
+
+  - name: "Palmwave"
+    slug: palmwave
+    repo: fablinoo/palmwave
+    language: "Rust"
+    priority: 10
+    phase: {level: 5, partial: false,
+            note_es: "Con el detector de cuelgues y dos pasadas de iluminación desactivadas por parches, entra en el mundo y presenta sus frames, pero se ven de un solo color plano; cada frame del mundo tarda de 18 s a 2 min de GPU.",
+            note_en: "With the hang detector and two lighting passes patched off, it enters the world and presents its frames, but they are one flat colour; each world frame takes 18 s to 2 min of GPU work."}
+    goal_es: "Ejecutar juegos de Xbox Series en Windows partiendo de XCL, con arreglos propios para GTA VI."
+    goal_en: "Run Xbox Series games on Windows starting from XCL, with fixes of its own for GTA VI."
+    approach_es: "Fork de XCL: código x64 nativo, APIs de consola reimplementadas y shaders RDNA2 traducidos a HLSL y DXIL para Direct3D 12, más parches de bytes aplicados en memoria al cargar."
+    approach_en: "XCL fork: native x64 code, reimplemented console APIs and RDNA2 shaders translated to HLSL and DXIL for Direct3D 12, plus byte patches applied in memory at load time."
+    technical_es: "Prepara en segundo plano las pipelines de cálculo del mundo; implementa wave64 en GPU de 32 hilos con dos mitades cooperando; herramientas para cronometrar cada draw y volcar frames. Mide 58.759 pipelines creadas antes de cargar el mundo."
+    technical_en: "Builds the world's compute pipelines on background threads; implements wave64 on 32-lane GPUs with two cooperating halves; tools to time every draw and dump frames. It measures 58,759 pipelines created before the world loads."
+    requirements_es: "Windows 10/11 x64, Rust con MSVC, Windows SDK con DXC, Gaming Services y GPU con SM 6.6 y mesh shaders."
+    requirements_en: "Windows 10/11 x64, Rust with MSVC, Windows SDK with DXC, Gaming Services and a GPU with SM 6.6 and mesh shaders."
+    kind: layer
+    based_on: [xcl]
+    article_es:
+      - "Palmwave es un fork de XCL con arreglos propios, hecho con ayuda de una plataforma de IA según su propio README. Su interés está en que documenta con mucho detalle lo que pasa al entrar en el mundo con la base de XCL."
+      - "Para llegar más lejos aplica parches de bytes en memoria (sin tocar el archivo en disco): apaga el detector de cuelgues del juego, que lo cierra si no recibe señales durante 30 segundos, y dos pasadas de iluminación cuyos shaders son enormes."
+      - "Así entra en el mundo, pero la imagen es un único color plano y cada frame tarda entre 18 segundos y 2 minutos. El motivo principal: más de 4 GB de memoria de GPU del juego viven en la RAM del PC y la tarjeta la lee a través del bus, cientos de veces más lento."
+      - "Qué vigilar: si logra mover esa memoria a la VRAM sin pasarse de los 16 GB de la tarjeta, y si los parches que apagan partes del juego dejan de hacer falta."
+    article_en:
+      - "Palmwave is an XCL fork with fixes of its own, made with help from an AI platform according to its README. What makes it interesting is how thoroughly it documents what happens when XCL's base enters the world."
+      - "To get further it applies byte patches in memory (the file on disk is left alone): it switches off the game's hang detector, which closes it after 30 seconds without a heartbeat, and two lighting passes whose shaders are huge."
+      - "That way it enters the world, but the picture is a single flat colour and each frame takes between 18 seconds and 2 minutes. The main reason: over 4 GB of the game's GPU memory lives in the PC's RAM and the card reads it across the bus, hundreds of times slower."
+      - "What to watch: whether it can move that memory into VRAM without going over the card's 16 GB, and whether the patches that switch parts of the game off stop being needed."
+    strengths:
+      - {es: "Mediciones muy precisas de qué frena cada frame del mundo.", en: "Very precise measurements of what slows each world frame.", evidence: "https://github.com/fablinoo/palmwave#status"}
+      - {es: "Hereda la base de XCL, que ya ejecuta otros juegos completos.", en: "Inherits XCL's base, which already runs other full games.", evidence: "https://github.com/ivall/xcl"}
+    weaknesses:
+      - {es: "Necesita parches que apagan partes del juego para avanzar.", en: "Needs patches that switch parts of the game off to progress.", evidence: "https://github.com/fablinoo/palmwave#status"}
+      - {es: "El mundo no se ve todavía y la VRAM se queda corta.", en: "The world is not visible yet and VRAM runs short.", evidence: "https://github.com/fablinoo/palmwave#status"}
+
+  - name: "OpenScarlett (Community Edition)"
+    slug: openscarlett-ce
+    repo: OpenCommunityEdition/OpenScarlett
+    language: "C++"
+    priority: 11
+    phase: {level: 4, partial: true,
+            note_es: "Con un juego reciente que no nombra: ajustes de primer arranque, pantallas legales y pantalla de inicio a 30 fps y vídeo 4K con sonido; se para mientras carga la escena de detrás de los menús.",
+            note_en: "With a newer game it does not name: first-boot settings, legal screens and start screen at 30 fps and a 4K intro video with sound; it stops while it streams in the scene behind the menus."}
+    goal_es: "Ejecutar juegos de Xbox Series en Windows y Linux, de forma nativa, desde tu propia copia."
+    goal_en: "Run Xbox Series games natively on Windows and Linux from your own copy."
+    approach_es: "Capa de compatibilidad: sustituye las DLL de sistema de la consola por DLL con el mismo nombre construidas sobre Win32 y Direct3D 12 de PC; en Linux corre bajo Wine con vkd3d-proton."
+    approach_en: "Compatibility layer: replaces the console's system DLLs with same-named DLLs built on Win32 and PC Direct3D 12; on Linux it runs under Wine with vkd3d-proton."
+    technical_es: "Traduce código máquina de GPU a HLSL (compute, pixel, vertex, mesh y geometry); trazado de rayos en curso; mandos, teclado y ratón; DirectStorage con zlib. Minecraft Preview es jugable a unos 60 fps y la demo técnica de Matrix con UE5 corre a unos 20 fps."
+    technical_en: "Translates GPU machine code to HLSL (compute, pixel, vertex, mesh and geometry); ray tracing in progress; gamepads, keyboard and mouse; DirectStorage with zlib. Minecraft Preview is playable at about 60 fps and the UE5 Matrix tech demo runs at about 20 fps."
+    requirements_es: "Windows 10/11 o Linux con Wine; probado sobre todo en RTX 5090."
+    requirements_en: "Windows 10/11 or Linux with Wine; tested mostly on an RTX 5090."
+    kind: layer
+    article_es:
+      - "OpenScarlett (Community Edition) es una capa de compatibilidad general para juegos de Xbox Series, independiente del otro OpenScarlett pese al nombre. \"Scarlett\" es el nombre en clave del hardware de Xbox Series."
+      - "Su truco es el de los sustitutos: cuando el juego busca las bibliotecas de la consola (gráficos, servicios, mando, almacenamiento), encuentra unas con el mismo nombre que por dentro llaman a Windows. En Linux hace lo mismo encima de Wine, como Proton con los juegos de Steam."
+      - "Ya es jugable con Minecraft Preview a unos 60 fps y corre la demo de Matrix con Unreal Engine 5. Con el juego reciente que no nombra pasa los ajustes, las pantallas legales y la pantalla de inicio a 30 fps, reproduce el vídeo 4K con sonido y se para al cargar la escena de los menús."
+      - "Qué vigilar: los menús. Es de los pocos proyectos con una base probada en varios juegos y además apunta a Linux."
+    article_en:
+      - "OpenScarlett (Community Edition) is a general compatibility layer for Xbox Series games, separate from the other OpenScarlett despite the name. \"Scarlett\" is the codename of the Xbox Series hardware."
+      - "Its trick is stand-ins: when the game looks for the console's libraries (graphics, services, gamepad, storage), it finds same-named ones that call Windows inside. On Linux it does the same on top of Wine, like Proton does with Steam games."
+      - "It is already playable with Minecraft Preview at about 60 fps and runs the Unreal Engine 5 Matrix demo. With the newer game it does not name, it gets through settings, legal screens and the start screen at 30 fps, plays the 4K video with sound, and stops while loading the scene behind the menus."
+      - "What to watch: the menus. It is one of the few projects with a base proven on several games, and it also targets Linux."
+    strengths:
+      - {es: "Base probada: Minecraft Preview jugable y una demo UE5 en marcha.", en: "Proven base: Minecraft Preview playable and a UE5 demo running.", evidence: "https://github.com/OpenCommunityEdition/OpenScarlett#tested-games"}
+      - {es: "Funciona también en Linux bajo Wine.", en: "Also works on Linux under Wine.", evidence: "https://github.com/OpenCommunityEdition/OpenScarlett#project-status"}
+    weaknesses:
+      - {es: "Con el juego reciente aún no llega a los menús.", en: "With the newer game it does not reach the menus yet.", evidence: "https://github.com/OpenCommunityEdition/OpenScarlett#tested-games"}
+      - {es: "El audio de los procesadores de la consola está en silencio.", en: "Audio from the console's sound processors is silent.", evidence: "https://github.com/OpenCommunityEdition/OpenScarlett#project-status"}
+
+  - name: "PercyScarlett"
+    slug: percyscarlett
+    repo: rpatty-dev/PercyScarlett
+    language: "Rust"
+    priority: 12
+    phase: {level: 4, partial: false,
+            note_es: "Con un ejecutable sin modificar muestra el selector de cuenta, vídeo a todo color y las pantallas de configuración inicial, e informa de streaming del mundo. Retiró sus capturas y ya no nombra el título.",
+            note_en: "On an unmodified executable it shows the account picker, full-colour video and first-time setup screens, and reports world streaming. It withdrew its screenshots and no longer names the title."}
+    goal_es: "Capa de traducción en Rust para ejecutar juegos de Xbox Series sin cifrar en Windows 10/11."
+    goal_en: "Rust translation layer to run unencrypted Xbox Series games on Windows 10/11."
+    approach_es: "Mapea el juego dentro de su propio proceso y le da las piezas exclusivas de consola: D3D12.X, memoria XMem, runtime de Xbox, entrada, audio, almacenamiento y red."
+    approach_en: "Maps the game inside its own process and supplies the console-only pieces: D3D12.X, XMem memory, the Xbox runtime, input, audio, storage and networking."
+    technical_es: "Cargador PE propio, réplica de listas de comandos D3D12.X sobre D3D12 de PC, traductor de shaders RDNA2 de vertex y pixel a SM 6.6 y espejo de memoria en VRAM. Con Minecraft (build de Series) crea, guarda y recarga mundos."
+    technical_en: "Own PE loader, D3D12.X command lists replayed on PC D3D12, an RDNA2 vertex and pixel shader lifter to SM 6.6 and a VRAM memory mirror. With Minecraft (Series build) it creates, saves and reloads worlds."
+    requirements_es: "Windows 10/11 x64, el GDK de Microsoft para registrar el juego y modo desarrollador."
+    requirements_en: "Windows 10/11 x64, Microsoft's GDK to register the game, and Developer Mode."
+    kind: layer
+    article_es:
+      - "PercyScarlett es una capa de traducción escrita en Rust con una interfaz pensada para usuarios: biblioteca de juegos, botón de comprobar y botón de lanzar. Su README llama al objetivo \"TheBig6\" con un guiño."
+      - "Como VIctory o XCL, no emula la CPU: carga el juego en su proceso y responde por la consola. Traduce los shaders de vértices y píxeles de la GPU RDNA2 a un formato de PC y reproduce las órdenes gráficas de la consola en Direct3D 12."
+      - "Con Minecraft en su versión de Series ya juega dentro del mundo a unos 45–50 fps en una RTX 2060 SUPER. Con GTA VI muestra el selector de cuenta, el vídeo y las pantallas de configuración inicial, y dice cargar el mundo por detrás."
+      - "Ojo: el proyecto ofrece releases con un ejecutable propio para facilitar su uso. Descárgalo solo desde su página oficial de GitHub, nunca de webs o vídeos de terceros."
+    article_en:
+      - "PercyScarlett is a translation layer written in Rust with a user-facing interface: a game library, a check button and a launch button. Its README calls the target \"TheBig6\" with a wink."
+      - "Like VIctory or XCL, it does not emulate the CPU: it loads the game into its process and answers for the console. It translates the RDNA2 GPU's vertex and pixel shaders into a PC format and replays the console's graphics commands on Direct3D 12."
+      - "With the Series build of Minecraft it already plays in-world at about 45–50 fps on an RTX 2060 SUPER. With GTA VI it shows the account picker, the video and the first-time setup screens, and says it streams the world behind them."
+      - "Careful: the project ships releases with its own executable to make it easier to use. Get it only from its official GitHub page, never from third-party sites or videos."
+    strengths:
+      - {es: "Juega Minecraft (build de Series) dentro del mundo.", en: "Plays Minecraft (Series build) in-world.", evidence: "https://github.com/rpatty-dev/PercyScarlett#status"}
+      - {es: "Interfaz sencilla con autocomprobación que abre un informe en GitHub.", en: "Simple interface with a self-test that opens a GitHub report.", evidence: "https://github.com/rpatty-dev/PercyScarlett#using-it"}
+    weaknesses:
+      - {es: "Retiró sus capturas del juego: lo publicado hoy no se puede contrastar.", en: "It withdrew its game screenshots: what is published today cannot be checked.", evidence: "https://vuyp.github.io/gta6-pc-race/"}
+      - {es: "Solo traduce shaders de vértices y píxeles; el resto, en curso.", en: "Only vertex and pixel shaders translate; the rest is in progress.", evidence: "https://github.com/rpatty-dev/PercyScarlett#status"}
+
+  - name: "OpenScarlett"
+    slug: openscarlett
+    repo: californiaAlmonds/OpenScarlett
+    language: "C++"
+    priority: 13
+    phase: {level: 4, partial: true,
+            note_es: "Sus commits informan de que el juego completa sus tareas de arranque, dibuja su interfaz y reproduce su vídeo a todo color en 4K en una GTX 1650 Ti de 4 GB. Nada más allá del vídeo.",
+            note_en: "Its commits report the game passing all its start-up tasks, drawing its interface and playing its video in full colour at 4K on a 4 GB GTX 1650 Ti. Nothing past the video."}
+    goal_es: "Capa de traducción MIT en C++20 para ejecutar juegos de Xbox Series en Windows 10/11."
+    goal_en: "MIT C++20 translation layer to run Xbox Series games on Windows 10/11."
+    approach_es: "CPU nativa y traducción solo de lo específico de Xbox: gráficos (D3D12 y Vulkan 1.4), shaders RDNA2, audio, entrada y llamadas al sistema."
+    approach_en: "Native CPU and translation of only the Xbox-specific parts: graphics (D3D12 and Vulkan 1.4), RDNA2 shaders, audio, input and OS calls."
+    technical_es: "33 DLL sustitutas con 1.360 exportaciones, 89 tests automáticos, Minecraft Preview jugable a 60 fps fijos y la demo de Matrix con UE5 llegando a frames 4K. Mantiene la VRAM en ~850 MB en una GTX 1650 Ti."
+    technical_en: "33 stand-in DLLs with 1,360 exports, 89 automated tests, Minecraft Preview playable at a locked 60 fps and the UE5 Matrix demo reaching 4K frames. Keeps VRAM at ~850 MB on a GTX 1650 Ti."
+    requirements_es: "Windows 10/11; funciona incluso en GPU modestas como una GTX 1650 Ti de 4 GB."
+    requirements_en: "Windows 10/11; it even works on modest GPUs like a 4 GB GTX 1650 Ti."
+    kind: layer
+    article_es:
+      - "OpenScarlett es una capa de traducción de código abierto (licencia MIT) para Xbox Series. Su README es muy entusiasta y está lleno de cifras; la parte comprobable es que ya ejecuta juegos más ligeros y que está muy bien cubierto de tests."
+      - "El planteamiento es el habitual: como la Xbox Series tiene un procesador AMD x86-64 igual que un PC, el código de CPU corre sin emulación y solo se traduce lo que es propio de Xbox. Su particularidad es que tiene dos salidas gráficas, Direct3D 12 y Vulkan."
+      - "Con GTA VI, sus commits informan de que el juego termina sus tareas de arranque, pinta su interfaz y reproduce el vídeo en 4K, y lo hace en una tarjeta gráfica de gama baja con 4 GB. No hay nada publicado más allá del vídeo."
+      - "Ojo: enlaza releases descargables desde su propio GitHub. Como con cualquier proyecto, descárgalas solo de ahí."
+    article_en:
+      - "OpenScarlett is an open-source (MIT) translation layer for Xbox Series. Its README is very enthusiastic and full of figures; the checkable part is that it already runs lighter games and is well covered by tests."
+      - "The approach is the usual one: since the Xbox Series has an AMD x86-64 processor just like a PC, CPU code runs without emulation and only what is specific to Xbox gets translated. What sets it apart is two graphics back ends, Direct3D 12 and Vulkan."
+      - "With GTA VI, its commits report the game finishing its start-up tasks, drawing its interface and playing its video at 4K, on a low-end 4 GB graphics card. Nothing past the video is published."
+      - "Careful: it links downloadable releases from its own GitHub. As with any project, only get them from there."
+    strengths:
+      - {es: "Corre en GPU modestas con muy poca VRAM.", en: "Runs on modest GPUs with very little VRAM.", evidence: "https://github.com/californiaAlmonds/OpenScarlett"}
+      - {es: "Muy cubierto de tests y con dos backends gráficos.", en: "Well covered by tests, with two graphics back ends.", evidence: "https://github.com/californiaAlmonds/OpenScarlett"}
+    weaknesses:
+      - {es: "Lo de GTA VI viene de mensajes de commit, no de una tabla de estado.", en: "The GTA VI results come from commit messages, not a status table.", evidence: "https://github.com/californiaAlmonds/OpenScarlett/commits"}
+      - {es: "README muy promocional: cuesta separar lo medido de lo prometido.", en: "Very promotional README: hard to tell measured from promised.", evidence: "https://github.com/californiaAlmonds/OpenScarlett"}
+
+  - name: "TuxBox"
+    slug: tuxbox
+    repo: brcly/TuxBox
+    language: "Rust"
+    priority: 14
+    phase: {level: 4, partial: true,
+            note_es: "En Linux con Proton Experimental muestra la pantalla de selección de jugador a 3840×2160; el vídeo de introducción y lo que viene después no están verificados.",
+            note_en: "On Linux with Proton Experimental it shows the player selection prompt at 3840×2160; the intro video and what follows are not verified."}
+    goal_es: "Capa de compatibilidad para ejecutar juegos de Xbox Series en Linux (con Proton) y Windows."
+    goal_en: "Compatibility layer to run Xbox Series games on Linux (with Proton) and Windows."
+    approach_es: "Aprovecha que Windows (o Proton en Linux) ya resuelve muchas llamadas del juego y traduce solo lo exclusivo de Xbox: órdenes gráficas y formatos de textura."
+    approach_en: "Relies on Windows (or Proton on Linux) already handling many of the game's calls and only translates what is Xbox-only: graphics commands and texture layouts."
+    technical_es: "Backend Direct3D 12 nativo en Windows; en Linux, Proton Experimental sin modificar. Prepara de antemano los shaders que pide el juego (2.755 de 11.429 compilados) y mide FPS con MangoHud."
+    technical_en: "Native Direct3D 12 back end on Windows; on Linux, stock Proton Experimental. It prepares the shaders the game asks for ahead of time (2,755 of 11,429 compiled) and measures FPS with MangoHud."
+    requirements_es: "Linux x86-64 con Proton Experimental o Windows; NVIDIA verificada en una RTX 4070 Ti SUPER."
+    requirements_en: "x86-64 Linux with Proton Experimental, or Windows; NVIDIA verified on an RTX 4070 Ti SUPER."
+    kind: layer
+    article_es:
+      - "TuxBox es el proyecto pensado para Linux: su nombre viene de Tux, el pingüino de Linux. Funciona con el Proton de Valve sin modificar, el mismo que usa Steam Deck, y también tiene un backend para Windows."
+      - "Su idea es minimalista: muchas de las cosas que pide un juego de Xbox ya las sabe hacer Windows, y Proton las imita en Linux. TuxBox solo traduce lo que es propio de la consola, sobre todo los gráficos y la forma en que guarda las texturas."
+      - "Con GTA VI muestra la pantalla de selección de jugador en 4K. Lo que viene detrás aún no está verificado, y su preparación de shaders va por 2.755 de 11.429."
+      - "Qué vigilar: si llega a los menús en Linux. Sería una buena noticia para quien juega en Steam Deck o en Linux."
+    article_en:
+      - "TuxBox is the Linux-minded project: its name comes from Tux, the Linux penguin. It works with Valve's stock Proton, the same one Steam Deck uses, and also has a Windows back end."
+      - "Its idea is minimalist: many things an Xbox game asks for are things Windows already knows how to do, and Proton imitates them on Linux. TuxBox only translates what is console-specific, mainly graphics and the way textures are laid out."
+      - "With GTA VI it shows the player selection prompt at 4K. What follows is not verified yet, and its shader preparation stands at 2,755 of 11,429."
+      - "What to watch: whether it reaches the menus on Linux. That would be good news for Steam Deck and Linux players."
+    strengths:
+      - {es: "Apunta a Linux con Proton sin modificar.", en: "Targets Linux with stock Proton.", evidence: "https://github.com/brcly/TuxBox"}
+      - {es: "Mide FPS y tiempos de frame de forma reproducible.", en: "Measures FPS and frame times reproducibly.", evidence: "https://github.com/brcly/TuxBox#game-logs"}
+    weaknesses:
+      - {es: "Más allá de la primera pantalla, nada verificado.", en: "Nothing verified past the first screen.", evidence: "https://github.com/brcly/TuxBox"}
+      - {es: "La compatibilidad en Windows aún está en desarrollo.", en: "Windows compatibility is still in development.", evidence: "https://github.com/brcly/TuxBox"}
+
+  - name: "Holy-Interoperability"
+    slug: holy-interoperability
+    repo: mewiof/Holy-Interoperability
+    language: "C++"
+    priority: 15
+    phase: {level: 3, partial: false,
+            note_es: "Con un título que no nombra, presenta sus primeros frames unos 30 s después de arrancar; el dispositivo gráfico a veces se pierde y no se ha visto nada de lo que dibuja.",
+            note_en: "With a title it does not name, it presents its first frames about 30 s after starting; the graphics device is sometimes lost and nothing it draws has been seen."}
+    goal_es: "Ejecutar paquetes de juegos x64 de consola como procesos nativos de Windows, sin emulación."
+    goal_en: "Run x64 console title packages as native Windows processes, with no emulation."
+    approach_es: "Arranca el ejecutable suspendido y sustituye en memoria su tabla de importaciones por su propio runtime; reimplementa las bibliotecas de consola en sala limpia."
+    approach_en: "Starts the executable suspended and swaps its import table in memory for its own runtime; reimplements the console libraries clean-room."
+    technical_es: "Sandbox de baja integridad, enlazador de importaciones que avisa de cada función que falta, memoria xmem, dispositivo d3d12_xs sobre D3D12 de PC, almacenamiento rápido con zlib. Mide el avance como cobertura de bibliotecas de consola."
+    technical_en: "Low-integrity sandbox, an import binder that reports each missing function, xmem memory, a d3d12_xs device on PC D3D12, fast storage with zlib. It measures progress as console-library coverage."
+    requirements_es: "Windows 10/11 x64, CMake, Ninja y clang-cl o Visual Studio 2022."
+    requirements_en: "Windows 10/11 x64, CMake, Ninja and clang-cl or Visual Studio 2022."
+    kind: layer
+    article_es:
+      - "Holy-Interoperability es una capa de compatibilidad en fase temprana con una filosofía muy cuidadosa: no nombra juegos, no toca nada en disco y ejecuta el título dentro de una sandbox que le impide escribir en tus archivos."
+      - "Su método: arranca el ejecutable en pausa y, antes de dejarlo correr, cambia en memoria la lista de bibliotecas que el juego pide por la suya. Así cada llamada acaba en Windows, en una DLL del propio juego o en una reimplementación del proyecto, y si falta algo lo dice con precisión."
+      - "Con un título reciente carga, inicializa sus servicios, crea ventana y dispositivo gráfico y presenta sus primeros frames a los 30 segundos. Después se para en el arranque del reproductor de vídeo y nada de lo que dibuja se ha visto aún."
+      - "Qué vigilar: su cobertura de bibliotecas de consola, el número que el propio proyecto usa para medir su avance."
+    article_en:
+      - "Holy-Interoperability is an early compatibility layer with a very careful philosophy: it names no games, changes nothing on disk and runs the title inside a sandbox that stops it writing to your files."
+      - "Its method: it starts the executable paused and, before letting it run, swaps in memory the list of libraries the game asks for with its own. Each call then ends up in Windows, in one of the game's DLLs or in a project reimplementation, and anything missing is reported precisely."
+      - "With a recent title it loads, starts its services, creates its window and graphics device and presents its first frames after 30 seconds. It then stops in its video player's start-up, and nothing it draws has been seen yet."
+      - "What to watch: its console-library coverage, the number the project itself uses to measure progress."
+    strengths:
+      - {es: "Diseño muy seguro: sandbox y nada se modifica en disco.", en: "Very safe design: sandboxed, nothing changed on disk.", evidence: "https://github.com/mewiof/Holy-Interoperability#how-it-works"}
+      - {es: "Bien cubierto de tests de extremo a extremo.", en: "Well covered by end-to-end tests.", evidence: "https://github.com/mewiof/Holy-Interoperability#status"}
+    weaknesses:
+      - {es: "Primeros frames, pero nada visible todavía.", en: "First frames, but nothing visible yet.", evidence: "https://github.com/mewiof/Holy-Interoperability#status"}
+      - {es: "Comunidad muy pequeña.", en: "Very small community.", evidence: "https://github.com/mewiof/Holy-Interoperability"}
+
+  - name: "xbox-emulator"
+    slug: xbox-emulator
+    repo: omonkeyz/xbox-emulator
+    language: "Rust"
+    priority: 16
+    phase: {level: 1, partial: false,
+            note_es: "Su README dice que no ha ejecutado GTA VI (su copia no tenía ejecutable) y solo examinó su paquete de shaders. Un tracker lo sitúa más arriba por notas de un colaborador que no hemos podido comprobar.",
+            note_en: "Its README says it has not run GTA VI (its dump had no executable) and only examined its shader pack. A tracker places it higher based on a contributor's notes we could not check."}
+    goal_es: "Ejecutar la biblioteca de Xbox Series en PC; continuación de TomBox."
+    goal_en: "Run the Xbox Series library on PC; a continuation of TomBox."
+    approach_es: "Pese al nombre, no emula la CPU: reimplementa la plataforma de la consola (D3D12 de Xbox, shaders RDNA2, memoria unificada, bibliotecas) para que las builds corran como procesos de Windows."
+    approach_en: "Despite the name, it does not emulate the CPU: it reimplements the console platform (Xbox Direct3D 12, RDNA2 shaders, unified memory, libraries) so builds run as Windows processes."
+    technical_es: "671 de 671 funciones de sistema importadas cubiertas y 105.506 shaders de un barrido completo traducidos. Trackmania se juega a unos 60 fps y Terraria llega a su mundo; Fortnite llega al lobby."
+    technical_en: "671 of 671 imported system functions covered and 105,506 shaders of a full sweep translated. Trackmania plays at about 60 fps and Terraria reaches its world; Fortnite reaches the lobby."
+    requirements_es: "Windows con GPU Direct3D 12 y Rust."
+    requirements_en: "Windows with a Direct3D 12 GPU and Rust."
+    kind: layer
+    article_es:
+      - "xbox-emulator es una continuación del proyecto TomBox. Su nombre confunde: no es un emulador clásico, sino otra capa de compatibilidad que deja correr el código del juego en tu CPU y reimplementa la plataforma de la consola debajo."
+      - "Lo interesante es su historial con otros juegos: Trackmania se juega a unos 60 fps, Terraria llega a su mundo y Fortnite llega al lobby. Eso demuestra que la base funciona con títulos comerciales."
+      - "Con GTA VI su propio README dice que no lo ha ejecutado, porque la copia con la que trabajaba no tenía el ejecutable; solo analizó su paquete de 26.503 shaders. Un tracker lo pone más arriba por notas de un colaborador que no hemos podido comprobar, así que lo dejamos en preparación."
+      - "Qué vigilar: un primer arranque de GTA VI documentado en el propio repositorio."
+    article_en:
+      - "xbox-emulator is a continuation of the TomBox project. Its name is misleading: it is not a classic emulator but another compatibility layer that lets the game's code run on your CPU and reimplements the console platform underneath."
+      - "What is interesting is its track record with other games: Trackmania plays at about 60 fps, Terraria reaches its world and Fortnite reaches the lobby. That shows the base works with commercial titles."
+      - "With GTA VI its own README says it has not run it, because the copy it worked with had no executable; it only analysed its 26,503-shader pack. A tracker places it higher based on a contributor's notes we could not check, so we keep it in preparation."
+      - "What to watch: a first GTA VI boot documented in the repository itself."
+    strengths:
+      - {es: "Juega otros títulos comerciales (Trackmania, Terraria).", en: "Plays other commercial titles (Trackmania, Terraria).", evidence: "https://github.com/omonkeyz/xbox-emulator#tested-titles"}
+      - {es: "Comunidad grande: cientos de forks.", en: "Large community: hundreds of forks.", evidence: "https://github.com/omonkeyz/xbox-emulator"}
+    weaknesses:
+      - {es: "No ha ejecutado GTA VI según su propio README.", en: "Has not run GTA VI according to its own README.", evidence: "https://github.com/omonkeyz/xbox-emulator#tested-titles"}
+      - {es: "Sin commits desde el 23 de noviembre.", en: "No commits since 23 November.", evidence: "https://github.com/omonkeyz/xbox-emulator/commits"}
+
+  - name: "G6Recomp"
+    slug: g6recomp
+    repo: Kajcsi/G6Recomp
+    language: "C++"
+    priority: 17
+    phase: {level: 2, partial: false,
+            note_es: "Crea la ventana del juego, el dispositivo gráfico, las colas y las listas de comandos, con código de memoria portado de Leonida. Todavía ningún frame.",
+            note_en: "Creates the game's window, graphics device, command queues and lists, with memory code ported from Leonida. No frame yet."}
+    goal_es: "Ejecutar la versión de Xbox Series de GTA VI como aplicación nativa de Windows."
+    goal_en: "Run the Xbox Series release of GTA VI as a native Windows application."
+    approach_es: "Empezó como recompilación estática (al estilo N64Recomp), pero hoy usa un cargador nativo con un runtime que reimplementa los servicios de la consola, como Wine."
+    approach_en: "It started as a static recompilation (N64Recomp-style), but now uses a native loader with a runtime that reimplements the console's services, like Wine."
+    technical_es: "Lectores PE, descubrimiento de funciones a partir de .pdata, motor de hooks, red siempre desconectada, usuario local sin conexión, instalación montada en solo lectura y shaders convertidos a DXIL en el primer uso."
+    technical_en: "PE readers, function discovery from .pdata, a hook engine, networking never forwarded, one offline local user, the install mounted read-only and shaders converted to DXIL on first use."
+    requirements_es: "Windows y tu propia copia del juego; nada jugable todavía."
+    requirements_en: "Windows and your own copy of the game; nothing playable yet."
+    kind: layer
+    article_es:
+      - "G6Recomp nació como una recompilación estática al estilo de N64Recomp o UnleashedRecomp, los proyectos que llevaron juegos de Nintendo 64 y de Xbox 360 a PC. A mitad de camino cambió de rumbo."
+      - "Hoy el código del juego corre tal cual en tu CPU sobre un runtime que imita los servicios de la consola, como hacen Wine y Proton. El recompilador se mantiene como plan B y como herramienta de análisis para colocar hooks de forma segura."
+      - "Va por el arranque: crea la ventana, el dispositivo gráfico y las colas de comandos, con código de memoria portado de Leonida. Aún no hay ningún frame en pantalla, y el README lo dice claro: nada es jugable."
+    article_en:
+      - "G6Recomp was born as a static recompilation in the style of N64Recomp or UnleashedRecomp, the projects that brought Nintendo 64 and Xbox 360 games to PC. Half-way it changed course."
+      - "Today the game's code runs as it is on your CPU on top of a runtime that imitates the console's services, as Wine and Proton do. The recompiler stays as a fallback and as an analysis tool to place hooks safely."
+      - "It is at the boot stage: it creates the window, the graphics device and the command queues, with memory code ported from Leonida. There is no frame on screen yet, and the README says it plainly: nothing is playable."
+    strengths:
+      - {es: "Hoja de ruta clara por hitos.", en: "Clear milestone roadmap.", evidence: "https://github.com/Kajcsi/G6Recomp#status"}
+    weaknesses:
+      - {es: "Sin frames todavía y con muy poca comunidad.", en: "No frames yet and a very small community.", evidence: "https://github.com/Kajcsi/G6Recomp#status"}
+
+  - name: "g6shim"
+    slug: g6shim
+    repo: gookie-dev/g6shim
+    language: "C++"
+    priority: 18
+    phase: {level: 2, partial: false,
+            note_es: "El juego arranca, abre todos sus archivos y se para donde empiezan los gráficos (creación del dispositivo D3D12).",
+            note_en: "The game starts, opens all its archives and stops where graphics begin (D3D12 device creation)."}
+    goal_es: "Ejecutar juegos de Xbox One y Xbox Series en PC sin emulación, con DLL de sistema sustitutas."
+    goal_en: "Run Xbox One and Xbox Series games on PC without emulation, using replacement system DLLs."
+    approach_es: "Escanea qué funciones faltan, genera una DLL con stubs para cada biblioteca de consola y las va sustituyendo por implementaciones reales una a una."
+    approach_en: "Scans which functions are missing, generates a stub DLL for each console library and replaces the stubs with real implementations one by one."
+    technical_es: "Traductor de shaders GFX10 a DXIL (vertex, pixel, compute y mesh), memoria xmem al 95 %, audio con XMA2 y Opus, DirectStorage con zlib y BCPack (con tablas que aporta el usuario)."
+    technical_en: "GFX10-to-DXIL shader translator (vertex, pixel, compute and mesh), xmem memory at 95%, audio with XMA2 and Opus, DirectStorage with zlib and BCPack (with user-supplied tables)."
+    requirements_es: "Windows y Visual Studio/CMake para compilar."
+    requirements_en: "Windows and Visual Studio/CMake to build."
+    kind: layer
+    article_es:
+      - "g6shim se toma el problema como una lista de tareas: primero escanea el juego y apunta cada función de consola que ni Windows ni el propio juego aportan; después genera una DLL con huecos para cada una y los va rellenando."
+      - "Su barra de progreso es muy visual: carga al 100 %, memoria al 95 %, audio al 80 %, shaders al 75 % y gráficos al 40 %. El juego arranca, abre todos sus archivos y se para justo donde empiezan los gráficos."
+      - "Qué vigilar: el primer frame, que es su siguiente hito declarado."
+    article_en:
+      - "g6shim treats the problem as a to-do list: first it scans the game and notes every console function that neither Windows nor the game itself provides; then it generates a DLL with gaps for each one and fills them in."
+      - "Its progress bar is very visual: loading at 100%, memory at 95%, audio at 80%, shaders at 75% and graphics at 40%. The game starts, opens all its archives and stops right where graphics begin."
+      - "What to watch: the first frame, its declared next milestone."
+    strengths:
+      - {es: "Método ordenado y medible por áreas.", en: "Orderly method, measurable per area.", evidence: "https://github.com/gookie-dev/g6shim#progress"}
+    weaknesses:
+      - {es: "Los gráficos solo van por el 40 %.", en: "Graphics are only at 40%.", evidence: "https://github.com/gookie-dev/g6shim#progress"}
+
+  - name: "XValkyrie"
+    slug: xvalkyrie
+    repo: sammwyy/xvalkyrie
+    language: "C++"
+    priority: 19
+    phase: {level: 1, partial: true,
+            note_es: "Ejecuta otros juegos de Xbox One y Series; un commit reciente prepara un título nuevo sin nombrarlo. No ha publicado trabajo sobre GTA VI.",
+            note_en: "Runs other Xbox One and Series games; a recent commit prepares for a newer title without naming it. No GTA VI work published."}
+    goal_es: "Ejecutar software de Xbox One y Xbox Series X|S en Windows de 64 bits por traducción."
+    goal_en: "Run Xbox One and Xbox Series X|S software on 64-bit Windows, by translation."
+    approach_es: "Capa de traducción en C++20: el ejecutable se mapea en un proceso, su código corre nativo y las bibliotecas de consola se responden con implementaciones propias."
+    approach_en: "C++20 translation layer: the executable is mapped into a process, its code runs natively and console libraries are answered by its own implementations."
+    technical_es: "Traduce las versiones de consola de Direct3D 11 y 12, los shaders en código máquina de la GPU de Series, la memoria de páginas físicas y los servicios de sistema. Tiene juegos de Xbox One jugables."
+    technical_en: "Translates the console builds of Direct3D 11 and 12, Series GPU machine-code shaders, physical-page memory and system services. It has playable Xbox One games."
+    requirements_es: "Windows x64."
+    requirements_en: "Windows x64."
+    kind: layer
+    article_es:
+      - "XValkyrie es la única capa de la lista que también apunta a Xbox One, la generación anterior. Ya tiene varios juegos de Xbox One jugables y algunos de Series en marcha."
+      - "Su explicación de por qué no es un emulador es de las más claras: las dos consolas son máquinas x86-64 con un Windows recortado, así que no hay CPU que emular ni sistema que arrancar. Lo que hay que traducir es lo que cambia respecto al PC: Direct3D de consola, shaders, memoria y servicios."
+      - "Con GTA VI no ha publicado nada todavía; solo un commit que se prepara para un título nuevo sin nombrarlo. Lo seguimos porque su base es sólida y podría entrar en la carrera."
+    article_en:
+      - "XValkyrie is the only layer on the list that also targets Xbox One, the previous generation. It already has several playable Xbox One games and some Series ones under way."
+      - "Its explanation of why it is not an emulator is one of the clearest: both consoles are x86-64 machines running a cut-down Windows, so there is no CPU to emulate and no system to boot. What needs translating is what differs from a PC: console Direct3D, shaders, memory and services."
+      - "With GTA VI it has published nothing yet; only a commit preparing for a newer title without naming it. We track it because its base is solid and it could join the race."
+    strengths:
+      - {es: "Juegos de Xbox One ya jugables.", en: "Xbox One games already playable.", evidence: "https://github.com/sammwyy/xvalkyrie#compatibility"}
+    weaknesses:
+      - {es: "Sin trabajo publicado sobre GTA VI.", en: "No published GTA VI work.", evidence: "https://vuyp.github.io/gta6-pc-race/"}

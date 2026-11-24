@@ -452,3 +452,121 @@ def test_html_escaping(tmp_path):
     from items import clean
 
     assert clean("<b>hi</b><script>x</script>") == "hix"
+
+
+# ------------------------------------------------------------------ v2: media, trackers, private projects, new pages
+
+
+def test_readme_media_skips_badges_and_logos_and_resolves_relative_paths():
+    import collect_media
+
+    media = collect_media.media_from_readme(README, "Example/Repo", "main", "victory", "2026-11-24T10:00:00Z")
+    thumbs = [m["thumb"] for m in media if m["thumb"]]
+    assert "https://raw.githubusercontent.com/Example/Repo/main/docs/img/menus.png" in thumbs
+    assert not any("shields.io" in t or "logo" in t for t in thumbs)
+    kinds = {m["kind"] for m in media}
+    assert "video" in kinds  # user-attachments clip and the YouTube link
+    assert any(m.get("embed") == "AbCdEfGhIjK" for m in media)
+    assert all(m["credibility"] == "confirmed" and m["origin"] == "project" for m in media)
+
+
+def test_youtube_parser_reads_ids_and_relative_dates():
+    import collect_media
+
+    videos = collect_media.parse_youtube((FIX / "youtube.html").read_text(encoding="utf-8"))
+    assert [v["video_id"] for v in videos] == ["Vid0000001A", "Vid0000002B", "Vid0000003C"]
+    assert videos[0]["created"] == "2026-11-24T09:00:00Z"
+
+
+def test_tracker_project_lists_and_merge():
+    from bs4 import BeautifulSoup
+
+    import collect_trackers
+    from common import load_json
+
+    race = collect_trackers.projects_from_race(
+        BeautifulSoup((FIX / "vuyp.html").read_text(encoding="utf-8"), "html.parser")
+    )
+    by_name = {p["name"]: p for p in race}
+    assert by_name["CGBJ"]["repo"] is None and by_name["CGBJ"]["stage"] == 6
+    assert by_name["VIctory"]["repo"] == "marvisak/VIctory" and by_name["VIctory"]["stage"] == 5
+    assert by_name["g6shim"]["watch"] is True
+    pw = collect_trackers.projects_from_portwatch(load_json(FIX / "portwatch.json"))
+    rows = collect_trackers.merge_external(
+        [{"name": "Race", "projects": race}, {"name": "PW", "projects": pw}],
+        run_all.config("projects")["projects"],
+    )
+    victory = next(r for r in rows if r["slug"] == "victory")
+    assert victory["stages"] == {"Race": 5, "PW": 5}
+    cgbj = next(r for r in rows if r["name"] == "CGBJ")
+    assert cgbj["slug"] == "cgbj"
+    assert any(r["slug"] is None and r["repo"] == "newdev/scarlett-runtime" for r in rows)
+
+
+def test_private_project_has_no_repo_link_and_a_private_signal():
+    cfg = next(p for p in run_all.config("projects")["projects"] if p["slug"] == "cgbj")
+    res = analyze.analyse_project(cfg, {"slug": "cgbj", "repo": None, "private": True}, None, None, [], {})
+    assert res["status"] == "private" and res["private"]
+    assert res["url"].startswith("https://portwatch-vi.xyz/")
+    assert any(s["code"] == "private" for s in res["signals_bad"])
+    assert res["estimates"] and not res["estimates"][0].get("stale")
+
+
+def test_news_relevance_is_whole_word_and_needs_pc_context():
+    import collect_news
+    from items import relevant
+
+    assert not relevant(["GTA 6 on PS Portal is great"])
+    assert relevant(["GTA 6 PC port progress"])
+    assert collect_news._relevant(["Unofficial GTA 6 PC port reaches the menus"])
+    assert not collect_news._relevant(["GTA 6 runs at 60 fps on Xbox Series X", "PC owners wait"])
+    assert not collect_news._relevant(["GTA 6 - How to make money fast in Port Gellhorn"])
+
+
+def test_new_pages_exist_in_both_languages(site):
+    for rel in [
+        "es/como-funciona/index.html",
+        "en/how-it-works/index.html",
+        "es/descargas-falsas/index.html",
+        "en/fake-downloads/index.html",
+        "es/galeria/index.html",
+        "en/gallery/index.html",
+        "es/noticias/index.html",
+        "en/news/index.html",
+        "es/proyectos/cgbj/index.html",
+        "en/projects/palmwave/index.html",
+    ]:
+        assert (site / rel).exists(), rel
+    sitemap = (site / "sitemap.xml").read_text(encoding="utf-8")
+    assert "como-funciona" in sitemap and "fake-downloads" in sitemap
+
+
+def test_media_never_loads_external_previews_by_default(site):
+    for rel in ["en/gallery/index.html", "es/index.html"]:
+        text = (site / rel).read_text(encoding="utf-8")
+        assert "<iframe" not in text
+        for src in re.findall(r'<img[^>]+src="([^"]+)"', text):
+            assert not src.startswith("http"), src
+        assert "data-src=" in text
+    gallery = (site / "en" / "gallery" / "index.html").read_text(encoding="utf-8")
+    assert "From the project" in gallery and "cdn.example.com" not in gallery
+    assert "Vid0000002B" not in gallery  # a "download" video is dropped by the legal filter
+    assert "Vid0000003C" not in gallery  # a hoax ("fully playable") is never listed
+
+
+def test_counters_and_structured_data(site):
+    text = (site / "es" / "index.html").read_text(encoding="utf-8")
+    assert 'data-since="2026-11-19T00:00:00Z"' in text and 'data-since="2026-11-23T14:36:00Z"' in text
+    assert '"@type": "FAQPage"' in text and '"@type": "ItemList"' in text
+    proj = (site / "en" / "projects" / "victory" / "index.html").read_text(encoding="utf-8")
+    assert '"codeRepository": "https://github.com/Marvisak/VIctory"' in proj
+    assert 'href="https://github.com/Marvisak/VIctory"' in proj
+    cgbj = (site / "en" / "projects" / "cgbj" / "index.html").read_text(encoding="utf-8")
+    assert "github.com/None" not in cgbj and "codeRepository" not in cgbj
+
+
+def test_press_headlines_shown_but_forum_titles_are_not(site):
+    text = (site / "en" / "news" / "index.html").read_text(encoding="utf-8")
+    assert "GTA 6 PC port progressing at breakneck speed" in text
+    home = (site / "en" / "index.html").read_text(encoding="utf-8")
+    assert "world now loads" not in home

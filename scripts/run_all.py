@@ -9,6 +9,7 @@ If a collector fails the rest keep going; the failure is recorded in data/source
 from __future__ import annotations
 
 import argparse
+import html
 import os
 import sys
 import traceback
@@ -21,6 +22,7 @@ import clone_detector
 import collect_discovery
 import collect_dmca
 import collect_github
+import collect_media
 import collect_news
 import collect_reddit
 import collect_social
@@ -32,6 +34,7 @@ from common import (
     DATA_DIR,
     Http,
     config,
+    domain_allowed,
     hours_since,
     iso,
     load_json,
@@ -41,9 +44,21 @@ from common import (
     save_json,
     setup_logging,
 )
-from items import public
+from items import clean, detect_project, public
 
-SOURCES = ["github", "dmca", "discovery", "reddit", "hn", "bluesky", "mastodon", "lemmy", "news", "trackers"]
+SOURCES = [
+    "github",
+    "dmca",
+    "discovery",
+    "reddit",
+    "hn",
+    "bluesky",
+    "mastodon",
+    "lemmy",
+    "youtube",
+    "news",
+    "trackers",
+]
 OFFLINE_NOW = "2026-11-24T12:00:00Z"
 
 
@@ -86,9 +101,9 @@ def _alerts(projects, candidates, forks_flagged, items, health, dmca, dropped, n
     for c in candidates + forks_flagged:
         if c.get("flagged"):
             out.append({"code": "clone", "repo": c["full_name"], "reasons": c["reasons"]})
-    for it in items:
-        if it.get("credibility") == "false":
-            out.append({"code": "hoax", "item": it["id"]})
+    hoaxes = [it for it in items if it.get("credibility") == "false"]
+    for it in sorted(hoaxes, key=lambda i: i.get("created") or "", reverse=True)[:8]:
+        out.append({"code": "hoax", "item": it["id"]})
     warn_h = config("settings")["health"]["warn_after_hours"]
     for name, h in health.items():
         since = h.get("failing_since")
@@ -100,6 +115,51 @@ def _alerts(projects, candidates, forks_flagged, items, health, dmca, dropped, n
     if dropped:
         out.append({"code": "dropped", "n": dropped})
     return out
+
+
+def build_media(
+    items: list[dict[str, Any]], gh: dict[str, Any], tr: dict[str, Any], prev: dict[str, Any], now
+) -> list[dict[str, Any]]:
+    """Every image/video that passes the legal and spoiler filters, labelled by origin and credibility.
+
+    Hoaxes (credibility 'false') are never listed. Nothing here is loaded by the page until the viewer clicks.
+    """
+    allowed = legal_filter.allowlist()
+    out: list[dict[str, Any]] = []
+    for it in items:
+        if it["kind"] not in ("video", "image") or it["credibility"] == "false":
+            continue
+        origin = "video" if it["source"] == "youtube" else "community"
+        out.append({**public(it), "origin": origin})
+    extra = collect_media.collect_readmes(gh.get("projects", {}))
+    for m in (tr or {}).get("media", []):
+        m["project"] = detect_project(m.get("_texts", []), [m["url"]])
+        m["credibility"] = "community"
+        extra.append(m)
+    for m in extra:
+        if legal_filter.url_violation(m["url"]) or (m.get("thumb") and legal_filter.url_violation(m["thumb"])):
+            continue
+        if spoiler_filter.is_spoiler(m.get("_texts", [])):
+            continue
+        out.append(public(m))
+    if not tr and not gh.get("projects"):  # sources down: keep the last catalogue
+        out += [m for m in prev.get("media_items", []) if m.get("origin") in ("project", "tracker")]
+    out = collect_media.finalize(list({m["id"]: m for m in out}.values()), allowed)
+    out = [m for m in out if not m.get("thumb") or domain_allowed(m["thumb"], allowed)]
+    out.sort(key=lambda m: m.get("created") or "", reverse=True)
+    # Round-robin across origins so one origin (e.g. README screenshots) never fills the whole grid.
+    by_origin: dict[str, list[dict[str, Any]]] = {}
+    for m in out:
+        by_origin.setdefault(m["origin"], []).append(m)
+    mixed: list[dict[str, Any]] = []
+    while any(by_origin.values()):
+        for key in ("project", "tracker", "community", "video"):
+            if by_origin.get(key):
+                mixed.append(by_origin[key].pop(0))
+        for key in [k for k in by_origin if k not in ("project", "tracker", "community", "video")]:
+            if by_origin[key]:
+                mixed.append(by_origin[key].pop(0))
+    return mixed[: config("settings")["media"]["max_items"]]
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -117,13 +177,15 @@ def main(argv: list[str] | None = None) -> int:
     now = runner.now
     prev = {} if args.offline else (load_json(DATA_DIR / "latest.json", {}) or {})
     projects_cfg = config("projects")["projects"]
-    tracked_repos = [p["repo"] for p in projects_cfg]
+    tracked_repos = [p["repo"] for p in projects_cfg if p.get("repo")]
 
     gh = runner.run("github", lambda: collect_github.collect(http)) or {"projects": {}}
     dmca = runner.run("dmca", lambda: collect_dmca.collect(http)) or {}
-    trackers = (runner.run("trackers", lambda: collect_trackers.collect(http)) or {}).get("trackers")
+    tr = runner.run("trackers", lambda: collect_trackers.collect(http)) or {}
+    trackers = tr.get("trackers")
     if trackers is None:
         trackers = prev.get("trackers", [])
+    external = tr.get("external") if tr else prev.get("external", [])
     readmes = {v["repo"]: v.get("_readme", "") for v in gh["projects"].values() if v.get("_readme")}
     disc = runner.run("discovery", lambda: collect_discovery.collect(http, readmes))
 
@@ -134,6 +196,7 @@ def main(argv: list[str] | None = None) -> int:
         ("bluesky", lambda: collect_social.collect_bluesky(http)),
         ("mastodon", lambda: collect_social.collect_mastodon(http)),
         ("lemmy", lambda: collect_social.collect_lemmy(http)),
+        ("youtube", lambda: collect_media.collect_youtube(http)),
         ("news", lambda: collect_news.collect(http)),
     ]:
         res = runner.run(name, fn)
@@ -169,7 +232,7 @@ def main(argv: list[str] | None = None) -> int:
                 dmca.get("hits", {}),
             )
         )
-    projects.sort(key=lambda x: (-x["score"], -(x["gh"].get("stars") or 0)))
+    projects.sort(key=lambda x: (-x["score"], x.get("priority", 99), -(x["gh"].get("stars") or 0)))
     max_reached = max((analyze.reached_level(p["phase"]) for p in projects), default=0)
     credibility.apply(items, max_reached, tracked_repos)
     # A thread confirmed by the project itself is "confirmed"
@@ -206,15 +269,20 @@ def main(argv: list[str] | None = None) -> int:
         ],
         key=lambda i: -(i.get("score") or 0),
     )[:10]
-    media = sorted(
-        [
-            i
-            for i in items
-            if i["kind"] in ("video", "image") and (i.get("project") or i["credibility"] in ("confirmed", "community"))
-        ],
+    media = build_media(items, gh, tr, prev, now)
+    show_headlines = config("settings")["news"].get("show_press_headlines")
+    for it in items:
+        if it["source"] == "news" and show_headlines and it.get("_texts"):
+            title = html.unescape(clean(it["_texts"][0], 300))
+            label = it.get("source_label") or ""
+            if label and title.endswith(" - " + label):
+                title = title[: -len(label) - 3]
+            it["headline"] = title[:160].strip()
+    press = sorted(
+        [i for i in items if i["source"] == "news" and i["credibility"] != "false"],
         key=lambda i: i["created"],
         reverse=True,
-    )[:12]
+    )[:30]
     alerts = _alerts(
         projects,
         candidates,
@@ -233,7 +301,12 @@ def main(argv: list[str] | None = None) -> int:
         "items": sorted([public(i) for i in items], key=lambda i: i["created"], reverse=True),
         "events": events,
         "weekly": [i["id"] for i in weekly],
-        "media": [i["id"] for i in media],
+        "media": [i["id"] for i in media if i["id"] in {x["id"] for x in items}],
+        "media_items": media,
+        "press": [i["id"] for i in press],
+        "external": external,
+        "scam": (tr or {}).get("scam") or prev.get("scam"),
+        "milestones": config("settings")["milestones"],
         "alerts": alerts,
         "trackers": [{k: t.get(k) for k in ("name", "url", "ok", "updated", "phases")} for t in trackers],
         "dmca": {"hits": dmca.get("hits", {}), "scanned": dmca.get("scanned")},

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% import "figures.html" as fig %}
+{% block main %}
+<article class="wrap sheet longform">
+  <nav class="crumbs" aria-label="breadcrumb"><a href="{{ site.base }}{{ path_for(lang, 'home') }}">{{ T.crumbs.home }}</a> <span aria-hidden="true">/</span> <span aria-current="page">{{ T.nav.how }}</span></nav>
+  <header class="longform__head">
+    <p class="h-eyebrow">{{ C.eyebrow }}</p>
+    <h1 class="h-display h-display--long">{{ C.h1 }}</h1>
+    <p class="lead">{{ C.lead }}</p>
+  </header>
+  <div class="longform__grid">
+    <nav class="toc card" aria-labelledby="toc-h">
+      <p id="toc-h" class="h-eyebrow">{{ C.toc }}</p>
+      <ul>{% for s in C.sections %}<li><a href="#{{ s.id }}">{{ s.h }}</a></li>{% endfor %}</ul>
+    </nav>
+    <div class="prose">
+      {% for s in C.sections %}
+      <section id="{{ s.id }}" class="prose__section" aria-labelledby="h-{{ s.id }}">
+        <h2 id="h-{{ s.id }}" class="h-section">{{ s.h }}</h2>
+        {% for para in s.paras or [] %}<p>{{ para|md }}</p>{% endfor %}
+        {% if s.figure == 'anatomy' %}{{ fig.anatomy(C.fig.anatomy) }}
+        {% elif s.figure == 'stack' %}{{ fig.stack(C.fig.stack) }}
+        {% elif s.figure == 'routes' %}{{ fig.routes(C.fig.routes) }}
+        {% elif s.figure == 'shaders' %}{{ fig.shaders(C.fig.shaders) }}
+        {% elif s.figure == 'phases' %}{{ fig.phases_road(T) }}{% endif %}
+        {% if s.bullets %}<ul class="bullets">{% for b in s.bullets %}<li>{{ b|md }}</li>{% endfor %}</ul>{% endif %}
+        {% if s.cards %}
+        <div class="routecards">
+          {% for c in s.cards %}
+          <div class="routecard card{{ ' card--glow' if loop.index == 2 }}">
+            <p class="routecard__tag">{{ c.tag }}</p>
+            <h3 class="h-card">{{ c.title }}</h3>
+            <p>{{ c.text }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if s.phases %}
+        <ol class="phasecards">
+          {% for i in range(1, 8) %}<li class="phasecard card"><span class="phasecard__n">{{ i }}</span><strong>{{ T.phases.heist[i] }}</strong><span class="muted">{{ T.phases.tech[i] }}</span></li>{% endfor %}
+        </ol>
+        {% endif %}
+        {% if s.after %}<p>{{ s.after }}</p>{% endif %}
+        {% if s.callout %}<aside class="callout">{{ s.callout }}{% if s.callout_link %} <a href="{{ site.base }}{{ path_for(lang, s.callout_link) }}">{{ T.nav[s.callout_link] }} →</a>{% endif %}</aside>{% endif %}
+      </section>
+      {% endfor %}
+      <aside class="cta card card--glow">
+        <h2 class="h-card">{{ C.cta_title }}</h2>
+        <p>{{ C.cta_text }}</p>
+        <a class="btn" href="{{ site.base }}{{ path_for(lang, 'home') }}#projects">{{ C.cta_btn }} →</a>
+      </aside>
+      <h2 class="h-sub">{{ T.sections.glossary }}</h2>
+      <dl class="glossary">
+        {% for g in T.glossary %}<div><dt><dfn>{{ g.term }}</dfn></dt><dd>{{ g.def }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+  </div>
+</article>
+{% endblock %}

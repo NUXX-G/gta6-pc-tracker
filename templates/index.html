@@ -1,14 +1,12 @@
 {% extends "base.html" %}
-{% block head %}
-<script type="application/ld+json">{{ faq_jsonld|safe }}</script>
-{% endblock %}
+{% import "figures.html" as fig %}
 {% block main %}
 
-{# 2. HERO #}
+{# HERO #}
 <section id="status" class="hero" aria-labelledby="hero-q">
   <div class="wrap hero__grid">
     <div class="hero__copy">
-      <p class="h-eyebrow">{{ T.sections.status_lead }}</p>
+      <p class="h-eyebrow">{{ T.meta.keywords_line }}</p>
       <h1 id="hero-q" class="hero__q">{{ T.hero.question }}</h1>
       <p class="hero__answer hero__answer--{{ hero.tone }}">{{ hero.answer }}</p>
       <p class="hero__tagline">{{ hero.tagline }}</p>
@@ -16,23 +14,40 @@
         <span class="muted">· {{ now_iso[11:16] }} {{ T.hero.updated_utc }}</span>
         <span class="muted localtime" data-local="{{ now_iso }}" data-label="{{ T.hero.local_time }}"></span></p>
     </div>
-    {% if leader %}
-    <aside class="hero__leader card card--glow" aria-label="{{ T.hero.leader }}">
-      <p class="h-eyebrow">{{ T.hero.leader }}</p>
-      <p class="hero__leadname"><a href="{{ site.base }}{{ path_for(lang, 'project', leader.slug) }}">{{ leader.name }}</a></p>
-      <p class="hero__pct"><span class="num">{{ leader.score|round|int }}</span><span class="pct">%</span> <span class="muted">{{ T.project_card.of_total }}</span></p>
-      {{ m.meter(leader.score) }}
-      <p class="hero__phase">{{ leader.phase_label }} · <strong>{{ leader.phase_name }}</strong> <span class="muted">({{ leader.phase_tech }})</span></p>
-      {{ m.phasebar(leader.phase, T) }}
-    </aside>
-    {% endif %}
+    <div class="hero__side">
+      {{ fig.hero_art() }}
+      {% if leader %}
+      <aside class="hero__leader card card--glow" aria-label="{{ T.hero.leader }}">
+        <p class="h-eyebrow">{{ T.hero.leader }}</p>
+        <p class="hero__leadname"><a href="{{ site.base }}{{ path_for(lang, 'project', leader.slug) }}">{{ leader.name }}</a></p>
+        <p class="hero__pct"><span class="num">{{ leader.score|round|int }}</span><span class="pct">%</span> <span class="muted">{{ T.project_card.of_total }}</span></p>
+        {{ m.meter(leader.score) }}
+        <p class="hero__phase">{{ leader.phase_label }} · <strong>{{ leader.phase_name }}</strong></p>
+        {{ m.phasebar(leader.phase, T) }}
+      </aside>
+      {% endif %}
+    </div>
+  </div>
+  <div class="wrap counters" aria-label="{{ T.counters.label }}">
+    {% if counters.console %}{{ m.counter('c-console', counters.console, counters.console_parts, T.counters.console, T.counters.console_sub, T) }}{% endif %}
+    {% if counters.exe %}{{ m.counter('c-exe', counters.exe, counters.exe_parts, T.counters.exe, fmt(T.counters.exe_sub, by=counters.exe_by), T, counters.exe_source) }}{% endif %}
   </div>
   <div class="wrap">
-    <p class="scam-strip" role="note"><span aria-hidden="true">⚠</span> {{ T.hero.scam }}</p>
+    <div class="ticker" role="region" aria-label="{{ T.header.ticker }}">
+      <span class="ticker__label">{{ T.header.ticker }}</span>
+      {% if ticker %}
+      <div class="ticker__list">
+        <ul class="ticker__track">
+        {% for e in ticker %}<li data-ts="{{ e.created }}"><a href="{{ e.url }}" target="_blank" rel="noopener noreferrer nofollow" title="{{ T.external }}">{{ e.title }}</a> <span class="muted">· {{ m.time(e.created, e.rel) }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      {% else %}<span class="muted">{{ T.header.ticker_empty }}</span>{% endif %}
+    </div>
+    <p class="scam-strip" role="note"><span aria-hidden="true">⚠</span> {{ T.hero.scam }} <a href="{{ site.base }}{{ path_for(lang, 'fake') }}">{{ T.alerts.scam_more }} →</a></p>
   </div>
 </section>
 
-{# 3. SUMMARY CARDS #}
+{# SUMMARY #}
 <section class="wrap summary" aria-label="{{ T.sections.status_lead }}">
   <div class="stat card">
     <p class="stat__label">{{ T.cards.leader }}</p>
@@ -56,7 +71,7 @@
   </div>
 </section>
 
-{# 4. PROJECTS #}
+{# PROJECTS #}
 <section id="projects" class="section wrap" aria-labelledby="h-projects">
   <header class="section__head">
     <h2 id="h-projects" class="h-section">{{ T.sections.projects }}</h2>
@@ -68,26 +83,47 @@
       <div class="pcard__top">
         <span class="pcard__rank" aria-hidden="true">{{ loop.index }}</span>
         <h3 class="pcard__name"><a href="{{ site.base }}{{ path_for(lang, 'project', p.slug) }}">{{ p.name }}</a></h3>
-        {{ m.status_badge(p.status, p.status_label) }}
         <p class="pcard__pct"><span class="num">{{ p.score|round|int }}</span>%</p>
       </div>
-      {{ m.meter(p.score) }}
+      <p class="pcard__tags"><span class="kind kind--{{ p.kind }}">{{ fig.kind_icon(p.kind) }}{{ p.kind_label }}</span> {{ m.status_badge(p.status, p.status_label) }}</p>
       <div class="pcard__phase">{{ m.phasebar(p.phase, T) }}<span class="pcard__phaselabel">{{ p.phase_label }} · {{ p.phase_name }}</span></div>
-      <dl class="pcard__facts">
-        <div><dt>{{ T.project_card.goal }}</dt><dd>{{ p.goal }}</dd></div>
-        <div><dt>{{ T.project_card.now }}</dt><dd>{{ p.now_line }}</dd></div>
-        {% if p.best %}<div class="fact--good"><dt>{{ T.project_card.best }}</dt><dd>{{ p.best.text }}</dd></div>{% endif %}
-        {% if p.worst %}<div class="fact--bad"><dt>{{ T.project_card.worst }}</dt><dd>{{ p.worst.text }}</dd></div>{% endif %}
-        <div><dt>{{ T.project_card.gpus }}</dt><dd>{% if p.gpu_ok %}{% for v in p.gpu_ok %}<span class="chip">{{ T.gpu[v] }}</span>{% endfor %}{% else %}<span class="muted">{{ T.project_card.gpus_none }}</span>{% endif %}</dd></div>
-      </dl>
-      <a class="pcard__more" href="{{ site.base }}{{ path_for(lang, 'project', p.slug) }}">{{ T.project_card.full }} <span aria-hidden="true">→</span></a>
+      <p class="pcard__goal">{{ p.goal }}</p>
+      <details class="pcard__details">
+        <summary>{{ T.project_card.details }}</summary>
+        <dl class="pcard__facts">
+          <div><dt>{{ T.project_card.now }}</dt><dd>{{ p.now_line if not p.private else p.phase_note }}</dd></div>
+          {% if p.best %}<div class="fact--good"><dt>{{ T.project_card.best }}</dt><dd>{{ p.best.text }}</dd></div>{% endif %}
+          {% if p.worst %}<div class="fact--bad"><dt>{{ T.project_card.worst }}</dt><dd>{{ p.worst.text }}</dd></div>{% endif %}
+          <div><dt>{{ T.project_card.gpus }}</dt><dd>{% if p.gpu_ok %}{% for v in p.gpu_ok %}<span class="chip">{{ T.gpu[v] }}</span>{% endfor %}{% else %}<span class="muted">{{ T.project_card.gpus_none }}</span>{% endif %}</dd></div>
+        </dl>
+      </details>
+      <p class="pcard__links">
+        <a class="pcard__more" href="{{ site.base }}{{ path_for(lang, 'project', p.slug) }}">{{ T.project_card.full }} <span aria-hidden="true">→</span></a>
+        {% if not p.private %}<a class="pcard__repo" href="{{ p.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ T.project_card.repo }} ↗<span class="sr-only"> {{ p.repo }}</span></a>{% else %}<span class="pcard__repo muted">{{ T.project_card.private }}</span>{% endif %}
+      </p>
     </li>
     {% endfor %}
   </ol>
 </section>
 
-{# 5. NEWS #}
-<section id="news" class="section wrap" aria-labelledby="h-news">
+{# PRESS #}
+<section id="news" class="section wrap" aria-labelledby="h-press">
+  <header class="section__head section__head--row">
+    <div><h2 id="h-press" class="h-section">{{ T.sections.press }}</h2>
+    <p class="section__lead">{{ T.sections.press_lead }}</p></div>
+    <a class="btn btn--ghost" href="{{ site.base }}{{ path_for(lang, 'news') }}">{{ T.sections.press_all }} →</a>
+  </header>
+  {% set picks = deeper.get('press', []) %}
+  {% if press or picks %}
+  <ul class="pressgrid">
+    {% for n in press[:6] %}{{ m.press_card(n, T) }}{% endfor %}
+    {% if press|length < 6 %}{% for l in picks[:6 - press|length] %}{{ m.curated_card(l, T) }}{% endfor %}{% endif %}
+  </ul>
+  {% else %}<p class="empty">{{ T.sections.press_empty }}</p>{% endif %}
+</section>
+
+{# UPDATES #}
+<section id="updates" class="section wrap" aria-labelledby="h-news">
   <header class="section__head">
     <h2 id="h-news" class="h-section">{{ T.sections.news }}</h2>
     <p class="section__lead">{{ T.sections.news_lead }}</p>
@@ -115,27 +151,37 @@
   </div>
 </section>
 
-{# 6. MEDIA #}
+{# MEDIA #}
 <section id="media" class="section wrap" aria-labelledby="h-media">
-  <header class="section__head">
-    <h2 id="h-media" class="h-section">{{ T.sections.media }}</h2>
-    <p class="section__lead">{{ T.sections.media_lead }}</p>
+  <header class="section__head section__head--row">
+    <div><h2 id="h-media" class="h-section">{{ T.sections.media }}</h2>
+    <p class="section__lead">{{ T.sections.media_lead }}</p></div>
+    <a class="btn btn--ghost" href="{{ site.base }}{{ path_for(lang, 'media') }}">{{ T.sections.media_all }} ({{ media|length }}) →</a>
   </header>
   {% if media %}
   <ul class="mediagrid">
-    {% for e in media %}
-    <li class="mcard card" data-ts="{{ e.created }}">
-      <span class="mcard__kind">{{ T.kinds[e.kind] }}</span>
-      {{ m.ext(e.url, e.title, T, 'mcard__title') }}
-      <span class="entry__meta">{{ m.time(e.created, e.rel) }} · {{ m.cred(e.credibility, T) }}</span>
-      {{ m.ext_warn(T) }}
-    </li>
-    {% endfor %}
+    {% for e in media[:6] %}{{ m.media_card(e, T) }}{% endfor %}
   </ul>
   {% else %}<p class="empty">{{ T.sections.media_empty }}</p>{% endif %}
 </section>
 
-{# 7. ETA #}
+{# GUIDES #}
+<section class="section wrap guides" aria-label="{{ T.footer.guides }}">
+  <a class="guide card card--glow" href="{{ site.base }}{{ path_for(lang, 'how') }}">
+    <span class="guide__art" aria-hidden="true">{{ fig.kind_icon('layer') }}</span>
+    <span class="guide__body"><span class="guide__title">{{ T.sections.how_title }}</span>
+    <span class="guide__text">{{ T.sections.how_text }}</span>
+    <span class="guide__cta">{{ T.sections.how_btn }} →</span></span>
+  </a>
+  <a class="guide guide--warn card" href="{{ site.base }}{{ path_for(lang, 'fake') }}">
+    <span class="guide__art" aria-hidden="true">{{ fig.shield() }}</span>
+    <span class="guide__body"><span class="guide__title">{{ T.sections.fake_title }}</span>
+    <span class="guide__text">{{ T.sections.fake_text }}</span>
+    <span class="guide__cta">{{ T.sections.fake_btn }} →</span></span>
+  </a>
+</section>
+
+{# ETA #}
 <section id="eta" class="section wrap" aria-labelledby="h-eta">
   <header class="section__head">
     <h2 id="h-eta" class="h-section">{{ T.sections.eta }}</h2>
@@ -159,7 +205,37 @@
   </ol>
 </section>
 
-{# 8. RADAR #}
+{# OTHER TRACKERS #}
+<section id="trackers" class="section wrap" aria-labelledby="h-trackers">
+  <header class="section__head">
+    <h2 id="h-trackers" class="h-section">{{ T.sections.external }}</h2>
+    <p class="section__lead">{{ T.sections.external_lead }}</p>
+  </header>
+  <p class="tracker-links">{% for t in trackers %}{% if t.url %}<a class="chip chip--link{{ ' is-off' if not t.ok }}" href="{{ t.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ t.name }} ↗</a>{% endif %}{% endfor %}</p>
+  {% for t in trackers if not t.ok %}<p class="note">{{ fmt(T.sections.external_blocked, name=t.name) }}</p>{% endfor %}
+  {% if external %}
+  {% set tnames = trackers|selectattr('ok')|map(attribute='name')|list %}
+  <div class="table-wrap">
+  <table class="rtable ext">
+    <thead><tr><th scope="col">{{ T.project.repo }}</th>{% for n in tnames %}<th scope="col">{{ n }}</th>{% endfor %}<th scope="col">{{ T.project.status }}</th></tr></thead>
+    <tbody>
+    {% for r in external %}
+    <tr>
+      <th scope="row" data-label="{{ T.project.repo }}">
+        {% if r.slug %}<a href="{{ site.base }}{{ path_for(lang, 'project', r.slug) }}">{{ r.name }}</a>{% else %}<span class="plain-name">{{ r.name }}</span>{% endif %}
+        {% if r.url %}<a class="evidence" href="{{ r.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ r.repo }} ↗</a>{% elif not r.repo %}<small class="note">{{ T.sections.external_private }}</small>{% endif %}
+      </th>
+      {% for n in tnames %}<td data-label="{{ n }}">{% if n in r.stages %}{% if r.stages[n] %}{{ fmt(T.sections.external_stage, n=r.stages[n]) }}{% else %}<span class="muted">{{ T.sections.external_watch }}</span>{% endif %}{% else %}<span class="muted">—</span>{% endif %}</td>{% endfor %}
+      <td data-label="{{ T.project.status }}">{% if r.slug %}<span class="badge badge--active">{{ T.sections.external_tracked }}</span>{% else %}<span class="badge badge--muted">{{ T.sections.external_not }}</span>{% endif %}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% else %}<p class="empty">{{ T.sections.external_empty }}</p>{% endif %}
+</section>
+
+{# RADAR #}
 <section id="radar" class="section wrap" aria-labelledby="h-radar">
   <header class="section__head">
     <h2 id="h-radar" class="h-section">{{ T.sections.radar }}</h2>
@@ -182,7 +258,7 @@
   {% else %}<p class="empty">{{ T.sections.radar_empty }}</p>{% endif %}
 </section>
 
-{# 9. DIG DEEPER #}
+{# DIG DEEPER #}
 <section id="deeper" class="section wrap" aria-labelledby="h-deeper">
   <header class="section__head">
     <h2 id="h-deeper" class="h-section">{{ T.sections.deeper }}</h2>
@@ -191,6 +267,7 @@
   <div class="linkgroups">
     {% for type in ['press', 'tracker', 'thread', 'repo'] %}
     {% set links = deeper.get(type, []) %}
+    {% if links %}
     <section class="linkgroup card">
       <h3 class="linkgroup__title"><span class="ltype ltype--{{ type }}" aria-hidden="true"></span>{{ T.link_types[type] }}</h3>
       <ul class="links">
@@ -202,19 +279,21 @@
       </details>
       {% endif %}
     </section>
+    {% endif %}
     {% endfor %}
   </div>
   <h3 class="h-sub">{{ T.sections.weekly }}</h3>
   {{ m.entry_list(weekly, T, ui.links_visible, T.sections.weekly_empty) }}
 </section>
 
-{# 10. ALERTS #}
+{# ALERTS #}
 <section id="alerts" class="section wrap" aria-labelledby="h-alerts">
   <header class="section__head">
     <h2 id="h-alerts" class="h-section">{{ T.sections.alerts }}</h2>
     <p class="section__lead">{{ T.sections.alerts_lead }}</p>
   </header>
   <ul class="alerts">
+    <li class="alert alert--scam"><strong class="alert__title">{{ T.alerts.scam_title }}</strong> {{ T.alerts.scam }} <a href="{{ site.base }}{{ path_for(lang, 'fake') }}">{{ T.alerts.scam_more }} →</a></li>
     {% for a in alerts %}
     <li class="alert alert--{{ a.kind }}">
       <strong class="alert__title">{{ a.title }}</strong>
@@ -224,15 +303,14 @@
     {% else %}
     <li class="alert alert--calm">{{ T.alerts.none }}</li>
     {% endfor %}
-    <li class="alert alert--scam"><strong class="alert__title">{{ T.alerts.scam_title }}</strong> {{ T.alerts.scam }}</li>
   </ul>
 </section>
 
-{# 11. FAQ + GLOSSARY #}
+{# FAQ + GLOSSARY #}
 <section id="faq" class="section wrap" aria-labelledby="h-faq">
   <header class="section__head"><h2 id="h-faq" class="h-section">{{ T.sections.faq }}</h2></header>
   <div class="faq">
-    {% for f in T.faq %}
+    {% for f in faq %}
     <details class="faq__item">
       <summary>{{ f.q }}</summary>
       <div class="faq__a">
@@ -246,6 +324,8 @@
         {% if loop.index0 == 6 %}
         <ul class="credlegend">{% for c in ['confirmed', 'community', 'unverified', 'false'] %}<li>{{ m.cred(c, T) }} {{ T.credibility[c ~ '_desc'] }}</li>{% endfor %}</ul>
         {% endif %}
+        {% if loop.index0 in (0, 1) %}<p><a href="{{ site.base }}{{ path_for(lang, 'how') }}">{{ T.sections.how_btn }} →</a></p>{% endif %}
+        {% if loop.index0 in (5, 8) %}<p><a href="{{ site.base }}{{ path_for(lang, 'fake') }}">{{ T.alerts.scam_more }} →</a></p>{% endif %}
       </div>
     </details>
     {% endfor %}
@@ -256,7 +336,7 @@
   </dl>
 </section>
 
-{# 12. HISTORY #}
+{# HISTORY #}
 <section id="history" class="section wrap" aria-labelledby="h-history">
   <header class="section__head">
     <h2 id="h-history" class="h-section">{{ T.sections.history }}</h2>

@@ -21,4 +21,4 @@ ignore = ["E501", "RUF001", "RUF002", "RUF003", "SIM108", "B023"]
 [tool.ruff.lint.isort]
 known-first-party = ["common", "items", "analyze", "build_site", "summarize", "legal_filter", "spoiler_filter",
   "clone_detector", "credibility", "readme_parser", "collect_github", "collect_dmca", "collect_discovery",
-  "collect_reddit", "collect_social", "collect_news", "collect_trackers", "make_og_image", "run_all"]
+  "collect_reddit", "collect_social", "collect_news", "collect_trackers", "collect_media", "make_og_image", "run_all"]

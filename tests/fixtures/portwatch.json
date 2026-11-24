@@ -21,6 +21,58 @@
     "menu": 1,
     "ingame": 0
    }
+  },
+  {
+   "name": "CGBJ",
+   "repo": null,
+   "gta": {
+    "loads": 1,
+    "boots": 1,
+    "menu": 1,
+    "ingame": 1,
+    "fps": 4
+   }
+  },
+  {
+   "name": "ScarlettX",
+   "repo": "Freminet/ScarlettX",
+   "tier": "watchlist",
+   "gta": {}
+  }
+ ],
+ "exe": {
+  "status": "released",
+  "releasedAt": "2026-11-23T14:36:00Z",
+  "by": "Cyberleek"
+ },
+ "flagged": [
+  {
+   "id": "net",
+   "count": 33
+  },
+  {
+   "id": "net2",
+   "count": 7
+  }
+ ],
+ "news": [
+  {
+   "id": "2026-11-24-victory-world",
+   "date": "2026-11-24",
+   "title": "VIctory loads the world",
+   "image": {
+    "url": "https://portwatch-vi.xyz/assets/img/news/victory.webp",
+    "credit": "VIctory"
+   }
+  },
+  {
+   "id": "2026-11-21-keyart",
+   "date": "2026-11-21",
+   "title": "Press art",
+   "image": {
+    "url": "https://cdn.example.com/keyart.jpg",
+    "credit": "Example"
+   }
   }
  ]
 }

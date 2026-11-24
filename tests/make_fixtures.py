@@ -110,6 +110,14 @@ def main() -> None:
 
 Tested on one machine: Windows 11, AMD RX 6700 XT. Also measured on an NVIDIA RTX 4090.
 
+![Menus at 30 fps](docs/img/menus.png)
+![build](https://img.shields.io/badge/build-passing-green)
+<img src="assets/logo.png" alt="logo" width="200">
+
+https://github.com/user-attachments/assets/0123abcd-4567-89ef-0123-456789abcdef
+
+Stream recap: https://www.youtube.com/watch?v=AbCdEfGhIjK
+
 ## License
 GPL
 """
@@ -286,7 +294,21 @@ GPL
                 "card": None,
                 "favourites_count": 12,
                 "replies_count": 3,
-            }
+            },
+            {
+                "id": "2",
+                "content": "<p>GTA 6 PC port XCL screenshot of the settings screen</p>",
+                "account": {"acct": "fan@example.social"},
+                "created_at": ts(2),
+                "sensitive": False,
+                "spoiler_text": "",
+                "media_attachments": [
+                    {"type": "image", "preview_url": "https://files.mastodon.social/media_attachments/small/1.png"}
+                ],
+                "card": None,
+                "favourites_count": 3,
+                "replies_count": 0,
+            },
         ],
     )
     w(
@@ -323,6 +345,13 @@ GPL
     w(
         "vuyp.html",
         "<html><body><p>VIctory is furthest, at stage&nbsp;5&nbsp;of&nbsp;7.</p><p>XCL: stage 4 of 7</p>"
+        "<ol class='board'>"
+        "<li class='board__row'><div class='board__who'><h3>CGBJ</h3><p class='label'>Stage 6 of 7: In-game</p></div></li>"
+        "<li class='board__row'><div class='board__who'><h3><a href='https://github.com/marvisak/VIctory'>VIctory</a></h3>"
+        "<p class='label'>Stage 5 of 7: Recognisable picture</p></div></li>"
+        "<li class='board__row'><div class='board__who'><h3><a href='https://github.com/newdev/scarlett-runtime'>Scarlett Runtime</a>"
+        "</h3><p class='label'>Stage 3 of 7: Graphics device</p></div></li>"
+        "</ol><ul class='pairs'><li><a href='https://github.com/gookie-dev/g6shim'>g6shim</a><p>x</p></li></ul>"
         "<time datetime='2026-11-24T11:49:00Z'>x</time></body></html>",
     )
     w(
@@ -336,9 +365,58 @@ GPL
                     "gta": {"loads": 1, "boots": 1, "menu": 1, "ingame": 1, "fps": 1},
                 },
                 {"name": "XCL", "repo": "ivall/xcl", "gta": {"loads": 1, "boots": 1, "menu": 1, "ingame": 0}},
+                {"name": "CGBJ", "repo": None, "gta": {"loads": 1, "boots": 1, "menu": 1, "ingame": 1, "fps": 4}},
+                {"name": "ScarlettX", "repo": "Freminet/ScarlettX", "tier": "watchlist", "gta": {}},
+            ],
+            "exe": {"status": "released", "releasedAt": "2026-11-23T14:36:00Z", "by": "Cyberleek"},
+            "flagged": [{"id": "net", "count": 33}, {"id": "net2", "count": 7}],
+            "news": [
+                {
+                    "id": "2026-11-24-victory-world",
+                    "date": "2026-11-24",
+                    "title": "VIctory loads the world",
+                    "image": {"url": "https://portwatch-vi.xyz/assets/img/news/victory.webp", "credit": "VIctory"},
+                },
+                {
+                    "id": "2026-11-21-keyart",
+                    "date": "2026-11-21",
+                    "title": "Press art",
+                    "image": {"url": "https://cdn.example.com/keyart.jpg", "credit": "Example"},
+                },
             ],
         },
     )
+    yt = {
+        "contents": {
+            "items": [
+                {
+                    "videoRenderer": {
+                        "videoId": "Vid0000001A",
+                        "title": {"runs": [{"text": "GTA 6 PC port: VIctory progress"}]},
+                        "ownerText": {"runs": [{"text": "Port Watcher"}]},
+                        "publishedTimeText": {"simpleText": "3 hours ago"},
+                    }
+                },
+                {
+                    "videoRenderer": {
+                        "videoId": "Vid0000002B",
+                        "title": {"runs": [{"text": "GTA 6 PC DOWNLOAD FREE"}]},
+                        "ownerText": {"runs": [{"text": "Free Games"}]},
+                        "publishedTimeText": {"simpleText": "1 day ago"},
+                    }
+                },
+                {
+                    "videoRenderer": {
+                        "videoId": "Vid0000003C",
+                        "title": {"runs": [{"text": "GTA 6 PC port is fully playable"}]},
+                        "ownerText": {"runs": [{"text": "Hype"}]},
+                        "publishedTimeText": {"simpleText": "5 hours ago"},
+                    }
+                },
+            ]
+        }
+    }
+    w("youtube.html", "<html><script>var ytInitialData = " + json.dumps(yt) + ";</script></html>")
     index = [
         ("api\\.github\\.com/repos/github/dmca/contents/\\d{4}/\\d{2}$", {"file": "dmca_list.json"}),
         ("api\\.github\\.com/repos/github/dmca/contents/.+\\.md$", {"file": "dmca_notice.md"}),
@@ -381,6 +459,8 @@ GPL
         ("portwatch-vi\\.xyz/data/tracker\\.json", {"file": "portwatch.json"}),
         ("vuyp\\.github\\.io", {"file": "vuyp.html"}),
         ("mtwildwood", {"status": 403}),
+        (r"youtube\.com/results", {"file": "youtube.html"}),
+        (r"feed|rss|\.xml|xml\.cgi", {"status": 404}),
     ]
     w("index.yml", [{"match": m, **e} for m, e in index])
 

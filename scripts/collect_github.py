@@ -224,6 +224,9 @@ def collect(http: Http) -> dict[str, Any]:
     results: dict[str, Any] = {}
     errors = 0
     for p in projects:
+        if not p.get("repo"):  # private build: nothing to read on GitHub
+            results[p["slug"]] = {"slug": p["slug"], "repo": None, "private": True}
+            continue
         try:
             results[p["slug"]] = collect_project(http, p, cache)
         except HttpError as exc:

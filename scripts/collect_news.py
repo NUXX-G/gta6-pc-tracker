@@ -34,9 +34,14 @@ def _decode_google(url: str) -> str | None:
 
 
 def _relevant(texts: list[str]) -> bool:
+    """The game must be named in the title, and the title must be about PC / the ports (whole words)."""
     cfg = config("settings")["news"]
-    joined = " ".join(texts).lower()
-    return bool(GTA_RE.search(joined)) and any(t in joined for t in cfg["context_terms"])
+    title = texts[0] if texts else ""
+    ctx = re.compile(r"(?<![\w])(" + "|".join(cfg["context_terms"]) + r")(?![\w])", re.IGNORECASE)
+    low = title.lower()
+    if any(t in low for t in cfg.get("exclude_terms", [])):
+        return False
+    return bool(GTA_RE.search(title)) and bool(ctx.search(title))
 
 
 def _parse(text: str, lang: str, google: bool) -> tuple[list[dict[str, Any]], int]:

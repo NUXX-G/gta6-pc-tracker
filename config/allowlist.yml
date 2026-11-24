@@ -1,7 +1,13 @@
 # Only these domains (and their subdomains) may be linked or stored. Extend as needed.
+# The legal filter still drops any URL with blocked words (download, torrent, password, ...) or file extensions.
 domains:
+  # code
   - github.com
   - gitlab.com
+  - raw.githubusercontent.com
+  - user-images.githubusercontent.com
+  - opengraph.githubassets.com
+  # community
   - reddit.com
   - redd.it
   - i.redd.it
@@ -10,19 +16,54 @@ domains:
   - news.ycombinator.com
   - bsky.app
   - mastodon.social
+  - files.mastodon.social
   - lemmy.world
+  - x.com
+  - twitter.com
+  # video
+  - youtube.com
+  - youtu.be
+  - youtube-nocookie.com
+  - i.ytimg.com
+  # press (EN)
   - videocardz.com
   - notebookcheck.net
   - pcgamer.com
   - gamesradar.com
   - vgtimes.com
-  - tarreo.com
   - dsogaming.com
   - xda-developers.com
   - eurogamer.net
   - ign.com
   - kotaku.com
   - videogameschronicle.com
+  - wccftech.com
+  - tomshardware.com
+  - windowscentral.com
+  - pcgamesn.com
+  - techradar.com
+  - theverge.com
+  - gamespot.com
+  - dexerto.com
+  - insider-gaming.com
+  - rockpapershotgun.com
+  - techspot.com
+  - tweaktown.com
+  - thegamer.com
+  - gamerant.com
+  # press (ES)
+  - tarreo.com
+  - 3djuegos.com
+  - vandal.elespanol.com
+  - hobbyconsolas.com
+  - vidaextra.com
+  - xataka.com
+  - eurogamer.es
+  - meristation.as.com
+  - as.com
+  - levelup.com
+  - areajugones.sport.es
+  # trackers
   - vuyp.github.io
   - portwatch-vi.xyz
   - gta.mtwildwood.net
