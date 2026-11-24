@@ -1,17 +1,17 @@
 {
- "generated": "2026-11-24T16:08:34Z",
+ "generated": "2026-11-24T16:25:33Z",
  "candidates": [
   {
    "full_name": "4lwayz/portwatch-vi",
    "url": "https://github.com/4lwayz/portwatch-vi",
-   "stars": 2161,
+   "stars": 2193,
    "created_at": "2026-11-21T23:16:41Z",
-   "pushed_at": "2026-11-24T15:23:22Z",
+   "pushed_at": "2026-11-24T16:26:33Z",
    "age_days": 2,
    "language": "JavaScript",
-   "size_kb": 2522,
+   "size_kb": 3218,
    "has_code": true,
-   "commits": 108,
+   "commits": 109,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -21,7 +21,7 @@
   {
    "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
    "url": "https://github.com/Ahmet-Dedeler/awesome-gta6-reverse-engineering",
-   "stars": 665,
+   "stars": 666,
    "created_at": "2026-11-21T17:08:48Z",
    "pushed_at": "2026-11-24T13:19:49Z",
    "age_days": 2,
@@ -60,12 +60,12 @@
      "code": "password"
     }
    ],
-   "similarity": 0.04
+   "similarity": 0.041
   },
   {
    "full_name": "ProjectLeonidaL/leonida",
    "url": "https://github.com/ProjectLeonidaL/leonida",
-   "stars": 283,
+   "stars": 306,
    "created_at": "2026-11-24T02:20:14Z",
    "pushed_at": "2026-11-24T15:42:53Z",
    "age_days": 0,
@@ -82,14 +82,14 @@
   {
    "full_name": "ranveersoni98/Xenora",
    "url": "https://github.com/ranveersoni98/Xenora",
-   "stars": 111,
+   "stars": 112,
    "created_at": "2026-11-22T03:52:19Z",
-   "pushed_at": "2026-11-24T16:08:37Z",
+   "pushed_at": "2026-11-24T16:24:10Z",
    "age_days": 2,
    "language": "Rust",
-   "size_kb": 2823,
+   "size_kb": 2689,
    "has_code": true,
-   "commits": 535,
+   "commits": 546,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -116,7 +116,7 @@
   {
    "full_name": "WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
    "url": "https://github.com/WerewolfRepairRedeem/GTA-6-Windows-PC-Beta",
-   "stars": 57,
+   "stars": 52,
    "created_at": "2026-11-24T12:27:02Z",
    "pushed_at": "2026-11-24T12:27:13Z",
    "age_days": 0,
@@ -143,7 +143,7 @@
   {
    "full_name": "WebConstableReckon/GTA-VI-Windows-Beta-PC",
    "url": "https://github.com/WebConstableReckon/GTA-VI-Windows-Beta-PC",
-   "stars": 57,
+   "stars": 52,
    "created_at": "2026-11-24T12:03:31Z",
    "pushed_at": "2026-11-24T12:03:43Z",
    "age_days": 0,
@@ -192,7 +192,7 @@
      "code": "external"
     }
    ],
-   "similarity": 0.049
+   "similarity": 0.054
   },
   {
    "full_name": "pixl27/ProjectReCity",
@@ -209,12 +209,12 @@
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.093
+   "similarity": 0.112
   },
   {
    "full_name": "jadeowaowa/scarlett-layer",
    "url": "https://github.com/jadeowaowa/scarlett-layer",
-   "stars": 38,
+   "stars": 39,
    "created_at": "2026-11-20T23:54:18Z",
    "pushed_at": "2026-11-24T00:30:36Z",
    "age_days": 3,
@@ -260,12 +260,12 @@
    "url": "https://github.com/vuyp/gta6-pc-race",
    "stars": 12,
    "created_at": "2026-11-23T17:27:05Z",
-   "pushed_at": "2026-11-24T15:51:02Z",
+   "pushed_at": "2026-11-24T16:13:29Z",
    "age_days": 0,
    "language": "HTML",
    "size_kb": 405,
    "has_code": true,
-   "commits": 81,
+   "commits": 82,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -314,7 +314,7 @@
    "pushed_at": "2026-11-24T15:22:05Z",
    "age_days": 0,
    "language": "C++",
-   "size_kb": 1085,
+   "size_kb": 1112,
    "has_code": true,
    "commits": 40,
    "first_seen": "2026-11-24T13:01:19Z",
@@ -328,12 +328,12 @@
    "url": "https://github.com/DesignWithTommy/Neonbridge",
    "stars": 4,
    "created_at": "2026-11-23T23:52:16Z",
-   "pushed_at": "2026-11-24T16:07:42Z",
+   "pushed_at": "2026-11-24T16:27:24Z",
    "age_days": 0,
    "language": "Rust",
-   "size_kb": 2467,
+   "size_kb": 3269,
    "has_code": true,
-   "commits": 450,
+   "commits": 458,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": true,
    "inspected": true,
@@ -418,24 +418,45 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.037
+   "similarity": 0.038
   },
   {
    "full_name": "bc160201983/gta6-pc-port-tracker",
    "url": "https://github.com/bc160201983/gta6-pc-port-tracker",
    "stars": 2,
    "created_at": "2026-11-24T08:39:04Z",
-   "pushed_at": "2026-11-24T16:01:08Z",
+   "pushed_at": "2026-11-24T16:21:07Z",
    "age_days": 0,
    "language": "HTML",
    "size_kb": 2513,
    "has_code": true,
-   "commits": 50,
+   "commits": 51,
    "first_seen": "2026-11-24T15:33:55Z",
    "flagged": false,
    "inspected": true,
    "reasons": [],
    "similarity": 0.036
+  },
+  {
+   "full_name": "ProjectLeonidaL/leonida-specs",
+   "url": "https://github.com/ProjectLeonidaL/leonida-specs",
+   "stars": 2,
+   "created_at": "2026-11-24T14:59:54Z",
+   "pushed_at": "2026-11-24T15:27:48Z",
+   "age_days": 0,
+   "language": "PowerShell",
+   "size_kb": 560,
+   "has_code": true,
+   "commits": 1,
+   "first_seen": "2026-11-24T16:27:45Z",
+   "flagged": true,
+   "inspected": true,
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.053
   },
   {
    "full_name": "Omeynu/wakfu-recomp",
@@ -478,23 +499,6 @@
     }
    ],
    "similarity": 0.057
-  },
-  {
-   "full_name": "idvwork/rebox",
-   "url": "https://github.com/idvwork/rebox",
-   "stars": 2,
-   "created_at": "2026-11-24T07:34:49Z",
-   "pushed_at": "2026-11-24T15:29:11Z",
-   "age_days": 0,
-   "language": "C",
-   "size_kb": 9178,
-   "has_code": true,
-   "commits": 521,
-   "first_seen": "2026-11-24T16:10:59Z",
-   "flagged": false,
-   "inspected": true,
-   "reasons": [],
-   "similarity": 0.042
   }
  ],
  "forks_flagged": [
@@ -520,7 +524,7 @@
      "code": "external"
     }
    ],
-   "similarity": 0.481,
+   "similarity": 0.239,
    "similar_to": "fablinoo/palmwave"
   },
   {
@@ -534,7 +538,7 @@
      "code": "external"
     }
    ],
-   "similarity": 0.481,
+   "similarity": 0.239,
    "similar_to": "fablinoo/palmwave"
   },
   {
@@ -548,7 +552,7 @@
      "code": "external"
     }
    ],
-   "similarity": 1.0,
+   "similarity": 0.508,
    "similar_to": "fablinoo/palmwave"
   },
   {
