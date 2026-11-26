@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T08:56:08Z",
+ "generated": "2026-11-26T10:59:38Z",
  "offline": false,
  "projects": [
   {
@@ -20,9 +20,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "Marvisak/VIctory",
-    "stars": 12842,
-    "forks": 2107,
-    "open_issues": 1884,
+    "stars": 12895,
+    "forks": 2114,
+    "open_issues": 1923,
     "language": "Rust",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-25T23:27:48Z",
@@ -1925,11 +1925,11 @@
       ]
      }
     ],
-    "commits_24h": 116,
+    "commits_24h": 95,
     "commits_7d": 692,
     "commits_sampled": 200,
-    "prs_open": 1349,
-    "prs_merged_24h": 3,
+    "prs_open": 1385,
+    "prs_merged_24h": 0,
     "problem_issues": [
      {
       "number": 1633,
@@ -1939,25 +1939,10 @@
       ]
      },
      {
-      "number": 1745,
-      "url": "https://github.com/Marvisak/VIctory/issues/1745",
+      "number": 2317,
+      "url": "https://github.com/Marvisak/VIctory/issues/2317",
       "keywords": [
        "nvidia"
-      ]
-     },
-     {
-      "number": 3081,
-      "url": "https://github.com/Marvisak/VIctory/issues/3081",
-      "keywords": [
-       "black screen",
-       "nvidia"
-      ]
-     },
-     {
-      "number": 23,
-      "url": "https://github.com/Marvisak/VIctory/issues/23",
-      "keywords": [
-       "crash"
       ]
      },
      {
@@ -1965,15 +1950,6 @@
       "url": "https://github.com/Marvisak/VIctory/issues/3110",
       "keywords": [
        "crash"
-      ]
-     },
-     {
-      "number": 400,
-      "url": "https://github.com/Marvisak/VIctory/issues/400",
-      "keywords": [
-       "hang",
-       "nvidia",
-       "device removed"
       ]
      }
     ],
@@ -2023,15 +1999,15 @@
    },
    "score": 70.0,
    "areas_24h": {
-    "gpu": 78,
-    "audio": 61,
-    "loader": 49,
-    "shaders": 46,
+    "gpu": 58,
+    "audio": 40,
+    "shaders": 38,
+    "loader": 33,
     "vendor": 20,
-    "perf": 14,
+    "perf": 12,
     "other": 8,
-    "docs": 6,
-    "input": 6
+    "docs": 5,
+    "input": 4
    },
    "areas_7d": {
     "gpu": 132,
@@ -2044,12 +2020,12 @@
     "input": 10,
     "docs": 6
    },
-   "commits_24h": 116,
+   "commits_24h": 95,
    "commits_7d": 692,
    "signals_good": [
     {
      "code": "stars_up",
-     "n": 1242,
+     "n": 623,
      "evidence": "https://github.com/Marvisak/VIctory/stargazers"
     },
     {
@@ -2067,7 +2043,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 6,
+     "n": 3,
      "evidence": "https://github.com/Marvisak/VIctory/issues"
     }
    ],
@@ -2090,7 +2066,7 @@
      "models": [],
      "evidence": null,
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/400"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/3110"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -2099,7 +2075,7 @@
      ],
      "evidence": "https://github.com/Marvisak/VIctory",
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/400"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/2317"
     },
     "intel": {
      "status": "untested",
@@ -2151,19 +2127,111 @@
     "exists": true,
     "http_status": 200,
     "full_name": "LooperSalty/AnyXboxX",
-    "stars": 390,
-    "forks": 62,
-    "open_issues": 83,
+    "stars": 393,
+    "forks": 63,
+    "open_issues": 88,
     "language": "Python",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-26T02:07:12Z",
+    "pushed_at": "2026-11-26T10:54:01Z",
     "created_at": "2026-11-21T00:18:13Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 21,
-    "last_commit": "2026-11-26T00:15:03Z",
+    "last_commit": "2026-11-26T10:53:54Z",
     "commits": [
+     {
+      "sha": "c4d91189ed",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/c4d91189ed33cc85bc05f8aedbc355d028da08f3",
+      "date": "2026-11-26T10:53:54Z",
+      "areas": [
+       "gpu",
+       "shaders"
+      ]
+     },
+     {
+      "sha": "5c38af5133",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/5c38af513302d8271512e94443c553fcc9d0bfa0",
+      "date": "2026-11-26T10:49:21Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "2a7a6e1740",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/2a7a6e1740c62301c403436f8b0edfbc6fee9c9a",
+      "date": "2026-11-26T10:48:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "1c32a01ef0",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/1c32a01ef099d177b2e5910a9241d4e3b8c46d7f",
+      "date": "2026-11-26T10:44:14Z",
+      "areas": [
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "afa30cea24",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/afa30cea2447a1becef0167c4498010d3b93cf05",
+      "date": "2026-11-26T10:42:42Z",
+      "areas": [
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "9981b5ceaa",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/9981b5ceaa186423792d13cd9825ac9bf2d48026",
+      "date": "2026-11-26T09:32:32Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "08cf8031d6",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/08cf8031d6fcb8e04f8554b94d71a8b74e07e110",
+      "date": "2026-11-26T04:39:40Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "docs"
+      ]
+     },
+     {
+      "sha": "e97654d53e",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/e97654d53eddec3fe0616d2167dfefc118b7b76c",
+      "date": "2026-11-26T03:48:06Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader"
+      ]
+     },
+     {
+      "sha": "1afeb0e245",
+      "url": "https://github.com/LooperSalty/AnyXboxX/commit/1afeb0e24533e4838693114a899803f20fabd3d5",
+      "date": "2026-11-26T01:43:51Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "perf"
+      ]
+     },
      {
       "sha": "c4c93bdc41",
       "url": "https://github.com/LooperSalty/AnyXboxX/commit/c4c93bdc413191a9dc909998d2d53080a3f0c880",
@@ -3938,107 +4006,13 @@
        "audio",
        "docs"
       ]
-     },
-     {
-      "sha": "7d17c22792",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/7d17c22792aef04a82765689d35eea253079c49e",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "audio",
-       "docs"
-      ]
-     },
-     {
-      "sha": "5c35d38fda",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/5c35d38fdaf15ad94197343879f41718fae54a96",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "audio",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "b930840e62",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/b930840e629087d04818eb23447a12c104c58697",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "audio",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "04738a72c2",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/04738a72c2805f9f6f92b1949654f85ff4a1dd7f",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "6f931030bf",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/6f931030bff6c389eb93936f5e09a107340637e1",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "91966dcbaa",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/91966dcbaa61317c7cd0212b848861f0b16bd1d9",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "4c4b70ae91",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/4c4b70ae91c05c94581cea6052daf33212b251dc",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "618b0caa88",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/618b0caa8847eaf523d7b29da0f4363c36ddfb62",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "0dbaf9fd4b",
-      "url": "https://github.com/LooperSalty/AnyXboxX/commit/0dbaf9fd4b914f287538464e9943dc0f7c3f127d",
-      "date": "2026-11-25T14:06:58Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "vendor"
-      ]
      }
     ],
-    "commits_24h": 287,
-    "commits_7d": 591,
+    "commits_24h": 294,
+    "commits_7d": 600,
     "commits_sampled": 200,
-    "prs_open": 76,
-    "prs_merged_24h": 44,
+    "prs_open": 82,
+    "prs_merged_24h": 45,
     "problem_issues": [
      {
       "number": 336,
@@ -4078,8 +4052,14 @@
       ]
      }
     ],
-    "releases": [],
-    "readme_hash": "82151290b05dd57c",
+    "releases": [
+     {
+      "url": "https://github.com/LooperSalty/AnyXboxX/releases/tag/launcher-v0.1.0",
+      "date": "2026-11-26T10:40:36Z",
+      "has_binaries": true
+     }
+    ],
+    "readme_hash": "8604ee63ff01858f",
     "status_rows": []
    },
    "auto_phase": {
@@ -4093,39 +4073,39 @@
    },
    "score": 70.0,
    "areas_24h": {
-    "shaders": 104,
-    "audio": 91,
-    "vendor": 73,
-    "docs": 62,
-    "gpu": 53,
+    "shaders": 109,
+    "audio": 86,
+    "vendor": 69,
+    "docs": 65,
+    "gpu": 54,
     "perf": 34,
-    "loader": 30,
+    "loader": 28,
     "other": 18,
     "input": 4
    },
    "areas_7d": {
-    "shaders": 104,
-    "audio": 91,
-    "vendor": 73,
-    "docs": 62,
-    "gpu": 53,
+    "shaders": 109,
+    "audio": 86,
+    "vendor": 69,
+    "docs": 65,
+    "gpu": 54,
     "perf": 34,
-    "loader": 30,
+    "loader": 28,
     "other": 18,
     "input": 4
    },
-   "commits_24h": 287,
-   "commits_7d": 591,
+   "commits_24h": 294,
+   "commits_7d": 600,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 287,
-     "avg": 50.7,
+     "n24": 294,
+     "avg": 51.0,
      "evidence": "https://github.com/LooperSalty/AnyXboxX/commits"
     },
     {
      "code": "contributors_up",
-     "n": 6,
+     "n": 2,
      "evidence": "https://github.com/LooperSalty/AnyXboxX/graphs/contributors"
     }
    ],
@@ -4134,6 +4114,10 @@
      "code": "crash_issues",
      "n": 5,
      "evidence": "https://github.com/LooperSalty/AnyXboxX/issues"
+    },
+    {
+     "code": "binaries",
+     "evidence": "https://github.com/LooperSalty/AnyXboxX/releases"
     }
    ],
    "trackers": [],
@@ -4279,9 +4263,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "xcl-dev/xcl",
-    "stars": 8399,
-    "forks": 1160,
-    "open_issues": 1734,
+    "stars": 8418,
+    "forks": 1161,
+    "open_issues": 1771,
     "language": "Rust",
     "license": "GPL-2.0",
     "pushed_at": "2026-11-26T06:10:46Z",
@@ -6062,20 +6046,12 @@
       ]
      }
     ],
-    "commits_24h": 214,
+    "commits_24h": 167,
     "commits_7d": 1323,
     "commits_sampled": 200,
-    "prs_open": 1442,
-    "prs_merged_24h": 17,
+    "prs_open": 1471,
+    "prs_merged_24h": 14,
     "problem_issues": [
-     {
-      "number": 2689,
-      "url": "https://github.com/xcl-dev/xcl/issues/2689",
-      "keywords": [
-       "crash",
-       "nvidia"
-      ]
-     },
      {
       "number": 2688,
       "url": "https://github.com/xcl-dev/xcl/issues/2688",
@@ -6084,42 +6060,25 @@
       ]
      },
      {
-      "number": 505,
-      "url": "https://github.com/xcl-dev/xcl/issues/505",
+      "number": 2743,
+      "url": "https://github.com/xcl-dev/xcl/issues/2743",
       "keywords": [
-       "crash"
+       "nvidia"
       ]
      },
      {
-      "number": 646,
-      "url": "https://github.com/xcl-dev/xcl/issues/646",
+      "number": 2403,
+      "url": "https://github.com/xcl-dev/xcl/issues/2403",
       "keywords": [
-       "crash"
+       "crash",
+       "nvidia"
       ]
      },
      {
-      "number": 1337,
-      "url": "https://github.com/xcl-dev/xcl/issues/1337",
+      "number": 1833,
+      "url": "https://github.com/xcl-dev/xcl/issues/1833",
       "keywords": [
-       "nvidia",
-       "wave64",
-       "device removed"
-      ]
-     },
-     {
-      "number": 2719,
-      "url": "https://github.com/xcl-dev/xcl/issues/2719",
-      "keywords": [
-       "nvidia",
-       "device removed"
-      ]
-     },
-     {
-      "number": 42,
-      "url": "https://github.com/xcl-dev/xcl/issues/42",
-      "keywords": [
-       "nvidia",
-       "wave64"
+       "nvidia"
       ]
      },
      {
@@ -6131,10 +6090,66 @@
       ]
      },
      {
-      "number": 2403,
-      "url": "https://github.com/xcl-dev/xcl/issues/2403",
+      "number": 2760,
+      "url": "https://github.com/xcl-dev/xcl/issues/2760",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1452,
+      "url": "https://github.com/xcl-dev/xcl/issues/1452",
+      "keywords": [
+       "hang",
+       "nvidia",
+       "device removed"
+      ]
+     },
+     {
+      "number": 505,
+      "url": "https://github.com/xcl-dev/xcl/issues/505",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
+      "number": 2088,
+      "url": "https://github.com/xcl-dev/xcl/issues/2088",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 1598,
+      "url": "https://github.com/xcl-dev/xcl/issues/1598",
       "keywords": [
        "crash",
+       "nvidia",
+       "wave64"
+      ]
+     },
+     {
+      "number": 2751,
+      "url": "https://github.com/xcl-dev/xcl/issues/2751",
+      "keywords": [
+       "crash",
+       "nvidia",
+       "wave64"
+      ]
+     },
+     {
+      "number": 42,
+      "url": "https://github.com/xcl-dev/xcl/issues/42",
+      "keywords": [
+       "nvidia",
+       "wave64"
+      ]
+     },
+     {
+      "number": 2512,
+      "url": "https://github.com/xcl-dev/xcl/issues/2512",
+      "keywords": [
+       "tdr",
        "nvidia"
       ]
      }
@@ -6154,12 +6169,12 @@
    },
    "score": 62.5,
    "areas_24h": {
-    "gpu": 116,
-    "shaders": 81,
-    "loader": 60,
-    "other": 34,
+    "gpu": 104,
+    "shaders": 71,
+    "loader": 52,
     "vendor": 33,
-    "perf": 18,
+    "other": 24,
+    "perf": 15,
     "docs": 14,
     "audio": 10,
     "input": 3
@@ -6175,17 +6190,17 @@
     "audio": 10,
     "input": 3
    },
-   "commits_24h": 214,
+   "commits_24h": 167,
    "commits_7d": 1323,
    "signals_good": [
     {
      "code": "stars_up",
-     "n": 453,
+     "n": 245,
      "evidence": "https://github.com/ivall/xcl/stargazers"
     },
     {
      "code": "contributors_up",
-     "n": 39,
+     "n": 27,
      "evidence": "https://github.com/ivall/xcl/graphs/contributors"
     },
     {
@@ -6198,7 +6213,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 9,
+     "n": 13,
      "evidence": "https://github.com/ivall/xcl/issues"
     }
    ],
@@ -6218,7 +6233,7 @@
      ],
      "evidence": "https://github.com/ivall/xcl",
      "known_issue": true,
-     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2403"
+     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2512"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -6227,7 +6242,7 @@
      ],
      "evidence": "https://github.com/ivall/xcl",
      "known_issue": true,
-     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/42"
+     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2512"
     },
     "intel": {
      "status": "untested",
@@ -6292,14 +6307,264 @@
     "open_issues": 13,
     "language": "C#",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-26T08:50:50Z",
+    "pushed_at": "2026-11-26T10:50:59Z",
     "created_at": "2026-11-23T09:57:42Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 5,
-    "last_commit": "2026-11-26T08:49:13Z",
+    "last_commit": "2026-11-26T10:48:46Z",
     "commits": [
+     {
+      "sha": "905deb80b1",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/905deb80b162e4c1c802e43002eed8cc854babbd",
+      "date": "2026-11-26T10:48:46Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "30d4d9e687",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/30d4d9e687ca6f885a8894cbb81de8965c6d15b4",
+      "date": "2026-11-26T10:26:35Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "54f1834607",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/54f18346077598aa7eb141b472fd6898ccf6ef94",
+      "date": "2026-11-26T10:18:06Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "4d468b5f08",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4d468b5f081316735bcf278122fff8d5579de09d",
+      "date": "2026-11-26T10:16:38Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "6c2065e802",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/6c2065e802a22d1a0ba130ade70b12517a1b2c2f",
+      "date": "2026-11-26T10:16:14Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "86693d05e8",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/86693d05e8a5110342f5c937087b79c52a3747ce",
+      "date": "2026-11-26T10:11:36Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "a3d550bcdc",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/a3d550bcdcc18b3ba4eae49ccf56b001b3281f2a",
+      "date": "2026-11-26T10:07:10Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "79fd0fb5dc",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/79fd0fb5dc817319f883605ebcb08f3ff69eae1f",
+      "date": "2026-11-26T10:07:10Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "a46f25e6a7",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/a46f25e6a7df04dadb00d47e80150dbc04113ba4",
+      "date": "2026-11-26T10:01:14Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "a31b3e5230",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/a31b3e5230920a8c655d298fd70ca274e1c7b0ca",
+      "date": "2026-11-26T09:59:47Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "e655fb8912",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/e655fb89128f5115479231fa452b45106822edb7",
+      "date": "2026-11-26T09:57:29Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "c68b1304a9",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/c68b1304a918208beace21794c86b89b9d4cecec",
+      "date": "2026-11-26T09:52:10Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "cbc68f7b6e",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/cbc68f7b6ef22fae4fc443f761696c265bb6ea4d",
+      "date": "2026-11-26T09:49:59Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "d3439a647b",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/d3439a647b689b730657ee7255fa6b7fbeee2b9d",
+      "date": "2026-11-26T09:37:35Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "d87c65f8ed",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/d87c65f8eddd5968213939ec315359b6303f7211",
+      "date": "2026-11-26T09:34:42Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "75e1c6693a",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/75e1c6693a0abe0e0072b1aaeb98f55ad65aa75b",
+      "date": "2026-11-26T09:20:05Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "388206693b",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/388206693bb4a25af2014a34a907f7d8cc76fe0a",
+      "date": "2026-11-26T09:17:24Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "099f6630cd",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/099f6630cd28c7e24013bb3d4dc571ca2e9f91a3",
+      "date": "2026-11-26T08:59:06Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "cb03e92d82",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/cb03e92d82e2ebec51b715fae34180890fd4ba44",
+      "date": "2026-11-26T08:59:05Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "4e23c32be2",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4e23c32be2ceaac0fe293413672643098cf8b314",
+      "date": "2026-11-26T08:59:05Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "02885afdb5",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/02885afdb5703e0ed6d273df12e46a461cff47ce",
+      "date": "2026-11-26T08:58:21Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "3875ee5f23",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/3875ee5f232729448f0f81153193e4456c50346f",
+      "date": "2026-11-26T08:57:24Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "bef2cc1c34",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/bef2cc1c34a8b459e1a919b3a20ff5f5ff0b8b8f",
+      "date": "2026-11-26T08:55:19Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "824434a268",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/824434a26800d0a592bf53a940485c4d7f4cb6c3",
+      "date": "2026-11-26T08:51:21Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "8ac194e87c",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/8ac194e87c7d89a410e29d0fc38e2b88f58f6db5",
+      "date": "2026-11-26T08:50:40Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
      {
       "sha": "4dce24a399",
       "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4dce24a399565d3d9b178bed74ac166b4501c43f",
@@ -7882,224 +8147,13 @@
       "areas": [
        "perf"
       ]
-     },
-     {
-      "sha": "5ea3a8af30",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/5ea3a8af3053a70b8f2d75e88f0f8d8212058587",
-      "date": "2026-11-25T19:24:13Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "6c13015373",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/6c130153738c6e5e96bebc239be0c717173755b7",
-      "date": "2026-11-25T19:22:28Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "2ac374b55c",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/2ac374b55c6887f5e1a643e05a05ce2edb3cf9a4",
-      "date": "2026-11-25T19:21:44Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "0e5eb375b8",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/0e5eb375b87eac07bc94493338626ab45980e018",
-      "date": "2026-11-25T19:21:27Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "996f4adf14",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/996f4adf1400f087059761a3490a8f8bdc491678",
-      "date": "2026-11-25T19:16:21Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "a1e6aef90c",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/a1e6aef90c95dac3456e0c7926662d26ed3a4522",
-      "date": "2026-11-25T19:15:53Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "abf5f3816a",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/abf5f3816acfe48d2e63d581de2ac79e90410d98",
-      "date": "2026-11-25T19:14:29Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "8d4be1edef",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/8d4be1edef43104e3615f6fbcb8eb66bce68356c",
-      "date": "2026-11-25T19:11:18Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "42e0b09f73",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/42e0b09f739805f02421155d7d788a9c79fbe7ca",
-      "date": "2026-11-25T19:10:54Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "9dbad2f369",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/9dbad2f369d0db06e09d09b1c492f39555452b14",
-      "date": "2026-11-25T19:06:54Z",
-      "areas": [
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "5b7e2cc207",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/5b7e2cc207c2b1ac82cc4c43441d0e9820146eb9",
-      "date": "2026-11-25T19:06:40Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "bfab441adc",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/bfab441adcb331cdd7fa92f3bfcb5aa4fabf29b3",
-      "date": "2026-11-25T18:59:20Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "4c640eb245",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4c640eb2451aaa918f77bdf958db4bb33363eda1",
-      "date": "2026-11-25T18:59:04Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "perf"
-      ]
-     },
-     {
-      "sha": "d2d5d63db6",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/d2d5d63db651dd9031e086b9f63dbdb2a1dfe243",
-      "date": "2026-11-25T18:58:40Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "737da6df0a",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/737da6df0a35a475c8191134d67376f1fc062087",
-      "date": "2026-11-25T18:58:11Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "e577bf91f7",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/e577bf91f7b463f03b7be03df6b6d6e29421118f",
-      "date": "2026-11-25T18:52:34Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "80377c30de",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/80377c30de30b8322a8e7613c2fc0c808e55fd2e",
-      "date": "2026-11-25T18:52:11Z",
-      "areas": [
-       "shaders",
-       "perf"
-      ]
-     },
-     {
-      "sha": "e6785b6696",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/e6785b669659f517e6703e6bb5890051e58f745a",
-      "date": "2026-11-25T18:40:14Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "perf"
-      ]
-     },
-     {
-      "sha": "95f35afa86",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/95f35afa86fff4462cfe0911d4ee7f9a33ed4c50",
-      "date": "2026-11-25T18:39:57Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "2ead63fa28",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/2ead63fa28051cca1b7f5332e5ab4861c5fc3b8e",
-      "date": "2026-11-25T18:37:11Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "b85b8f2e82",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/b85b8f2e82ca8bafe15ea5e695547a6a95528b4b",
-      "date": "2026-11-25T18:28:10Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "ed00813d5c",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/ed00813d5c97c2eeebe4f049232c20d5a90cc1f8",
-      "date": "2026-11-25T18:23:04Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "f511b44e21",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/f511b44e2181531fbb4ad77026d00141e60e7a2a",
-      "date": "2026-11-25T18:22:41Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "2fbd6b6c85",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/2fbd6b6c857c6c96e6da59553cf548f4e489a400",
-      "date": "2026-11-25T18:19:56Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "2c2ea18dc8",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/2c2ea18dc80918e39614a6a54c782dc4add46a8e",
-      "date": "2026-11-25T18:19:33Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 500,
-    "commits_7d": 1322,
+    "commits_24h": 459,
+    "commits_7d": 1347,
     "commits_sampled": 200,
     "prs_open": 0,
-    "prs_merged_24h": 24,
+    "prs_merged_24h": 23,
     "problem_issues": [
      {
       "number": 13,
@@ -8186,34 +8240,34 @@
    },
    "score": 62.5,
    "areas_24h": {
-    "gpu": 108,
-    "loader": 87,
-    "shaders": 48,
-    "docs": 40,
-    "other": 37,
+    "gpu": 119,
+    "loader": 103,
+    "docs": 57,
+    "shaders": 50,
     "perf": 33,
+    "other": 30,
     "vendor": 16,
     "audio": 14,
     "input": 11
    },
    "areas_7d": {
-    "gpu": 108,
-    "loader": 87,
-    "shaders": 48,
-    "docs": 40,
-    "other": 37,
+    "gpu": 119,
+    "loader": 103,
+    "docs": 57,
+    "shaders": 50,
     "perf": 33,
+    "other": 30,
     "vendor": 16,
     "audio": 14,
     "input": 11
    },
-   "commits_24h": 500,
-   "commits_7d": 1322,
+   "commits_24h": 459,
+   "commits_7d": 1347,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 500,
-     "avg": 137.0,
+     "n24": 459,
+     "avg": 148.0,
      "evidence": "https://github.com/ThatRecompDev/five-star-recomp/commits"
     },
     {
@@ -8995,7 +9049,7 @@
       ]
      }
     ],
-    "commits_24h": 3,
+    "commits_24h": 0,
     "commits_7d": 76,
     "commits_sampled": 76,
     "prs_open": 3,
@@ -9092,15 +9146,7 @@
     "source": "manual"
    },
    "score": 55.0,
-   "areas_24h": {
-    "docs": 3,
-    "loader": 2,
-    "gpu": 1,
-    "shaders": 1,
-    "audio": 1,
-    "input": 1,
-    "perf": 1
-   },
+   "areas_24h": {},
    "areas_7d": {
     "docs": 32,
     "other": 26,
@@ -9112,7 +9158,7 @@
     "input": 4,
     "vendor": 3
    },
-   "commits_24h": 3,
+   "commits_24h": 0,
    "commits_7d": 76,
    "signals_good": [
     {
@@ -9125,8 +9171,8 @@
    "signals_bad": [
     {
      "code": "activity_down",
-     "n24": 3,
-     "avg": 12.2,
+     "n24": 0,
+     "avg": 12.7,
      "evidence": "https://github.com/rpatty-dev/PercyScarlett/commits"
     },
     {
@@ -9507,7 +9553,7 @@
    "signals_bad": [
     {
      "code": "stale",
-     "h": 55,
+     "h": 57,
      "evidence": "https://github.com/OnlyMoisties/GTA6-BootTest/commits"
     },
     {
@@ -9585,19 +9631,157 @@
     "exists": true,
     "http_status": 200,
     "full_name": "R0Y00/Xbox2Windows",
-    "stars": 1960,
-    "forks": 232,
-    "open_issues": 166,
+    "stars": 1962,
+    "forks": 233,
+    "open_issues": 154,
     "language": "Python",
     "license": "MIT",
-    "pushed_at": "2026-11-26T08:32:45Z",
+    "pushed_at": "2026-11-26T10:58:48Z",
     "created_at": "2026-11-20T17:43:52Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 120,
-    "last_commit": "2026-11-26T08:32:45Z",
+    "contributors": 121,
+    "last_commit": "2026-11-26T10:58:48Z",
     "commits": [
+     {
+      "sha": "10d45a9cef",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/10d45a9cef2b0517137bb53be6102e0150ed4a89",
+      "date": "2026-11-26T10:58:48Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "4989a6df53",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/4989a6df537a64a7e05b40b1602a8a2a8629eda5",
+      "date": "2026-11-26T10:39:24Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "9b45cbb44a",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/9b45cbb44a0d51802c62a5415f708aa0580e3f75",
+      "date": "2026-11-26T10:17:30Z",
+      "areas": [
+       "shaders",
+       "input",
+       "docs"
+      ]
+     },
+     {
+      "sha": "700522ef56",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/700522ef562d80ccfc178dd05ff9a691699ab05f",
+      "date": "2026-11-26T09:52:03Z",
+      "areas": [
+       "gpu",
+       "docs"
+      ]
+     },
+     {
+      "sha": "b2cf7dc5ac",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b2cf7dc5ac2fed1e382f974613607a466423bc6b",
+      "date": "2026-11-26T09:41:24Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "79410a80e5",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/79410a80e51778fd174d787644816e4ce6eeb507",
+      "date": "2026-11-26T09:33:26Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "c5641b5049",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/c5641b50498341b79d6b5aa5d42e3ba4c492a00d",
+      "date": "2026-11-26T09:30:50Z",
+      "areas": [
+       "docs"
+      ]
+     },
+     {
+      "sha": "02e0a78d07",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/02e0a78d07d7769d78fbe129a8ce458f0256700d",
+      "date": "2026-11-26T09:29:51Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "564f9badef",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/564f9badef4535cc93b2fe9074b39e79a1c98ecd",
+      "date": "2026-11-26T09:29:32Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "38628ca159",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/38628ca15903791443bc62308b178e2b04f1b062",
+      "date": "2026-11-26T09:28:49Z",
+      "areas": [
+       "gpu",
+       "shaders"
+      ]
+     },
+     {
+      "sha": "169c4ee5a6",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/169c4ee5a67b1c065dc4010bef7895122221c13c",
+      "date": "2026-11-26T09:23:10Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "63451c5e61",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/63451c5e614571499c39b61210e545e638a26834",
+      "date": "2026-11-26T09:08:37Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "d527e36c7d",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d527e36c7d094ecaab9b6345db83447554c8e87d",
+      "date": "2026-11-26T09:04:39Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "docs"
+      ]
+     },
+     {
+      "sha": "d1b2be6aa3",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d1b2be6aa3b37275b0c938d9b8e67ed4dc0500a2",
+      "date": "2026-11-26T08:58:49Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "docs"
+      ]
+     },
      {
       "sha": "4bbe52ee07",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/4bbe52ee07438e30cc565cf376fc3f3705069ff8",
@@ -11325,142 +11509,28 @@
       "areas": [
        "gpu"
       ]
-     },
-     {
-      "sha": "51fc8e0b13",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/51fc8e0b13acad07cd05032d9d0cf2abe75f4e1f",
-      "date": "2026-11-25T23:28:44Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "66026a399b",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/66026a399bee8894411fbed31653d9dcab811a68",
-      "date": "2026-11-25T23:22:08Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "docs"
-      ]
-     },
-     {
-      "sha": "24cfd7c0f6",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/24cfd7c0f6b734e71547f086f24a469c3f9c7c40",
-      "date": "2026-11-25T23:18:44Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "docs"
-      ]
-     },
-     {
-      "sha": "444bf3a8d3",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/444bf3a8d3bcccf03ea59022ddee7f2fe55b955d",
-      "date": "2026-11-25T23:15:31Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "8298ec668e",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/8298ec668ed13f6659d5f947cfcccfdbdf2264f9",
-      "date": "2026-11-25T23:15:16Z",
-      "areas": [
-       "perf"
-      ]
-     },
-     {
-      "sha": "a696744692",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/a696744692b2ecc65b72e100be0be8393373bceb",
-      "date": "2026-11-25T23:11:57Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "e4e2b46d7b",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e4e2b46d7b10815d18844a7dbc44a51031b31d91",
-      "date": "2026-11-25T23:10:16Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "perf",
-       "docs"
-      ]
-     },
-     {
-      "sha": "cece3a364f",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/cece3a364f103085d68f6a80031a6ef8c4388714",
-      "date": "2026-11-25T23:05:03Z",
-      "areas": [
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "b69a9b9b09",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b69a9b9b090d2ee2c3c09f08df56f1fc8816c6f6",
-      "date": "2026-11-25T23:04:25Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "c97baa15f9",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/c97baa15f9169fc3fb13cf33516413eb963aa836",
-      "date": "2026-11-25T23:02:54Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "perf",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "3b093d4769",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/3b093d4769e3e9a9a16788811e8fda3a235dd396",
-      "date": "2026-11-25T23:02:40Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "fe4f4696ca",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/fe4f4696cab1dcfc65b96c0a4884eafd47e46ab3",
-      "date": "2026-11-25T23:01:52Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "d233f210c4",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/d233f210c491beebcf99724c9ce47f19d771f22b",
-      "date": "2026-11-25T23:01:37Z",
-      "areas": [
-       "shaders",
-       "perf"
-      ]
-     },
-     {
-      "sha": "f03cf16f3b",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/f03cf16f3bf98197c7679a3eb12ded26e08f2b98",
-      "date": "2026-11-25T22:55:51Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
      }
     ],
-    "commits_24h": 532,
-    "commits_7d": 4934,
+    "commits_24h": 511,
+    "commits_7d": 4948,
     "commits_sampled": 200,
-    "prs_open": 65,
-    "prs_merged_24h": 50,
+    "prs_open": 52,
+    "prs_merged_24h": 30,
     "problem_issues": [
+     {
+      "number": 2797,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/2797",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 2788,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/2788",
+      "keywords": [
+       "crash"
+      ]
+     },
      {
       "number": 2413,
       "url": "https://github.com/R0Y00/Xbox2Windows/issues/2413",
@@ -11539,6 +11609,13 @@
       "keywords": [
        "nvidia"
       ]
+     },
+     {
+      "number": 737,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/737",
+      "keywords": [
+       "nvidia"
+      ]
      }
     ],
     "releases": [
@@ -11548,7 +11625,7 @@
       "has_binaries": true
      }
     ],
-    "readme_hash": "73ef157e3253ce0f",
+    "readme_hash": "6f20968e0d60a0a4",
     "status_rows": []
    },
    "auto_phase": {
@@ -11562,33 +11639,33 @@
    },
    "score": 47.5,
    "areas_24h": {
-    "gpu": 99,
-    "shaders": 95,
-    "docs": 81,
-    "loader": 48,
-    "other": 34,
+    "gpu": 103,
+    "shaders": 96,
+    "docs": 88,
+    "loader": 50,
+    "other": 31,
     "audio": 27,
-    "perf": 26,
-    "vendor": 23,
-    "input": 23
+    "input": 24,
+    "perf": 24,
+    "vendor": 23
    },
    "areas_7d": {
-    "gpu": 99,
-    "shaders": 95,
-    "docs": 81,
-    "loader": 48,
-    "other": 34,
+    "gpu": 103,
+    "shaders": 96,
+    "docs": 88,
+    "loader": 50,
+    "other": 31,
     "audio": 27,
-    "perf": 26,
-    "vendor": 23,
-    "input": 23
+    "input": 24,
+    "perf": 24,
+    "vendor": 23
    },
-   "commits_24h": 532,
-   "commits_7d": 4934,
+   "commits_24h": 511,
+   "commits_7d": 4948,
    "signals_good": [
     {
      "code": "contributors_up",
-     "n": 12,
+     "n": 6,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/graphs/contributors"
     },
     {
@@ -11601,7 +11678,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 11,
+     "n": 14,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/issues"
     },
     {
@@ -11637,7 +11714,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/1115"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/737"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -11663,7 +11740,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/1115"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/737"
     }
    },
    "estimates": [
@@ -13310,7 +13387,7 @@
       ]
      }
     ],
-    "commits_24h": 1,
+    "commits_24h": 0,
     "commits_7d": 152,
     "commits_sampled": 152,
     "prs_open": 1,
@@ -13376,12 +13453,7 @@
     "source": "manual"
    },
    "score": 47.5,
-   "areas_24h": {
-    "gpu": 1,
-    "loader": 1,
-    "perf": 1,
-    "docs": 1
-   },
+   "areas_24h": {},
    "areas_7d": {
     "gpu": 126,
     "audio": 86,
@@ -13393,7 +13465,7 @@
     "input": 14,
     "other": 1
    },
-   "commits_24h": 1,
+   "commits_24h": 0,
    "commits_7d": 152,
    "signals_good": [
     {
@@ -13406,8 +13478,8 @@
    "signals_bad": [
     {
      "code": "activity_down",
-     "n24": 1,
-     "avg": 25.2,
+     "n24": 0,
+     "avg": 25.3,
      "evidence": "https://github.com/OpenCommunityEdition/OpenScarlett/commits"
     }
    ],
@@ -13505,14 +13577,32 @@
     "open_issues": 8,
     "language": "C++",
     "license": "MIT",
-    "pushed_at": "2026-11-26T08:35:50Z",
+    "pushed_at": "2026-11-26T10:59:24Z",
     "created_at": "2026-11-21T14:35:25Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 6,
-    "last_commit": "2026-11-26T08:35:52Z",
+    "last_commit": "2026-11-26T10:59:25Z",
     "commits": [
+     {
+      "sha": "b1e5ee09bb",
+      "url": "https://github.com/californiaAlmonds/OpenScarlett/commit/b1e5ee09bb5a32ca05c96de48059ba44fa6d99ac",
+      "date": "2026-11-26T10:59:25Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "60743d277b",
+      "url": "https://github.com/californiaAlmonds/OpenScarlett/commit/60743d277be92fd851c8fcd46df3fe420f500b22",
+      "date": "2026-11-26T09:42:30Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
      {
       "sha": "2902ad3329",
       "url": "https://github.com/californiaAlmonds/OpenScarlett/commit/2902ad3329b4c21384775b9f5b8b2add66d68f73",
@@ -15257,26 +15347,10 @@
       "areas": [
        "other"
       ]
-     },
-     {
-      "sha": "e4463d0892",
-      "url": "https://github.com/californiaAlmonds/OpenScarlett/commit/e4463d0892f0d6a5fa8577a568e24a54d520e537",
-      "date": "2026-11-22T09:26:57Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "04a8eba309",
-      "url": "https://github.com/californiaAlmonds/OpenScarlett/commit/04a8eba309b1a32cdab6f4c5b0cf77eed1886fd2",
-      "date": "2026-11-22T09:26:57Z",
-      "areas": [
-       "other"
-      ]
      }
     ],
-    "commits_24h": 23,
-    "commits_7d": 371,
+    "commits_24h": 25,
+    "commits_7d": 373,
     "commits_sampled": 200,
     "prs_open": 1,
     "prs_merged_24h": 1,
@@ -15374,8 +15448,8 @@
    },
    "score": 47.5,
    "areas_24h": {
-    "gpu": 17,
-    "loader": 12,
+    "gpu": 19,
+    "loader": 14,
     "docs": 6,
     "shaders": 5,
     "perf": 2,
@@ -15384,18 +15458,18 @@
     "input": 1
    },
    "areas_7d": {
-    "gpu": 94,
-    "loader": 69,
-    "other": 44,
+    "gpu": 96,
+    "loader": 71,
+    "other": 43,
     "shaders": 38,
     "perf": 30,
-    "docs": 28,
+    "docs": 27,
     "audio": 27,
     "vendor": 18,
     "input": 13
    },
-   "commits_24h": 23,
-   "commits_7d": 371,
+   "commits_24h": 25,
+   "commits_7d": 373,
    "signals_good": [
     {
      "code": "tracker_confirms",
@@ -15509,8 +15583,8 @@
     "http_status": 200,
     "full_name": "brcly/TuxBox",
     "stars": 374,
-    "forks": 43,
-    "open_issues": 11,
+    "forks": 44,
+    "open_issues": 16,
     "language": "Rust",
     "license": "Apache-2.0",
     "pushed_at": "2026-11-26T08:27:36Z",
@@ -15518,7 +15592,7 @@
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 23,
+    "contributors": 25,
     "last_commit": "2026-11-26T08:27:36Z",
     "commits": [
      {
@@ -17301,11 +17375,11 @@
       ]
      }
     ],
-    "commits_24h": 173,
+    "commits_24h": 135,
     "commits_7d": 632,
     "commits_sampled": 200,
-    "prs_open": 8,
-    "prs_merged_24h": 49,
+    "prs_open": 12,
+    "prs_merged_24h": 48,
     "problem_issues": [
      {
       "number": 215,
@@ -17355,14 +17429,14 @@
    },
    "score": 47.5,
    "areas_24h": {
-    "gpu": 92,
-    "loader": 53,
-    "shaders": 51,
-    "other": 42,
+    "gpu": 82,
+    "loader": 48,
+    "shaders": 46,
     "docs": 30,
-    "vendor": 26,
-    "audio": 18,
-    "perf": 15,
+    "vendor": 22,
+    "other": 21,
+    "perf": 14,
+    "audio": 12,
     "input": 3
    },
    "areas_7d": {
@@ -17376,18 +17450,18 @@
     "perf": 19,
     "input": 4
    },
-   "commits_24h": 173,
+   "commits_24h": 135,
    "commits_7d": 632,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 173,
-     "avg": 76.5,
+     "n24": 135,
+     "avg": 82.8,
      "evidence": "https://github.com/brcly/TuxBox/commits"
     },
     {
      "code": "contributors_up",
-     "n": 7,
+     "n": 4,
      "evidence": "https://github.com/brcly/TuxBox/graphs/contributors"
     },
     {
@@ -17496,7 +17570,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "mewiof/Holy-Interoperability",
-    "stars": 8,
+    "stars": 9,
     "forks": 0,
     "open_issues": 0,
     "language": "C++",
@@ -17932,7 +18006,7 @@
     },
     {
      "code": "stale",
-     "h": 53,
+     "h": 55,
      "evidence": "https://github.com/mewiof/Holy-Interoperability/commits"
     }
    ],
@@ -17999,19 +18073,64 @@
     "exists": true,
     "http_status": 200,
     "full_name": "luizwidmer/palmetto",
-    "stars": 14,
+    "stars": 15,
     "forks": 3,
-    "open_issues": 0,
+    "open_issues": 1,
     "language": "Python",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-26T04:35:00Z",
+    "pushed_at": "2026-11-26T10:55:44Z",
     "created_at": "2026-11-24T22:05:23Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 1,
-    "last_commit": "2026-11-26T04:34:56Z",
+    "last_commit": "2026-11-26T10:55:39Z",
     "commits": [
+     {
+      "sha": "a0395fc996",
+      "url": "https://github.com/luizwidmer/palmetto/commit/a0395fc9962e03aa4160010075d4030b4b6f3e8b",
+      "date": "2026-11-26T10:55:39Z",
+      "areas": [
+       "gpu",
+       "input",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "fe76e7eeaa",
+      "url": "https://github.com/luizwidmer/palmetto/commit/fe76e7eeaa5e8879519569a1395e19110f8e3ae3",
+      "date": "2026-11-26T10:53:52Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "input",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "f22ff4d41f",
+      "url": "https://github.com/luizwidmer/palmetto/commit/f22ff4d41f06ad79a1d65eb7ea01a0969b1b2dcf",
+      "date": "2026-11-26T10:10:56Z",
+      "areas": [
+       "gpu",
+       "input",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "766bcd0670",
+      "url": "https://github.com/luizwidmer/palmetto/commit/766bcd06703bf2e9476dd7bcfcfad21d36dd1c47",
+      "date": "2026-11-26T09:16:30Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "docs"
+      ]
+     },
      {
       "sha": "a81a91415a",
       "url": "https://github.com/luizwidmer/palmetto/commit/a81a91415a55b952723408d36669de94571dc724",
@@ -19608,9 +19727,9 @@
       ]
      }
     ],
-    "commits_24h": 86,
-    "commits_7d": 158,
-    "commits_sampled": 158,
+    "commits_24h": 81,
+    "commits_7d": 162,
+    "commits_sampled": 162,
     "prs_open": 0,
     "prs_merged_24h": 0,
     "problem_issues": [],
@@ -19690,33 +19809,33 @@
    },
    "score": 25.0,
    "areas_24h": {
-    "loader": 73,
+    "loader": 69,
     "docs": 67,
-    "gpu": 59,
-    "vendor": 21,
-    "shaders": 21,
-    "perf": 11,
-    "input": 9,
+    "gpu": 58,
+    "shaders": 22,
+    "vendor": 18,
+    "input": 11,
+    "perf": 9,
     "audio": 5
    },
    "areas_7d": {
-    "loader": 129,
-    "gpu": 115,
-    "docs": 110,
-    "shaders": 51,
+    "loader": 133,
+    "gpu": 119,
+    "docs": 114,
+    "shaders": 53,
     "vendor": 29,
-    "input": 25,
+    "input": 28,
     "perf": 22,
     "audio": 5,
     "other": 3
    },
-   "commits_24h": 86,
-   "commits_7d": 158,
+   "commits_24h": 81,
+   "commits_7d": 162,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 86,
-     "avg": 12.0,
+     "n24": 81,
+     "avg": 13.5,
      "evidence": "https://github.com/luizwidmer/palmetto/commits"
     },
     {
@@ -20524,7 +20643,7 @@
     },
     {
      "code": "stale",
-     "h": 49,
+     "h": 51,
      "evidence": "https://github.com/Kajcsi/G6Recomp/commits"
     }
    ],
@@ -22391,11 +22510,11 @@
       ]
      }
     ],
-    "commits_24h": 48,
+    "commits_24h": 41,
     "commits_7d": 201,
     "commits_sampled": 200,
     "prs_open": 2,
-    "prs_merged_24h": 9,
+    "prs_merged_24h": 8,
     "problem_issues": [],
     "releases": [],
     "readme_hash": "86a756a6117f3ac0",
@@ -22412,15 +22531,14 @@
    },
    "score": 25.0,
    "areas_24h": {
-    "shaders": 36,
-    "docs": 34,
-    "gpu": 28,
-    "loader": 13,
-    "perf": 12,
-    "input": 2,
+    "shaders": 33,
+    "docs": 28,
+    "gpu": 25,
+    "loader": 12,
+    "perf": 11,
     "vendor": 1,
-    "audio": 1,
-    "other": 1
+    "input": 1,
+    "audio": 1
    },
    "areas_7d": {
     "docs": 85,
@@ -22433,13 +22551,13 @@
     "input": 9,
     "vendor": 3
    },
-   "commits_24h": 48,
+   "commits_24h": 41,
    "commits_7d": 201,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 48,
-     "avg": 25.5,
+     "n24": 41,
+     "avg": 26.7,
      "evidence": "https://github.com/gookie-dev/g6shim/commits"
     },
     {
@@ -22547,9 +22665,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ubiquitarianism/leonida",
-    "stars": 2398,
-    "forks": 544,
-    "open_issues": 1443,
+    "stars": 2416,
+    "forks": 547,
+    "open_issues": 1471,
     "language": "Python",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-26T03:35:47Z",
@@ -24403,11 +24521,11 @@
       ]
      }
     ],
-    "commits_24h": 368,
+    "commits_24h": 349,
     "commits_7d": 13390,
     "commits_sampled": 200,
-    "prs_open": 1398,
-    "prs_merged_24h": 16,
+    "prs_open": 1426,
+    "prs_merged_24h": 15,
     "problem_issues": [],
     "releases": [],
     "readme_hash": "78c0ddfb5b98c9b2",
@@ -24516,17 +24634,17 @@
     "perf": 13,
     "input": 11
    },
-   "commits_24h": 368,
+   "commits_24h": 349,
    "commits_7d": 13390,
    "signals_good": [
     {
      "code": "stars_up",
-     "n": 420,
+     "n": 199,
      "evidence": "https://github.com/ubiquitarianism/leonida/stargazers"
     },
     {
      "code": "contributors_up",
-     "n": 51,
+     "n": 46,
      "evidence": "https://github.com/ubiquitarianism/leonida/graphs/contributors"
     },
     {
@@ -24539,8 +24657,8 @@
    "signals_bad": [
     {
      "code": "activity_down",
-     "n24": 368,
-     "avg": 2170.3,
+     "n24": 349,
+     "avg": 2173.5,
      "evidence": "https://github.com/ubiquitarianism/leonida/commits"
     }
    ],
@@ -24655,8 +24773,8 @@
     "exists": true,
     "http_status": 200,
     "full_name": "omonkeyz/xbox-emulator",
-    "stars": 1850,
-    "forks": 123,
+    "stars": 1849,
+    "forks": 124,
     "open_issues": 54,
     "language": "Rust",
     "license": "GPL-3.0",
@@ -26466,11 +26584,6 @@
      "evidence": "https://github.com/omonkeyz/xbox-emulator/commits"
     },
     {
-     "code": "contributors_up",
-     "n": 12,
-     "evidence": "https://github.com/omonkeyz/xbox-emulator/graphs/contributors"
-    },
-    {
      "code": "tracker_confirms",
      "tracker": "GTA VI PC Race",
      "phase": 3,
@@ -26699,7 +26812,7 @@
     "exists": true,
     "http_status": 200,
     "full_name": "sammwyy/xvalkyrie",
-    "stars": 235,
+    "stars": 236,
     "forks": 14,
     "open_issues": 9,
     "language": "C++",
@@ -28475,7 +28588,7 @@
       ]
      }
     ],
-    "commits_24h": 51,
+    "commits_24h": 50,
     "commits_7d": 294,
     "commits_sampled": 200,
     "prs_open": 2,
@@ -28532,11 +28645,11 @@
    },
    "score": 10.0,
    "areas_24h": {
-    "loader": 40,
+    "loader": 39,
     "gpu": 28,
     "docs": 13,
-    "shaders": 7,
-    "perf": 5,
+    "shaders": 6,
+    "perf": 4,
     "audio": 3,
     "vendor": 2
    },
@@ -28551,7 +28664,7 @@
     "audio": 5,
     "vendor": 2
    },
-   "commits_24h": 51,
+   "commits_24h": 50,
    "commits_7d": 294,
    "signals_good": [],
    "signals_bad": [
@@ -28659,6 +28772,120 @@
  ],
  "items": [
   {
+   "id": "98d4d45aaf994886",
+   "source": "bluesky",
+   "source_label": "Bluesky",
+   "url": "https://bsky.app/profile/memesstation.bsky.social/post/3n37ipnd2ln2n",
+   "created": "2026-11-26T10:47:24Z",
+   "kind": "discussion",
+   "project": null,
+   "score": 1,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": null,
+   "embed": null,
+   "credibility": "false"
+  },
+  {
+   "id": "fba26e3887b3ae29",
+   "source": "bluesky",
+   "source_label": "Bluesky",
+   "url": "https://bsky.app/profile/kisuke2514.bsky.social/post/3n37hvjofds2c",
+   "created": "2026-11-26T10:32:47Z",
+   "kind": "discussion",
+   "project": null,
+   "score": 0,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": null,
+   "embed": null,
+   "credibility": "unverified"
+  },
+  {
+   "id": "33c9a5fab0084c38",
+   "source": "news",
+   "source_label": "wccftech.com",
+   "url": "https://wccftech.com/unofficial-grand-theft-auto-vi-pc-recompilations-20-30-fps/",
+   "created": "2026-11-26T10:30:00Z",
+   "kind": "news",
+   "project": null,
+   "score": null,
+   "comments": null,
+   "lang": "en",
+   "by_owner": false,
+   "thumb": null,
+   "embed": null,
+   "credibility": "community",
+   "headline": "Unofficial Grand Theft Auto VI PC Recompilations Are Now Running at 20-30 FPS, With One Player Reporting Up to 44 FPS"
+  },
+  {
+   "id": "19aedaa02c231665",
+   "source": "mastodon",
+   "source_label": "Mastodon",
+   "url": "https://mastodon.social/@xdc33@social.cologne/117682217507582177",
+   "created": "2026-11-26T10:15:32Z",
+   "kind": "image",
+   "project": null,
+   "score": 0,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": "https://files.mastodon.social/cache/media_attachments/files/117/682/217/462/066/624/small/1fcd2125b6b42a8e.jpeg",
+   "embed": null,
+   "credibility": "unverified"
+  },
+  {
+   "id": "906a2e89186d4388",
+   "source": "bluesky",
+   "source_label": "Bluesky",
+   "url": "https://bsky.app/profile/orcastanets.bsky.social/post/3n37f2g5s522a",
+   "created": "2026-11-26T09:41:50Z",
+   "kind": "discussion",
+   "project": null,
+   "score": 1,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": null,
+   "embed": null,
+   "credibility": "unverified"
+  },
+  {
+   "id": "191a5b1ab3a981ca",
+   "source": "news",
+   "source_label": "notebookcheck.net",
+   "url": "https://www.notebookcheck.net/GTA-6-recomp-hits-90-progress-and-here-s-what-that-means.1460623.0.html",
+   "created": "2026-11-26T09:20:00Z",
+   "kind": "news",
+   "project": null,
+   "score": null,
+   "comments": null,
+   "lang": "en",
+   "by_owner": false,
+   "thumb": null,
+   "embed": null,
+   "credibility": "community",
+   "headline": "GTA 6 recomp hits 90% progress – and here's what that means"
+  },
+  {
+   "id": "3bf0fc57ead07f89",
+   "source": "mastodon",
+   "source_label": "Mastodon",
+   "url": "https://mastodon.social/@seepathagency/117681940633694908",
+   "created": "2026-11-26T09:05:08Z",
+   "kind": "image",
+   "project": null,
+   "score": 0,
+   "comments": 1,
+   "lang": null,
+   "by_owner": false,
+   "thumb": "https://files.mastodon.social/media_attachments/files/117/681/940/311/948/709/small/0c51848749febfed.png",
+   "embed": null,
+   "credibility": "unverified"
+  },
+  {
    "id": "d8bcd28ce69944ce",
    "source": "bluesky",
    "source_label": "Bluesky",
@@ -28666,7 +28893,7 @@
    "created": "2026-11-26T08:55:31Z",
    "kind": "discussion",
    "project": null,
-   "score": 0,
+   "score": 3,
    "comments": 1,
    "lang": null,
    "by_owner": false,
@@ -28737,8 +28964,8 @@
    "created": "2026-11-26T08:12:39Z",
    "kind": "discussion",
    "project": null,
-   "score": 18,
-   "comments": 2,
+   "score": 29,
+   "comments": 4,
    "lang": null,
    "by_owner": false,
    "thumb": null,
@@ -28782,52 +29009,6 @@
    "by_owner": false,
    "thumb": "https://files.mastodon.social/cache/media_attachments/files/117/681/625/968/846/459/small/91700f0fe217f9ed.jpg",
    "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "ca3ca1222bf60711",
-   "source": "reddit",
-   "source_label": "r/GTA6",
-   "url": "https://www.reddit.com/r/GTA6/comments/1y5uwcu/",
-   "created": "2026-11-26T07:16:35Z",
-   "kind": "video",
-   "project": null,
-   "score": 1,
-   "comments": 1,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "via": "arcticshift",
-   "vias": [
-    "arcticshift"
-   ],
-   "completeness": "partial",
-   "post_id": "1y5uwcu",
-   "subreddit": "GTA6",
-   "credibility": "unverified"
-  },
-  {
-   "id": "8cc630e91f1d22ce",
-   "source": "reddit",
-   "source_label": "r/GTA6",
-   "url": "https://www.reddit.com/r/GTA6/comments/1y5uul8/",
-   "created": "2026-11-26T07:13:38Z",
-   "kind": "video",
-   "project": null,
-   "score": 1,
-   "comments": 1,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "via": "arcticshift",
-   "vias": [
-    "arcticshift"
-   ],
-   "completeness": "partial",
-   "post_id": "1y5uul8",
-   "subreddit": "GTA6",
    "credibility": "unverified"
   },
   {
@@ -28900,7 +29081,7 @@
    "created": "2026-11-26T04:33:13Z",
    "kind": "discussion",
    "project": null,
-   "score": 87,
+   "score": 89,
    "comments": 4,
    "lang": null,
    "by_owner": false,
@@ -28978,27 +29159,11 @@
    "created": "2026-11-26T02:50:45Z",
    "kind": "discussion",
    "project": null,
-   "score": 5,
+   "score": 8,
    "comments": 1,
    "lang": null,
    "by_owner": false,
    "thumb": null,
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "b5b65879b02d4fcc",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@codorco/117680389096469856",
-   "created": "2026-11-26T02:30:34Z",
-   "kind": "image",
-   "project": null,
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://files.mastodon.social/media_attachments/files/117/680/388/784/903/215/small/87b4b325001c4f9b.jpeg",
    "embed": null,
    "credibility": "unverified"
   },
@@ -29016,29 +29181,6 @@
    "by_owner": false,
    "thumb": null,
    "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "6a8de7e7e4175c70",
-   "source": "reddit",
-   "source_label": "r/GTA",
-   "url": "https://www.reddit.com/r/GTA/comments/1y5o6l5/",
-   "created": "2026-11-26T01:12:56Z",
-   "kind": "image",
-   "project": null,
-   "score": 0,
-   "comments": 11,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://preview.redd.it/lwd2vjcpwu3i1.png?width=108&auto=webp&s=13fd30653f4aecc8b3ff9f7a6e2fc6e2d15c812c",
-   "embed": null,
-   "via": "arcticshift",
-   "vias": [
-    "arcticshift"
-   ],
-   "completeness": "partial",
-   "post_id": "1y5o6l5",
-   "subreddit": "GTA",
    "credibility": "unverified"
   },
   {
@@ -29097,7 +29239,7 @@
    "created": "2026-11-25T23:10:37Z",
    "kind": "discussion",
    "project": null,
-   "score": 3,
+   "score": 4,
    "comments": 0,
    "lang": null,
    "by_owner": false,
@@ -29242,18 +29384,18 @@
    "embed": "3Wcygk90C54",
    "source": "youtube",
    "source_label": "YouTube · Hertz & Hem",
-   "created": "2026-11-25T21:00:44Z",
+   "created": "2026-11-25T21:03:55Z",
    "credibility": "unverified"
   },
   {
-   "id": "83583f60ed403028",
+   "id": "8d8efd95839e305d",
    "kind": "video",
-   "url": "https://www.youtube.com/watch?v=ove3fPUgRfQ",
-   "thumb": "https://i.ytimg.com/vi/ove3fPUgRfQ/hqdefault.jpg",
-   "embed": "ove3fPUgRfQ",
+   "url": "https://www.youtube.com/watch?v=_Be9x6Q5EtY",
+   "thumb": "https://i.ytimg.com/vi/_Be9x6Q5EtY/hqdefault.jpg",
+   "embed": "_Be9x6Q5EtY",
    "source": "youtube",
-   "source_label": "YouTube · NeuralDisc",
-   "created": "2026-11-25T21:00:42Z",
+   "source_label": "YouTube · Mr. Sujano",
+   "created": "2026-11-25T21:03:41Z",
    "credibility": "unverified"
   },
   {
@@ -29272,17 +29414,6 @@
    "embed": null,
    "credibility": "community",
    "headline": "Take-Two frena Leonida, un proyecto que pretendía llevar 'GTA VI' a Windows a partir de una versión filtrada de Xbox"
-  },
-  {
-   "id": "8d8efd95839e305d",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=_Be9x6Q5EtY",
-   "thumb": "https://i.ytimg.com/vi/_Be9x6Q5EtY/hqdefault.jpg",
-   "embed": "_Be9x6Q5EtY",
-   "source": "youtube",
-   "source_label": "YouTube · Mr. Sujano",
-   "created": "2026-11-25T21:00:30Z",
-   "credibility": "unverified"
   },
   {
    "id": "301782830a348776",
@@ -29347,7 +29478,7 @@
    "created": "2026-11-25T20:25:17Z",
    "kind": "discussion",
    "project": null,
-   "score": 28,
+   "score": 30,
    "comments": 2,
    "lang": null,
    "by_owner": false,
@@ -29439,22 +29570,6 @@
    "lang": null,
    "by_owner": false,
    "thumb": null,
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "3bbca8067e16541c",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@darkghosthunter/117678846992650342",
-   "created": "2026-11-25T19:58:23Z",
-   "kind": "image",
-   "project": null,
-   "score": 1,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://files.mastodon.social/media_attachments/files/117/678/811/826/828/712/small/9f903beb2fcd1d0c.jpeg",
    "embed": null,
    "credibility": "unverified"
   },
@@ -29569,38 +29684,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "591905c32854be6b",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@gamechosis/117678580129084943",
-   "created": "2026-11-25T18:50:31Z",
-   "kind": "image",
-   "project": null,
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://files.mastodon.social/media_attachments/files/117/678/580/063/022/296/small/0a2181ab78e81cd2.jpg",
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "9843fba48947704e",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@noping/117678564101772968",
-   "created": "2026-11-25T18:46:26Z",
-   "kind": "image",
-   "project": null,
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": "https://files.mastodon.social/media_attachments/files/117/678/562/657/586/006/small/bea8b2fd2e9bb3d6.png",
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
    "id": "bae3ce6f99e49730",
    "source": "bluesky",
    "source_label": "Bluesky",
@@ -29657,7 +29740,7 @@
    "created": "2026-11-25T17:34:37Z",
    "kind": "discussion",
    "project": null,
-   "score": 38,
+   "score": 39,
    "comments": 1,
    "lang": null,
    "by_owner": false,
@@ -29810,7 +29893,7 @@
    "embed": "2DtdKBiqbEc",
    "source": "youtube",
    "source_label": "YouTube · Adi 4 u",
-   "created": "2026-11-25T15:00:36Z",
+   "created": "2026-11-25T15:03:47Z",
    "credibility": "unverified"
   },
   {
@@ -29935,7 +30018,7 @@
    "embed": "N7Rlo7CN2rw",
    "source": "youtube",
    "source_label": "YouTube · Undocumented Behavior",
-   "created": "2026-11-25T12:00:44Z",
+   "created": "2026-11-25T12:03:55Z",
    "credibility": "unverified"
   },
   {
@@ -29986,6 +30069,28 @@
    "by_owner": false,
    "thumb": null,
    "embed": null,
+   "credibility": "unverified"
+  },
+  {
+   "id": "627b52035118903b",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=Z6NIBsCm83Y",
+   "thumb": "https://i.ytimg.com/vi/Z6NIBsCm83Y/hqdefault.jpg",
+   "embed": "Z6NIBsCm83Y",
+   "source": "youtube",
+   "source_label": "YouTube · SomeOrdinaryGamers",
+   "created": "2026-11-25T11:03:47Z",
+   "credibility": "unverified"
+  },
+  {
+   "id": "4a425b73008d0a27",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=HWyuSFPmLFo",
+   "thumb": "https://i.ytimg.com/vi/HWyuSFPmLFo/hqdefault.jpg",
+   "embed": "HWyuSFPmLFo",
+   "source": "youtube",
+   "source_label": "YouTube · Sumit Charismatic",
+   "created": "2026-11-25T11:03:43Z",
    "credibility": "unverified"
   },
   {
@@ -30050,28 +30155,6 @@
    "by_owner": false,
    "thumb": null,
    "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "89b5e0187042f34d",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=ssn9gfV5ZBI",
-   "thumb": "https://i.ytimg.com/vi/ssn9gfV5ZBI/hqdefault.jpg",
-   "embed": "ssn9gfV5ZBI",
-   "source": "youtube",
-   "source_label": "YouTube ·  Hyzee AI",
-   "created": "2026-11-25T09:00:46Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "627b52035118903b",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=Z6NIBsCm83Y",
-   "thumb": "https://i.ytimg.com/vi/Z6NIBsCm83Y/hqdefault.jpg",
-   "embed": "Z6NIBsCm83Y",
-   "source": "youtube",
-   "source_label": "YouTube · SomeOrdinaryGamers",
-   "created": "2026-11-25T09:00:36Z",
    "credibility": "unverified"
   },
   {
@@ -30217,8 +30300,8 @@
    "created": "2026-11-25T00:11:03Z",
    "kind": "discussion",
    "project": null,
-   "score": 198,
-   "comments": 74,
+   "score": 201,
+   "comments": 77,
    "lang": null,
    "by_owner": false,
    "thumb": null,
@@ -30367,8 +30450,8 @@
    "created": "2026-11-24T21:24:44Z",
    "kind": "discussion",
    "project": null,
-   "score": 172,
-   "comments": 97,
+   "score": 180,
+   "comments": 98,
    "lang": null,
    "by_owner": false,
    "thumb": "https://lemmy.world/pictrs/image/2fc852c2-346c-46c1-acef-04459dbfebc5.jpeg",
@@ -30416,22 +30499,6 @@
    "kind": "discussion",
    "project": null,
    "score": 12,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "f0a2c8477f723be3",
-   "source": "bluesky",
-   "source_label": "Bluesky",
-   "url": "https://bsky.app/profile/lodesrs.bsky.social/post/3n33abdvm5c2f",
-   "created": "2026-11-24T18:05:35Z",
-   "kind": "discussion",
-   "project": null,
-   "score": 0,
    "comments": 0,
    "lang": null,
    "by_owner": false,
@@ -30504,22 +30571,6 @@
    "embed": null,
    "credibility": "community",
    "headline": "Unofficial GTA 6 PC port effort suffers setback as Rockstar seemingly takes down Project Leonida, one of the internet's biggest recompilation projects"
-  },
-  {
-   "id": "fc57788de232d358",
-   "source": "bluesky",
-   "source_label": "Bluesky",
-   "url": "https://bsky.app/profile/chippocrates.bsky.social/post/3n32pgnlg2k2i",
-   "created": "2026-11-24T13:04:19Z",
-   "kind": "discussion",
-   "project": null,
-   "score": 2,
-   "comments": 1,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "credibility": "unverified"
   },
   {
    "id": "a3abebc291e9f02c",
@@ -30602,6 +30653,50 @@
    "credibility": "unverified"
   },
   {
+   "id": "a0b9d2d65b888dac",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=xgQXhFxWfvo",
+   "thumb": "https://i.ytimg.com/vi/xgQXhFxWfvo/hqdefault.jpg",
+   "embed": "xgQXhFxWfvo",
+   "source": "youtube",
+   "source_label": "YouTube · Sumit Charismatic",
+   "created": "2026-11-24T11:03:57Z",
+   "credibility": "unverified"
+  },
+  {
+   "id": "701f513db14a4c9e",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=1l0suSnAn8s",
+   "thumb": "https://i.ytimg.com/vi/1l0suSnAn8s/hqdefault.jpg",
+   "embed": "1l0suSnAn8s",
+   "source": "youtube",
+   "source_label": "YouTube · AlphaBolt",
+   "created": "2026-11-24T11:03:57Z",
+   "credibility": "unverified"
+  },
+  {
+   "id": "89b5e0187042f34d",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=ssn9gfV5ZBI",
+   "thumb": "https://i.ytimg.com/vi/ssn9gfV5ZBI/hqdefault.jpg",
+   "embed": "ssn9gfV5ZBI",
+   "source": "youtube",
+   "source_label": "YouTube ·  Hyzee AI",
+   "created": "2026-11-24T11:03:57Z",
+   "credibility": "unverified"
+  },
+  {
+   "id": "87a4901531d421ca",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=V19k4n4zA8k",
+   "thumb": "https://i.ytimg.com/vi/V19k4n4zA8k/hqdefault.jpg",
+   "embed": "V19k4n4zA8k",
+   "source": "youtube",
+   "source_label": "YouTube · Glitching Queen",
+   "created": "2026-11-24T11:03:47Z",
+   "credibility": "unverified"
+  },
+  {
    "id": "71f43099c3e8c4fd",
    "source": "hn",
    "source_label": "Hacker News",
@@ -30618,50 +30713,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "a0b9d2d65b888dac",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=xgQXhFxWfvo",
-   "thumb": "https://i.ytimg.com/vi/xgQXhFxWfvo/hqdefault.jpg",
-   "embed": "xgQXhFxWfvo",
-   "source": "youtube",
-   "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T09:00:46Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "701f513db14a4c9e",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=1l0suSnAn8s",
-   "thumb": "https://i.ytimg.com/vi/1l0suSnAn8s/hqdefault.jpg",
-   "embed": "1l0suSnAn8s",
-   "source": "youtube",
-   "source_label": "YouTube · AlphaBolt",
-   "created": "2026-11-24T09:00:46Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "87a4901531d421ca",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=V19k4n4zA8k",
-   "thumb": "https://i.ytimg.com/vi/V19k4n4zA8k/hqdefault.jpg",
-   "embed": "V19k4n4zA8k",
-   "source": "youtube",
-   "source_label": "YouTube · Glitching Queen",
-   "created": "2026-11-24T09:00:44Z",
-   "credibility": "unverified"
-  },
-  {
-   "id": "3939538dde5d8d29",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=GTmvDfFBKw4",
-   "thumb": "https://i.ytimg.com/vi/GTmvDfFBKw4/hqdefault.jpg",
-   "embed": "GTmvDfFBKw4",
-   "source": "youtube",
-   "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T09:00:38Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "6ba962df0cbbf3a5",
    "source": "hn",
    "source_label": "Hacker News",
@@ -30669,8 +30720,8 @@
    "created": "2026-11-24T02:08:09Z",
    "kind": "discussion",
    "project": null,
-   "score": 388,
-   "comments": 717,
+   "score": 389,
+   "comments": 721,
    "lang": null,
    "by_owner": false,
    "thumb": null,
@@ -30826,6 +30877,17 @@
    "credibility": "unverified"
   },
   {
+   "id": "3939538dde5d8d29",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=GTmvDfFBKw4",
+   "thumb": "https://i.ytimg.com/vi/GTmvDfFBKw4/hqdefault.jpg",
+   "embed": "GTmvDfFBKw4",
+   "source": "youtube",
+   "source_label": "YouTube · Sumit Charismatic",
+   "created": "2026-11-23T11:03:49Z",
+   "credibility": "unverified"
+  },
+  {
    "id": "695db8aa50d429b2",
    "source": "news",
    "source_label": "notebookcheck.net",
@@ -30945,6 +31007,108 @@
   }
  ],
  "events": [
+  {
+   "kind": "readme",
+   "created": "2026-11-26T10:59:38Z",
+   "url": "https://github.com/LooperSalty/AnyXboxX#readme",
+   "project": "anyxboxx",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "anyxboxx-readme-2026-11-26T10:59:38Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-26T10:59:38Z",
+   "url": "https://github.com/R0Y00/Xbox2Windows#readme",
+   "project": "xbox2windows",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xbox2windows-readme-2026-11-26T10:59:38Z"
+  },
+  {
+   "kind": "commits",
+   "n": 2,
+   "areas": [
+    "gpu",
+    "loader"
+   ],
+   "created": "2026-11-26T10:59:25Z",
+   "url": "https://github.com/californiaAlmonds/OpenScarlett/commits",
+   "project": "openscarlett",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "openscarlett-commits-2026-11-26T10:59:25Z"
+  },
+  {
+   "kind": "commits",
+   "n": 14,
+   "areas": [
+    "docs",
+    "gpu",
+    "shaders"
+   ],
+   "created": "2026-11-26T10:58:48Z",
+   "url": "https://github.com/R0Y00/Xbox2Windows/commits",
+   "project": "xbox2windows",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xbox2windows-commits-2026-11-26T10:58:48Z"
+  },
+  {
+   "kind": "commits",
+   "n": 4,
+   "areas": [
+    "gpu",
+    "loader",
+    "docs"
+   ],
+   "created": "2026-11-26T10:55:39Z",
+   "url": "https://github.com/luizwidmer/palmetto/commits",
+   "project": "palmetto",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "palmetto-commits-2026-11-26T10:55:39Z"
+  },
+  {
+   "kind": "commits",
+   "n": 6,
+   "areas": [
+    "shaders",
+    "gpu",
+    "vendor"
+   ],
+   "created": "2026-11-26T10:53:54Z",
+   "url": "https://github.com/LooperSalty/AnyXboxX/commits",
+   "project": "anyxboxx",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "anyxboxx-commits-2026-11-26T10:53:54Z"
+  },
+  {
+   "kind": "commits",
+   "n": 22,
+   "areas": [
+    "gpu",
+    "loader",
+    "docs"
+   ],
+   "created": "2026-11-26T10:48:46Z",
+   "url": "https://github.com/ThatRecompDev/five-star-recomp/commits",
+   "project": "five-star-recomp",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "five-star-recomp-commits-2026-11-26T10:48:46Z"
+  },
+  {
+   "kind": "release",
+   "created": "2026-11-26T10:40:36Z",
+   "url": "https://github.com/LooperSalty/AnyXboxX/releases/tag/launcher-v0.1.0",
+   "binaries": true,
+   "project": "anyxboxx",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "anyxboxx-release-2026-11-26T10:40:36Z"
+  },
   {
    "kind": "readme",
    "created": "2026-11-26T08:56:08Z",
@@ -33333,14 +33497,14 @@
  ],
  "media": [
   "c2813dde49536483",
-  "83583f60ed403028",
   "8d8efd95839e305d",
   "5d55125bab2ca2a7",
   "57e4cf130d502f03",
-  "89b5e0187042f34d",
   "627b52035118903b",
+  "4a425b73008d0a27",
   "a0b9d2d65b888dac",
   "701f513db14a4c9e",
+  "89b5e0187042f34d",
   "87a4901531d421ca",
   "3939538dde5d8d29"
  ],
@@ -33353,20 +33517,7 @@
    "embed": "3Wcygk90C54",
    "source": "youtube",
    "source_label": "YouTube · Hertz & Hem",
-   "created": "2026-11-25T21:00:44Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "83583f60ed403028",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=ove3fPUgRfQ",
-   "thumb": "https://i.ytimg.com/vi/ove3fPUgRfQ/hqdefault.jpg",
-   "embed": "ove3fPUgRfQ",
-   "source": "youtube",
-   "source_label": "YouTube · NeuralDisc",
-   "created": "2026-11-25T21:00:42Z",
+   "created": "2026-11-25T21:03:55Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33379,7 +33530,7 @@
    "embed": "_Be9x6Q5EtY",
    "source": "youtube",
    "source_label": "YouTube · Mr. Sujano",
-   "created": "2026-11-25T21:00:30Z",
+   "created": "2026-11-25T21:03:41Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33392,7 +33543,7 @@
    "embed": "2DtdKBiqbEc",
    "source": "youtube",
    "source_label": "YouTube · Adi 4 u",
-   "created": "2026-11-25T15:00:36Z",
+   "created": "2026-11-25T15:03:47Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33405,20 +33556,7 @@
    "embed": "N7Rlo7CN2rw",
    "source": "youtube",
    "source_label": "YouTube · Undocumented Behavior",
-   "created": "2026-11-25T12:00:44Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "89b5e0187042f34d",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=ssn9gfV5ZBI",
-   "thumb": "https://i.ytimg.com/vi/ssn9gfV5ZBI/hqdefault.jpg",
-   "embed": "ssn9gfV5ZBI",
-   "source": "youtube",
-   "source_label": "YouTube ·  Hyzee AI",
-   "created": "2026-11-25T09:00:46Z",
+   "created": "2026-11-25T12:03:55Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33431,7 +33569,20 @@
    "embed": "Z6NIBsCm83Y",
    "source": "youtube",
    "source_label": "YouTube · SomeOrdinaryGamers",
-   "created": "2026-11-25T09:00:36Z",
+   "created": "2026-11-25T11:03:47Z",
+   "credibility": "unverified",
+   "origin": "video",
+   "project": null
+  },
+  {
+   "id": "4a425b73008d0a27",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=HWyuSFPmLFo",
+   "thumb": "https://i.ytimg.com/vi/HWyuSFPmLFo/hqdefault.jpg",
+   "embed": "HWyuSFPmLFo",
+   "source": "youtube",
+   "source_label": "YouTube · Sumit Charismatic",
+   "created": "2026-11-25T11:03:43Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33444,7 +33595,7 @@
    "embed": "xgQXhFxWfvo",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T09:00:46Z",
+   "created": "2026-11-24T11:03:57Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33457,7 +33608,20 @@
    "embed": "1l0suSnAn8s",
    "source": "youtube",
    "source_label": "YouTube · AlphaBolt",
-   "created": "2026-11-24T09:00:46Z",
+   "created": "2026-11-24T11:03:57Z",
+   "credibility": "unverified",
+   "origin": "video",
+   "project": null
+  },
+  {
+   "id": "89b5e0187042f34d",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=ssn9gfV5ZBI",
+   "thumb": "https://i.ytimg.com/vi/ssn9gfV5ZBI/hqdefault.jpg",
+   "embed": "ssn9gfV5ZBI",
+   "source": "youtube",
+   "source_label": "YouTube ·  Hyzee AI",
+   "created": "2026-11-24T11:03:57Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33470,7 +33634,7 @@
    "embed": "V19k4n4zA8k",
    "source": "youtube",
    "source_label": "YouTube · Glitching Queen",
-   "created": "2026-11-24T09:00:44Z",
+   "created": "2026-11-24T11:03:47Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -33483,13 +33647,15 @@
    "embed": "GTmvDfFBKw4",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-24T09:00:38Z",
+   "created": "2026-11-23T11:03:49Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
   }
  ],
  "press": [
+  "33c9a5fab0084c38",
+  "191a5b1ab3a981ca",
   "6e0441a9fa5e49f6",
   "5962ac829a9a02f0",
   "e85e46fe914a1a2f",
@@ -33597,7 +33763,8 @@
    "name": "Kelvaroq",
    "repo": "fablinoo/kelvaroq",
    "stages": {
-    "GTA VI PC Race": 6
+    "GTA VI PC Race": 6,
+    "PortWatch VI": 4
    },
    "watch": false,
    "slug": null
@@ -34111,6 +34278,15 @@
    "slug": null
   },
   {
+   "name": "Neptune + GDeflate",
+   "repo": "dudegio/Neptune-GDeflate",
+   "stages": {
+    "GTA VI PC Race": 0
+   },
+   "watch": true,
+   "slug": null
+  },
+  {
    "name": "project-flamingo",
    "repo": "JMAN730/project-flamingo",
    "stages": {
@@ -34201,6 +34377,24 @@
    "slug": null
   },
   {
+   "name": "VIctory-RDNA",
+   "repo": "XaviFortes/VIctory-RDNA",
+   "stages": {
+    "GTA VI PC Race": 0
+   },
+   "watch": true,
+   "slug": null
+  },
+  {
+   "name": "VIctory-reloaded",
+   "repo": "Biskwit/VIctory-reloaded",
+   "stages": {
+    "GTA VI PC Race": 0
+   },
+   "watch": true,
+   "slug": null
+  },
+  {
    "name": "victory-world-runtime",
    "repo": "ZSlayerHQ/victory-world-runtime",
    "stages": {
@@ -34266,7 +34460,7 @@
  ],
  "scam": {
   "networks": 6,
-  "copies": 158
+  "copies": 160
  },
  "milestones": {
   "console_launch": "2026-11-19T00:00:00Z",
@@ -34275,6 +34469,11 @@
   "exe_leak_source": "https://www.xda-developers.com/gta-6-xbox-executable-leaked-opening-door-for-pc-recompilation-projects-begin-testing/"
  },
  "alerts": [
+  {
+   "code": "binaries",
+   "project": "anyxboxx",
+   "name": "AnyXboxX"
+  },
   {
    "code": "missing",
    "project": "palmwave",
@@ -34379,13 +34578,10 @@
   },
   {
    "code": "clone",
-   "repo": "DesignWithTommy/i95",
+   "repo": "anrq0/SeriesX-Emulator",
    "reasons": [
     {
      "code": "binaries"
-    },
-    {
-     "code": "password"
     }
    ]
   },
@@ -34448,6 +34644,10 @@
   },
   {
    "code": "hoax",
+   "item": "98d4d45aaf994886"
+  },
+  {
+   "code": "hoax",
    "item": "b6519ab900473836"
   },
   {
@@ -34493,7 +34693,7 @@
   },
   {
    "code": "dropped",
-   "n": 52
+   "n": 58
   }
  ],
  "trackers": [
@@ -34524,7 +34724,7 @@
    "name": "PortWatch VI",
    "url": "https://portwatch-vi.xyz/",
    "ok": true,
-   "updated": "2026-11-26T07:37:39.644Z",
+   "updated": "2026-11-26T10:23:53.338Z",
    "phases": {
     "victory": 4,
     "tuxbox": 2,
@@ -34539,7 +34739,7 @@
    "name": "mtwildwood GTA 6 PC",
    "url": "https://gta.mtwildwood.net/es/gta-6-pc/",
    "ok": true,
-   "updated": "2026-11-26T08:52:50Z",
+   "updated": "2026-11-26T11:00:34Z",
    "phases": {}
   }
  ],
@@ -34549,9 +34749,9 @@
  },
  "max_reached": 5,
  "stats": {
-  "dropped_legal": 52,
+  "dropped_legal": 58,
   "dropped_spoiler": 13,
-  "http_calls": 594
+  "http_calls": 527
  },
  "phase_changes": [
   {
@@ -34761,7 +34961,7 @@
  ],
  "reddit_freshness": {
   "newest": "2026-11-26T08:39:49Z",
-  "lag_h": 0.3,
+  "lag_h": 2.3,
   "stale": false
  }
 }

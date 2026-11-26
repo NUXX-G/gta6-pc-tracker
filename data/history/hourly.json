@@ -2858,5 +2858,200 @@
     "status": "active"
    }
   }
+ },
+ {
+  "t": "2026-11-26T10:59:38Z",
+  "p": {
+   "victory": {
+    "phase": 5,
+    "partial": false,
+    "score": 70.0,
+    "stars": 12895,
+    "forks": 2114,
+    "contributors": 137,
+    "commits_24h": 95,
+    "status": "active"
+   },
+   "anyxboxx": {
+    "phase": 5,
+    "partial": false,
+    "score": 70.0,
+    "stars": 393,
+    "forks": 63,
+    "contributors": 21,
+    "commits_24h": 294,
+    "status": "active"
+   },
+   "palmwave": {
+    "phase": 5,
+    "partial": false,
+    "score": 70.0,
+    "stars": null,
+    "forks": null,
+    "contributors": null,
+    "commits_24h": 0,
+    "status": "missing"
+   },
+   "xcl": {
+    "phase": 5,
+    "partial": true,
+    "score": 62.5,
+    "stars": 8418,
+    "forks": 1161,
+    "contributors": 149,
+    "commits_24h": 167,
+    "status": "active"
+   },
+   "five-star-recomp": {
+    "phase": 5,
+    "partial": true,
+    "score": 62.5,
+    "stars": 220,
+    "forks": 14,
+    "contributors": 5,
+    "commits_24h": 459,
+    "status": "active"
+   },
+   "percyscarlett": {
+    "phase": 4,
+    "partial": false,
+    "score": 55.0,
+    "stars": 42,
+    "forks": 5,
+    "contributors": 1,
+    "commits_24h": 0,
+    "status": "active"
+   },
+   "gta6-boottest": {
+    "phase": 4,
+    "partial": true,
+    "score": 47.5,
+    "stars": 44,
+    "forks": 4,
+    "contributors": 1,
+    "commits_24h": 0,
+    "status": "stale"
+   },
+   "xbox2windows": {
+    "phase": 4,
+    "partial": true,
+    "score": 47.5,
+    "stars": 1962,
+    "forks": 233,
+    "contributors": 121,
+    "commits_24h": 511,
+    "status": "active"
+   },
+   "openscarlett-ce": {
+    "phase": 4,
+    "partial": true,
+    "score": 47.5,
+    "stars": 88,
+    "forks": 4,
+    "contributors": 2,
+    "commits_24h": 0,
+    "status": "active"
+   },
+   "openscarlett": {
+    "phase": 4,
+    "partial": true,
+    "score": 47.5,
+    "stars": 103,
+    "forks": 12,
+    "contributors": 6,
+    "commits_24h": 25,
+    "status": "active"
+   },
+   "tuxbox": {
+    "phase": 4,
+    "partial": true,
+    "score": 47.5,
+    "stars": 374,
+    "forks": 44,
+    "contributors": 25,
+    "commits_24h": 135,
+    "status": "active"
+   },
+   "holy-interoperability": {
+    "phase": 3,
+    "partial": false,
+    "score": 40.0,
+    "stars": 9,
+    "forks": 0,
+    "contributors": 1,
+    "commits_24h": 0,
+    "status": "stale"
+   },
+   "palmetto": {
+    "phase": 2,
+    "partial": false,
+    "score": 25.0,
+    "stars": 15,
+    "forks": 3,
+    "contributors": 1,
+    "commits_24h": 81,
+    "status": "active"
+   },
+   "g6recomp": {
+    "phase": 2,
+    "partial": false,
+    "score": 25.0,
+    "stars": 11,
+    "forks": 1,
+    "contributors": 1,
+    "commits_24h": 0,
+    "status": "stale"
+   },
+   "g6shim": {
+    "phase": 2,
+    "partial": false,
+    "score": 25.0,
+    "stars": 9,
+    "forks": 2,
+    "contributors": 3,
+    "commits_24h": 41,
+    "status": "active"
+   },
+   "leonida-continued": {
+    "phase": 1,
+    "partial": false,
+    "score": 20.0,
+    "stars": 2416,
+    "forks": 547,
+    "contributors": 809,
+    "commits_24h": 349,
+    "status": "active"
+   },
+   "xbox-emulator": {
+    "phase": 1,
+    "partial": false,
+    "score": 20.0,
+    "stars": 1849,
+    "forks": 124,
+    "contributors": 31,
+    "commits_24h": 134,
+    "status": "active"
+   },
+   "leonida-reforge": {
+    "phase": 1,
+    "partial": true,
+    "score": 10.0,
+    "stars": null,
+    "forks": null,
+    "contributors": null,
+    "commits_24h": 0,
+    "status": "missing"
+   },
+   "xvalkyrie": {
+    "phase": 1,
+    "partial": true,
+    "score": 10.0,
+    "stars": 236,
+    "forks": 14,
+    "contributors": 4,
+    "commits_24h": 50,
+    "status": "active"
+   }
+  }
  }
 ]
