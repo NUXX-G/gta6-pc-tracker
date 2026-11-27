@@ -1,17 +1,17 @@
 {
- "generated": "2026-11-27T20:20:51Z",
+ "generated": "2026-11-27T22:03:44Z",
  "candidates": [
   {
    "full_name": "xcl-dev/xcl",
    "url": "https://github.com/xcl-dev/xcl",
-   "stars": 8714,
+   "stars": 8722,
    "created_at": "2026-11-20T20:03:21Z",
-   "pushed_at": "2026-11-27T16:16:53Z",
+   "pushed_at": "2026-11-27T21:27:54Z",
    "age_days": 7,
    "language": "Rust",
    "size_kb": 9311,
    "has_code": true,
-   "commits": 1353,
+   "commits": 1355,
    "first_seen": "2026-11-24T22:03:10Z",
    "flagged": true,
    "inspected": true,
@@ -27,12 +27,12 @@
   {
    "full_name": "4lwayz/portwatch-vi",
    "url": "https://github.com/4lwayz/portwatch-vi",
-   "stars": 6605,
+   "stars": 6667,
    "created_at": "2026-11-21T23:16:41Z",
    "pushed_at": "2026-11-27T19:38:52Z",
    "age_days": 5,
    "language": "JavaScript",
-   "size_kb": 5729,
+   "size_kb": 5613,
    "has_code": true,
    "commits": 253,
    "first_seen": "2026-11-24T13:01:19Z",
@@ -44,14 +44,14 @@
   {
    "full_name": "ProjectLeonida/mandy",
    "url": "https://github.com/ProjectLeonida/mandy",
-   "stars": 2623,
+   "stars": 2641,
    "created_at": "2026-11-23T23:54:39Z",
-   "pushed_at": "2026-11-27T19:55:43Z",
+   "pushed_at": "2026-11-27T21:42:07Z",
    "age_days": 3,
    "language": "Python",
-   "size_kb": 369168,
+   "size_kb": 369568,
    "has_code": true,
-   "commits": 13625,
+   "commits": 13665,
    "first_seen": "2026-11-27T20:23:31Z",
    "flagged": true,
    "inspected": true,
@@ -67,14 +67,14 @@
   {
    "full_name": "zortos293/XSEmu",
    "url": "https://github.com/zortos293/XSEmu",
-   "stars": 893,
+   "stars": 897,
    "created_at": "2026-11-23T12:57:17Z",
-   "pushed_at": "2026-11-27T20:18:30Z",
+   "pushed_at": "2026-11-27T21:59:32Z",
    "age_days": 4,
    "language": "Rust",
-   "size_kb": 6542,
+   "size_kb": 9583,
    "has_code": true,
-   "commits": 35,
+   "commits": 38,
    "first_seen": "2026-11-26T19:20:59Z",
    "flagged": true,
    "inspected": true,
@@ -88,14 +88,14 @@
   {
    "full_name": "Ahmet-Dedeler/awesome-gta6-reverse-engineering",
    "url": "https://github.com/Ahmet-Dedeler/awesome-gta6-reverse-engineering",
-   "stars": 833,
+   "stars": 834,
    "created_at": "2026-11-21T17:08:48Z",
-   "pushed_at": "2026-11-26T22:26:05Z",
+   "pushed_at": "2026-11-27T20:31:09Z",
    "age_days": 6,
    "language": "HTML",
-   "size_kb": 6945,
+   "size_kb": 7112,
    "has_code": true,
-   "commits": 46,
+   "commits": 47,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": true,
    "inspected": true,
@@ -104,7 +104,7 @@
      "code": "password"
     }
    ],
-   "similarity": 0.063
+   "similarity": 0.067
   },
   {
    "full_name": "Shagg88/COGBox",
@@ -136,31 +136,35 @@
   {
    "full_name": "ProjectLeonidaL/leonida",
    "url": "https://github.com/ProjectLeonidaL/leonida",
-   "stars": 542,
+   "stars": 547,
    "created_at": "2026-11-24T02:20:14Z",
-   "pushed_at": "2026-11-27T20:15:25Z",
+   "pushed_at": "2026-11-27T22:04:38Z",
    "age_days": 3,
    "language": "Rust",
-   "size_kb": 12989,
+   "size_kb": 13031,
    "has_code": true,
-   "commits": 597,
+   "commits": 608,
    "first_seen": "2026-11-24T13:01:19Z",
-   "flagged": false,
+   "flagged": true,
    "inspected": true,
-   "reasons": [],
-   "similarity": 0.099
+   "reasons": [
+    {
+     "code": "binaries"
+    }
+   ],
+   "similarity": 0.097
   },
   {
    "full_name": "vuyp/gta6-pc-race",
    "url": "https://github.com/vuyp/gta6-pc-race",
-   "stars": 384,
+   "stars": 386,
    "created_at": "2026-11-23T17:27:05Z",
-   "pushed_at": "2026-11-27T20:10:50Z",
+   "pushed_at": "2026-11-27T21:43:21Z",
    "age_days": 4,
    "language": "HTML",
-   "size_kb": 4243,
+   "size_kb": 4497,
    "has_code": true,
-   "commits": 288,
+   "commits": 291,
    "first_seen": "2026-11-24T13:01:19Z",
    "flagged": false,
    "inspected": true,
@@ -170,14 +174,14 @@
   {
    "full_name": "isaac-btw/AmericasLauncher",
    "url": "https://github.com/isaac-btw/AmericasLauncher",
-   "stars": 206,
+   "stars": 210,
    "created_at": "2026-11-25T11:02:41Z",
-   "pushed_at": "2026-11-27T20:23:24Z",
+   "pushed_at": "2026-11-27T21:50:21Z",
    "age_days": 2,
    "language": "C#",
-   "size_kb": 1513,
+   "size_kb": 1530,
    "has_code": true,
-   "commits": 112,
+   "commits": 114,
    "first_seen": "2026-11-26T19:20:59Z",
    "flagged": true,
    "inspected": true,
@@ -186,19 +190,19 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.058
+   "similarity": 0.055
   },
   {
    "full_name": "PastiiJay/klbf-lab",
    "url": "https://github.com/PastiiJay/klbf-lab",
-   "stars": 180,
+   "stars": 189,
    "created_at": "2026-11-25T08:33:02Z",
-   "pushed_at": "2026-11-27T20:17:35Z",
+   "pushed_at": "2026-11-27T21:46:00Z",
    "age_days": 2,
    "language": "Rust",
-   "size_kb": 8252,
+   "size_kb": 8256,
    "has_code": true,
-   "commits": 339,
+   "commits": 340,
    "first_seen": "2026-11-25T16:12:59Z",
    "flagged": true,
    "inspected": true,
@@ -207,7 +211,7 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.071
+   "similarity": 0.057
   },
   {
    "full_name": "ranveersoni98/Xenora",
@@ -229,7 +233,7 @@
   {
    "full_name": "edsuuu/VI-BR-PORT",
    "url": "https://github.com/edsuuu/VI-BR-PORT",
-   "stars": 154,
+   "stars": 158,
    "created_at": "2026-11-24T03:07:05Z",
    "pushed_at": "2026-11-27T14:20:57Z",
    "age_days": 3,
@@ -246,7 +250,7 @@
   {
    "full_name": "pixl27/ProjectReCity",
    "url": "https://github.com/pixl27/ProjectReCity",
-   "stars": 143,
+   "stars": 145,
    "created_at": "2026-11-22T04:40:06Z",
    "pushed_at": "2026-11-26T15:14:54Z",
    "age_days": 5,
@@ -258,12 +262,12 @@
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.064
+   "similarity": 0.067
   },
   {
    "full_name": "LakshanSivakumar/Native-Victory-macOS",
    "url": "https://github.com/LakshanSivakumar/Native-Victory-macOS",
-   "stars": 121,
+   "stars": 125,
    "created_at": "2026-11-26T06:56:43Z",
    "pushed_at": "2026-11-27T17:59:36Z",
    "age_days": 1,
@@ -299,12 +303,12 @@
    "url": "https://github.com/Guernica4u/GTA6-PC-Port-Archive",
    "stars": 60,
    "created_at": "2026-11-24T01:15:37Z",
-   "pushed_at": "2026-11-27T20:18:15Z",
+   "pushed_at": "2026-11-27T21:47:41Z",
    "age_days": 3,
    "language": "Rust",
-   "size_kb": 4085404,
+   "size_kb": 4135058,
    "has_code": true,
-   "commits": 113,
+   "commits": 116,
    "first_seen": "2026-11-24T22:03:10Z",
    "flagged": true,
    "inspected": true,
@@ -313,29 +317,29 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.035
+   "similarity": 0.038
   },
   {
-   "full_name": "heeeet111/gta2-seuko-vice-edition",
-   "url": "https://github.com/heeeet111/gta2-seuko-vice-edition",
-   "stars": 56,
-   "created_at": "2026-09-21T21:27:16Z",
-   "pushed_at": "2026-11-27T18:01:40Z",
-   "age_days": 66,
-   "language": "HTML",
-   "size_kb": 733,
-   "has_code": true,
-   "commits": 300,
-   "first_seen": "2026-11-27T20:23:31Z",
+   "full_name": "BottomLocustJump/gta-6-windows-pc",
+   "url": "https://github.com/BottomLocustJump/gta-6-windows-pc",
+   "stars": 58,
+   "created_at": "2026-11-25T22:22:38Z",
+   "pushed_at": "2026-11-27T20:43:20Z",
+   "age_days": 1,
+   "language": null,
+   "size_kb": 4,
+   "has_code": false,
+   "commits": 3,
+   "first_seen": "2026-11-27T22:05:36Z",
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.041
+   "similarity": 0.078
   },
   {
    "full_name": "realblastex/flamingo",
    "url": "https://github.com/realblastex/flamingo",
-   "stars": 55,
+   "stars": 54,
    "created_at": "2026-11-25T09:27:44Z",
    "pushed_at": "2026-11-27T11:19:06Z",
    "age_days": 2,
@@ -352,14 +356,14 @@
   {
    "full_name": "ToLIManl/VIctory-Hydra",
    "url": "https://github.com/ToLIManl/VIctory-Hydra",
-   "stars": 44,
+   "stars": 45,
    "created_at": "2026-11-27T12:19:26Z",
-   "pushed_at": "2026-11-27T18:50:58Z",
+   "pushed_at": "2026-11-27T21:00:40Z",
    "age_days": 0,
    "language": "Rust",
-   "size_kb": 4252,
+   "size_kb": 4428,
    "has_code": true,
-   "commits": 16,
+   "commits": 17,
    "first_seen": "2026-11-27T20:23:31Z",
    "flagged": false,
    "inspected": true,
@@ -369,14 +373,14 @@
   {
    "full_name": "voidopcode/vilocity",
    "url": "https://github.com/voidopcode/vilocity",
-   "stars": 33,
+   "stars": 39,
    "created_at": "2026-11-25T11:25:08Z",
-   "pushed_at": "2026-11-27T20:01:38Z",
+   "pushed_at": "2026-11-27T21:32:12Z",
    "age_days": 2,
    "language": "Rust",
-   "size_kb": 6842,
+   "size_kb": 7119,
    "has_code": true,
-   "commits": 99,
+   "commits": 103,
    "first_seen": "2026-11-27T11:29:11Z",
    "flagged": true,
    "inspected": true,
@@ -385,19 +389,19 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.117
+   "similarity": 0.122
   },
   {
    "full_name": "DesignWithTommy/i95-GTA6-PC-Launcher",
    "url": "https://github.com/DesignWithTommy/i95-GTA6-PC-Launcher",
    "stars": 31,
    "created_at": "2026-11-23T23:52:16Z",
-   "pushed_at": "2026-11-27T20:22:18Z",
+   "pushed_at": "2026-11-27T22:05:12Z",
    "age_days": 3,
    "language": "Rust",
-   "size_kb": 105963,
+   "size_kb": 106442,
    "has_code": true,
-   "commits": 278,
+   "commits": 295,
    "first_seen": "2026-11-26T19:20:59Z",
    "flagged": true,
    "inspected": true,
@@ -406,7 +410,7 @@
      "code": "binaries"
     }
    ],
-   "similarity": 0.065
+   "similarity": 0.059
   },
   {
    "full_name": "IAmNotSiob/leonida-ce",
@@ -423,7 +427,7 @@
    "flagged": false,
    "inspected": true,
    "reasons": [],
-   "similarity": 0.175
+   "similarity": 0.177
   },
   {
    "full_name": "daeken/XSXEmu",
@@ -443,6 +447,23 @@
    "similarity": 0.039
   },
   {
+   "full_name": "3bdalra7manm2o-hub/leonida-gta-vi-recompilation",
+   "url": "https://github.com/3bdalra7manm2o-hub/leonida-gta-vi-recompilation",
+   "stars": 8,
+   "created_at": "2026-11-26T22:26:48Z",
+   "pushed_at": "2026-11-27T21:51:37Z",
+   "age_days": 0,
+   "language": "HTML",
+   "size_kb": 718,
+   "has_code": true,
+   "commits": 29,
+   "first_seen": "2026-11-27T22:05:36Z",
+   "flagged": false,
+   "inspected": true,
+   "reasons": [],
+   "similarity": 0.045
+  },
+  {
    "full_name": "shadshuvo/GanduTheftAutoVi",
    "url": "https://github.com/shadshuvo/GanduTheftAutoVi",
    "stars": 8,
@@ -458,23 +479,6 @@
    "inspected": true,
    "reasons": [],
    "similarity": 0.077
-  },
-  {
-   "full_name": "Mizushi148/MizuBox",
-   "url": "https://github.com/Mizushi148/MizuBox",
-   "stars": 8,
-   "created_at": "2026-11-22T18:25:09Z",
-   "pushed_at": "2026-11-22T18:31:35Z",
-   "age_days": 5,
-   "language": "C++",
-   "size_kb": 1509,
-   "has_code": true,
-   "commits": 4,
-   "first_seen": "2026-11-27T11:29:11Z",
-   "flagged": false,
-   "inspected": true,
-   "reasons": [],
-   "similarity": 0.071
   }
  ],
  "forks_flagged": [
