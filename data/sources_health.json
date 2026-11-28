@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-28T03:58:05Z",
+ "generated": "2026-11-28T12:27:28Z",
  "sources": {
   "github": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
    "items": 19,
    "error": null,
@@ -12,7 +12,7 @@
    "lag_h": null
   },
   "dmca": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
    "items": 428,
    "error": null,
@@ -22,7 +22,7 @@
    "lag_h": null
   },
   "trackers": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
    "items": 3,
    "error": null,
@@ -32,7 +32,7 @@
    "lag_h": null
   },
   "discovery": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
    "items": 25,
    "error": null,
@@ -42,9 +42,9 @@
    "lag_h": null
   },
   "hn": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
-   "items": 14,
+   "items": 15,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -52,7 +52,7 @@
    "lag_h": null
   },
   "bluesky": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": "2026-11-24T16:38:16Z",
    "items": 78,
    "error": null,
@@ -62,9 +62,9 @@
    "lag_h": null
   },
   "mastodon": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
-   "items": 18,
+   "items": 13,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -72,7 +72,7 @@
    "lag_h": null
   },
   "lemmy": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
    "items": 39,
    "error": null,
@@ -82,19 +82,19 @@
    "lag_h": null
   },
   "news": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
-   "items": 32,
+   "items": 30,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
-   "note": 200,
+   "note": 204,
    "lag_h": null
   },
   "youtube": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
-   "items": 13,
+   "items": 18,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
@@ -113,14 +113,14 @@
    "lag_h": null
   },
   "arcticshift": {
-   "last_ok": "2026-11-28T03:58:05Z",
+   "last_ok": "2026-11-28T12:27:28Z",
    "last_fail": null,
-   "items": 26,
+   "items": 31,
    "error": null,
    "ok_this_run": true,
    "failing_since": null,
    "note": null,
-   "lag_h": 1.8
+   "lag_h": 1.7
   },
   "pullpush": {
    "last_ok": null,
