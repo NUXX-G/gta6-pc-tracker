@@ -22519,5 +22519,73 @@
  "9331f9c81409b8f0b46cc5ab2032948f766dcccd": [
   "gpu",
   "perf"
+ ],
+ "4f9199d09ab2d93b7e90061141fae518f515180e": [
+  "docs"
+ ],
+ "486436937409535e0abb8c862c1fae5bce6e1158": [
+  "perf",
+  "docs"
+ ],
+ "4846c090a53a4a1d5645e3a38a8f792fffb90c5e": [
+  "audio",
+  "docs"
+ ],
+ "7d28ffe63127aa18373b3e671ad49b4b667b9a5a": [
+  "gpu",
+  "shaders",
+  "vendor",
+  "docs"
+ ],
+ "4f5e9b65ddacd5bf350a9a82cd4b3ad92475aa0d": [
+  "loader"
+ ],
+ "534ab02387b8ed0986a7a581ef7e187bc7b2dcfd": [
+  "other"
+ ],
+ "20a4e5d8912d8f188ddb3f462dd8ccbdd5959b1b": [
+  "shaders"
+ ],
+ "96bee20d83dfb487d08d3fc829f450e312835c37": [
+  "other"
+ ],
+ "8dc7bf55fc51c6456c0e759b7a27871371d73f68": [
+  "other"
+ ],
+ "9ae734c8886c93fb5abcbf67618a7db5ac2d4756": [
+  "loader"
+ ],
+ "84292ffb6a38991799ce36b6f603899dc103c775": [
+  "other"
+ ],
+ "97c74d62f25796e52fcb278f4dacf95dda021fb6": [
+  "other"
+ ],
+ "34d44bdf5686790cd0f04227411c228ba8f59cc7": [
+  "shaders"
+ ],
+ "32f4f3b27f7768ea64c3d33b34c5cc6cff2c4a1d": [
+  "other"
+ ],
+ "69c18554a099b2a04ecbb7f0bf610b9bdbd6583b": [
+  "other"
+ ],
+ "e9bf75408a3293a7fb1529e643cfdd1ba7b664c3": [
+  "other"
+ ],
+ "7db4e58ac96d26c716de175688ef895eae5da701": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "8b16f099e49fbfaa228a0bc0dfedac706b020e99": [
+  "gpu",
+  "loader",
+  "docs"
+ ],
+ "9bb9a81d1e2f067a83ca2d25f92b82e207b9a135": [
+  "gpu",
+  "loader",
+  "docs"
  ]
 }
