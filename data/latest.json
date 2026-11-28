@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T02:58:40Z",
+ "generated": "2026-11-28T03:58:05Z",
  "offline": false,
  "projects": [
   {
@@ -20,9 +20,9 @@
     "exists": true,
     "http_status": 200,
     "full_name": "Marvisak/VIctory",
-    "stars": 13840,
-    "forks": 2384,
-    "open_issues": 2325,
+    "stars": 13847,
+    "forks": 2392,
+    "open_issues": 2332,
     "language": "Rust",
     "license": "GPL-3.0",
     "pushed_at": "2026-11-25T23:27:48Z",
@@ -1928,13 +1928,36 @@
     "commits_24h": 0,
     "commits_7d": 692,
     "commits_sampled": 200,
-    "prs_open": 1744,
+    "prs_open": 1750,
     "prs_merged_24h": 0,
     "problem_issues": [
+     {
+      "number": 3486,
+      "url": "https://github.com/Marvisak/VIctory/issues/3486",
+      "keywords": [
+       "crash",
+       "hang"
+      ]
+     },
      {
       "number": 1633,
       "url": "https://github.com/Marvisak/VIctory/issues/1633",
       "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 3285,
+      "url": "https://github.com/Marvisak/VIctory/issues/3285",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
+      "number": 698,
+      "url": "https://github.com/Marvisak/VIctory/issues/698",
+      "keywords": [
+       "crash",
        "nvidia"
       ]
      },
@@ -1944,14 +1967,6 @@
       "keywords": [
        "crash",
        "nvidia"
-      ]
-     },
-     {
-      "number": 3486,
-      "url": "https://github.com/Marvisak/VIctory/issues/3486",
-      "keywords": [
-       "crash",
-       "hang"
       ]
      },
      {
@@ -1974,52 +1989,6 @@
       "url": "https://github.com/Marvisak/VIctory/issues/1612",
       "keywords": [
        "nvidia"
-      ]
-     },
-     {
-      "number": 3505,
-      "url": "https://github.com/Marvisak/VIctory/issues/3505",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 3567,
-      "url": "https://github.com/Marvisak/VIctory/issues/3567",
-      "keywords": [
-       "crash"
-      ]
-     },
-     {
-      "number": 3624,
-      "url": "https://github.com/Marvisak/VIctory/issues/3624",
-      "keywords": [
-       "crash",
-       "hang",
-       "tdr"
-      ]
-     },
-     {
-      "number": 3347,
-      "url": "https://github.com/Marvisak/VIctory/issues/3347",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 3618,
-      "url": "https://github.com/Marvisak/VIctory/issues/3618",
-      "keywords": [
-       "crash"
-      ]
-     },
-     {
-      "number": 3621,
-      "url": "https://github.com/Marvisak/VIctory/issues/3621",
-      "keywords": [
-       "crash",
-       "black screen",
-       "device removed"
       ]
      }
     ],
@@ -2085,7 +2054,7 @@
    "signals_good": [
     {
      "code": "stars_up",
-     "n": 439,
+     "n": 446,
      "evidence": "https://github.com/Marvisak/VIctory/stargazers"
     },
     {
@@ -2104,12 +2073,12 @@
     },
     {
      "code": "stale",
-     "h": 51,
+     "h": 52,
      "evidence": "https://github.com/Marvisak/VIctory/commits"
     },
     {
      "code": "crash_issues",
-     "n": 12,
+     "n": 8,
      "evidence": "https://github.com/Marvisak/VIctory/issues"
     }
    ],
@@ -2132,7 +2101,7 @@
      "models": [],
      "evidence": null,
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/3347"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/1612"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -2141,7 +2110,7 @@
      ],
      "evidence": "https://github.com/Marvisak/VIctory",
      "known_issue": true,
-     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/3621"
+     "evidence_issue": "https://github.com/Marvisak/VIctory/issues/1612"
     },
     "intel": {
      "status": "untested",
@@ -2181,12 +2150,12 @@
     "exists": true,
     "http_status": 200,
     "full_name": "LooperSalty/AnyXboxX",
-    "stars": 530,
+    "stars": 532,
     "forks": 105,
     "open_issues": 104,
     "language": "Rust",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-28T01:15:41Z",
+    "pushed_at": "2026-11-28T03:54:45Z",
     "created_at": "2026-11-21T00:18:13Z",
     "is_fork": false,
     "default_branch": "main",
@@ -4299,569 +4268,1441 @@
     "exists": true,
     "http_status": 200,
     "full_name": "xcl-dev/xcl",
-    "stars": 8746,
-    "forks": 1220,
-    "open_issues": 1966,
+    "stars": 8750,
+    "forks": 1221,
+    "open_issues": 1953,
     "language": "Rust",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-28T01:14:25Z",
+    "pushed_at": "2026-11-28T03:52:02Z",
     "created_at": "2026-11-20T20:03:21Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 150,
-    "last_commit": "2026-11-28T01:14:25Z",
+    "contributors": 152,
+    "last_commit": "2026-11-28T03:27:04Z",
     "commits": [
      {
-      "sha": "753e8b1a25",
-      "url": "https://github.com/xcl-dev/xcl/commit/753e8b1a2568c37248133880328f5fe1d5220193",
-      "date": "2026-11-28T01:14:25Z",
+      "sha": "e429936c10",
+      "url": "https://github.com/xcl-dev/xcl/commit/e429936c10a5b8aa09470ff99dfc8c8d3d8c56fd",
+      "date": "2026-11-28T03:27:04Z",
       "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "2049651b23",
-      "url": "https://github.com/xcl-dev/xcl/commit/2049651b233d612f4cfac073d0db4e709c875ae6",
-      "date": "2026-11-28T01:14:01Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "78421697e6",
-      "url": "https://github.com/xcl-dev/xcl/commit/78421697e620c69fe805c5547e588a5988c27e8f",
-      "date": "2026-11-28T01:13:45Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "c62393c994",
-      "url": "https://github.com/xcl-dev/xcl/commit/c62393c994de93fc8edb0398cfe38afe962b0f3a",
-      "date": "2026-11-28T01:13:18Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "96247f0754",
-      "url": "https://github.com/xcl-dev/xcl/commit/96247f07540e901c6cb13d7c5fd8228876f92fd7",
-      "date": "2026-11-28T01:12:43Z",
-      "areas": [
-       "gpu",
        "shaders",
        "docs"
       ]
      },
      {
-      "sha": "ae5ae5a8cf",
-      "url": "https://github.com/xcl-dev/xcl/commit/ae5ae5a8cfaa82404f2a7370dc178c7345f28b4e",
-      "date": "2026-11-28T01:12:31Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "2c717a043c",
-      "url": "https://github.com/xcl-dev/xcl/commit/2c717a043c8488938179fca81da4bb9e7913a358",
-      "date": "2026-11-27T21:27:53Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "e475c76f80",
-      "url": "https://github.com/xcl-dev/xcl/commit/e475c76f80ed7cc7d3ec6a7e5352c200af63ac30",
-      "date": "2026-11-27T19:44:02Z",
-      "areas": [
-       "shaders",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "a19c48b658",
-      "url": "https://github.com/xcl-dev/xcl/commit/a19c48b6585e19a4da077e5e13ed49e256aac4b9",
-      "date": "2026-11-27T19:44:01Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "99948a6ad8",
-      "url": "https://github.com/xcl-dev/xcl/commit/99948a6ad8ff7f5b08339902ba2c48a12bb4633e",
-      "date": "2026-11-27T19:44:01Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "e2d5cd87fe",
-      "url": "https://github.com/xcl-dev/xcl/commit/e2d5cd87fe3d490b444fd9d15dcb9d2d14515d3a",
-      "date": "2026-11-27T19:43:45Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "5ba1c9bddc",
-      "url": "https://github.com/xcl-dev/xcl/commit/5ba1c9bddc674ac067c38ccb3da395f3d850583e",
-      "date": "2026-11-27T19:43:45Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "0d84fb5ee1",
-      "url": "https://github.com/xcl-dev/xcl/commit/0d84fb5ee17489e45b61c16420955e0044fe2abc",
-      "date": "2026-11-27T19:43:44Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "loader",
-       "perf",
-       "docs"
-      ]
-     },
-     {
-      "sha": "b83c3f0d7e",
-      "url": "https://github.com/xcl-dev/xcl/commit/b83c3f0d7efed89a88b0f5c2182cc2a8cde0b233",
-      "date": "2026-11-27T19:43:34Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "62c6bda8ac",
-      "url": "https://github.com/xcl-dev/xcl/commit/62c6bda8ace4b520bfba669ab4d13ec00ad1abd2",
-      "date": "2026-11-27T17:50:09Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "loader"
-      ]
-     },
-     {
-      "sha": "d8dae08ddb",
-      "url": "https://github.com/xcl-dev/xcl/commit/d8dae08ddb1fd30a688cb1e56c5e3daa87e889e0",
-      "date": "2026-11-27T16:22:27Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "6089122a1c",
-      "url": "https://github.com/xcl-dev/xcl/commit/6089122a1c96dff16e93b6fdf04c8ed20cfb6102",
-      "date": "2026-11-27T16:16:53Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "b64e48627f",
-      "url": "https://github.com/xcl-dev/xcl/commit/b64e48627fce09d2983a1cf420400f244738aebb",
-      "date": "2026-11-27T15:33:59Z",
-      "areas": [
-       "gpu",
-       "perf"
-      ]
-     },
-     {
-      "sha": "0d97736044",
-      "url": "https://github.com/xcl-dev/xcl/commit/0d97736044fa43becd9bcefe53f7063528e157a8",
-      "date": "2026-11-27T15:31:15Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "2d473dcd0c",
-      "url": "https://github.com/xcl-dev/xcl/commit/2d473dcd0cc48edbdfa8be25b5e6f7a741260498",
-      "date": "2026-11-27T15:31:15Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "7659b88de9",
-      "url": "https://github.com/xcl-dev/xcl/commit/7659b88de9507fe0eb2f22ca93bfa2674d203e17",
-      "date": "2026-11-27T15:29:39Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "02c66cad30",
-      "url": "https://github.com/xcl-dev/xcl/commit/02c66cad306fb3e427c2c31f831479aaa9209c15",
-      "date": "2026-11-27T15:29:38Z",
-      "areas": [
-       "shaders",
-       "input"
-      ]
-     },
-     {
-      "sha": "f383079820",
-      "url": "https://github.com/xcl-dev/xcl/commit/f38307982097ad1df40346936e0b108052e5c16b",
-      "date": "2026-11-27T15:29:18Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "docs"
-      ]
-     },
-     {
-      "sha": "0600e8620e",
-      "url": "https://github.com/xcl-dev/xcl/commit/0600e8620e09f9634334828ff2141c722a1bb230",
-      "date": "2026-11-27T15:28:28Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "perf"
-      ]
-     },
-     {
-      "sha": "7b392149ea",
-      "url": "https://github.com/xcl-dev/xcl/commit/7b392149ea1471444c8fc3724b6a301ce87b00dc",
-      "date": "2026-11-27T15:27:58Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "4d78a9ba20",
-      "url": "https://github.com/xcl-dev/xcl/commit/4d78a9ba2061265984f9dccf3123fb0102a71e71",
-      "date": "2026-11-27T15:24:54Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "0a79e6cc81",
-      "url": "https://github.com/xcl-dev/xcl/commit/0a79e6cc818ac75cb852dc1ec09aa4573da21dd8",
-      "date": "2026-11-27T15:24:50Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "perf",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "8f906486d6",
-      "url": "https://github.com/xcl-dev/xcl/commit/8f906486d6596e1d54f2f25a603764baf926b59b",
-      "date": "2026-11-27T15:24:45Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "loader",
-       "perf",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "192374ea0d",
-      "url": "https://github.com/xcl-dev/xcl/commit/192374ea0d9c89fb415e6db1adf3fb9b378b37cf",
-      "date": "2026-11-27T15:22:25Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "53c1d28198",
-      "url": "https://github.com/xcl-dev/xcl/commit/53c1d28198bf0341f44985d03819c286a0f727c3",
-      "date": "2026-11-27T15:21:52Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "input",
-       "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "f985c1cf17",
-      "url": "https://github.com/xcl-dev/xcl/commit/f985c1cf174a7b5985ae0b554db1cf99d9079bd1",
-      "date": "2026-11-27T15:19:23Z",
-      "areas": [
-       "gpu",
-       "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "ad1ff9a6d4",
-      "url": "https://github.com/xcl-dev/xcl/commit/ad1ff9a6d4f2a75bdedec4b006b8f9338838aeee",
-      "date": "2026-11-27T15:19:23Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "perf"
-      ]
-     },
-     {
-      "sha": "5584a82512",
-      "url": "https://github.com/xcl-dev/xcl/commit/5584a82512be45581d460d41830ca58a54f1809c",
-      "date": "2026-11-27T15:18:58Z",
+      "sha": "392db2cfe0",
+      "url": "https://github.com/xcl-dev/xcl/commit/392db2cfe026554881baaa593ab797b7c56ac763",
+      "date": "2026-11-28T03:26:25Z",
       "areas": [
        "gpu"
       ]
      },
      {
-      "sha": "88bc67da03",
-      "url": "https://github.com/xcl-dev/xcl/commit/88bc67da0332ece5d7cea5356c89bf34e79a7046",
-      "date": "2026-11-27T15:18:31Z",
+      "sha": "5d2ea8f846",
+      "url": "https://github.com/xcl-dev/xcl/commit/5d2ea8f846a2de290fec1a51ede750e09563cfe2",
+      "date": "2026-11-28T03:24:16Z",
       "areas": [
        "gpu",
-       "vendor"
+       "shaders"
       ]
      },
      {
-      "sha": "f9a0cb80f9",
-      "url": "https://github.com/xcl-dev/xcl/commit/f9a0cb80f9decb41d6f6315f6cf4e06270ba2bda",
-      "date": "2026-11-27T15:11:49Z",
+      "sha": "336fdddafb",
+      "url": "https://github.com/xcl-dev/xcl/commit/336fdddafbcb3c3db753629f5f79a9f44b6c4b9d",
+      "date": "2026-11-28T03:22:53Z",
       "areas": [
        "gpu",
-       "shaders",
-       "perf"
-      ]
-     },
-     {
-      "sha": "062158eab1",
-      "url": "https://github.com/xcl-dev/xcl/commit/062158eab18069c87a336b37c8d1f4c31e990dcc",
-      "date": "2026-11-27T15:02:35Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "loader",
        "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "81693f0207",
-      "url": "https://github.com/xcl-dev/xcl/commit/81693f020768ec47dbfe9eefba5eec0ab9aeda6c",
-      "date": "2026-11-27T14:21:57Z",
-      "areas": [
-       "input",
        "docs"
       ]
      },
      {
-      "sha": "06f90c1986",
-      "url": "https://github.com/xcl-dev/xcl/commit/06f90c1986f43698d0405eff3c2ab0af230e1ed9",
-      "date": "2026-11-27T11:55:49Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "docs"
-      ]
-     },
-     {
-      "sha": "623d02e465",
-      "url": "https://github.com/xcl-dev/xcl/commit/623d02e465a17497a757a4ce867f482b0a6c8f3b",
-      "date": "2026-11-27T08:50:19Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "83b008188e",
-      "url": "https://github.com/xcl-dev/xcl/commit/83b008188efbf954b846667f48d75e3fa9310a01",
-      "date": "2026-11-27T06:41:22Z",
+      "sha": "86e83e76d1",
+      "url": "https://github.com/xcl-dev/xcl/commit/86e83e76d1b9ff3adb2b322211f1772f9fac6d11",
+      "date": "2026-11-28T03:21:52Z",
       "areas": [
        "gpu",
        "shaders",
+       "vendor",
        "docs"
       ]
      },
      {
-      "sha": "f78e05bcc2",
-      "url": "https://github.com/xcl-dev/xcl/commit/f78e05bcc2803becade7e5368b2f0008e5d7c74b",
-      "date": "2026-11-27T05:42:28Z",
+      "sha": "f1171e4e47",
+      "url": "https://github.com/xcl-dev/xcl/commit/f1171e4e47363ddcb49a47a29686455dbe8b7b62",
+      "date": "2026-11-28T03:21:15Z",
       "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "vendor"
+       "perf",
+       "docs"
       ]
      },
      {
-      "sha": "8617577b67",
-      "url": "https://github.com/xcl-dev/xcl/commit/8617577b67c3b2c67542ff3d47d6e631967c16c6",
-      "date": "2026-11-27T05:41:30Z",
+      "sha": "b801633e98",
+      "url": "https://github.com/xcl-dev/xcl/commit/b801633e98709ae9450c00033921bdbefd155475",
+      "date": "2026-11-28T03:20:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "f2c0d36ff0",
+      "url": "https://github.com/xcl-dev/xcl/commit/f2c0d36ff01a7b5c7d2a58e682249a5e8bfc4647",
+      "date": "2026-11-28T03:19:54Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "d85f2c6c34",
+      "url": "https://github.com/xcl-dev/xcl/commit/d85f2c6c34a7a349def5893d9af22bb79614e774",
+      "date": "2026-11-28T03:19:10Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "b0b041fdfe",
+      "url": "https://github.com/xcl-dev/xcl/commit/b0b041fdfe75181981dec92325a2480234ee7463",
+      "date": "2026-11-28T03:18:42Z",
       "areas": [
        "gpu",
        "shaders",
        "audio",
+       "loader",
        "perf",
        "vendor",
        "docs"
       ]
      },
      {
-      "sha": "c2ee10e4e9",
-      "url": "https://github.com/xcl-dev/xcl/commit/c2ee10e4e905eb736e56953c52b749e18bcc7ede",
-      "date": "2026-11-27T05:02:19Z",
+      "sha": "4577f09c8b",
+      "url": "https://github.com/xcl-dev/xcl/commit/4577f09c8b81152906f1babf9ce785943617cb72",
+      "date": "2026-11-28T03:18:16Z",
       "areas": [
-       "gpu",
+       "shaders",
+       "loader"
+      ]
+     },
+     {
+      "sha": "fdbac840ba",
+      "url": "https://github.com/xcl-dev/xcl/commit/fdbac840ba68b1706136564fbcfa8ddffb1d5b8d",
+      "date": "2026-11-28T03:15:58Z",
+      "areas": [
+       "shaders",
+       "audio",
+       "loader",
        "docs"
       ]
      },
      {
-      "sha": "fa671a2fb2",
-      "url": "https://github.com/xcl-dev/xcl/commit/fa671a2fb2fd8b394ec678bd24dd04a17c415365",
-      "date": "2026-11-27T04:50:31Z",
+      "sha": "651867a496",
+      "url": "https://github.com/xcl-dev/xcl/commit/651867a496efaa7dae595aabc64b4d2d34451946",
+      "date": "2026-11-28T02:34:50Z",
+      "areas": [
+       "shaders",
+       "audio"
+      ]
+     },
+     {
+      "sha": "be0c274d64",
+      "url": "https://github.com/xcl-dev/xcl/commit/be0c274d642839e451d535a1d481f271bfdd5f38",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "gpu",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "86a90eebad",
+      "url": "https://github.com/xcl-dev/xcl/commit/86a90eebad296798fb46d8d610203f89eadaee7f",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "2f49ef5a00",
+      "url": "https://github.com/xcl-dev/xcl/commit/2f49ef5a00ce4eec930117d8e77cca608f862f00",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "687d553c70",
+      "url": "https://github.com/xcl-dev/xcl/commit/687d553c70da7d2b7d450288b8b56832d12a0411",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "51cda2f489",
+      "url": "https://github.com/xcl-dev/xcl/commit/51cda2f48932cdee512d61d4cd7948f829656722",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "40d3a31231",
+      "url": "https://github.com/xcl-dev/xcl/commit/40d3a31231a33466d06de3789356ab34a07cb151",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "23c06c9f1a",
+      "url": "https://github.com/xcl-dev/xcl/commit/23c06c9f1a286cfdd03baf6016fdc50efaa771c3",
+      "date": "2026-11-28T01:34:39Z",
+      "areas": [
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "f0384e0a9b",
+      "url": "https://github.com/xcl-dev/xcl/commit/f0384e0a9bcd9204db6ccf183f2e78fc7093d298",
+      "date": "2026-11-28T01:34:32Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader"
+      ]
+     },
+     {
+      "sha": "520f3f1ce0",
+      "url": "https://github.com/xcl-dev/xcl/commit/520f3f1ce05a49a1b8249f83f7ad5cf09fb87b95",
+      "date": "2026-11-28T01:34:32Z",
       "areas": [
        "gpu",
        "loader",
+       "perf"
+      ]
+     },
+     {
+      "sha": "97e80fbf39",
+      "url": "https://github.com/xcl-dev/xcl/commit/97e80fbf3905c8998321d321d848c7c627b612c8",
+      "date": "2026-11-28T01:30:50Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c77525255f",
+      "url": "https://github.com/xcl-dev/xcl/commit/c77525255faad7733bd24c44b35e5fd00ae2a2eb",
+      "date": "2026-11-28T01:30:50Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "8d6704d902",
+      "url": "https://github.com/xcl-dev/xcl/commit/8d6704d902663fba4f784dc2f858127d06affa38",
+      "date": "2026-11-28T01:30:50Z",
+      "areas": [
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "dd84e0ad1d",
+      "url": "https://github.com/xcl-dev/xcl/commit/dd84e0ad1d3c18eaacc1091e705ebcfd67ecd5ad",
+      "date": "2026-11-28T01:30:50Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "df7b9fd587",
+      "url": "https://github.com/xcl-dev/xcl/commit/df7b9fd5878006b6bc990727b860aad2983396e2",
+      "date": "2026-11-28T01:30:50Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "aeba0477c3",
+      "url": "https://github.com/xcl-dev/xcl/commit/aeba0477c33fef76dcfe8986a5e58878ad086106",
+      "date": "2026-11-28T01:30:50Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "1cb6e4c54b",
+      "url": "https://github.com/xcl-dev/xcl/commit/1cb6e4c54ba9e58f9212ccd10ca18f930dfc9f5b",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "775520bea6",
+      "url": "https://github.com/xcl-dev/xcl/commit/775520bea6356b55783abda63db708c3726f14ff",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "5ec653385b",
+      "url": "https://github.com/xcl-dev/xcl/commit/5ec653385b835b54d088a49714bb9ba7c6342dd5",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "01f85586dd",
+      "url": "https://github.com/xcl-dev/xcl/commit/01f85586dd7f773192b0cef2238d7aa9ec9fcc67",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "db4dd2706a",
+      "url": "https://github.com/xcl-dev/xcl/commit/db4dd2706a10f66471a01d68e99442d3c3ad7885",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "e5561505e4",
+      "url": "https://github.com/xcl-dev/xcl/commit/e5561505e4e6b1ecdb9e725bc5f4fee02a91106a",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "3f91865bb3",
+      "url": "https://github.com/xcl-dev/xcl/commit/3f91865bb32f6bda2151df9933c67cbaa3c21855",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "fcbae0ce0b",
+      "url": "https://github.com/xcl-dev/xcl/commit/fcbae0ce0bdaa37badf30c743fdcdada51f56370",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "43391a13c4",
+      "url": "https://github.com/xcl-dev/xcl/commit/43391a13c47d5f1254ebc4a2e9e7e855b24d51ca",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "9c0824f290",
+      "url": "https://github.com/xcl-dev/xcl/commit/9c0824f290a4ec32399228415223299e8be41290",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "5b03933e10",
+      "url": "https://github.com/xcl-dev/xcl/commit/5b03933e103a093643e98c34430faed1da01f6ac",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "52436c9a3e",
+      "url": "https://github.com/xcl-dev/xcl/commit/52436c9a3e0b355eadd9d0e596f4662bbc38f3cf",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "57b766caf9",
+      "url": "https://github.com/xcl-dev/xcl/commit/57b766caf9a490d2da497545db24caa60530b99e",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "a6dfe2e537",
+      "url": "https://github.com/xcl-dev/xcl/commit/a6dfe2e53771ee65c86fe747673ba10eaced9c4e",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c50fcdfaa0",
+      "url": "https://github.com/xcl-dev/xcl/commit/c50fcdfaa01002766a3e911caad77a3f71e9961b",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "c1c963b740",
+      "url": "https://github.com/xcl-dev/xcl/commit/c1c963b7401f8b07ae0de16d40d060c75ea40734",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "3f54312c43",
+      "url": "https://github.com/xcl-dev/xcl/commit/3f54312c43ef28f71bf371e8bc9a7e458735431c",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "96ef96cc90",
+      "url": "https://github.com/xcl-dev/xcl/commit/96ef96cc90bc92548cf9e2a18b8115ba127cf4c4",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "529fb19cb2",
+      "url": "https://github.com/xcl-dev/xcl/commit/529fb19cb2979954a1b87dff2da64cb9813cc2dd",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "4701a87451",
+      "url": "https://github.com/xcl-dev/xcl/commit/4701a874513631bf20563eb0a93230885dbb5f1e",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "c51cfd396b",
+      "url": "https://github.com/xcl-dev/xcl/commit/c51cfd396b78fa6204fef2860e15ae1059d33b6d",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "cbf758ce1a",
+      "url": "https://github.com/xcl-dev/xcl/commit/cbf758ce1a2a40a281c293ce0c349c28af1e77d5",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "130c0c45cf",
+      "url": "https://github.com/xcl-dev/xcl/commit/130c0c45cfc532dfa017a918a8500d529e05b413",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "f194ea7d12",
+      "url": "https://github.com/xcl-dev/xcl/commit/f194ea7d12b26b2cf5633a161d2bb220b99fade4",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "a3b3643039",
+      "url": "https://github.com/xcl-dev/xcl/commit/a3b36430390a72f0b933bb22fac1734d72c72864",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "e4c3df141a",
+      "url": "https://github.com/xcl-dev/xcl/commit/e4c3df141a748cb444df1cc61c1345c5145cdcbf",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "9b5b5bf122",
+      "url": "https://github.com/xcl-dev/xcl/commit/9b5b5bf1224374271950c939e08f20638ee1f6b3",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "2dbf6e82c6",
+      "url": "https://github.com/xcl-dev/xcl/commit/2dbf6e82c65d987a99ecbee7e67bfc0593b38730",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "8ad1245fab",
+      "url": "https://github.com/xcl-dev/xcl/commit/8ad1245fab840280a6a4281e23fb6698a70f3803",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "84f7dbf675",
+      "url": "https://github.com/xcl-dev/xcl/commit/84f7dbf675e7047a9e8d214a25a32d4a0b4c9bfb",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "6bdd99ef2f",
+      "url": "https://github.com/xcl-dev/xcl/commit/6bdd99ef2f8f66fbf388c0994548a3fc4e8ba37d",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "b1e44d89ee",
+      "url": "https://github.com/xcl-dev/xcl/commit/b1e44d89ee8afdd99deebede1483cfca2d60d35f",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "a3ae4644ea",
+      "url": "https://github.com/xcl-dev/xcl/commit/a3ae4644ea4ab697af02214c4f10cb194b56e75a",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "56d19278a4",
+      "url": "https://github.com/xcl-dev/xcl/commit/56d19278a41e9b4ec141c8ba758e9490764bb251",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "6ae88983e9",
+      "url": "https://github.com/xcl-dev/xcl/commit/6ae88983e9cb857a1e3210e3c6721e1843ccf454",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "35df1ae61c",
+      "url": "https://github.com/xcl-dev/xcl/commit/35df1ae61c980797dc5e6c2cb8945af72ab95dc1",
+      "date": "2026-11-28T01:30:49Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "61b4ad709e",
+      "url": "https://github.com/xcl-dev/xcl/commit/61b4ad709eb78635e6444cd7bf12fa3b47bff729",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "e7567b1b7f",
+      "url": "https://github.com/xcl-dev/xcl/commit/e7567b1b7f9042d28aac15b18d1838cadd448b71",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "519731e9f3",
+      "url": "https://github.com/xcl-dev/xcl/commit/519731e9f3eadd4f30720e89dd8215c3f6693e36",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "6300d7e270",
+      "url": "https://github.com/xcl-dev/xcl/commit/6300d7e2702b965632f50fccc5a9ed91038f289c",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "4a7f1175b4",
+      "url": "https://github.com/xcl-dev/xcl/commit/4a7f1175b49c1650481cb46d254eb9b4d8f3af48",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "056fc43b3f",
+      "url": "https://github.com/xcl-dev/xcl/commit/056fc43b3fc771e062f8dc717d60d3eb2a54d5f6",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "perf"
+      ]
+     },
+     {
+      "sha": "077a0afafa",
+      "url": "https://github.com/xcl-dev/xcl/commit/077a0afafad14f8cda722227eb2749327271c0c1",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "ed5e9e479a",
+      "url": "https://github.com/xcl-dev/xcl/commit/ed5e9e479a260fe5d430aba7ba6142fa651c0e46",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "ef9ec83896",
+      "url": "https://github.com/xcl-dev/xcl/commit/ef9ec83896ab7c241bd45617ae09f98ec050a44a",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "a61303743d",
+      "url": "https://github.com/xcl-dev/xcl/commit/a61303743d30ef443f2f6c8e2bdd1fe6f6a4a02b",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "a4dbe5c5dd",
+      "url": "https://github.com/xcl-dev/xcl/commit/a4dbe5c5ddf391253cfb0afdf76c0b5f98813d32",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "shaders",
        "perf",
        "vendor"
       ]
      },
      {
-      "sha": "3416143360",
-      "url": "https://github.com/xcl-dev/xcl/commit/3416143360f0c66f888d7292a8865954de895442",
-      "date": "2026-11-26T23:42:59Z",
+      "sha": "8cb7b0a0fb",
+      "url": "https://github.com/xcl-dev/xcl/commit/8cb7b0a0fbf1dbd25a3720d150632ce5590dbfe5",
+      "date": "2026-11-28T01:30:48Z",
       "areas": [
-       "gpu",
-       "docs"
+       "gpu"
       ]
      },
      {
-      "sha": "fd0cc07d5d",
-      "url": "https://github.com/xcl-dev/xcl/commit/fd0cc07d5d1fc364252d3470c2634902f08825dd",
-      "date": "2026-11-26T23:19:40Z",
+      "sha": "4d64749164",
+      "url": "https://github.com/xcl-dev/xcl/commit/4d6474916436d01777211f348e4931566cd9b3c9",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "50e85c5bfa",
+      "url": "https://github.com/xcl-dev/xcl/commit/50e85c5bfab0f276bef21175b1e20fcf55863bea",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "fb0931da79",
+      "url": "https://github.com/xcl-dev/xcl/commit/fb0931da79d6d0059b38a3c16d1f8175e7219ea1",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "e909e148b5",
+      "url": "https://github.com/xcl-dev/xcl/commit/e909e148b58c14feecf985b4bf138eee6487b411",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "dbe6b30b6b",
+      "url": "https://github.com/xcl-dev/xcl/commit/dbe6b30b6b2e9ac9a66d2488dad825a6ae171128",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "22026ba5a4",
+      "url": "https://github.com/xcl-dev/xcl/commit/22026ba5a497b94d7f2462a34a94cfcb5a96c37b",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "f9f1762fb3",
+      "url": "https://github.com/xcl-dev/xcl/commit/f9f1762fb393b5aefbf7a72521ff78f46901917a",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders",
+       "perf",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "5a984e0220",
+      "url": "https://github.com/xcl-dev/xcl/commit/5a984e0220cdf02ed6782ec5f100cf8cc138a21d",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "2ca912767c",
+      "url": "https://github.com/xcl-dev/xcl/commit/2ca912767cb61687b17bca08d49df542c9b86f68",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "5e343d1a25",
+      "url": "https://github.com/xcl-dev/xcl/commit/5e343d1a2517810e126b8dc01a2deced0c4ca9af",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "38c81423ab",
+      "url": "https://github.com/xcl-dev/xcl/commit/38c81423abd845637e2d9a29f553251c7b29f36d",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "shaders"
+      ]
+     },
+     {
+      "sha": "3cde0cc347",
+      "url": "https://github.com/xcl-dev/xcl/commit/3cde0cc34725f2b162bc4b5e6910753344bba6f8",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "5c50099cd7",
+      "url": "https://github.com/xcl-dev/xcl/commit/5c50099cd7aba25729fe141dcfac8d8ed6513d27",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "622c5e6163",
+      "url": "https://github.com/xcl-dev/xcl/commit/622c5e6163738b32e94f1848fae301ba5602e137",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "833d267622",
+      "url": "https://github.com/xcl-dev/xcl/commit/833d267622ca9cf569c9d0e74333f007fba11b3f",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "885e825ce1",
+      "url": "https://github.com/xcl-dev/xcl/commit/885e825ce1cae64d2bba91ff817e7fb3e4642390",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "vendor"
+      ]
+     },
+     {
+      "sha": "38452a179c",
+      "url": "https://github.com/xcl-dev/xcl/commit/38452a179c3768677e5a936de44f6a7b37d54400",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "8790512e28",
+      "url": "https://github.com/xcl-dev/xcl/commit/8790512e281029c9b2b1db1f95fd9727fe4baf27",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "dd208b9e54",
+      "url": "https://github.com/xcl-dev/xcl/commit/dd208b9e547887be65e4e1386a2b07de1ce18766",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "86daee84dc",
+      "url": "https://github.com/xcl-dev/xcl/commit/86daee84dc77893e445e79bc94c8e9bf6d4d0253",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "3cf40d1c8f",
+      "url": "https://github.com/xcl-dev/xcl/commit/3cf40d1c8fa56a1afed8e7d21aaa67b2a04bd293",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "5f04285fad",
+      "url": "https://github.com/xcl-dev/xcl/commit/5f04285fadab90dc2683376dac195003310833ea",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "f19a07deb4",
+      "url": "https://github.com/xcl-dev/xcl/commit/f19a07deb4df889698f4470cd09fba40b79be092",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "1566d744c3",
+      "url": "https://github.com/xcl-dev/xcl/commit/1566d744c3081422ca8c8675cb96b938036f1708",
+      "date": "2026-11-28T01:30:48Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "30511e1fd0",
+      "url": "https://github.com/xcl-dev/xcl/commit/30511e1fd0b1c7aa747b533e004e7115e7240a4b",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "other"
+      ]
+     },
+     {
+      "sha": "c3e75fb456",
+      "url": "https://github.com/xcl-dev/xcl/commit/c3e75fb456e37c7cfa172e8f18f3860990a3e810",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "3172fd8f9f",
+      "url": "https://github.com/xcl-dev/xcl/commit/3172fd8f9f81f03d07a04da82ff4e828904f0fdc",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "1a3bd1d326",
+      "url": "https://github.com/xcl-dev/xcl/commit/1a3bd1d326deebbb8800bb2cabc63c5a118b22fa",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "cfb7374cbf",
+      "url": "https://github.com/xcl-dev/xcl/commit/cfb7374cbf177b9973d6563adb6efccb108c7ff5",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "8f3998f165",
+      "url": "https://github.com/xcl-dev/xcl/commit/8f3998f16591a35e7e6ff954183267530d5243c8",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "0bcb64449e",
+      "url": "https://github.com/xcl-dev/xcl/commit/0bcb64449ea4e66180bd198154fb69214e0afa2f",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "1120fdc991",
+      "url": "https://github.com/xcl-dev/xcl/commit/1120fdc991c175ef7473f48a95ab4e272b54c17d",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader"
+      ]
+     },
+     {
+      "sha": "c35d24a8ea",
+      "url": "https://github.com/xcl-dev/xcl/commit/c35d24a8eacf7c839b79db9f5b8c0f94c3d40cee",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "input"
+      ]
+     },
+     {
+      "sha": "1d942ea82d",
+      "url": "https://github.com/xcl-dev/xcl/commit/1d942ea82dbff38a8ee049b260c8d0fc07f237e1",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "input"
+      ]
+     },
+     {
+      "sha": "9a077c0fff",
+      "url": "https://github.com/xcl-dev/xcl/commit/9a077c0fff3cbfe6dfa2ac0ab50698ffbbd50f9c",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "cfc11ab647",
+      "url": "https://github.com/xcl-dev/xcl/commit/cfc11ab6471dba9282ff096af2601ea70d74685b",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "e3fb670c24",
+      "url": "https://github.com/xcl-dev/xcl/commit/e3fb670c24f7bedd1f5520185f8787792bbb34fe",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c5d854d773",
+      "url": "https://github.com/xcl-dev/xcl/commit/c5d854d773cde3cc1a6126be4a1bddbc0d025112",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "f663775c53",
+      "url": "https://github.com/xcl-dev/xcl/commit/f663775c53340e0e2ca779858e421ad5a5da314b",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "379aa29de1",
+      "url": "https://github.com/xcl-dev/xcl/commit/379aa29de1503d6522dc78bdd2d8af86cced8ab8",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "4b0c6ad745",
+      "url": "https://github.com/xcl-dev/xcl/commit/4b0c6ad7453c7b55d73761e0edd5a0e9e83733f5",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "fdd9df7b33",
+      "url": "https://github.com/xcl-dev/xcl/commit/fdd9df7b33a50c33e0ae7c11cd282719059e1e9f",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "5674db9dc5",
+      "url": "https://github.com/xcl-dev/xcl/commit/5674db9dc5b8446cbc66bce49874e180f5999826",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "48ab3bc613",
+      "url": "https://github.com/xcl-dev/xcl/commit/48ab3bc613d38820d1d54a6522bc969ea84ca512",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "8828fec873",
+      "url": "https://github.com/xcl-dev/xcl/commit/8828fec873add1b5945c717cca123c1a640a07ff",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "3e2a48ec18",
+      "url": "https://github.com/xcl-dev/xcl/commit/3e2a48ec18956174bcfca4446c6478d6e1e2c131",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "shaders",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "bed1444566",
+      "url": "https://github.com/xcl-dev/xcl/commit/bed144456632f1fdcfd7434352e16460fed13e69",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "48286fdd99",
+      "url": "https://github.com/xcl-dev/xcl/commit/48286fdd99ee6704940b0ba70668ac58386f0b8b",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "a3fdbde4e8",
+      "url": "https://github.com/xcl-dev/xcl/commit/a3fdbde4e84327f7f44096a3b930b7cbc5bdae8d",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "b4625a4dd6",
+      "url": "https://github.com/xcl-dev/xcl/commit/b4625a4dd622a3c0a0493f050952a51e4ddf3709",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "18d38a67e3",
+      "url": "https://github.com/xcl-dev/xcl/commit/18d38a67e3dc150291a9361a4678a71741af4e96",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "perf"
+      ]
+     },
+     {
+      "sha": "97583afdd7",
+      "url": "https://github.com/xcl-dev/xcl/commit/97583afdd710947abe98c7d8d5755498d14fc769",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "8eb35ad790",
+      "url": "https://github.com/xcl-dev/xcl/commit/8eb35ad7903241eb677e2a71384bfbb510deb86a",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "85c26b1eb2",
+      "url": "https://github.com/xcl-dev/xcl/commit/85c26b1eb28dde14f9fc00d0512871066592661f",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "8fd2139112",
+      "url": "https://github.com/xcl-dev/xcl/commit/8fd2139112f0a0fc7e85ae2f962022cefe27c5ef",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "c1bdf10e95",
+      "url": "https://github.com/xcl-dev/xcl/commit/c1bdf10e95c07cd03eafe7a1a89d19ab8f52bd86",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "f5ce20f373",
+      "url": "https://github.com/xcl-dev/xcl/commit/f5ce20f3736848137a29cf9341da366b0295957f",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "00dfb30529",
+      "url": "https://github.com/xcl-dev/xcl/commit/00dfb3052921c496b303ca734251a9310aeffe33",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "a3b43590b7",
+      "url": "https://github.com/xcl-dev/xcl/commit/a3b43590b792d3aaaed6c3b200722316a3c0f7c1",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "7dd1390df7",
+      "url": "https://github.com/xcl-dev/xcl/commit/7dd1390df7b8f9bd475810460750fa827e15828e",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "196803647e",
+      "url": "https://github.com/xcl-dev/xcl/commit/196803647ebb407c6a58866948a400322952bae5",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c1be67ec8c",
+      "url": "https://github.com/xcl-dev/xcl/commit/c1be67ec8cb988558e6d8446913044843d044ea9",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "d4084ba0a1",
+      "url": "https://github.com/xcl-dev/xcl/commit/d4084ba0a14a8d1e364baf10e980e5d97f2da15a",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "11613fb6e1",
+      "url": "https://github.com/xcl-dev/xcl/commit/11613fb6e15b2f5083029862ee938ba3e5da387a",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "9da465f1a7",
+      "url": "https://github.com/xcl-dev/xcl/commit/9da465f1a70009f6c8afc7eb4c370c99a2ff02d7",
+      "date": "2026-11-28T01:30:47Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "86bad822c5",
+      "url": "https://github.com/xcl-dev/xcl/commit/86bad822c5df01de0d287b29a52c227a86104b2b",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "665ce02914",
+      "url": "https://github.com/xcl-dev/xcl/commit/665ce02914592185c4d9cd9f4fd64f777ce92c4b",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c524972c76",
+      "url": "https://github.com/xcl-dev/xcl/commit/c524972c761c8e58307bc5ae4e94e8bb1df31945",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "9d7bea0fc0",
+      "url": "https://github.com/xcl-dev/xcl/commit/9d7bea0fc0f53249c160b848068903837029a2ee",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "cfeb2817ac",
+      "url": "https://github.com/xcl-dev/xcl/commit/cfeb2817acdf57ca1fe4ce9ac433aaebb93b608f",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "dcfbb49cfd",
+      "url": "https://github.com/xcl-dev/xcl/commit/dcfbb49cfd7442325ac78f238ad7a10c2e36500f",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "9d08eceb77",
+      "url": "https://github.com/xcl-dev/xcl/commit/9d08eceb779d639ee59bdbe4ea7f3165b6d1812b",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "d87f1a05d0",
+      "url": "https://github.com/xcl-dev/xcl/commit/d87f1a05d038484aa5ee072eed7e74b12685905d",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "776fb303e9",
+      "url": "https://github.com/xcl-dev/xcl/commit/776fb303e9ff31d4e3e895be588acc4f1e677691",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "608cf74186",
+      "url": "https://github.com/xcl-dev/xcl/commit/608cf7418628357644fedab49c97f85eaaac6b15",
+      "date": "2026-11-28T01:30:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "1b93747498",
+      "url": "https://github.com/xcl-dev/xcl/commit/1b93747498cb3e1bc0dbeaa6486b503dca97571c",
+      "date": "2026-11-28T01:30:30Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "input",
+       "loader"
+      ]
+     },
+     {
+      "sha": "9d8af31c22",
+      "url": "https://github.com/xcl-dev/xcl/commit/9d8af31c22805f8ad082a2621c8db245812fe5ec",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "vendor"
+      ]
+     },
+     {
+      "sha": "976faf729f",
+      "url": "https://github.com/xcl-dev/xcl/commit/976faf729f68f4d47771351007db60aa72734732",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "bff80f9bb3",
+      "url": "https://github.com/xcl-dev/xcl/commit/bff80f9bb3eb3dfafd78dabba3c58a9a320905ef",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "3caff9ef8c",
+      "url": "https://github.com/xcl-dev/xcl/commit/3caff9ef8c3910f9094f23540b5fe9e83bcb02f0",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "loader"
+      ]
+     },
+     {
+      "sha": "60a90b12fd",
+      "url": "https://github.com/xcl-dev/xcl/commit/60a90b12fd3ba1b69c23f542b84030ed420c5ffe",
+      "date": "2026-11-28T01:30:09Z",
       "areas": [
        "gpu",
        "audio"
       ]
      },
      {
-      "sha": "f2248f0689",
-      "url": "https://github.com/xcl-dev/xcl/commit/f2248f0689ba10123f48f0ed33ef249b05f0a8e4",
-      "date": "2026-11-26T22:56:38Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "b84e0378b3",
-      "url": "https://github.com/xcl-dev/xcl/commit/b84e0378b31fef9bff73edf498bcf7c1700d0957",
-      "date": "2026-11-26T16:42:39Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "perf"
-      ]
-     },
-     {
-      "sha": "8b957bec6f",
-      "url": "https://github.com/xcl-dev/xcl/commit/8b957bec6f82495aec940944c6bf47faa02db590",
-      "date": "2026-11-26T15:02:04Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "docs"
-      ]
-     },
-     {
-      "sha": "813302f383",
-      "url": "https://github.com/xcl-dev/xcl/commit/813302f38326c854862ee6b0ade6a612688ac549",
-      "date": "2026-11-26T14:59:23Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "loader",
-       "perf",
-       "docs"
-      ]
-     },
-     {
-      "sha": "e120925e3a",
-      "url": "https://github.com/xcl-dev/xcl/commit/e120925e3abc9956a8b9bae631969d32e8ccd43c",
-      "date": "2026-11-26T14:57:57Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "perf",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "8d5fde3c4a",
-      "url": "https://github.com/xcl-dev/xcl/commit/8d5fde3c4ab67d3f78aedbdc63c324799c750324",
-      "date": "2026-11-26T14:57:32Z",
-      "areas": [
-       "input",
-       "docs"
-      ]
-     },
-     {
-      "sha": "76631abbbb",
-      "url": "https://github.com/xcl-dev/xcl/commit/76631abbbb1ebeb06e7100018b3f0901808e03ea",
-      "date": "2026-11-26T14:56:19Z",
+      "sha": "04de323497",
+      "url": "https://github.com/xcl-dev/xcl/commit/04de323497724ea483caeab5788e0976b0e3413f",
+      "date": "2026-11-28T01:30:09Z",
       "areas": [
        "gpu"
       ]
      },
      {
-      "sha": "f9c9df3770",
-      "url": "https://github.com/xcl-dev/xcl/commit/f9c9df37703babb4f6bb9b51841e18c813751c2c",
-      "date": "2026-11-26T09:17:18Z",
+      "sha": "1dccf8319f",
+      "url": "https://github.com/xcl-dev/xcl/commit/1dccf8319feebba97acf5997885c7cc936cc96a4",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "3b5bc7b886",
+      "url": "https://github.com/xcl-dev/xcl/commit/3b5bc7b8862717b001d6daf8459125e7b9020ca4",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "75485a228c",
+      "url": "https://github.com/xcl-dev/xcl/commit/75485a228cb13d364648a85bf4d1b5460745a882",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "3168aea150",
+      "url": "https://github.com/xcl-dev/xcl/commit/3168aea150c094ec9c34be48e8fb135c436ab8c9",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "680ea61289",
+      "url": "https://github.com/xcl-dev/xcl/commit/680ea61289d9e839fc59d15218bcce3b9bff7810",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "b1c3e98d05",
+      "url": "https://github.com/xcl-dev/xcl/commit/b1c3e98d05daeca0179533c5b35e3d6e03660e48",
+      "date": "2026-11-28T01:30:09Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c5fb9fe583",
+      "url": "https://github.com/xcl-dev/xcl/commit/c5fb9fe5839ad53595ed8b6ff2eac05d4c0bf23b",
+      "date": "2026-11-28T01:30:09Z",
       "areas": [
        "gpu",
        "perf",
@@ -4869,1314 +5710,365 @@
       ]
      },
      {
-      "sha": "7ca0164422",
-      "url": "https://github.com/xcl-dev/xcl/commit/7ca016442286780915653fc871acb86fb2a85754",
-      "date": "2026-11-26T08:35:18Z",
+      "sha": "4cbefd18ee",
+      "url": "https://github.com/xcl-dev/xcl/commit/4cbefd18ee6bedf13761c6b4fb499d6fb529c7fc",
+      "date": "2026-11-28T01:29:35Z",
       "areas": [
-       "gpu",
-       "shaders",
        "perf"
       ]
      },
      {
-      "sha": "bdef448039",
-      "url": "https://github.com/xcl-dev/xcl/commit/bdef448039788d275d2a8da374d9095486de1752",
-      "date": "2026-11-26T08:31:49Z",
+      "sha": "e009ba2c77",
+      "url": "https://github.com/xcl-dev/xcl/commit/e009ba2c77dfc3e3f09258e2f9bae2bb2e42b188",
+      "date": "2026-11-28T01:29:35Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "c580dd3135",
+      "url": "https://github.com/xcl-dev/xcl/commit/c580dd31356c444ad3da60700eb67337e83a83d0",
+      "date": "2026-11-28T01:29:35Z",
       "areas": [
        "gpu",
-       "shaders",
-       "input",
+       "loader"
+      ]
+     },
+     {
+      "sha": "be9d405798",
+      "url": "https://github.com/xcl-dev/xcl/commit/be9d40579896933e8acccb6ef2d73e02bf8c4bc9",
+      "date": "2026-11-28T01:29:35Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
+     {
+      "sha": "e938907618",
+      "url": "https://github.com/xcl-dev/xcl/commit/e9389076183149affd22d1837a55a062e45ce6f7",
+      "date": "2026-11-28T01:29:35Z",
+      "areas": [
+       "gpu",
+       "perf"
+      ]
+     },
+     {
+      "sha": "d36718ca18",
+      "url": "https://github.com/xcl-dev/xcl/commit/d36718ca18c07d8d4697b6b055dd614cd4997205",
+      "date": "2026-11-28T01:28:05Z",
+      "areas": [
        "perf",
        "vendor"
       ]
      },
      {
-      "sha": "f9e6ac5f71",
-      "url": "https://github.com/xcl-dev/xcl/commit/f9e6ac5f71372ef8420850cf63bad5715c3b5736",
-      "date": "2026-11-26T08:29:48Z",
+      "sha": "a05fbc49c8",
+      "url": "https://github.com/xcl-dev/xcl/commit/a05fbc49c80c1ee853665e1a21f9975bdf897172",
+      "date": "2026-11-28T01:27:33Z",
       "areas": [
-       "input",
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "7f920d4b9c",
+      "url": "https://github.com/xcl-dev/xcl/commit/7f920d4b9c2ebb1ed40ebab98bb4dfbf950248c4",
+      "date": "2026-11-28T01:27:33Z",
+      "areas": [
        "docs"
       ]
      },
      {
-      "sha": "d61ffdc435",
-      "url": "https://github.com/xcl-dev/xcl/commit/d61ffdc435d5b7c71f4635e4fb06b28eed1328a3",
-      "date": "2026-11-26T08:28:52Z",
+      "sha": "afa683541b",
+      "url": "https://github.com/xcl-dev/xcl/commit/afa683541ba966450fb5e272e9025412f718edba",
+      "date": "2026-11-28T01:27:33Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "db157fe5a3",
+      "url": "https://github.com/xcl-dev/xcl/commit/db157fe5a3366089a25e2e765e4342e52b16b96d",
+      "date": "2026-11-28T01:27:33Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "057f463a85",
+      "url": "https://github.com/xcl-dev/xcl/commit/057f463a85fe14764f7b7c6935e843a8972b2023",
+      "date": "2026-11-28T01:27:32Z",
       "areas": [
        "gpu",
-       "shaders",
-       "input",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "ed98461e39",
+      "url": "https://github.com/xcl-dev/xcl/commit/ed98461e39cfdad21843bfc2b0d462932c7af362",
+      "date": "2026-11-28T01:27:32Z",
+      "areas": [
+       "gpu"
+      ]
+     },
+     {
+      "sha": "66f0ea5462",
+      "url": "https://github.com/xcl-dev/xcl/commit/66f0ea5462c03d35c52772b94ba328c8e888e24d",
+      "date": "2026-11-28T01:27:32Z",
+      "areas": [
+       "gpu",
        "perf"
       ]
      },
      {
-      "sha": "b49be18368",
-      "url": "https://github.com/xcl-dev/xcl/commit/b49be1836844fe0b0cdb3211dce3cb7fb4e21ac7",
-      "date": "2026-11-26T00:48:16Z",
+      "sha": "1071d4abd8",
+      "url": "https://github.com/xcl-dev/xcl/commit/1071d4abd8505ab6ad87bfb25d05c085696666ca",
+      "date": "2026-11-28T01:27:32Z",
+      "areas": [
+       "gpu",
+       "perf",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "78a0503017",
+      "url": "https://github.com/xcl-dev/xcl/commit/78a0503017f288486bebf88e6339554113945b91",
+      "date": "2026-11-28T01:27:00Z",
+      "areas": [
+       "gpu",
+       "perf",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "f2cb30f8b9",
+      "url": "https://github.com/xcl-dev/xcl/commit/f2cb30f8b99750d0d01bf3b2ca4ebfb006423621",
+      "date": "2026-11-28T01:26:59Z",
       "areas": [
        "gpu",
        "shaders",
+       "perf"
+      ]
+     },
+     {
+      "sha": "65704ff166",
+      "url": "https://github.com/xcl-dev/xcl/commit/65704ff166792e6158579031908917fa4d768471",
+      "date": "2026-11-28T01:26:59Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "perf",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "8626d5ba4f",
+      "url": "https://github.com/xcl-dev/xcl/commit/8626d5ba4f53fa6ca77770fd3c761a08e46a07af",
+      "date": "2026-11-28T01:26:28Z",
+      "areas": [
+       "gpu",
+       "perf",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "474ca3b508",
+      "url": "https://github.com/xcl-dev/xcl/commit/474ca3b508c5061b8bf719ac29ee580a81b2ae3e",
+      "date": "2026-11-28T01:26:28Z",
+      "areas": [
+       "gpu",
        "loader",
        "perf",
-       "docs"
+       "vendor"
       ]
      },
      {
-      "sha": "f8f9de654f",
-      "url": "https://github.com/xcl-dev/xcl/commit/f8f9de654f82aba63dc80451b895ac4e49e691d6",
-      "date": "2026-11-25T23:53:52Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "c836ecd9ff",
-      "url": "https://github.com/xcl-dev/xcl/commit/c836ecd9ff0a645e108722cc48890211ca8bb9f5",
-      "date": "2026-11-25T23:53:52Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "ec80c0716d",
-      "url": "https://github.com/xcl-dev/xcl/commit/ec80c0716d81c57eb1d6d192e380fee9635a3a7e",
-      "date": "2026-11-25T23:53:52Z",
-      "areas": [
-       "gpu",
-       "docs"
-      ]
-     },
-     {
-      "sha": "5bec587753",
-      "url": "https://github.com/xcl-dev/xcl/commit/5bec587753ddf8234193f0f8bb6d6f367315c36d",
-      "date": "2026-11-25T23:08:18Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "08db8020d3",
-      "url": "https://github.com/xcl-dev/xcl/commit/08db8020d323bf478964fcc586152cce54959cfc",
-      "date": "2026-11-25T23:01:59Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "defe7ef132",
-      "url": "https://github.com/xcl-dev/xcl/commit/defe7ef132ede1399f30e73aace6d1beb667ef14",
-      "date": "2026-11-25T22:56:26Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "7d9e81110d",
-      "url": "https://github.com/xcl-dev/xcl/commit/7d9e81110d29d77757f9aad2d435bf0d6623a30b",
-      "date": "2026-11-25T22:43:05Z",
-      "areas": [
-       "shaders",
-       "docs"
-      ]
-     },
-     {
-      "sha": "e1d84b7d91",
-      "url": "https://github.com/xcl-dev/xcl/commit/e1d84b7d9153f86a97d2ec5d209d196046fc0bea",
-      "date": "2026-11-25T21:36:24Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "6d12f58a22",
-      "url": "https://github.com/xcl-dev/xcl/commit/6d12f58a229bc73889878a448c64dc3af25eeba0",
-      "date": "2026-11-25T19:59:50Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "e0d93c84ad",
-      "url": "https://github.com/xcl-dev/xcl/commit/e0d93c84ad8253f6e17738d14741c1bab7061127",
-      "date": "2026-11-25T19:51:26Z",
-      "areas": [
-       "gpu",
-       "perf"
-      ]
-     },
-     {
-      "sha": "6d051da51b",
-      "url": "https://github.com/xcl-dev/xcl/commit/6d051da51ba3fe7ba7d4ef542da71f544646e3ba",
-      "date": "2026-11-25T19:43:36Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "input",
-       "loader"
-      ]
-     },
-     {
-      "sha": "fda0b1fcf8",
-      "url": "https://github.com/xcl-dev/xcl/commit/fda0b1fcf82ec47cbf99ed5bdf7270ace1d6f6a6",
-      "date": "2026-11-25T19:43:19Z",
+      "sha": "8e7b566ae5",
+      "url": "https://github.com/xcl-dev/xcl/commit/8e7b566ae5ec2a6d15cde15cde2e0c9b0e113ae7",
+      "date": "2026-11-28T01:26:16Z",
       "areas": [
        "gpu",
        "loader"
       ]
      },
      {
-      "sha": "6044729477",
-      "url": "https://github.com/xcl-dev/xcl/commit/6044729477db63730f46ddee576ad6f7e53f89e9",
-      "date": "2026-11-25T19:37:33Z",
+      "sha": "78060a895f",
+      "url": "https://github.com/xcl-dev/xcl/commit/78060a895f868d3db0730ab88506a358766f3aa1",
+      "date": "2026-11-28T01:26:16Z",
       "areas": [
-       "gpu",
        "audio"
       ]
      },
      {
-      "sha": "889ef3e8aa",
-      "url": "https://github.com/xcl-dev/xcl/commit/889ef3e8aa7f267323ab4879e735e65da6bcef10",
-      "date": "2026-11-25T19:36:02Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "72f848cabf",
-      "url": "https://github.com/xcl-dev/xcl/commit/72f848cabfa588201554c1c01c9406a73fe7e964",
-      "date": "2026-11-25T19:35:45Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "3f60df5a5a",
-      "url": "https://github.com/xcl-dev/xcl/commit/3f60df5a5ace7b6cef3e222be808037772b61aa6",
-      "date": "2026-11-25T19:30:51Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "06055a7a0f",
-      "url": "https://github.com/xcl-dev/xcl/commit/06055a7a0fb43c5f83f55e7a2ce201417de171e9",
-      "date": "2026-11-25T19:24:26Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "8f87d724da",
-      "url": "https://github.com/xcl-dev/xcl/commit/8f87d724da211a6a7e909d479b07fba0014c1051",
-      "date": "2026-11-25T19:24:10Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "27157141c3",
-      "url": "https://github.com/xcl-dev/xcl/commit/27157141c308c18ddf699a3618b30d6716290547",
-      "date": "2026-11-25T19:23:53Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "44eb541cde",
-      "url": "https://github.com/xcl-dev/xcl/commit/44eb541cde023fcf31d18541d93551650014cafe",
-      "date": "2026-11-25T19:23:37Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "d48b065ea6",
-      "url": "https://github.com/xcl-dev/xcl/commit/d48b065ea6cd6b6b5629fe1ffe34c946857878a0",
-      "date": "2026-11-25T19:23:21Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "27fa5f3da8",
-      "url": "https://github.com/xcl-dev/xcl/commit/27fa5f3da8dbc1c6b77179775963d89e28841ad2",
-      "date": "2026-11-25T19:23:06Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "38c38621ac",
-      "url": "https://github.com/xcl-dev/xcl/commit/38c38621ac27351be0cf619cda0992beb6f5b55a",
-      "date": "2026-11-25T19:22:49Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "23865ea5ee",
-      "url": "https://github.com/xcl-dev/xcl/commit/23865ea5ee6985400434b58e176b0d607ef5af8d",
-      "date": "2026-11-25T19:22:33Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "8a3f91230b",
-      "url": "https://github.com/xcl-dev/xcl/commit/8a3f91230b6ca01f3b85d5b637240d04a0671921",
-      "date": "2026-11-25T19:22:17Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "72b59b5013",
-      "url": "https://github.com/xcl-dev/xcl/commit/72b59b5013bcea085deb17d02c94ae7a9411de17",
-      "date": "2026-11-25T19:22:02Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "7511b4dad8",
-      "url": "https://github.com/xcl-dev/xcl/commit/7511b4dad85829fc325cb573f9f6be805f9ea3d3",
-      "date": "2026-11-25T19:21:46Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "e214a8588a",
-      "url": "https://github.com/xcl-dev/xcl/commit/e214a8588a006e71257aa970492a869b79d40f57",
-      "date": "2026-11-25T19:21:30Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "3584bc0d3d",
-      "url": "https://github.com/xcl-dev/xcl/commit/3584bc0d3d35e855671bb167af44e57125943f19",
-      "date": "2026-11-25T19:21:14Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "8545a248e8",
-      "url": "https://github.com/xcl-dev/xcl/commit/8545a248e8e1f8ddbcdcb67ff93d7d80a3a68d2e",
-      "date": "2026-11-25T19:20:57Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "4b49e73b3d",
-      "url": "https://github.com/xcl-dev/xcl/commit/4b49e73b3d2266f2515897a7330a32bd49fbc61d",
-      "date": "2026-11-25T19:20:48Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "2664021103",
-      "url": "https://github.com/xcl-dev/xcl/commit/266402110339d793d7e0f4a73e91bccdf9fb712b",
-      "date": "2026-11-25T19:20:30Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "8b38c1d46f",
-      "url": "https://github.com/xcl-dev/xcl/commit/8b38c1d46f5fe99cc71c0bd1e890aa2c9a8f9109",
-      "date": "2026-11-25T19:20:14Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "661373ace0",
-      "url": "https://github.com/xcl-dev/xcl/commit/661373ace03797c4bf7838841e2cbd2de5819232",
-      "date": "2026-11-25T19:19:58Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "e41528c7c3",
-      "url": "https://github.com/xcl-dev/xcl/commit/e41528c7c333168bb6c3dc04e2e4b83e3a1e4a93",
-      "date": "2026-11-25T19:19:43Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "6521351780",
-      "url": "https://github.com/xcl-dev/xcl/commit/6521351780bc922648a3d17f66a3e3e1a031b10d",
-      "date": "2026-11-25T19:19:42Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "04f4091959",
-      "url": "https://github.com/xcl-dev/xcl/commit/04f409195993777995f489227dfce41d7862076d",
-      "date": "2026-11-25T19:19:26Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "9ba6804fed",
-      "url": "https://github.com/xcl-dev/xcl/commit/9ba6804fedcb476ae79f0d3a7330feb017cbfda0",
-      "date": "2026-11-25T19:19:10Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "7958d6be44",
-      "url": "https://github.com/xcl-dev/xcl/commit/7958d6be44117f596ebd5cdaf17305d1917abd98",
-      "date": "2026-11-25T19:18:54Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "3111b5f57f",
-      "url": "https://github.com/xcl-dev/xcl/commit/3111b5f57f3c36eadfd221c7715a8e26b9320cc2",
-      "date": "2026-11-25T19:18:38Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "6ccfd1d267",
-      "url": "https://github.com/xcl-dev/xcl/commit/6ccfd1d2679a3d15f74efa341e647d7824376ef8",
-      "date": "2026-11-25T19:10:40Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "b9fdc89326",
-      "url": "https://github.com/xcl-dev/xcl/commit/b9fdc89326419df3aa92a0f61eb08fb9c56d4d64",
-      "date": "2026-11-25T19:10:40Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "perf"
-      ]
-     },
-     {
-      "sha": "502ced5754",
-      "url": "https://github.com/xcl-dev/xcl/commit/502ced5754aafb5beb4df6959aa2d24624d6fc4d",
-      "date": "2026-11-25T18:51:35Z",
+      "sha": "d634138c42",
+      "url": "https://github.com/xcl-dev/xcl/commit/d634138c42ebef9ba67ec879b546aabf8099d13a",
+      "date": "2026-11-28T01:26:16Z",
       "areas": [
        "gpu",
        "audio",
+       "loader",
+       "perf",
        "vendor"
       ]
      },
      {
-      "sha": "25af00e196",
-      "url": "https://github.com/xcl-dev/xcl/commit/25af00e196b5f5282d59fe3bcc71b10a6893a526",
-      "date": "2026-11-25T18:49:37Z",
+      "sha": "733130a050",
+      "url": "https://github.com/xcl-dev/xcl/commit/733130a0501de3b64f35ff2657489f88dc58ef4e",
+      "date": "2026-11-28T01:26:16Z",
+      "areas": [
+       "gpu",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "a2d66d6a5b",
+      "url": "https://github.com/xcl-dev/xcl/commit/a2d66d6a5b910453ff10dd2e217f8831ebf9e873",
+      "date": "2026-11-28T01:25:31Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "9f6d8ebcf3",
+      "url": "https://github.com/xcl-dev/xcl/commit/9f6d8ebcf3f778b9ac97398a22c5c57402ccddb2",
+      "date": "2026-11-28T01:25:16Z",
+      "areas": [
+       "gpu",
+       "perf",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "e8f7164b0f",
+      "url": "https://github.com/xcl-dev/xcl/commit/e8f7164b0f1ffdcc33accca2c42433f5b84a7ce9",
+      "date": "2026-11-28T01:25:02Z",
       "areas": [
        "gpu",
        "shaders",
        "input",
-       "loader"
-      ]
-     },
-     {
-      "sha": "2898511af1",
-      "url": "https://github.com/xcl-dev/xcl/commit/2898511af1c038a2ef809719e9b6f89e5675c422",
-      "date": "2026-11-25T18:47:04Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "f9f6d494b3",
-      "url": "https://github.com/xcl-dev/xcl/commit/f9f6d494b312f46aa0f2e9de321d7ca49b218e87",
-      "date": "2026-11-25T18:46:44Z",
-      "areas": [
-       "shaders",
+       "loader",
        "perf"
       ]
      },
      {
-      "sha": "e3f042c518",
-      "url": "https://github.com/xcl-dev/xcl/commit/e3f042c5184ebe5708041c0f2a29b8069e25c4aa",
-      "date": "2026-11-25T18:46:16Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "c56e7448e5",
-      "url": "https://github.com/xcl-dev/xcl/commit/c56e7448e58bf9cce17f15b95cd8c5276af22af5",
-      "date": "2026-11-25T18:45:44Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "3f27770195",
-      "url": "https://github.com/xcl-dev/xcl/commit/3f2777019544c0ada2cd294aa792d3c378ff0df8",
-      "date": "2026-11-25T18:38:54Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "7292dca0c2",
-      "url": "https://github.com/xcl-dev/xcl/commit/7292dca0c25edfc5e8c8b3e581d0e3f8ef196762",
-      "date": "2026-11-25T18:38:14Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "c7e1799762",
-      "url": "https://github.com/xcl-dev/xcl/commit/c7e1799762abf522d043f2d028beca81e85cc683",
-      "date": "2026-11-25T18:37:47Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "2e40b78793",
-      "url": "https://github.com/xcl-dev/xcl/commit/2e40b7879330e41bac1918d400d4efe2a757132c",
-      "date": "2026-11-25T18:37:37Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "ae6f28494c",
-      "url": "https://github.com/xcl-dev/xcl/commit/ae6f28494c790a2fededf932f7f3ae9f3c3a8548",
-      "date": "2026-11-25T18:37:27Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "f4242ed1ca",
-      "url": "https://github.com/xcl-dev/xcl/commit/f4242ed1ca17514bab4e01bcdef73513b7d2da14",
-      "date": "2026-11-25T18:37:16Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "c685e12262",
-      "url": "https://github.com/xcl-dev/xcl/commit/c685e122620243cb6d2083ebba922abb32e7f2c5",
-      "date": "2026-11-25T18:37:05Z",
+      "sha": "f043b31925",
+      "url": "https://github.com/xcl-dev/xcl/commit/f043b31925b0d6ea07cdba64fcbb8245bbe967be",
+      "date": "2026-11-28T01:25:02Z",
       "areas": [
        "gpu",
-       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "604672927b",
+      "url": "https://github.com/xcl-dev/xcl/commit/604672927b9c6befbb1fbcbcaa2b26f7764ed956",
+      "date": "2026-11-28T01:25:02Z",
+      "areas": [
+       "audio"
+      ]
+     },
+     {
+      "sha": "efdebc82c0",
+      "url": "https://github.com/xcl-dev/xcl/commit/efdebc82c0fe8e43d9d8f2a592a615aba0607e3b",
+      "date": "2026-11-28T01:25:02Z",
+      "areas": [
+       "gpu",
        "loader",
        "perf",
        "vendor"
       ]
      },
      {
-      "sha": "3ceb5507a0",
-      "url": "https://github.com/xcl-dev/xcl/commit/3ceb5507a05355719ff1d7b5c29bc52aff142000",
-      "date": "2026-11-25T18:28:16Z",
+      "sha": "c22c0ac248",
+      "url": "https://github.com/xcl-dev/xcl/commit/c22c0ac2481b9ac0adabb1a0c53f46d2059f536d",
+      "date": "2026-11-28T01:25:02Z",
       "areas": [
        "gpu"
       ]
      },
      {
-      "sha": "38ac3d943d",
-      "url": "https://github.com/xcl-dev/xcl/commit/38ac3d943d6aebee40d7c06c8c694b9b51ba52cc",
-      "date": "2026-11-25T18:27:19Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "22b6222845",
-      "url": "https://github.com/xcl-dev/xcl/commit/22b6222845976e492e0d4850ad099e3a60c4d729",
-      "date": "2026-11-25T18:24:42Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "e44af7062d",
-      "url": "https://github.com/xcl-dev/xcl/commit/e44af7062dc610a9f889de2dcf11450e3e4884b3",
-      "date": "2026-11-25T18:24:31Z",
+      "sha": "2f523330ae",
+      "url": "https://github.com/xcl-dev/xcl/commit/2f523330ae160ccca151bd6e0417a4bafbfd0d43",
+      "date": "2026-11-28T01:25:02Z",
       "areas": [
        "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "bd2ac50703",
-      "url": "https://github.com/xcl-dev/xcl/commit/bd2ac50703a3ec1232744624f99e903e8fff62b9",
-      "date": "2026-11-25T18:23:13Z",
-      "areas": [
-       "input"
-      ]
-     },
-     {
-      "sha": "c828d8c091",
-      "url": "https://github.com/xcl-dev/xcl/commit/c828d8c091740c41a21fc1607d82c85bc9195cc6",
-      "date": "2026-11-25T18:22:45Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "943043e87c",
-      "url": "https://github.com/xcl-dev/xcl/commit/943043e87ce32ec4ec8cc51525ba25ebc4d6649d",
-      "date": "2026-11-25T18:22:37Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "7ff2b2e0e2",
-      "url": "https://github.com/xcl-dev/xcl/commit/7ff2b2e0e22efc786b5d0c607b7e9516e36b4e2e",
-      "date": "2026-11-25T18:22:25Z",
-      "areas": [
-       "shaders",
+       "audio",
+       "loader",
        "perf"
       ]
      },
      {
-      "sha": "c9ee916a39",
-      "url": "https://github.com/xcl-dev/xcl/commit/c9ee916a39f316ff1cd8e8d4bf0c4bf96e5deb31",
-      "date": "2026-11-25T18:21:21Z",
-      "areas": [
-       "docs"
-      ]
-     },
-     {
-      "sha": "0437ecd928",
-      "url": "https://github.com/xcl-dev/xcl/commit/0437ecd9286df0e1dca8ec2be1b1e634c7d156ef",
-      "date": "2026-11-25T18:21:16Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "569f0fc556",
-      "url": "https://github.com/xcl-dev/xcl/commit/569f0fc556e268767abbfe6fb51efff78602c7b0",
-      "date": "2026-11-25T18:18:58Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "63e13cd801",
-      "url": "https://github.com/xcl-dev/xcl/commit/63e13cd80199680afd50111557cbd32db14f4596",
-      "date": "2026-11-25T18:18:47Z",
-      "areas": [
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "31608c9159",
-      "url": "https://github.com/xcl-dev/xcl/commit/31608c9159c63f77063b92170f592eb1106dc6ec",
-      "date": "2026-11-25T18:18:37Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "728e254892",
-      "url": "https://github.com/xcl-dev/xcl/commit/728e254892a86cb891e806dc9356a39f71dc4ed1",
-      "date": "2026-11-25T18:17:20Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "be67bfcfe8",
-      "url": "https://github.com/xcl-dev/xcl/commit/be67bfcfe8143e21a62bbfd5d279d292229e27f9",
-      "date": "2026-11-25T18:17:10Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "9ed0c13ca7",
-      "url": "https://github.com/xcl-dev/xcl/commit/9ed0c13ca7f3a4f0ce4e9461022fd5a9ce9f2f1b",
-      "date": "2026-11-25T18:16:58Z",
-      "areas": [
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "59cdc7184c",
-      "url": "https://github.com/xcl-dev/xcl/commit/59cdc7184c979d8d5a8bf5b8d4a180d820893574",
-      "date": "2026-11-25T18:16:48Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "397ea96175",
-      "url": "https://github.com/xcl-dev/xcl/commit/397ea9617554a543995fd5fe7a652ed3eea66f75",
-      "date": "2026-11-25T18:16:20Z",
+      "sha": "7049cc3e2f",
+      "url": "https://github.com/xcl-dev/xcl/commit/7049cc3e2f818accbaca38727786baf1940c9d35",
+      "date": "2026-11-28T01:24:28Z",
       "areas": [
        "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "9bcb867bb1",
-      "url": "https://github.com/xcl-dev/xcl/commit/9bcb867bb1c20cc76efb3af903fec564fca14bd2",
-      "date": "2026-11-25T18:16:15Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "d508006089",
-      "url": "https://github.com/xcl-dev/xcl/commit/d5080060893725f9475c7df3afc7ca1fa7511057",
-      "date": "2026-11-25T18:16:10Z",
-      "areas": [
-       "gpu",
-       "perf"
-      ]
-     },
-     {
-      "sha": "2c6fd71d57",
-      "url": "https://github.com/xcl-dev/xcl/commit/2c6fd71d572d87560ea2fb1fb1ab27f30e1ab52e",
-      "date": "2026-11-25T18:16:06Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "4f0dc626c1",
-      "url": "https://github.com/xcl-dev/xcl/commit/4f0dc626c1f012e42a7ab9cf76d2d7060718a5c0",
-      "date": "2026-11-25T18:16:02Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "b32811395a",
-      "url": "https://github.com/xcl-dev/xcl/commit/b32811395a17379e79ea9a957626aa58cb87d548",
-      "date": "2026-11-25T18:15:26Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "ed95117d0c",
-      "url": "https://github.com/xcl-dev/xcl/commit/ed95117d0cd09bed67a72b75491044591b695754",
-      "date": "2026-11-25T18:15:09Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "db4ad096ab",
-      "url": "https://github.com/xcl-dev/xcl/commit/db4ad096ab4932b426e703ecd15515928c235345",
-      "date": "2026-11-25T18:14:14Z",
-      "areas": [
-       "gpu",
-       "perf"
-      ]
-     },
-     {
-      "sha": "f54019e7d9",
-      "url": "https://github.com/xcl-dev/xcl/commit/f54019e7d9430daf840f92c9f6e35b461ca9dc95",
-      "date": "2026-11-25T18:14:09Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "88d7a98cc2",
-      "url": "https://github.com/xcl-dev/xcl/commit/88d7a98cc2cd7345d58e72fdeeebdda186beab14",
-      "date": "2026-11-25T18:14:04Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "e89f5ca5c5",
-      "url": "https://github.com/xcl-dev/xcl/commit/e89f5ca5c54de25e78bcf248306221e0a246c576",
-      "date": "2026-11-25T18:13:46Z",
-      "areas": [
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "73e3aba648",
-      "url": "https://github.com/xcl-dev/xcl/commit/73e3aba648c9d985b044f1af1c8e5c4dfe634cf8",
-      "date": "2026-11-25T18:11:48Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "68a284a596",
-      "url": "https://github.com/xcl-dev/xcl/commit/68a284a596bd558b6bd9db6eedda6d6aa178c360",
-      "date": "2026-11-25T16:52:19Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "50a9fdef81",
-      "url": "https://github.com/xcl-dev/xcl/commit/50a9fdef81cb796b8756a31defb0648301d002ce",
-      "date": "2026-11-25T16:42:41Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "af066dd1f8",
-      "url": "https://github.com/xcl-dev/xcl/commit/af066dd1f849c3d97e585e6ace6fc91ed94a3d48",
-      "date": "2026-11-25T16:42:26Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "7648fe125e",
-      "url": "https://github.com/xcl-dev/xcl/commit/7648fe125ec7926d4ef48a318f8f328c119a5595",
-      "date": "2026-11-25T16:38:43Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "55d64c277b",
-      "url": "https://github.com/xcl-dev/xcl/commit/55d64c277be137cb6b47d7528dc6a88082bf573e",
-      "date": "2026-11-25T16:32:46Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "65fc114a14",
-      "url": "https://github.com/xcl-dev/xcl/commit/65fc114a140d9043f8e3d70ffb863f7987816d8f",
-      "date": "2026-11-25T16:26:58Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "9f02f9d153",
-      "url": "https://github.com/xcl-dev/xcl/commit/9f02f9d15319d1bcc7daf143614a72539abad2ac",
-      "date": "2026-11-25T16:26:40Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "30ba7a2b70",
-      "url": "https://github.com/xcl-dev/xcl/commit/30ba7a2b704ab6a045bb3aafd24323d539cd2fea",
-      "date": "2026-11-25T16:26:30Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "ce6a880669",
-      "url": "https://github.com/xcl-dev/xcl/commit/ce6a880669416eb3a2e74016b737298dea614a8b",
-      "date": "2026-11-25T16:26:29Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "3f4495a2b3",
-      "url": "https://github.com/xcl-dev/xcl/commit/3f4495a2b325ae5a9df314dd86d10327502b5cf5",
-      "date": "2026-11-25T16:16:40Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "e9f129d8a7",
-      "url": "https://github.com/xcl-dev/xcl/commit/e9f129d8a73772523e45ab8be45541f726e6a776",
-      "date": "2026-11-25T16:15:58Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "764d9ed0fc",
-      "url": "https://github.com/xcl-dev/xcl/commit/764d9ed0fcb42b561a8f6b9fd6d06c17165c5a10",
-      "date": "2026-11-25T16:15:36Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "4114da86c9",
-      "url": "https://github.com/xcl-dev/xcl/commit/4114da86c9725e62f6b33dea63cedd6fb4faff0a",
-      "date": "2026-11-25T16:15:16Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "10e9fb761f",
-      "url": "https://github.com/xcl-dev/xcl/commit/10e9fb761fbf19c4b8e0e8fa745835d8127732ee",
-      "date": "2026-11-25T15:53:03Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "5983162be1",
-      "url": "https://github.com/xcl-dev/xcl/commit/5983162be19b4c0e77cd5de2ab6007eb908ba504",
-      "date": "2026-11-25T15:52:19Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "83ad6a559a",
-      "url": "https://github.com/xcl-dev/xcl/commit/83ad6a559a4f6811a746cdddea53a816fa299a35",
-      "date": "2026-11-25T15:48:21Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "2228be784e",
-      "url": "https://github.com/xcl-dev/xcl/commit/2228be784e4ebd515b94a34afeaaee068ba865ae",
-      "date": "2026-11-25T15:26:54Z",
-      "areas": [
-       "gpu",
-       "shaders",
        "loader",
        "perf",
        "vendor"
       ]
      },
      {
-      "sha": "440e80211d",
-      "url": "https://github.com/xcl-dev/xcl/commit/440e80211d54443756b8aade8111517db50f7475",
-      "date": "2026-11-25T15:25:22Z",
+      "sha": "5cd0c4aecc",
+      "url": "https://github.com/xcl-dev/xcl/commit/5cd0c4aecc52ca8c066ae8b97086bd45dc08082a",
+      "date": "2026-11-28T01:24:27Z",
       "areas": [
        "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "082944135c",
-      "url": "https://github.com/xcl-dev/xcl/commit/082944135cd2b96288470a595861fa608eee08dc",
-      "date": "2026-11-25T15:20:32Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "e9ddf17e14",
-      "url": "https://github.com/xcl-dev/xcl/commit/e9ddf17e145c589d9ba9e79178e2068ef1204bba",
-      "date": "2026-11-25T15:18:46Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "625a0f3648",
-      "url": "https://github.com/xcl-dev/xcl/commit/625a0f36485c488cf3764b07609652c352d022fd",
-      "date": "2026-11-25T15:18:46Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "12f25f147c",
-      "url": "https://github.com/xcl-dev/xcl/commit/12f25f147c40f883a07cf022f520792dcee4bab9",
-      "date": "2026-11-25T15:16:14Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "7906df76ec",
-      "url": "https://github.com/xcl-dev/xcl/commit/7906df76ec2da841ed2e4f90feae88ba7a1912cc",
-      "date": "2026-11-25T15:16:14Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "8fcc11131f",
-      "url": "https://github.com/xcl-dev/xcl/commit/8fcc11131f9fe3daec6cfb207bacf87f73f75463",
-      "date": "2026-11-25T14:54:26Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "0306d10500",
-      "url": "https://github.com/xcl-dev/xcl/commit/0306d1050017e6a4f30381721b3de16582b78e01",
-      "date": "2026-11-25T14:51:17Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "c0eaeff704",
-      "url": "https://github.com/xcl-dev/xcl/commit/c0eaeff7046ebb8e5384673c661920d7a9d76cff",
-      "date": "2026-11-25T14:48:59Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "audio",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "95f6c1aab9",
-      "url": "https://github.com/xcl-dev/xcl/commit/95f6c1aab9e5e2730e303af20e26a1de9c9cc338",
-      "date": "2026-11-25T14:32:22Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "05ad2d6cf4",
-      "url": "https://github.com/xcl-dev/xcl/commit/05ad2d6cf4da3878219d40df3b9bae81c1fa8d9c",
-      "date": "2026-11-25T14:18:31Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "f5494de4a0",
-      "url": "https://github.com/xcl-dev/xcl/commit/f5494de4a049a0673af3b58ee9ce564eaedb5224",
-      "date": "2026-11-25T14:07:59Z",
-      "areas": [
-       "shaders",
        "perf"
       ]
      },
      {
-      "sha": "a78ffa89f6",
-      "url": "https://github.com/xcl-dev/xcl/commit/a78ffa89f64c31ed248b1e643e6ebb6c1b31455f",
-      "date": "2026-11-25T14:03:18Z",
+      "sha": "fbcd70e74b",
+      "url": "https://github.com/xcl-dev/xcl/commit/fbcd70e74bae9f500e6c5f99cbe10dcdd372b34a",
+      "date": "2026-11-28T01:24:27Z",
       "areas": [
        "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "8898cd360c",
-      "url": "https://github.com/xcl-dev/xcl/commit/8898cd360ce80f90c983c5922d3c170db816905d",
-      "date": "2026-11-25T14:01:27Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "1b017c1813",
-      "url": "https://github.com/xcl-dev/xcl/commit/1b017c18138183a2a6d8dfff68b6a3dd259a5fec",
-      "date": "2026-11-25T14:00:41Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "f51058f787",
-      "url": "https://github.com/xcl-dev/xcl/commit/f51058f787a62d3a4964029f0279335a1832da68",
-      "date": "2026-11-25T13:55:04Z",
-      "areas": [
-       "shaders",
-       "loader",
-       "perf"
-      ]
-     },
-     {
-      "sha": "41dac1f367",
-      "url": "https://github.com/xcl-dev/xcl/commit/41dac1f367c358b8964a524a78003a5c62aa9509",
-      "date": "2026-11-25T13:54:50Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "5b97e22b2e",
-      "url": "https://github.com/xcl-dev/xcl/commit/5b97e22b2e77b2ba3e65d8a3396c0f7a9eaf04af",
-      "date": "2026-11-25T13:51:16Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "dbd11b92f5",
-      "url": "https://github.com/xcl-dev/xcl/commit/dbd11b92f53379e9962d125d8bc8d9273e84b5ca",
-      "date": "2026-11-25T13:47:36Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "b1e84577db",
-      "url": "https://github.com/xcl-dev/xcl/commit/b1e84577dbd3dd4667729bf8e3211758957baa74",
-      "date": "2026-11-25T13:45:44Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "52e9014e98",
-      "url": "https://github.com/xcl-dev/xcl/commit/52e9014e98fbb8f235dff036ec95f3b35b3a4595",
-      "date": "2026-11-25T13:45:44Z",
-      "areas": [
-       "gpu",
-       "vendor"
-      ]
-     },
-     {
-      "sha": "06c9f5505f",
-      "url": "https://github.com/xcl-dev/xcl/commit/06c9f5505f63f10c5ec49ef932d75b2c28177324",
-      "date": "2026-11-25T13:41:19Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "afc5ee86ae",
-      "url": "https://github.com/xcl-dev/xcl/commit/afc5ee86ae3a9521c9f15d96505cd73fe72f2191",
-      "date": "2026-11-25T13:34:26Z",
-      "areas": [
-       "gpu",
-       "shaders"
-      ]
-     },
-     {
-      "sha": "eafdf36fb7",
-      "url": "https://github.com/xcl-dev/xcl/commit/eafdf36fb79954e94f6adc23ad9573cfe65478e6",
-      "date": "2026-11-25T13:34:25Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "docs"
-      ]
-     },
-     {
-      "sha": "5b22c92a93",
-      "url": "https://github.com/xcl-dev/xcl/commit/5b22c92a93338f303b14af1af6dc7a1b7499a796",
-      "date": "2026-11-25T13:34:24Z",
-      "areas": [
-       "gpu",
-       "shaders",
        "loader",
        "perf",
-       "docs"
-      ]
-     },
-     {
-      "sha": "379725aeff",
-      "url": "https://github.com/xcl-dev/xcl/commit/379725aefffe3023696f2f8c784315f7a6fbc318",
-      "date": "2026-11-25T13:19:49Z",
-      "areas": [
-       "gpu",
-       "docs"
-      ]
-     },
-     {
-      "sha": "8e9af35c33",
-      "url": "https://github.com/xcl-dev/xcl/commit/8e9af35c331f7cdc07b64eadc16a34e5c9c7b48f",
-      "date": "2026-11-25T13:17:19Z",
-      "areas": [
-       "gpu"
-      ]
-     },
-     {
-      "sha": "3ea5edc1c9",
-      "url": "https://github.com/xcl-dev/xcl/commit/3ea5edc1c941be6350d66b45e1e5c91f72158c18",
-      "date": "2026-11-25T13:06:52Z",
-      "areas": [
-       "gpu",
-       "loader"
-      ]
-     },
-     {
-      "sha": "b758a7e82d",
-      "url": "https://github.com/xcl-dev/xcl/commit/b758a7e82d5ad541d7312c2a933462a865579479",
-      "date": "2026-11-25T13:03:37Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "6bb40a6da7",
-      "url": "https://github.com/xcl-dev/xcl/commit/6bb40a6da70a310623dd88409155b057a306e119",
-      "date": "2026-11-25T12:49:42Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "7817eb17eb",
-      "url": "https://github.com/xcl-dev/xcl/commit/7817eb17eba0ce921d78e60b862c2ebe49a71185",
-      "date": "2026-11-25T12:49:00Z",
-      "areas": [
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "ed56bca4c3",
-      "url": "https://github.com/xcl-dev/xcl/commit/ed56bca4c3d31b2d928e545d5a9a9a222932099f",
-      "date": "2026-11-25T12:48:11Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "d2515bc8c5",
-      "url": "https://github.com/xcl-dev/xcl/commit/d2515bc8c5c2b71149aa836513449bc4e2117cd1",
-      "date": "2026-11-25T12:45:54Z",
-      "areas": [
-       "loader"
-      ]
-     },
-     {
-      "sha": "f8ce21de8f",
-      "url": "https://github.com/xcl-dev/xcl/commit/f8ce21de8f599635d9c811edbd4d6f59c8c84fc5",
-      "date": "2026-11-25T12:44:27Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "9a7e0edd87",
-      "url": "https://github.com/xcl-dev/xcl/commit/9a7e0edd87d4f4c540dc91c7eba7291e0d856ca1",
-      "date": "2026-11-25T12:25:53Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "d041801d41",
-      "url": "https://github.com/xcl-dev/xcl/commit/d041801d4129a89a8485f82a56ada91b2ea42df9",
-      "date": "2026-11-25T12:18:42Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "38f47bfaf1",
-      "url": "https://github.com/xcl-dev/xcl/commit/38f47bfaf1d00332560535c8f202482cf77d630e",
-      "date": "2026-11-25T12:07:43Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "c7b7ebe0c1",
-      "url": "https://github.com/xcl-dev/xcl/commit/c7b7ebe0c1c831c2e273ed064107c0fa92952c05",
-      "date": "2026-11-25T12:06:25Z",
-      "areas": [
        "vendor"
       ]
      },
      {
-      "sha": "7fa8789091",
-      "url": "https://github.com/xcl-dev/xcl/commit/7fa8789091281de67c1940fdf04e8f53e5cfe5ed",
-      "date": "2026-11-25T12:03:28Z",
+      "sha": "839b6ea012",
+      "url": "https://github.com/xcl-dev/xcl/commit/839b6ea012fdfc0555cf56f7078ac167bec46f07",
+      "date": "2026-11-28T01:24:27Z",
       "areas": [
        "gpu",
-       "perf"
-      ]
-     },
-     {
-      "sha": "a5af72bba1",
-      "url": "https://github.com/xcl-dev/xcl/commit/a5af72bba1a0d25fbd59f37a6a952b33874ce734",
-      "date": "2026-11-25T12:03:00Z",
-      "areas": [
+       "loader",
        "vendor"
       ]
      }
     ],
-    "commits_24h": 44,
-    "commits_7d": 1374,
+    "commits_24h": 389,
+    "commits_7d": 1719,
     "commits_sampled": 200,
-    "prs_open": 1621,
-    "prs_merged_24h": 12,
+    "prs_open": 1608,
+    "prs_merged_24h": 20,
     "problem_issues": [
+     {
+      "number": 2952,
+      "url": "https://github.com/xcl-dev/xcl/issues/2952",
+      "keywords": [
+       "hang",
+       "nvidia"
+      ]
+     },
+     {
+      "number": 505,
+      "url": "https://github.com/xcl-dev/xcl/issues/505",
+      "keywords": [
+       "crash"
+      ]
+     },
+     {
+      "number": 3084,
+      "url": "https://github.com/xcl-dev/xcl/issues/3084",
+      "keywords": [
+       "nvidia"
+      ]
+     },
      {
       "number": 3069,
       "url": "https://github.com/xcl-dev/xcl/issues/3069",
@@ -6207,13 +6099,6 @@
       ]
      },
      {
-      "number": 505,
-      "url": "https://github.com/xcl-dev/xcl/issues/505",
-      "keywords": [
-       "crash"
-      ]
-     },
-     {
       "number": 846,
       "url": "https://github.com/xcl-dev/xcl/issues/846",
       "keywords": [
@@ -6229,42 +6114,10 @@
        "nvidia",
        "device removed"
       ]
-     },
-     {
-      "number": 3084,
-      "url": "https://github.com/xcl-dev/xcl/issues/3084",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 2619,
-      "url": "https://github.com/xcl-dev/xcl/issues/2619",
-      "keywords": [
-       "crash",
-       "device removed"
-      ]
-     },
-     {
-      "number": 499,
-      "url": "https://github.com/xcl-dev/xcl/issues/499",
-      "keywords": [
-       "crash",
-       "nvidia",
-       "device removed"
-      ]
-     },
-     {
-      "number": 2512,
-      "url": "https://github.com/xcl-dev/xcl/issues/2512",
-      "keywords": [
-       "tdr",
-       "nvidia"
-      ]
      }
     ],
     "releases": [],
-    "readme_hash": "3ddce7c82d07d0c6",
+    "readme_hash": "9796c12798377403",
     "status_rows": []
    },
    "auto_phase": {
@@ -6278,29 +6131,41 @@
    },
    "score": 62.5,
    "areas_24h": {
-    "gpu": 40,
-    "shaders": 33,
-    "vendor": 20,
-    "loader": 15,
-    "docs": 14,
-    "perf": 13,
-    "input": 7,
-    "audio": 6
+    "gpu": 161,
+    "loader": 49,
+    "perf": 45,
+    "vendor": 43,
+    "shaders": 30,
+    "docs": 12,
+    "audio": 11,
+    "other": 4,
+    "input": 4
    },
    "areas_7d": {
-    "gpu": 138,
-    "shaders": 93,
-    "loader": 62,
-    "vendor": 50,
-    "docs": 33,
-    "perf": 33,
-    "other": 20,
-    "input": 16,
-    "audio": 13
+    "gpu": 161,
+    "loader": 49,
+    "perf": 45,
+    "vendor": 43,
+    "shaders": 30,
+    "docs": 12,
+    "audio": 11,
+    "other": 4,
+    "input": 4
    },
-   "commits_24h": 44,
-   "commits_7d": 1374,
+   "commits_24h": 389,
+   "commits_7d": 1719,
    "signals_good": [
+    {
+     "code": "activity_up",
+     "n24": 389,
+     "avg": 221.7,
+     "evidence": "https://github.com/ivall/xcl/commits"
+    },
+    {
+     "code": "contributors_up",
+     "n": 3,
+     "evidence": "https://github.com/ivall/xcl/graphs/contributors"
+    },
     {
      "code": "tracker_confirms",
      "tracker": "GTA VI PC Race",
@@ -6310,14 +6175,8 @@
    ],
    "signals_bad": [
     {
-     "code": "activity_down",
-     "n24": 44,
-     "avg": 221.7,
-     "evidence": "https://github.com/ivall/xcl/commits"
-    },
-    {
      "code": "crash_issues",
-     "n": 11,
+     "n": 9,
      "evidence": "https://github.com/ivall/xcl/issues"
     }
    ],
@@ -6337,7 +6196,7 @@
      ],
      "evidence": "https://github.com/ivall/xcl",
      "known_issue": true,
-     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2512"
+     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2917"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -6346,7 +6205,7 @@
      ],
      "evidence": "https://github.com/ivall/xcl",
      "known_issue": true,
-     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2512"
+     "evidence_issue": "https://github.com/xcl-dev/xcl/issues/2996"
     },
     "intel": {
      "status": "untested",
@@ -6411,14 +6270,43 @@
     "open_issues": 12,
     "language": "C#",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-28T02:56:49Z",
+    "pushed_at": "2026-11-28T03:39:41Z",
     "created_at": "2026-11-23T09:57:42Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 8,
-    "last_commit": "2026-11-28T02:55:35Z",
+    "last_commit": "2026-11-28T03:38:25Z",
     "commits": [
+     {
+      "sha": "7da2bd683b",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/7da2bd683b9d2757757c04fd31458eb419123851",
+      "date": "2026-11-28T03:38:25Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "addc840d60",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/addc840d60955ba4ca8138f90cec068ea748b743",
+      "date": "2026-11-28T03:27:47Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "357718d901",
+      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/357718d9018583b8f4bbd699483fdd75770dfc1a",
+      "date": "2026-11-28T03:27:47Z",
+      "areas": [
+       "gpu",
+       "loader"
+      ]
+     },
      {
       "sha": "44da838a49",
       "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/44da838a49fc6326810d7cc790b07768a90cd93f",
@@ -8304,38 +8192,10 @@
        "vendor",
        "docs"
       ]
-     },
-     {
-      "sha": "4d5f9cee65",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/4d5f9cee6534632d8bba98b76d32ec33c9f02671",
-      "date": "2026-11-26T14:52:05Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader"
-      ]
-     },
-     {
-      "sha": "ea5dd2f7b6",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/ea5dd2f7b69da6b0e4ba550c3379f109f805bb99",
-      "date": "2026-11-26T14:48:10Z",
-      "areas": [
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "314578173e",
-      "url": "https://github.com/ThatRecompDev/five-star-recomp/commit/314578173eb683302b4cba7fc38ba101d9ac06dc",
-      "date": "2026-11-26T14:48:03Z",
-      "areas": [
-       "loader",
-       "perf"
-      ]
      }
     ],
-    "commits_24h": 93,
-    "commits_7d": 1600,
+    "commits_24h": 92,
+    "commits_7d": 1603,
     "commits_sampled": 200,
     "prs_open": 1,
     "prs_merged_24h": 4,
@@ -8418,28 +8278,28 @@
    },
    "score": 62.5,
    "areas_24h": {
-    "loader": 73,
-    "gpu": 60,
-    "docs": 55,
+    "loader": 74,
+    "gpu": 61,
+    "docs": 57,
     "shaders": 32,
     "vendor": 21,
     "input": 11,
     "perf": 9,
-    "other": 4
+    "other": 1
    },
    "areas_7d": {
     "loader": 133,
-    "gpu": 123,
-    "docs": 94,
-    "shaders": 56,
+    "gpu": 125,
+    "docs": 95,
+    "shaders": 55,
     "vendor": 38,
     "other": 27,
-    "perf": 22,
+    "perf": 21,
     "input": 12,
     "audio": 9
    },
-   "commits_24h": 93,
-   "commits_7d": 1600,
+   "commits_24h": 92,
+   "commits_7d": 1603,
    "signals_good": [
     {
      "code": "contributors_up",
@@ -9353,7 +9213,7 @@
     },
     {
      "code": "stale",
-     "h": 65,
+     "h": 66,
      "evidence": "https://github.com/rpatty-dev/PercyScarlett/commits"
     },
     {
@@ -9716,7 +9576,7 @@
    "signals_bad": [
     {
      "code": "stale",
-     "h": 97,
+     "h": 98,
      "evidence": "https://github.com/OnlyMoisties/GTA6-BootTest/commits"
     },
     {
@@ -9794,19 +9654,164 @@
     "exists": true,
     "http_status": 200,
     "full_name": "R0Y00/Xbox2Windows",
-    "stars": 2043,
+    "stars": 2044,
     "forks": 247,
-    "open_issues": 235,
+    "open_issues": 221,
     "language": "Python",
     "license": "MIT",
-    "pushed_at": "2026-11-28T02:50:59Z",
+    "pushed_at": "2026-11-28T03:57:50Z",
     "created_at": "2026-11-20T17:43:52Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 123,
-    "last_commit": "2026-11-28T02:50:59Z",
+    "last_commit": "2026-11-28T03:57:50Z",
     "commits": [
+     {
+      "sha": "f41806a932",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/f41806a9329ab39b679903ab0c91b8d07e242932",
+      "date": "2026-11-28T03:57:50Z",
+      "areas": [
+       "shaders",
+       "docs"
+      ]
+     },
+     {
+      "sha": "6c5f4ed011",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/6c5f4ed0116b4cc3a1dbeac7ef6132570ddb9b28",
+      "date": "2026-11-28T03:56:24Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "152e93b4be",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/152e93b4be681b80e51adb3811bf4e7346d642e5",
+      "date": "2026-11-28T03:53:24Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "input",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "e8dd89ed89",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e8dd89ed8932dddfb9e5f29466c9945d2f06c89e",
+      "date": "2026-11-28T03:51:39Z",
+      "areas": [
+       "shaders",
+       "input",
+       "docs"
+      ]
+     },
+     {
+      "sha": "fdba6e15ee",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/fdba6e15eede368e515d80cb0e99f29249527907",
+      "date": "2026-11-28T03:45:13Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio"
+      ]
+     },
+     {
+      "sha": "a166a753dd",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/a166a753ddd2c7df4194784a3b3ded0f990835a7",
+      "date": "2026-11-28T03:34:51Z",
+      "areas": [
+       "shaders",
+       "audio",
+       "input",
+       "loader",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "5033d2d326",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/5033d2d3261b6cda68a9947949a33568f6ae6e4d",
+      "date": "2026-11-28T03:31:38Z",
+      "areas": [
+       "gpu",
+       "input",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "dbaa010b28",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/dbaa010b288ea21202503f6072aacee473713aa4",
+      "date": "2026-11-28T03:26:32Z",
+      "areas": [
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "a44e1f951f",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/a44e1f951f47ef90850f4727c2345fed8ae1cebb",
+      "date": "2026-11-28T03:25:18Z",
+      "areas": [
+       "shaders",
+       "vendor"
+      ]
+     },
+     {
+      "sha": "bf1bc76927",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/bf1bc76927e543e34beffc094847e5260b150775",
+      "date": "2026-11-28T03:21:48Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "0fe4cebcbc",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0fe4cebcbc78f6b020a95f6df8f1ff0e9c3ffc86",
+      "date": "2026-11-28T03:15:41Z",
+      "areas": [
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "9872074aa8",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/9872074aa8de2b3ea47437ece4ef1099ee4e1844",
+      "date": "2026-11-28T03:09:52Z",
+      "areas": [
+       "shaders",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "0637fced66",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/0637fced66c6ca492d8394b50e8222c8c7a0ac5a",
+      "date": "2026-11-28T03:03:08Z",
+      "areas": [
+       "shaders",
+       "vendor",
+       "docs"
+      ]
+     },
+     {
+      "sha": "a0b45d438c",
+      "url": "https://github.com/R0Y00/Xbox2Windows/commit/a0b45d438c8304cedd0b9f38ecdaa3bd4e808736",
+      "date": "2026-11-28T03:01:00Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
      {
       "sha": "c827d8baad",
       "url": "https://github.com/R0Y00/Xbox2Windows/commit/c827d8baad6c950fac15a1314842e352358d9c6a",
@@ -11496,134 +11501,13 @@
        "shaders",
        "audio"
       ]
-     },
-     {
-      "sha": "24d92609d9",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/24d92609d9cc368c6f76e5756316ce5d70441744",
-      "date": "2026-11-27T04:35:44Z",
-      "areas": [
-       "shaders",
-       "audio"
-      ]
-     },
-     {
-      "sha": "50488e1c8d",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/50488e1c8d836a54ecffa37198e3ca1ca89dde5b",
-      "date": "2026-11-27T04:32:58Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "9436a181a5",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/9436a181a58015d4b7d6fd4ce304cb39ebd735ac",
-      "date": "2026-11-27T04:20:04Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "34b2f58d78",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/34b2f58d780b88fce31e8688cca952d78a595db3",
-      "date": "2026-11-27T04:19:54Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "be58ec5ac0",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/be58ec5ac0cf63fc3d39bd249e08a721c83a018f",
-      "date": "2026-11-27T04:19:45Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "8895045b06",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/8895045b066a23eb1551ffb121315c777e81f488",
-      "date": "2026-11-27T03:57:04Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "e0d837594b",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e0d837594b1169d3ced1e6a98ee0fa326da5e96c",
-      "date": "2026-11-27T03:48:11Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "perf",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "79a8db6ca7",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/79a8db6ca7ce334a99070320f2f438d67e58bd40",
-      "date": "2026-11-27T03:47:29Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "c6908ccec2",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/c6908ccec2876ffe65dac6dd1156125c14328826",
-      "date": "2026-11-27T03:47:20Z",
-      "areas": [
-       "shaders",
-       "audio"
-      ]
-     },
-     {
-      "sha": "b69c111f69",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/b69c111f696ccfda0935a3e7a2747e2ba407c29e",
-      "date": "2026-11-27T03:47:12Z",
-      "areas": [
-       "shaders",
-       "audio"
-      ]
-     },
-     {
-      "sha": "e05b3ced1c",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/e05b3ced1c557a971600237f535e7477ef8f6f6c",
-      "date": "2026-11-27T03:35:58Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "fb955a5172",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/fb955a5172bd385236ddf78264786bf828e5d46f",
-      "date": "2026-11-27T03:18:35Z",
-      "areas": [
-       "shaders"
-      ]
-     },
-     {
-      "sha": "4ff5e36d12",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/4ff5e36d12b134b359685f0752887b401d6b8187",
-      "date": "2026-11-27T03:17:19Z",
-      "areas": [
-       "other"
-      ]
-     },
-     {
-      "sha": "a4fae19951",
-      "url": "https://github.com/R0Y00/Xbox2Windows/commit/a4fae199517158fd443bfdd450f476b2c7b5f4c1",
-      "date": "2026-11-27T03:15:13Z",
-      "areas": [
-       "input",
-       "loader"
-      ]
      }
     ],
-    "commits_24h": 202,
-    "commits_7d": 5232,
+    "commits_24h": 205,
+    "commits_7d": 5246,
     "commits_sampled": 200,
-    "prs_open": 105,
-    "prs_merged_24h": 44,
+    "prs_open": 94,
+    "prs_merged_24h": 46,
     "problem_issues": [
      {
       "number": 3224,
@@ -11633,18 +11517,18 @@
       ]
      },
      {
+      "number": 3076,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/3076",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
       "number": 3237,
       "url": "https://github.com/R0Y00/Xbox2Windows/issues/3237",
       "keywords": [
        "nvidia",
        "wave64"
-      ]
-     },
-     {
-      "number": 3076,
-      "url": "https://github.com/R0Y00/Xbox2Windows/issues/3076",
-      "keywords": [
-       "nvidia"
       ]
      },
      {
@@ -11675,6 +11559,27 @@
        "nvidia",
        "wave64"
       ]
+     },
+     {
+      "number": 3052,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/3052",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 3149,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/3149",
+      "keywords": [
+       "nvidia"
+      ]
+     },
+     {
+      "number": 2896,
+      "url": "https://github.com/R0Y00/Xbox2Windows/issues/2896",
+      "keywords": [
+       "nvidia"
+      ]
      }
     ],
     "releases": [
@@ -11698,29 +11603,29 @@
    },
    "score": 47.5,
    "areas_24h": {
-    "shaders": 119,
-    "docs": 97,
-    "gpu": 57,
-    "loader": 47,
-    "other": 33,
-    "vendor": 23,
-    "perf": 16,
-    "audio": 11,
-    "input": 8
+    "shaders": 120,
+    "docs": 108,
+    "gpu": 60,
+    "loader": 51,
+    "other": 30,
+    "vendor": 26,
+    "perf": 17,
+    "audio": 12,
+    "input": 11
    },
    "areas_7d": {
-    "shaders": 119,
-    "docs": 97,
-    "gpu": 57,
-    "loader": 47,
-    "other": 33,
-    "vendor": 23,
-    "perf": 16,
-    "audio": 11,
-    "input": 8
+    "shaders": 120,
+    "docs": 108,
+    "gpu": 60,
+    "loader": 51,
+    "other": 30,
+    "vendor": 26,
+    "perf": 17,
+    "audio": 12,
+    "input": 11
    },
-   "commits_24h": 202,
-   "commits_7d": 5232,
+   "commits_24h": 205,
+   "commits_7d": 5246,
    "signals_good": [
     {
      "code": "tracker_confirms",
@@ -11732,13 +11637,13 @@
    "signals_bad": [
     {
      "code": "activity_down",
-     "n24": 202,
-     "avg": 838.3,
+     "n24": 205,
+     "avg": 840.2,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/commits"
     },
     {
      "code": "crash_issues",
-     "n": 7,
+     "n": 10,
      "evidence": "https://github.com/R0Y00/Xbox2Windows/issues"
     },
     {
@@ -11774,7 +11679,7 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/2413"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/2896"
     },
     "amd": {
      "status": "ok_with_issues",
@@ -11790,16 +11695,18 @@
      ],
      "evidence": "https://github.com/R0Y00/Xbox2Windows",
      "known_issue": true,
-     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows"
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/3052"
     },
     "intel": {
-     "status": "ok",
+     "status": "ok_with_issues",
      "models": [
       "ARC A380",
       "ARC B390",
       "ARC B580"
      ],
-     "evidence": "https://github.com/R0Y00/Xbox2Windows"
+     "evidence": "https://github.com/R0Y00/Xbox2Windows",
+     "known_issue": true,
+     "evidence_issue": "https://github.com/R0Y00/Xbox2Windows/issues/2896"
     }
    },
    "estimates": [
@@ -13543,7 +13450,7 @@
     },
     {
      "code": "stale",
-     "h": 65,
+     "h": 66,
      "evidence": "https://github.com/OpenCommunityEdition/OpenScarlett/commits"
     }
    ],
@@ -15640,18 +15547,31 @@
     "http_status": 200,
     "full_name": "brcly/TuxBox",
     "stars": 400,
-    "forks": 52,
-    "open_issues": 20,
+    "forks": 54,
+    "open_issues": 21,
     "language": "Rust",
     "license": "Apache-2.0",
-    "pushed_at": "2026-11-28T02:50:44Z",
+    "pushed_at": "2026-11-28T03:36:38Z",
     "created_at": "2026-11-21T12:07:28Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 36,
-    "last_commit": "2026-11-28T02:49:26Z",
+    "last_commit": "2026-11-28T03:36:34Z",
     "commits": [
+     {
+      "sha": "e5c17a40d5",
+      "url": "https://github.com/brcly/TuxBox/commit/e5c17a40d5b732ac208740d6533077c2686b5d7c",
+      "date": "2026-11-28T03:36:34Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "loader",
+       "perf",
+       "vendor",
+       "docs"
+      ]
+     },
      {
       "sha": "df4f27c30c",
       "url": "https://github.com/brcly/TuxBox/commit/df4f27c30c0005a728ec1d3fefd3172f36b75b41",
@@ -17486,34 +17406,17 @@
        "shaders",
        "loader"
       ]
-     },
-     {
-      "sha": "a0cc6640d6",
-      "url": "https://github.com/brcly/TuxBox/commit/a0cc6640d696827c03dde82803e9712aa7149479",
-      "date": "2026-11-27T08:27:51Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "docs"
-      ]
      }
     ],
     "commits_24h": 223,
-    "commits_7d": 1035,
+    "commits_7d": 1036,
     "commits_sampled": 200,
-    "prs_open": 5,
+    "prs_open": 7,
     "prs_merged_24h": 50,
     "problem_issues": [
      {
       "number": 358,
       "url": "https://github.com/brcly/TuxBox/issues/358",
-      "keywords": [
-       "nvidia"
-      ]
-     },
-     {
-      "number": 333,
-      "url": "https://github.com/brcly/TuxBox/issues/333",
       "keywords": [
        "nvidia"
       ]
@@ -17597,32 +17500,32 @@
    "areas_24h": {
     "gpu": 123,
     "shaders": 76,
-    "loader": 72,
+    "loader": 73,
     "docs": 50,
-    "vendor": 40,
+    "vendor": 41,
     "audio": 32,
     "other": 25,
-    "perf": 21,
+    "perf": 22,
     "input": 6
    },
    "areas_7d": {
     "gpu": 123,
     "shaders": 76,
-    "loader": 72,
+    "loader": 73,
     "docs": 50,
-    "vendor": 40,
+    "vendor": 41,
     "audio": 32,
     "other": 25,
-    "perf": 21,
+    "perf": 22,
     "input": 6
    },
    "commits_24h": 223,
-   "commits_7d": 1035,
+   "commits_7d": 1036,
    "signals_good": [
     {
      "code": "activity_up",
      "n24": 223,
-     "avg": 135.3,
+     "avg": 135.5,
      "evidence": "https://github.com/brcly/TuxBox/commits"
     },
     {
@@ -17640,7 +17543,7 @@
    "signals_bad": [
     {
      "code": "crash_issues",
-     "n": 8,
+     "n": 7,
      "evidence": "https://github.com/brcly/TuxBox/issues"
     }
    ],
@@ -17747,14 +17650,68 @@
     "open_issues": 0,
     "language": "C++",
     "license": "MIT",
-    "pushed_at": "2026-11-28T02:42:11Z",
+    "pushed_at": "2026-11-28T03:45:53Z",
     "created_at": "2026-11-23T16:30:37Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
     "contributors": 1,
-    "last_commit": "2026-11-28T02:42:10Z",
+    "last_commit": "2026-11-28T03:45:51Z",
     "commits": [
+     {
+      "sha": "ee00352011",
+      "url": "https://github.com/mewiof/Holy-Interoperability/commit/ee003520117a7a1ec83eb2be1c4835f7bdfe77c2",
+      "date": "2026-11-28T03:45:51Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "docs"
+      ]
+     },
+     {
+      "sha": "bec036898c",
+      "url": "https://github.com/mewiof/Holy-Interoperability/commit/bec036898cccea253610e02db133d0fdd1819efa",
+      "date": "2026-11-28T03:45:42Z",
+      "areas": [
+       "gpu",
+       "audio",
+       "perf",
+       "docs"
+      ]
+     },
+     {
+      "sha": "f3077bc4bc",
+      "url": "https://github.com/mewiof/Holy-Interoperability/commit/f3077bc4bce26b44392d03bd4b7e3872062f8cb4",
+      "date": "2026-11-28T03:39:51Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "fd5734b56f",
+      "url": "https://github.com/mewiof/Holy-Interoperability/commit/fd5734b56f4b350a12bbb1f71b530e4d4e7c8afd",
+      "date": "2026-11-28T03:19:24Z",
+      "areas": [
+       "gpu",
+       "shaders",
+       "audio",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "25721539c1",
+      "url": "https://github.com/mewiof/Holy-Interoperability/commit/25721539c17eee4f47e27c6f83fe6f376fdd888b",
+      "date": "2026-11-28T03:01:19Z",
+      "areas": [
+       "audio",
+       "docs"
+      ]
+     },
      {
       "sha": "4ba9b35dac",
       "url": "https://github.com/mewiof/Holy-Interoperability/commit/4ba9b35dac1b189f58ba20bd7d530baaa02b1884",
@@ -19355,14 +19312,14 @@
       ]
      }
     ],
-    "commits_24h": 125,
-    "commits_7d": 155,
-    "commits_sampled": 155,
+    "commits_24h": 130,
+    "commits_7d": 160,
+    "commits_sampled": 160,
     "prs_open": null,
     "prs_merged_24h": null,
     "problem_issues": [],
     "releases": [],
-    "readme_hash": "5719bbeb045830f4",
+    "readme_hash": "ae4b73e8710f81ea",
     "status_rows": [
      {
       "stage": "loader",
@@ -19437,32 +19394,32 @@
    },
    "score": 40.0,
    "areas_24h": {
-    "audio": 125,
-    "gpu": 75,
-    "docs": 72,
-    "loader": 69,
-    "perf": 31,
-    "shaders": 26,
+    "audio": 130,
+    "gpu": 79,
+    "docs": 77,
+    "loader": 71,
+    "perf": 32,
+    "shaders": 28,
     "input": 6,
     "vendor": 5
    },
    "areas_7d": {
-    "audio": 153,
-    "loader": 94,
-    "gpu": 91,
-    "docs": 90,
-    "shaders": 36,
-    "perf": 33,
+    "audio": 158,
+    "loader": 96,
+    "gpu": 95,
+    "docs": 95,
+    "shaders": 38,
+    "perf": 34,
     "input": 8,
     "vendor": 8,
     "other": 1
    },
-   "commits_24h": 125,
-   "commits_7d": 155,
+   "commits_24h": 130,
+   "commits_7d": 160,
    "signals_good": [
     {
      "code": "activity_up",
-     "n24": 125,
+     "n24": 130,
      "avg": 5.0,
      "evidence": "https://github.com/mewiof/Holy-Interoperability/commits"
     },
@@ -22478,7 +22435,7 @@
     },
     {
      "code": "stale",
-     "h": 91,
+     "h": 92,
      "evidence": "https://github.com/Kajcsi/G6Recomp/commits"
     }
    ],
@@ -24381,7 +24338,7 @@
     },
     {
      "code": "stale",
-     "h": 50,
+     "h": 51,
      "evidence": "https://github.com/gookie-dev/g6shim/commits"
     }
    ],
@@ -24452,19 +24409,56 @@
     "exists": true,
     "http_status": 200,
     "full_name": "ProjectLeonida/mandy",
-    "stars": 2931,
-    "forks": 633,
-    "open_issues": 1521,
+    "stars": 2959,
+    "forks": 643,
+    "open_issues": 1518,
     "language": "Python",
     "license": "GPL-3.0",
-    "pushed_at": "2026-11-28T02:29:26Z",
+    "pushed_at": "2026-11-28T03:48:32Z",
     "created_at": "2026-11-23T23:54:39Z",
     "is_fork": false,
     "default_branch": "main",
     "archived": false,
-    "contributors": 926,
-    "last_commit": "2026-11-28T02:29:25Z",
+    "contributors": 925,
+    "last_commit": "2026-11-28T03:48:31Z",
     "commits": [
+     {
+      "sha": "f77359c5b4",
+      "url": "https://github.com/ProjectLeonida/mandy/commit/f77359c5b42fdba8025bf4bf6cf553a945a8451b",
+      "date": "2026-11-28T03:48:31Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "477f56cc1a",
+      "url": "https://github.com/ProjectLeonida/mandy/commit/477f56cc1afa204d51e32c2f24de3862657d1dce",
+      "date": "2026-11-28T03:48:27Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "725d223757",
+      "url": "https://github.com/ProjectLeonida/mandy/commit/725d2237574be4c96f10b184c86364c7a8f05178",
+      "date": "2026-11-28T03:48:22Z",
+      "areas": [
+       "gpu",
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "5651950adb",
+      "url": "https://github.com/ProjectLeonida/mandy/commit/5651950adbaa292dcc794c621386b5c64b80f80b",
+      "date": "2026-11-28T03:48:18Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
      {
       "sha": "02f71ccfe7",
       "url": "https://github.com/ProjectLeonida/mandy/commit/02f71ccfe78160997a02950607be583af87e1180",
@@ -25465,6 +25459,24 @@
       ]
      },
      {
+      "sha": "1dd08900f6",
+      "url": "https://github.com/ProjectLeonida/mandy/commit/1dd08900f6a5f646e90fa317b8e75cda4eee788f",
+      "date": "2026-11-27T19:10:51Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
+      "sha": "6f7963abdd",
+      "url": "https://github.com/ProjectLeonida/mandy/commit/6f7963abddd7e545f43097c50f687e8e71626d72",
+      "date": "2026-11-27T19:09:18Z",
+      "areas": [
+       "loader",
+       "docs"
+      ]
+     },
+     {
       "sha": "c9316aa4bc",
       "url": "https://github.com/ProjectLeonida/mandy/commit/c9316aa4bcc9060be6cd900c0f129f528fc72576",
       "date": "2026-11-27T18:48:49Z",
@@ -26269,78 +26281,22 @@
        "perf",
        "docs"
       ]
-     },
+     }
+    ],
+    "commits_24h": 343,
+    "commits_7d": 15110,
+    "commits_sampled": 200,
+    "prs_open": 1466,
+    "prs_merged_24h": 21,
+    "problem_issues": [
      {
-      "sha": "8bab5f2811",
-      "url": "https://github.com/ProjectLeonida/mandy/commit/8bab5f2811763e22e9306b988cac497563b05e33",
-      "date": "2026-11-27T12:50:01Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "e31f50bbcc",
-      "url": "https://github.com/ProjectLeonida/mandy/commit/e31f50bbcce7bce2fae5746aab1b23c721c92a5c",
-      "date": "2026-11-27T12:49:07Z",
-      "areas": [
-       "gpu",
-       "audio",
-       "loader",
-       "perf",
-       "vendor",
-       "docs"
-      ]
-     },
-     {
-      "sha": "439766b7a2",
-      "url": "https://github.com/ProjectLeonida/mandy/commit/439766b7a2c67abf782fa0e37b9f38add2daad89",
-      "date": "2026-11-27T12:49:03Z",
-      "areas": [
-       "gpu",
-       "audio"
-      ]
-     },
-     {
-      "sha": "6af3b1dac6",
-      "url": "https://github.com/ProjectLeonida/mandy/commit/6af3b1dac6c24325170bbc85079bb3defc8c8ebd",
-      "date": "2026-11-27T12:43:49Z",
-      "areas": [
-       "gpu",
-       "shaders",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "690dea5193",
-      "url": "https://github.com/ProjectLeonida/mandy/commit/690dea51932fcd1b2213b39a28dd837b0752e6c5",
-      "date": "2026-11-27T12:43:04Z",
-      "areas": [
-       "gpu",
-       "loader",
-       "docs"
-      ]
-     },
-     {
-      "sha": "a78040bb13",
-      "url": "https://github.com/ProjectLeonida/mandy/commit/a78040bb133cb25433eb92a2536ab87435c32e7d",
-      "date": "2026-11-27T12:39:13Z",
-      "areas": [
-       "shaders",
-       "audio",
-       "vendor"
+      "number": 2556,
+      "url": "https://github.com/ProjectLeonida/mandy/issues/2556",
+      "keywords": [
+       "nvidia"
       ]
      }
     ],
-    "commits_24h": 372,
-    "commits_7d": 15105,
-    "commits_sampled": 200,
-    "prs_open": 1470,
-    "prs_merged_24h": 17,
-    "problem_issues": [],
     "releases": [],
     "readme_hash": "aa4395b03d88584f",
     "status_rows": [
@@ -26427,38 +26383,38 @@
    },
    "score": 20.0,
    "areas_24h": {
-    "gpu": 107,
-    "loader": 77,
-    "vendor": 66,
-    "docs": 61,
+    "gpu": 103,
+    "loader": 79,
+    "vendor": 64,
+    "docs": 63,
     "other": 44,
-    "audio": 42,
-    "shaders": 36,
-    "perf": 31,
+    "audio": 39,
+    "shaders": 33,
+    "perf": 30,
     "input": 5
    },
    "areas_7d": {
-    "gpu": 107,
-    "loader": 77,
-    "vendor": 66,
-    "docs": 61,
+    "gpu": 103,
+    "loader": 79,
+    "vendor": 64,
+    "docs": 63,
     "other": 44,
-    "audio": 42,
-    "shaders": 36,
-    "perf": 31,
+    "audio": 39,
+    "shaders": 33,
+    "perf": 30,
     "input": 5
    },
-   "commits_24h": 372,
-   "commits_7d": 15105,
+   "commits_24h": 343,
+   "commits_7d": 15110,
    "signals_good": [
     {
      "code": "stars_up",
-     "n": 394,
+     "n": 422,
      "evidence": "https://github.com/ubiquitarianism/leonida/stargazers"
     },
     {
      "code": "contributors_up",
-     "n": 110,
+     "n": 109,
      "evidence": "https://github.com/ubiquitarianism/leonida/graphs/contributors"
     },
     {
@@ -26471,8 +26427,8 @@
    "signals_bad": [
     {
      "code": "activity_down",
-     "n24": 372,
-     "avg": 2455.5,
+     "n24": 343,
+     "avg": 2461.2,
      "evidence": "https://github.com/ubiquitarianism/leonida/commits"
     }
    ],
@@ -26490,7 +26446,7 @@
      "models": [],
      "evidence": "https://github.com/ubiquitarianism/leonida",
      "known_issue": true,
-     "evidence_issue": "https://github.com/ubiquitarianism/leonida"
+     "evidence_issue": "https://github.com/ProjectLeonida/mandy/issues/2556"
     },
     "amd": {
      "status": "untested",
@@ -28397,7 +28353,7 @@
     },
     {
      "code": "stale",
-     "h": 61,
+     "h": 62,
      "evidence": "https://github.com/omonkeyz/xbox-emulator/commits"
     },
     {
@@ -30589,6 +30545,84 @@
  ],
  "items": [
   {
+   "id": "5433aeb5dd0e8c58",
+   "source": "reddit",
+   "source_label": "r/GTA6",
+   "url": "https://www.reddit.com/r/GTA6/comments/1y7cf0a/",
+   "created": "2026-11-28T03:55:16Z",
+   "kind": "video",
+   "project": null,
+   "score": 1,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": "https://external-preview.redd.it/dXpvdzBwdHAwYTRpMaPMeSEhuksza58Yp9C1a17z3t4m6hSLYSmvneil5S1E.png?width=640&format=pjpg&auto=webp&s=77916dc979f95d3df4ca6bbdd0eeb17aada60100",
+   "embed": null,
+   "via": "arcticshift",
+   "vias": [
+    "arcticshift"
+   ],
+   "completeness": "partial",
+   "post_id": "1y7cf0a",
+   "subreddit": "GTA6",
+   "credibility": "unverified"
+  },
+  {
+   "id": "f67baa3a1e6bef5a",
+   "source": "bluesky",
+   "source_label": "Bluesky",
+   "url": "https://bsky.app/profile/gretchenleigh.zone/post/3n3dqoev2as2v",
+   "created": "2026-11-28T03:20:30Z",
+   "kind": "discussion",
+   "project": null,
+   "score": 7,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": null,
+   "embed": null,
+   "credibility": "unverified"
+  },
+  {
+   "id": "4d4dd1436a718a5d",
+   "source": "reddit",
+   "source_label": "r/GTA",
+   "url": "https://www.reddit.com/r/GTA/comments/1y7bkvm/",
+   "created": "2026-11-28T03:09:47Z",
+   "kind": "video",
+   "project": null,
+   "score": 1,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": "https://external-preview.redd.it/MTFiaDc3bm83OTRpMb87TX2lzcwMk6pvc3yPTo13hSsHrmpOI1dUs0fyzan0.png?width=1080&format=pjpg&auto=webp&s=1d58811be0154b321355df976c17e888e9dd45f8",
+   "embed": null,
+   "via": "arcticshift",
+   "vias": [
+    "arcticshift"
+   ],
+   "completeness": "partial",
+   "post_id": "1y7bkvm",
+   "subreddit": "GTA",
+   "credibility": "unverified"
+  },
+  {
+   "id": "c216f18165055fe6",
+   "source": "mastodon",
+   "source_label": "Mastodon",
+   "url": "https://mastodon.social/@newisty/117691838560545334",
+   "created": "2026-11-28T03:02:18Z",
+   "kind": "image",
+   "project": null,
+   "score": 0,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": "https://files.mastodon.social/media_attachments/files/117/691/838/475/966/794/small/24c2e69919567eb8.webp",
+   "embed": null,
+   "credibility": "false"
+  },
+  {
    "id": "2574ffadaed30e7a",
    "source": "mastodon",
    "source_label": "Mastodon",
@@ -30713,7 +30747,7 @@
    "created": "2026-11-28T01:23:56Z",
    "kind": "discussion",
    "project": null,
-   "score": 1,
+   "score": 0,
    "comments": 0,
    "lang": null,
    "by_owner": false,
@@ -30752,29 +30786,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "d1d85fc7d4e0112d",
-   "source": "reddit",
-   "source_label": "r/GTA6",
-   "url": "https://www.reddit.com/r/GTA6/comments/1y78tqu/",
-   "created": "2026-11-28T00:45:34Z",
-   "kind": "discussion",
-   "project": null,
-   "score": 1,
-   "comments": 1,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "via": "arcticshift",
-   "vias": [
-    "arcticshift"
-   ],
-   "completeness": "partial",
-   "post_id": "1y78tqu",
-   "subreddit": "GTA6",
-   "credibility": "unverified"
-  },
-  {
    "id": "a5bc6577bcb20e5d",
    "source": "bluesky",
    "source_label": "Bluesky",
@@ -30782,7 +30793,7 @@
    "created": "2026-11-28T00:10:38Z",
    "kind": "discussion",
    "project": null,
-   "score": 0,
+   "score": 1,
    "comments": 0,
    "lang": null,
    "by_owner": false,
@@ -30940,22 +30951,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "73648a2c135e3975",
-   "source": "mastodon",
-   "source_label": "Mastodon",
-   "url": "https://mastodon.social/@gamechosis/117690572555248924",
-   "created": "2026-11-27T21:40:21Z",
-   "kind": "discussion",
-   "project": "xcl",
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
    "id": "63b6116ea9faaf8e",
    "source": "reddit",
    "source_label": "r/GTA",
@@ -31057,7 +31052,7 @@
    "embed": "L_4BJfus8WY",
    "source": "youtube",
    "source_label": "YouTube · Cutter Gamer",
-   "created": "2026-11-27T20:02:57Z",
+   "created": "2026-11-27T20:02:03Z",
    "credibility": "false"
   },
   {
@@ -31116,10 +31111,10 @@
    "credibility": "unverified"
   },
   {
-   "id": "fc4c42c4549b9963",
+   "id": "738546981a911924",
    "source": "bluesky",
    "source_label": "Bluesky",
-   "url": "https://bsky.app/profile/the-dragondev.bsky.social/post/3n3csepyo6c2j",
+   "url": "https://bsky.app/profile/dragon-dev.bsky.social/post/3n3csepyo6c2j",
    "created": "2026-11-27T18:18:14Z",
    "kind": "discussion",
    "project": null,
@@ -31245,17 +31240,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "8d5cf029ae2e0fd1",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=gmPkhD7Kf-w",
-   "thumb": "https://i.ytimg.com/vi/gmPkhD7Kf-w/hqdefault.jpg",
-   "embed": "gmPkhD7Kf-w",
-   "source": "youtube",
-   "source_label": "YouTube · NoobBlox",
-   "created": "2026-11-27T15:02:44Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "2b10af431a3f59dc",
    "source": "mastodon",
    "source_label": "Mastodon",
@@ -31269,6 +31253,17 @@
    "by_owner": false,
    "thumb": "https://files.mastodon.social/media_attachments/files/117/689/001/836/692/571/small/7f942d711641755b.png",
    "embed": null,
+   "credibility": "unverified"
+  },
+  {
+   "id": "8d5cf029ae2e0fd1",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=gmPkhD7Kf-w",
+   "thumb": "https://i.ytimg.com/vi/gmPkhD7Kf-w/hqdefault.jpg",
+   "embed": "gmPkhD7Kf-w",
+   "source": "youtube",
+   "source_label": "YouTube · NoobBlox",
+   "created": "2026-11-27T15:01:49Z",
    "credibility": "unverified"
   },
   {
@@ -31472,17 +31467,6 @@
    "credibility": "unverified"
   },
   {
-   "id": "c36f6bf7036b68bb",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=wE5tEZZ2EIg",
-   "thumb": "https://i.ytimg.com/vi/wE5tEZZ2EIg/hqdefault.jpg",
-   "embed": "wE5tEZZ2EIg",
-   "source": "youtube",
-   "source_label": "YouTube · Sh00ter Stu",
-   "created": "2026-11-27T09:02:53Z",
-   "credibility": "unverified"
-  },
-  {
    "id": "221a7e1f312abda3",
    "source": "bluesky",
    "source_label": "Bluesky",
@@ -31522,7 +31506,7 @@
    "embed": "JDTgKLcupO8",
    "source": "youtube",
    "source_label": "YouTube · Leonida Files ",
-   "created": "2026-11-27T08:02:59Z",
+   "created": "2026-11-27T08:02:05Z",
    "credibility": "unverified"
   },
   {
@@ -31574,6 +31558,17 @@
    "credibility": "unverified"
   },
   {
+   "id": "f732b75c7a32c004",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=-gHm1JGc2oA",
+   "thumb": "https://i.ytimg.com/vi/-gHm1JGc2oA/hqdefault.jpg",
+   "embed": "-gHm1JGc2oA",
+   "source": "youtube",
+   "source_label": "YouTube · ApTreX",
+   "created": "2026-11-27T04:02:03Z",
+   "credibility": "false"
+  },
+  {
    "id": "4a36be6e8b06983f",
    "source": "hn",
    "source_label": "Hacker News",
@@ -31587,28 +31582,6 @@
    "by_owner": false,
    "thumb": null,
    "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "f732b75c7a32c004",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=-gHm1JGc2oA",
-   "thumb": "https://i.ytimg.com/vi/-gHm1JGc2oA/hqdefault.jpg",
-   "embed": "-gHm1JGc2oA",
-   "source": "youtube",
-   "source_label": "YouTube · ApTreX",
-   "created": "2026-11-27T03:02:57Z",
-   "credibility": "false"
-  },
-  {
-   "id": "e3aa5ffb808ff7f9",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=yzgS-KfkS58",
-   "thumb": "https://i.ytimg.com/vi/yzgS-KfkS58/hqdefault.jpg",
-   "embed": "yzgS-KfkS58",
-   "source": "youtube",
-   "source_label": "YouTube · pain",
-   "created": "2026-11-27T03:02:57Z",
    "credibility": "unverified"
   },
   {
@@ -32021,8 +31994,8 @@
    "created": "2026-11-26T13:19:44Z",
    "kind": "discussion",
    "project": null,
-   "score": 471,
-   "comments": 142,
+   "score": 477,
+   "comments": 150,
    "lang": null,
    "by_owner": false,
    "thumb": null,
@@ -32312,7 +32285,7 @@
    "embed": "N7Rlo7CN2rw",
    "source": "youtube",
    "source_label": "YouTube · Undocumented Behavior",
-   "created": "2026-11-26T03:02:59Z",
+   "created": "2026-11-26T04:02:07Z",
    "credibility": "unverified"
   },
   {
@@ -32357,38 +32330,6 @@
    "project": null,
    "score": 2,
    "comments": 1,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "credibility": "unverified"
-  },
-  {
-   "id": "b6519ab900473836",
-   "source": "bluesky",
-   "source_label": "Bluesky",
-   "url": "https://bsky.app/profile/burning1.bsky.social/post/3n36e2o5jw22n",
-   "created": "2026-11-25T23:51:25Z",
-   "kind": "discussion",
-   "project": null,
-   "score": 0,
-   "comments": 0,
-   "lang": null,
-   "by_owner": false,
-   "thumb": null,
-   "embed": null,
-   "credibility": "false"
-  },
-  {
-   "id": "92c5aefddfa13d1a",
-   "source": "bluesky",
-   "source_label": "Bluesky",
-   "url": "https://bsky.app/profile/kblaney.bsky.social/post/3n36brp4btk2m",
-   "created": "2026-11-25T23:10:37Z",
-   "kind": "discussion",
-   "project": null,
-   "score": 6,
-   "comments": 0,
    "lang": null,
    "by_owner": false,
    "thumb": null,
@@ -32503,7 +32444,7 @@
    "embed": "xgQXhFxWfvo",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-25T03:03:01Z",
+   "created": "2026-11-25T04:02:07Z",
    "credibility": "unverified"
   },
   {
@@ -32514,7 +32455,7 @@
    "embed": "Z6NIBsCm83Y",
    "source": "youtube",
    "source_label": "YouTube · SomeOrdinaryGamers",
-   "created": "2026-11-25T03:03:01Z",
+   "created": "2026-11-25T04:02:07Z",
    "credibility": "unverified"
   },
   {
@@ -32525,7 +32466,7 @@
    "embed": "V19k4n4zA8k",
    "source": "youtube",
    "source_label": "YouTube · Glitching Queen",
-   "created": "2026-11-25T03:02:59Z",
+   "created": "2026-11-25T04:02:07Z",
    "credibility": "unverified"
   },
   {
@@ -32536,7 +32477,7 @@
    "embed": "7EL1ewzHlnE",
    "source": "youtube",
    "source_label": "YouTube · Evolução Neural",
-   "created": "2026-11-25T03:02:59Z",
+   "created": "2026-11-25T04:02:05Z",
    "credibility": "unverified"
   },
   {
@@ -32567,7 +32508,7 @@
    "comments": 0,
    "lang": null,
    "by_owner": false,
-   "thumb": "https://lemmy.world/pictrs/image/b9e9221e-ddfb-402a-880e-20e2cf48d7dd.jpeg",
+   "thumb": "https://lemmy.world/pictrs/image/0ba8f3f2-b683-4f95-9992-3abec23e56e5.jpeg",
    "embed": null,
    "credibility": "unverified"
   },
@@ -32662,7 +32603,7 @@
    "embed": "1l0suSnAn8s",
    "source": "youtube",
    "source_label": "YouTube · AlphaBolt",
-   "created": "2026-11-24T03:03:01Z",
+   "created": "2026-11-24T04:02:07Z",
    "credibility": "unverified"
   },
   {
@@ -32881,6 +32822,114 @@
   }
  ],
  "events": [
+  {
+   "kind": "readme",
+   "created": "2026-11-28T03:58:05Z",
+   "url": "https://github.com/ivall/xcl#readme",
+   "project": "xcl",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xcl-readme-2026-11-28T03:58:05Z"
+  },
+  {
+   "kind": "readme",
+   "created": "2026-11-28T03:58:05Z",
+   "url": "https://github.com/mewiof/Holy-Interoperability#readme",
+   "project": "holy-interoperability",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "holy-interoperability-readme-2026-11-28T03:58:05Z"
+  },
+  {
+   "kind": "commits",
+   "n": 14,
+   "areas": [
+    "docs",
+    "shaders",
+    "loader"
+   ],
+   "created": "2026-11-28T03:57:50Z",
+   "url": "https://github.com/R0Y00/Xbox2Windows/commits",
+   "project": "xbox2windows",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xbox2windows-commits-2026-11-28T03:57:50Z"
+  },
+  {
+   "kind": "commits",
+   "n": 4,
+   "areas": [
+    "loader",
+    "docs",
+    "gpu"
+   ],
+   "created": "2026-11-28T03:48:31Z",
+   "url": "https://github.com/ubiquitarianism/leonida/commits",
+   "project": "leonida-continued",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "leonida-continued-commits-2026-11-28T03:48:31Z"
+  },
+  {
+   "kind": "commits",
+   "n": 5,
+   "areas": [
+    "audio",
+    "docs",
+    "gpu"
+   ],
+   "created": "2026-11-28T03:45:51Z",
+   "url": "https://github.com/mewiof/Holy-Interoperability/commits",
+   "project": "holy-interoperability",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "holy-interoperability-commits-2026-11-28T03:45:51Z"
+  },
+  {
+   "kind": "commits",
+   "n": 3,
+   "areas": [
+    "gpu",
+    "loader",
+    "docs"
+   ],
+   "created": "2026-11-28T03:38:25Z",
+   "url": "https://github.com/ThatRecompDev/five-star-recomp/commits",
+   "project": "five-star-recomp",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "five-star-recomp-commits-2026-11-28T03:38:25Z"
+  },
+  {
+   "kind": "commits",
+   "n": 1,
+   "areas": [
+    "gpu",
+    "shaders",
+    "loader"
+   ],
+   "created": "2026-11-28T03:36:34Z",
+   "url": "https://github.com/brcly/TuxBox/commits",
+   "project": "tuxbox",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "tuxbox-commits-2026-11-28T03:36:34Z"
+  },
+  {
+   "kind": "commits",
+   "n": 12,
+   "areas": [
+    "gpu",
+    "shaders",
+    "docs"
+   ],
+   "created": "2026-11-28T03:27:04Z",
+   "url": "https://github.com/ivall/xcl/commits",
+   "project": "xcl",
+   "source": "github",
+   "credibility": "confirmed",
+   "id": "xcl-commits-2026-11-28T03:27:04Z"
+  },
   {
    "kind": "readme",
    "created": "2026-11-28T02:58:40Z",
@@ -36453,10 +36502,9 @@
   "4537574eb2712ea3"
  ],
  "media": [
+  "5433aeb5dd0e8c58",
   "8d5cf029ae2e0fd1",
-  "c36f6bf7036b68bb",
   "a5e79ce6a8ea1898",
-  "e3aa5ffb808ff7f9",
   "57e4cf130d502f03",
   "a0b9d2d65b888dac",
   "627b52035118903b",
@@ -36466,6 +36514,30 @@
  ],
  "media_items": [
   {
+   "id": "5433aeb5dd0e8c58",
+   "source": "reddit",
+   "source_label": "r/GTA6",
+   "url": "https://www.reddit.com/r/GTA6/comments/1y7cf0a/",
+   "created": "2026-11-28T03:55:16Z",
+   "kind": "video",
+   "project": null,
+   "score": 1,
+   "comments": 0,
+   "lang": null,
+   "by_owner": false,
+   "thumb": "https://external-preview.redd.it/dXpvdzBwdHAwYTRpMaPMeSEhuksza58Yp9C1a17z3t4m6hSLYSmvneil5S1E.png?width=640&format=pjpg&auto=webp&s=77916dc979f95d3df4ca6bbdd0eeb17aada60100",
+   "embed": null,
+   "via": "arcticshift",
+   "vias": [
+    "arcticshift"
+   ],
+   "completeness": "partial",
+   "post_id": "1y7cf0a",
+   "subreddit": "GTA6",
+   "credibility": "unverified",
+   "origin": "community"
+  },
+  {
    "id": "8d5cf029ae2e0fd1",
    "kind": "video",
    "url": "https://www.youtube.com/watch?v=gmPkhD7Kf-w",
@@ -36473,20 +36545,7 @@
    "embed": "gmPkhD7Kf-w",
    "source": "youtube",
    "source_label": "YouTube · NoobBlox",
-   "created": "2026-11-27T15:02:44Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "c36f6bf7036b68bb",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=wE5tEZZ2EIg",
-   "thumb": "https://i.ytimg.com/vi/wE5tEZZ2EIg/hqdefault.jpg",
-   "embed": "wE5tEZZ2EIg",
-   "source": "youtube",
-   "source_label": "YouTube · Sh00ter Stu",
-   "created": "2026-11-27T09:02:53Z",
+   "created": "2026-11-27T15:01:49Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36499,20 +36558,7 @@
    "embed": "JDTgKLcupO8",
    "source": "youtube",
    "source_label": "YouTube · Leonida Files ",
-   "created": "2026-11-27T08:02:59Z",
-   "credibility": "unverified",
-   "origin": "video",
-   "project": null
-  },
-  {
-   "id": "e3aa5ffb808ff7f9",
-   "kind": "video",
-   "url": "https://www.youtube.com/watch?v=yzgS-KfkS58",
-   "thumb": "https://i.ytimg.com/vi/yzgS-KfkS58/hqdefault.jpg",
-   "embed": "yzgS-KfkS58",
-   "source": "youtube",
-   "source_label": "YouTube · pain",
-   "created": "2026-11-27T03:02:57Z",
+   "created": "2026-11-27T08:02:05Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36525,7 +36571,7 @@
    "embed": "N7Rlo7CN2rw",
    "source": "youtube",
    "source_label": "YouTube · Undocumented Behavior",
-   "created": "2026-11-26T03:02:59Z",
+   "created": "2026-11-26T04:02:07Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36538,7 +36584,7 @@
    "embed": "xgQXhFxWfvo",
    "source": "youtube",
    "source_label": "YouTube · Sumit Charismatic",
-   "created": "2026-11-25T03:03:01Z",
+   "created": "2026-11-25T04:02:07Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36551,7 +36597,7 @@
    "embed": "Z6NIBsCm83Y",
    "source": "youtube",
    "source_label": "YouTube · SomeOrdinaryGamers",
-   "created": "2026-11-25T03:03:01Z",
+   "created": "2026-11-25T04:02:07Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36564,7 +36610,7 @@
    "embed": "V19k4n4zA8k",
    "source": "youtube",
    "source_label": "YouTube · Glitching Queen",
-   "created": "2026-11-25T03:02:59Z",
+   "created": "2026-11-25T04:02:07Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36577,7 +36623,7 @@
    "embed": "7EL1ewzHlnE",
    "source": "youtube",
    "source_label": "YouTube · Evolução Neural",
-   "created": "2026-11-25T03:02:59Z",
+   "created": "2026-11-25T04:02:05Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -36590,7 +36636,7 @@
    "embed": "1l0suSnAn8s",
    "source": "youtube",
    "source_label": "YouTube · AlphaBolt",
-   "created": "2026-11-24T03:03:01Z",
+   "created": "2026-11-24T04:02:07Z",
    "credibility": "unverified",
    "origin": "video",
    "project": null
@@ -37789,6 +37835,10 @@
   },
   {
    "code": "hoax",
+   "item": "c216f18165055fe6"
+  },
+  {
+   "code": "hoax",
    "item": "1204a415b0d788dc"
   },
   {
@@ -37814,10 +37864,6 @@
   {
    "code": "hoax",
    "item": "98d4d45aaf994886"
-  },
-  {
-   "code": "hoax",
-   "item": "b6519ab900473836"
   },
   {
    "code": "gta_notice",
@@ -37846,7 +37892,7 @@
   },
   {
    "code": "dropped",
-   "n": 61
+   "n": 63
   }
  ],
  "trackers": [
@@ -37892,7 +37938,7 @@
    "name": "mtwildwood GTA 6 PC",
    "url": "https://gta.mtwildwood.net/es/gta-6-pc/",
    "ok": true,
-   "updated": "2026-11-28T02:56:00Z",
+   "updated": "2026-11-28T03:57:32Z",
    "phases": {}
   }
  ],
@@ -37902,9 +37948,9 @@
  },
  "max_reached": 5,
  "stats": {
-  "dropped_legal": 61,
-  "dropped_spoiler": 11,
-  "http_calls": 654
+  "dropped_legal": 63,
+  "dropped_spoiler": 10,
+  "http_calls": 531
  },
  "phase_changes": [
   {
@@ -38113,8 +38159,8 @@
   }
  ],
  "reddit_freshness": {
-  "newest": "2026-11-28T02:07:55Z",
-  "lag_h": 0.8,
+  "newest": "2026-11-28T03:55:16Z",
+  "lag_h": 0.0,
   "stale": false
  }
 }
